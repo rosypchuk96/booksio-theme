@@ -33,11 +33,6 @@
     </div>
 
     {{ 'jquery.min.js' | asset_url | script_tag }}
-    {{ 'require.js' | asset_url | script_tag }}
-    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="{{ 'ninjamenustop' | asset_url }}" src="{{ 'ninjamenustop.min.js' | asset_url }}"></script>
-    {% comment %}
-    {{ 'ninjamenustop.min.js' | asset_url | script_tag }}
-{% endcomment %}
     {{ 'theme.min.js' | asset_url | script_tag }}
   </body>
 </html>
