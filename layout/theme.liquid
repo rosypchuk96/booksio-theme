@@ -21,11 +21,12 @@
     {{ 'styles-m.min.css' | asset_url | stylesheet_tag }}
     {{ 'styles.min.css' | asset_url | stylesheet_tag }}
     {{ 'styles-l.min.css' | asset_url | stylesheet_tag }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
 
     {{ content_for_header }}
   </head>
 
-  <body>
+  <body id="html-body">
     <div class="page-wrapper">
       {% section 'header' %}
       {{ content_for_layout }}
