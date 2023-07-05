@@ -11,6 +11,13 @@
 
     <meta name="description" content="">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
     {{ 'styles-m.min.css' | asset_url | stylesheet_tag }}
     {{ 'styles.min.css' | asset_url | stylesheet_tag }}
     {{ 'styles-l.min.css' | asset_url | stylesheet_tag }}
@@ -19,10 +26,18 @@
   </head>
 
   <body>
-    {{ content_for_layout }}
+    <div class="page-wrapper">
+      {% section 'header' %}
+      {{ content_for_layout }}
+      {% section 'footer' %}
+    </div>
 
+    {{ 'jquery.min.js' | asset_url | script_tag }}
+    {{ 'require.js' | asset_url | script_tag }}
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="{{ 'ninjamenustop' | asset_url }}" src="{{ 'ninjamenustop.min.js' | asset_url }}"></script>
     {% comment %}
-      {{ 'main.js' | asset_url | script_tag }}
-    {% endcomment %}
+    {{ 'ninjamenustop.min.js' | asset_url | script_tag }}
+{% endcomment %}
+    {{ 'theme.min.js' | asset_url | script_tag }}
   </body>
 </html>
