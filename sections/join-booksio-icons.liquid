@@ -1,0 +1,62 @@
+<div class="become-booksio-partners box-model-64a7cf716a671" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="MV839K2">
+  <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+    <div class="pagebuilder-column main_content box-model-64a7cf716a67b" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="OBNM34S">
+      <div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="VS0U42W" class="box-model-64a7cf716a684">
+        <h2>{{ section.settings.title }}</h2>
+        {{ section.settings.text }}
+        <ul class="becomes-partner-list">
+          {% for block in section.blocks %}
+            <li>
+              {% if block.settings.icon != blank %}
+                <img src="{{ block.settings.icon | img_url: 'master' }}" alt="" style="display: inline-block;">
+              {% endif %}
+              <h2>{{ block.settings.title }}</h2>
+              {{ block.settings.text  }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Icons",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

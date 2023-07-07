@@ -1,0 +1,98 @@
+<style>
+  #html-body [data-pb-style=AFALW05], #html-body [data-pb-style=YMMTSCE] {
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    border-width: 0;
+  }
+  .partners-gift h2 strong {
+    color: {{ section.settings.color }};
+    ;
+  }
+  .cms-page-view .partners-gift .partners-gift-right .join-books.chrts > a {
+    background: {{ section.settings.color }};
+    border: 1px solid {{ section.settings.color }};
+  }
+</style>
+<div class="partners-gift box-model-64a7cf716a624" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="YMMTSCE">
+  <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+    <div class="pagebuilder-column partners-gift-left box-model-64a7cf716a639" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="AFALW05">
+      <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="I6BKH6X">
+        {% if section.settings.bg != blank %}
+          <img class="pagebuilder-mobile-hidden" src="{{ section.settings.bg | img_url: 'master' }}" alt="" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="UP518L1" style="display: inline-block;">
+        {% endif %}
+        {% if section.settings.bg_mobile != blank %}
+          <img class="pagebuilder-mobile-only" src="{{ section.settings.bg_mobile | img_url: 'master' }}" alt="" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="ASQDRH2" style="display: inline-block;">
+        {% elsif section.settings.bg != blank %}
+          <img class="pagebuilder-mobile-only" src="{{ section.settings.bg | img_url: 'master' }}" alt="" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="ASQDRH2" style="display: inline-block;">
+        {% endif %}
+      </figure>
+    </div>
+    <div class="pagebuilder-column partners-gift-right box-model-64a7cf716a64a" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="PD5JUEX">
+      <div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="G3QK1N1" class="box-model-64a7cf716a654" style="font-size: 14px; color: #797979;">
+        <p><span style="color: #939393; font-size: 28px;">{{ section.settings.title }}</span></p>
+        <h2>{{ section.settings.subtitle }}</h2>
+        {{ section.settings.text }}
+      </div>
+      <div data-content-type="buttons" data-appearance="inline" data-same-width="false" data-element="main" data-pb-style="FK6HAGJ" class="box-model-64a7cf716a65e">
+        <div class="join-books chrts" data-content-type="button-item" data-appearance="default" data-element="main" data-pb-style="UVTH2Q5">
+          {% if section.settings.button_text != blank or section.settings.url != blank %}
+            <a class="pagebuilder-button-link box-model-64a7cf716a667" href="{{ section.settings.url }}" target="" data-link-type="default" data-element="link" data-pb-style="Y5317JN"><span data-element="link_text">{{ section.settings.button_text }}</span></a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Color"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Image Mobile"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,80 @@
+<style>
+  .cms-page-view .faq-section .becomes-partner-list li .more-faqs {
+    margin-top: 50px;
+  }
+  @media (max-width: 767px) {
+    .cms-page-view .faq-section .becomes-partner-list li .more-faqs {
+      margin-top: 10px;
+    }
+  }
+</style>
+<div class="faq-section box-model-64a7cf716a68d" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="YS435KU">
+  <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+    <div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-box-model="{}" data-element="main" data-pb-style="YTAHOQK">
+      <div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="RMT51L9" class="box-model-64a7cf716a697">
+        <h2>{{ section.settings.title }}</h2>
+        {{ section.settings.text }}
+        <ul class="becomes-partner-list">
+          {% for block in section.blocks %}
+            <li>
+              <span class="numbers-count chrts">{{ forloop.index }}</span>
+              <img src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/tourch-img.png?v=1688722101" alt="" style="display: block;">
+              <h2>{{ block.settings.title }}</h2>
+              {{ block.settings.text  }}
+              {% if forloop.index == 3 and section.settings.url != blank or section.settings.button_text != blank %}
+                <a class="more-faqs chrts" tabindex="0" href="h{{ section.settings.url }}" target="_blank" rel="noopener">{{ section.settings.button_text }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "max_blocks": 3,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
