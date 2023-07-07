@@ -134,7 +134,7 @@
     <div data-block="minicart" class="minicart-wrapper">
       <a
         class="action showcart"
-        href="https://www.booksio.com/checkout/cart/"
+        href="/cart"
         data-bind="scope: 'minicart_content'">
         <i class="icon" aria-hidden="true"></i>
         <span class="cart-label">My Cart</span>
@@ -177,7 +177,7 @@
                 <span
                   class="qty empty"
                   data-bind="css: { empty: !!getCartParam('summary_count') == false },
-                                                                                                                                                                                                                                                                                                                                                attr: { title: $t('Items in Cart') }, text: getCartParam('summary_count')"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    attr: { title: $t('Items in Cart') }, text: getCartParam('summary_count')"
                   title="Items in Cart">0</span>
               </strong>
             </div>
@@ -188,11 +188,11 @@
                 class="action close"
                 data-action="close"
                 data-bind="
-                                                                                                                                                                                                                                                                                                                attr: {
-                                                                                                                                                                                                                                                                                                                title: $t('Close')
-                                                                                                                                                                                                                                                                                                                },
-                                                                                                                                                                                                                                                                                                                click: closeMinicart()
-                                                                                                                                                                                                                                                                                                                "
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  attr: {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  title: $t('Close')
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  },
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  click: closeMinicart()
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  "
                 title="Close">
                 <span data-bind="i18n: 'Close'">Close</span>
                 <i class="icon" aria-hidden="true"></i>
@@ -216,11 +216,11 @@
                       class="action primary checkout"
                       data-action="close"
                       data-bind="
-                                                                                                                                                                                                                                                                                                                                                                                                                      attr: {
-                                                                                                                                                                                                                                                                                                                                                                                                                      title: $t('Shop Now')
-                                                                                                                                                                                                                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                                                                                                                                                                                                                      click: closeMinicart()
-                                                                                                                                                                                                                                                                                                                                                                                                                      , i18n: 'Shop Now'"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              attr: {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              title: $t('Shop Now')
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              },
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              click: closeMinicart()
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              , i18n: 'Shop Now'"
                       title="Shop Now">Shop Now</button>
                   </div>
                 </div>
@@ -273,362 +273,46 @@
             data-type="horizontal"
             data-mobile-type="accordion">
             <div class="magezon-builder">
-              <div class="n8mdjvv mgz-element main-books nav-item mega left_edge_menu_bar level0">
-                <a href="https://www.booksio.com/ny-times-bestsellers">
-                  <span class="title">Books</span>
-                </a>
-                <span class="opener"></span>
-                <div class="item-submenu mgz-element-inner n8mdjvv-s">
-                  <div class="foh0vgx mgz-element mgz-element-row full_width_row mgz-row-equal-height content-top">
-                    <div class="mgz-element-inner foh0vgx-s">
-                      <div class="inner-content mgz-container">
-                        <div class="s838vmq mgz-element mgz-element-column mgz-col-xl-9 mgz-col-lg-9 mgz-col-md-12 mgz-col-sm-12 mgz-col-xs-12">
-                          <div class="mgz-element-inner s838vmq-s">
-                            <div class="n3lnprm mgz-element mgz-element-row full_width_row">
-                              <div class="mgz-element-inner n3lnprm-s">
-                                <div class="inner-content mgz-container">
-                                  <div class="b9h0kak mgz-element mgz-element-column mgz-col-xl-3 mgz-col-lg-3 mgz-col-md-3 mgz-col-sm-12 mgz-col-xs-12 mgz-row-gap-margin">
-                                    <div class="mgz-element-inner b9h0kak-s">
-                                      <div class="i3fks86 mgz-element nav-item stack left_edge_parent_item">
-                                        <a href="#">
-                                          <span class="title">BOOK CATEGORIES</span>
-                                        </a>
-                                        <span class="opener"></span>
-                                        <div class="item-submenu mgz-element-inner i3fks86-s">
-                                          <div class="cc2f1sn mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/fiction/action-adventure">
-                                              <span class="title">Action &amp; Adventure</span>
-                                            </a>
-                                          </div>
-                                          <div class="faass0p mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/antiques-collectibles">
-                                              <span class="title">Antiques &amp; Collectibles</span>
-                                            </a>
-                                          </div>
-                                          <div class="bqxwxy3 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/architecture">
-                                              <span class="title">Architecture</span>
-                                            </a>
-                                          </div>
-                                          <div class="jhob2j8 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/art">
-                                              <span class="title">Art</span>
-                                            </a>
-                                          </div>
-                                          <div class="johstbp mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/bibles">
-                                              <span class="title">Bibles</span>
-                                            </a>
-                                          </div>
-                                          <div class="gcbue03 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/biography-autobiography">
-                                              <span class="title">Biography &amp; Autobiography</span>
-                                            </a>
-                                          </div>
-                                          <div class="cp9lljo mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/body-mind-spirit">
-                                              <span class="title">Body, Mind &amp; Spirit</span>
-                                            </a>
-                                          </div>
-                                          <div class="nci2a86 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/business-economics">
-                                              <span class="title">Business &amp; Economics</span>
-                                            </a>
-                                          </div>
-                                          <div class="vtqt8pr mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/comics-graphic-novels">
-                                              <span class="title">Comics &amp; Graphic Novels</span>
-                                            </a>
-                                          </div>
-                                          <div class="tk9xm2t mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/computers">
-                                              <span class="title">Computers</span>
-                                            </a>
-                                          </div>
-                                          <div class="rf19sga mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/cooking">
-                                              <span class="title">Cooking</span>
-                                            </a>
-                                          </div>
-                                          <div class="ndffbcb mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/crafts-hobbies">
-                                              <span class="title">Crafts &amp; Hobbies</span>
-                                            </a>
-                                          </div>
-                                          <div class="g9syjx3 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/design">
-                                              <span class="title">Design</span>
-                                            </a>
-                                          </div>
-                                          <div class="ae79549 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/drama">
-                                              <span class="title">Drama</span>
-                                            </a>
-                                          </div>
-                                          <div class="ua6rqrh mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/education">
-                                              <span class="title">Education</span>
-                                            </a>
-                                          </div>
-                                          <div class="q6xsq8s mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/family-relationships">
-                                              <span class="title">Family &amp; Relationships</span>
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="bale1us mgz-element mgz-element-column mgz-col-xl-3 mgz-col-lg-3 mgz-col-md-3 mgz-col-sm-12 mgz-col-xs-12 mgz-row-gap-margin">
-                                    <div class="mgz-element-inner bale1us-s">
-                                      <div class="v8bxqrj mgz-element nav-item stack left_edge_parent_item">
-                                        <a href="#"></a>
-                                        <span class="opener"></span>
-                                        <div class="item-submenu mgz-element-inner v8bxqrj-s">
-                                          <div class="g90d85s mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/fiction/fantasy">
-                                              <span class="title">Fantasy</span>
-                                            </a>
-                                          </div>
-                                          <div class="bm53lve mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/fiction">
-                                              <span class="title">Fiction</span>
-                                            </a>
-                                          </div>
-                                          <div class="bt5vhhh mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/foreign-language-study">
-                                              <span class="title">Foreign Language Study</span>
-                                            </a>
-                                          </div>
-                                          <div class="re62q34 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/games-activities">
-                                              <span class="title">Games &amp; Activities</span>
-                                            </a>
-                                          </div>
-                                          <div class="nfx6d4v mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/gardening">
-                                              <span class="title">Gardening</span>
-                                            </a>
-                                          </div>
-                                          <div class="ht5k79w mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/health-fitness">
-                                              <span class="title">Health &amp; Fitness</span>
-                                            </a>
-                                          </div>
-                                          <div class="yl7br0n mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/history">
-                                              <span class="title">History</span>
-                                            </a>
-                                          </div>
-                                          <div class="af7p9ni mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/house-home">
-                                              <span class="title">House &amp; Home</span>
-                                            </a>
-                                          </div>
-                                          <div class="khiu0dk mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/humor">
-                                              <span class="title">Humor</span>
-                                            </a>
-                                          </div>
-                                          <div class="evs4879 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/fiction/horror">
-                                              <span class="title">Horror</span>
-                                            </a>
-                                          </div>
-                                          <div class="lw0ecmg mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/juvenile-fiction">
-                                              <span class="title">Juvenile Fiction</span>
-                                            </a>
-                                          </div>
-                                          <div class="qstbyjq mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/juvenile-nonfiction">
-                                              <span class="title">Juvenile Nonfiction</span>
-                                            </a>
-                                          </div>
-                                          <div class="pl5rcpn mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/language-arts-disciplines">
-                                              <span class="title">Language Arts &amp; Disciplines</span>
-                                            </a>
-                                          </div>
-                                          <div class="tfkq2s6 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/law">
-                                              <span class="title">Law</span>
-                                            </a>
-                                          </div>
-                                          <div class="xdoxoht mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/literary-collections">
-                                              <span class="title">Literary Collections</span>
-                                            </a>
-                                          </div>
-                                          <div class="bj7pojx mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/literary-criticism">
-                                              <span class="title">Literary Criticism</span>
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="wh8ya5h mgz-element mgz-element-column mgz-col-xl-3 mgz-col-lg-3 mgz-col-md-3 mgz-col-sm-12 mgz-col-xs-12 mgz-row-gap-margin">
-                                    <div class="mgz-element-inner wh8ya5h-s">
-                                      <div class="vi9bw3k mgz-element nav-item stack left_edge_parent_item">
-                                        <a href="#"></a>
-                                        <span class="opener"></span>
-                                        <div class="item-submenu mgz-element-inner vi9bw3k-s">
-                                          <div class="k6thdor mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/mathematics">
-                                              <span class="title">Mathematics</span>
-                                            </a>
-                                          </div>
-                                          <div class="dc1e1bl mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/medical">
-                                              <span class="title">Medical</span>
-                                            </a>
-                                          </div>
-                                          <div class="qdyq5vo mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/music">
-                                              <span class="title">Music</span>
-                                            </a>
-                                          </div>
-                                          <div class="euhvg0e mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/fiction/mystery-detective">
-                                              <span class="title">Mystery &amp; Detective</span>
-                                            </a>
-                                          </div>
-                                          <div class="jclhrt8 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/nature">
-                                              <span class="title">Nature</span>
-                                            </a>
-                                          </div>
-                                          <div class="egmqh4o mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/ny-times-bestsellers">
-                                              <span class="title">NY Times® Bestsellers</span>
-                                            </a>
-                                          </div>
-                                          <div class="ksyy591 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/performing-arts">
-                                              <span class="title">Performing Arts</span>
-                                            </a>
-                                          </div>
-                                          <div class="j946dpa mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/pets">
-                                              <span class="title">Pets</span>
-                                            </a>
-                                          </div>
-                                          <div class="w1ntdev mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/philosophy">
-                                              <span class="title">Philosophy</span>
-                                            </a>
-                                          </div>
-                                          <div class="x2p40l0 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/photography">
-                                              <span class="title">Photography</span>
-                                            </a>
-                                          </div>
-                                          <div class="pt17i9x mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/poetry">
-                                              <span class="title">Poetry</span>
-                                            </a>
-                                          </div>
-                                          <div class="yjfyfr3 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/political-science">
-                                              <span class="title">Political Science</span>
-                                            </a>
-                                          </div>
-                                          <div class="oms5lkb mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/psychology">
-                                              <span class="title">Psychology</span>
-                                            </a>
-                                          </div>
-                                          <div class="m315k68 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/reference">
-                                              <span class="title">Reference</span>
-                                            </a>
-                                          </div>
-                                          <div class="juhr7a1 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/religion">
-                                              <span class="title">Religion</span>
-                                            </a>
-                                          </div>
-                                          <div class="lbk2n0x mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/science">
-                                              <span class="title">Science</span>
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="kj904jl mgz-element mgz-element-column mgz-col-xl-3 mgz-col-lg-3 mgz-col-md-3 mgz-col-sm-12 mgz-col-xs-12 mgz-row-gap-margin">
-                                    <div class="mgz-element-inner kj904jl-s">
-                                      <div class="d4wf1si mgz-element nav-item stack left_edge_parent_item">
-                                        <a href="#"></a>
-                                        <span class="opener"></span>
-                                        <div class="item-submenu mgz-element-inner d4wf1si-s">
-                                          <div class="qeidq2b mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/fiction/science-fiction">
-                                              <span class="title">Sci-Fi</span>
-                                            </a>
-                                          </div>
-                                          <div class="r2met8j mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/self-help">
-                                              <span class="title">Self-help</span>
-                                            </a>
-                                          </div>
-                                          <div class="r17jrk8 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/social-science">
-                                              <span class="title">Social Science</span>
-                                            </a>
-                                          </div>
-                                          <div class="rqrwgta mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/sports-recreation">
-                                              <span class="title">Sports &amp; Recreation</span>
-                                            </a>
-                                          </div>
-                                          <div class="aw9sve3 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/study-aids">
-                                              <span class="title">Study Aids</span>
-                                            </a>
-                                          </div>
-                                          <div class="aghe72k mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/technology-engineering">
-                                              <span class="title">Technology &amp; Engineering</span>
-                                            </a>
-                                          </div>
-                                          <div class="elnxemt mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/textbooks">
-                                              <span class="title">Textbooks</span>
-                                            </a>
-                                          </div>
-                                          <div class="chnn63s mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/fiction/thrillers">
-                                              <span class="title">Thrillers</span>
-                                            </a>
-                                          </div>
-                                          <div class="ai9nvul mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/transportation">
-                                              <span class="title">Transportation</span>
-                                            </a>
-                                          </div>
-                                          <div class="jg091ve mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/travel">
-                                              <span class="title">Travel</span>
-                                            </a>
-                                          </div>
-                                          <div class="xw7cs98 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/true-crime">
-                                              <span class="title">True Crime</span>
-                                            </a>
-                                          </div>
-                                          <div class="u62gk8t mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/young-adult-fiction">
-                                              <span class="title">Young Adult Fiction</span>
-                                            </a>
-                                          </div>
-                                          <div class="sr8f82p mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/young-adult-nonfiction">
-                                              <span class="title">Young Adult Nonfiction</span>
-                                            </a>
+              {% for link in linklists.main-menu.links %}
+                {% if link.links != blank %}
+                  <div class="mgz-element main-books nav-item mega left_edge_menu_bar level0">
+                    <a href="{{ link.url }}">
+                      <span class="title">{{ link.title }}</span>
+                    </a>
+                    <span class="opener"></span>
+                    <div class="item-submenu mgz-element-inner n8mdjvv-s">
+                      <div class="mgz-element mgz-element-row full_width_row mgz-row-equal-height content-top">
+                        <div class="mgz-element-inner">
+                          <div class="inner-content mgz-container">
+                            {% for child_link in link.links %}
+                              <div class="mgz-element mgz-element-column mgz-col-xl-9 mgz-col-lg-9 mgz-col-md-12 mgz-col-sm-12 mgz-col-xs-12">
+                                <div class="mgz-element-inner s838vmq-s">
+                                  <div class="n3lnprm mgz-element mgz-element-row full_width_row">
+                                    <div class="mgz-element-inner n3lnprm-s">
+                                      <div class="inner-content mgz-container">
+                                        <div class="b9h0kak mgz-element mgz-element-column mgz-col-xl-3 mgz-col-lg-3 mgz-col-md-3 mgz-col-sm-12 mgz-col-xs-12 mgz-row-gap-margin">
+                                          <div class="mgz-element-inner b9h0kak-s">
+                                            {% if child_link.links != blank %}
+                                              <div class="mgz-element nav-item stack left_edge_parent_item">
+                                                <a href="{{ child_link.url }}">
+                                                  <span class="title">{{ child_link.title }}</span>
+                                                </a>
+                                                <span class="opener"></span>
+                                                <div class="item-submenu mgz-element-inner i3fks86-s">
+                                                  {% for child_link_2 in child_link.links %}
+                                                    <div class="mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
+                                                      <a href="{{ child_link_2.url }}">
+                                                        <span class="title">{{ child_link_2.title }}</span>
+                                                      </a>
+                                                    </div>
+                                                  {% endfor %}
+                                                </div>
+                                              </div>
+                                            {% else %}
+                                              <a href="{{ child_link.url }}">
+                                                <span class="title">{{ child_link.title }}</span>
+                                              </a>
+                                            {% endif %}
                                           </div>
                                         </div>
                                       </div>
@@ -636,499 +320,20 @@
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="ivf8vdr mgz-element mgz-element-column menu-image-cols shop-books mgz-col-xl-3 mgz-col-lg-3 mgz-col-md-12 mgz-col-sm-12 mgz-col-xs-12 mgz-hidden-md mgz-hidden-sm mgz-hidden-xs">
-                          <div class="mgz-element-inner ivf8vdr-s">
-                            <div class="ht0xkub mgz-element mgz-child mgz-element-single_image mgz-hidden-sm mgz-hidden-xs mgz-image-hovers">
-                              <div class="mgz-element-inner ht0xkub-s">
-                                <div class="mgz-single-image-wrapper">
-                                  <div class="mgz-single-image-inner mgz-image-link">
-                                    <a
-                                      class=""
-                                      href="https://www.booksio.com/all-good-people-here-43a59fb84686"
-                                      data-type="image"
-                                      data-title=""
-                                      data-zoom="1"><img
-                                        class="ninjamenus-lazy mgz-hover-main ninjamenus-lazy-loaded"
-                                        src="https://www.booksio.com/media/BKSIO_DropDown-GoodPeople_1.png"
-                                        data-amsrc=""
-                                        data-src="https://www.booksio.com/media/BKSIO_DropDown-GoodPeople_1.png"
-                                        alt="BKSIO_DropDown-GoodPeople_1"
-                                        title=""
-                                        data-loaded="true"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                            {% endfor %}
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="pil20w9 mgz-element nav-item mega left_edge_menu_bar level0">
-                <a href="https://www.booksio.com/magazines">
-                  <span class="title">Magazines</span>
-                </a>
-                <span class="opener"></span>
-                <div class="item-submenu mgz-element-inner pil20w9-s">
-                  <div class="kb370kq mgz-element mgz-element-row full_width_row mgz-row-equal-height content-top">
-                    <div class="mgz-element-inner kb370kq-s">
-                      <div class="inner-content mgz-container">
-                        <div class="u23kev0 mgz-element mgz-element-column mgz-col-xl-9 mgz-col-lg-10 mgz-col-md-12 mgz-col-sm-12 mgz-col-xs-12">
-                          <div class="mgz-element-inner u23kev0-s">
-                            <div class="l9bjuh1 mgz-element mgz-element-row full_width_row">
-                              <div class="mgz-element-inner l9bjuh1-s">
-                                <div class="inner-content mgz-container">
-                                  <div class="rme2y0t mgz-element mgz-element-column mgz-col-xl-4 mgz-col-lg-3 mgz-col-md-3 mgz-col-sm-12 mgz-col-xs-12 mgz-row-gap-margin">
-                                    <div class="mgz-element-inner rme2y0t-s">
-                                      <div class="t69q9tp mgz-element nav-item stack left_edge_parent_item">
-                                        <a href="#">
-                                          <span class="title">MAGAZINE CATEGORIES</span>
-                                        </a>
-                                        <span class="opener"></span>
-                                        <div class="item-submenu mgz-element-inner t69q9tp-s">
-                                          <div class="s36h92k mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/auto">
-                                              <span class="title">Auto</span>
-                                            </a>
-                                          </div>
-                                          <div class="wyybyfw mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/business-finance">
-                                              <span class="title">Business &amp; Finance</span>
-                                            </a>
-                                          </div>
-                                          <div class="yjhbqks mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/children-s-magazines">
-                                              <span class="title">Children's Magazines</span>
-                                            </a>
-                                          </div>
-                                          <div class="i54ih4n mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/computer-electronics">
-                                              <span class="title">Computer &amp; Electronics</span>
-                                            </a>
-                                          </div>
-                                          <div class="al3ec3g mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/cooking-food-beverage">
-                                              <span class="title">Cooking, Food &amp; Beverage</span>
-                                            </a>
-                                          </div>
-                                          <div class="nfwjqpc mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/craft-hobbies">
-                                              <span class="title">Craft &amp; Hobbies</span>
-                                            </a>
-                                          </div>
-                                          <div class="mg3glwx mgz-element mgz-element-section mgz-hidden-xl">
-                                            <div class="mgz-element-inner mg3glwx-s">
-                                              <div class="viowicx mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/fiction/literary">
-                                                  <span class="title">Literary Fiction</span>
-                                                </a>
-                                              </div>
-                                              <div class="ldvcm3e mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/literary-collections">
-                                                  <span class="title">Literary Collections</span>
-                                                </a>
-                                              </div>
-                                              <div class="fx6wrsr mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/juvenile-nonfiction/poetry">
-                                                  <span class="title">Poetry</span>
-                                                </a>
-                                              </div>
-                                              <div class="vq3q7xy mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/juvenile-nonfiction/religion">
-                                                  <span class="title">Religion</span>
-                                                </a>
-                                              </div>
-                                              <div class="dvpby4p mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/science">
-                                                  <span class="title">Science</span>
-                                                </a>
-                                              </div>
-                                              <div class="v5l3hkm mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/sports-recreation">
-                                                  <span class="title">Sports &amp; Recreation</span>
-                                                </a>
-                                              </div>
-                                              <div class="h85awcf mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/true-crime">
-                                                  <span class="title">True Crime</span>
-                                                </a>
-                                              </div>
-                                              <div class="bipfsgo mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/young-adult-fiction">
-                                                  <span class="title">Young Adult Fiction</span>
-                                                </a>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="vds7gr8 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/en-espa-ol">
-                                              <span class="title">En Español</span>
-                                            </a>
-                                          </div>
-                                          <div class="iwdgcfi mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/entertainment-tv">
-                                              <span class="title">Entertainment &amp; Tv</span>
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="q01fgpf mgz-element mgz-element-column mgz-col-xl-4 mgz-col-lg-3 mgz-col-md-3 mgz-col-sm-12 mgz-col-xs-12 mgz-row-gap-margin">
-                                    <div class="mgz-element-inner q01fgpf-s">
-                                      <div class="mqyt8ym mgz-element nav-item stack left_edge_parent_item">
-                                        <a href="#"></a>
-                                        <span class="opener"></span>
-                                        <div class="item-submenu mgz-element-inner mqyt8ym-s">
-                                          <div class="r32iv1i mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/fashion-style">
-                                              <span class="title">Fashion &amp; Style</span>
-                                            </a>
-                                          </div>
-                                          <div class="barq5ax mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/health-fitness">
-                                              <span class="title">Health &amp; Fitness</span>
-                                            </a>
-                                          </div>
-                                          <div class="mgbb5mj mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/home-garden">
-                                              <span class="title">Home &amp; Garden</span>
-                                            </a>
-                                          </div>
-                                          <div class="hsvcu3d mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/lifestyle">
-                                              <span class="title">Lifestyle</span>
-                                            </a>
-                                          </div>
-                                          <div class="k0ecvct mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/men-s-magazines">
-                                              <span class="title">Men's Magazines</span>
-                                            </a>
-                                          </div>
-                                          <div class="be8ws1n mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/news-politics">
-                                              <span class="title">News &amp; Politics</span>
-                                            </a>
-                                          </div>
-                                          <div class="n4cte8d mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/parenting">
-                                              <span class="title">Parenting</span>
-                                            </a>
-                                          </div>
-                                          <div class="yyjglld mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/psychology">
-                                              <span class="title">Psychology</span>
-                                            </a>
-                                          </div>
-                                          <div class="d2cksve mgz-element mgz-element-section mgz-hidden-xl">
-                                            <div class="mgz-element-inner d2cksve-s">
-                                              <div class="hoxfwtj mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/fiction/literary">
-                                                  <span class="title">Literary Fiction</span>
-                                                </a>
-                                              </div>
-                                              <div class="rshysij mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/sports-recreation">
-                                                  <span class="title">Sports &amp; Recreation</span>
-                                                </a>
-                                              </div>
-                                              <div class="jyc8d0g mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/true-crime">
-                                                  <span class="title">True Crime</span>
-                                                </a>
-                                              </div>
-                                              <div class="emr87t3 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/literary-collections">
-                                                  <span class="title">Literary Collections</span>
-                                                </a>
-                                              </div>
-                                              <div class="p9x5t3j mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/juvenile-nonfiction/poetry">
-                                                  <span class="title">Poetry</span>
-                                                </a>
-                                              </div>
-                                              <div class="gup6kt0 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/juvenile-nonfiction/religion">
-                                                  <span class="title">Religion</span>
-                                                </a>
-                                              </div>
-                                              <div class="ri6w3b7 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/science">
-                                                  <span class="title">Science</span>
-                                                </a>
-                                              </div>
-                                              <div class="xg4lgud mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/young-adult-fiction">
-                                                  <span class="title">Young Adult Fiction</span>
-                                                </a>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="qipm2d1 mgz-element mgz-element-column mgz-col-xl-4 mgz-col-lg-3 mgz-col-md-3 mgz-col-sm-12 mgz-col-xs-12 mgz-row-gap-margin">
-                                    <div class="mgz-element-inner qipm2d1-s">
-                                      <div class="e2026qd mgz-element nav-item stack left_edge_parent_item">
-                                        <a href="#"></a>
-                                        <span class="opener"></span>
-                                        <div class="item-submenu mgz-element-inner e2026qd-s">
-                                          <div class="sk1stwl mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/regional">
-                                              <span class="title">Regional</span>
-                                            </a>
-                                          </div>
-                                          <div class="ngej8au mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/science-nature">
-                                              <span class="title">Science &amp; Nature</span>
-                                            </a>
-                                          </div>
-                                          <div class="ngovqi1 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/sports-recreation">
-                                              <span class="title">Sports &amp; Recreation</span>
-                                            </a>
-                                          </div>
-                                          <div class="mi8gnol mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/teen">
-                                              <span class="title">Teen</span>
-                                            </a>
-                                          </div>
-                                          <div class="lgdwbdd mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/magazines/travel-places">
-                                              <span class="title">Travel &amp; Places</span>
-                                            </a>
-                                          </div>
-                                          <div class="ar9vo39 mgz-element mgz-element-section mgz-hidden-xl">
-                                            <div class="mgz-element-inner ar9vo39-s">
-                                              <div class="clvem12 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/fiction/literary">
-                                                  <span class="title">Literary Fiction</span>
-                                                </a>
-                                              </div>
-                                              <div class="oqduhog mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/literary-collections">
-                                                  <span class="title">Literary Collections</span>
-                                                </a>
-                                              </div>
-                                              <div class="kupk1hr mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/juvenile-nonfiction/poetry">
-                                                  <span class="title">Poetry</span>
-                                                </a>
-                                              </div>
-                                              <div class="umsevqm mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/juvenile-nonfiction/religion">
-                                                  <span class="title">Religion</span>
-                                                </a>
-                                              </div>
-                                              <div class="loex4t3 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/science">
-                                                  <span class="title">Science</span>
-                                                </a>
-                                              </div>
-                                              <div class="yqjktog mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/sports-recreation">
-                                                  <span class="title">Sports &amp; Recreation</span>
-                                                </a>
-                                              </div>
-                                              <div class="jj7idnk mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/true-crime">
-                                                  <span class="title">True Crime</span>
-                                                </a>
-                                              </div>
-                                              <div class="t00015p mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                                <a href="https://www.booksio.com/young-adult-fiction">
-                                                  <span class="title">Young Adult Fiction</span>
-                                                </a>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="g00ywqa mgz-element mgz-element-column menu-image-cols shop-magazines mgz-col-xl-3 mgz-col-lg-2 mgz-col-md-12 mgz-col-sm-12 mgz-col-xs-12 mgz-hidden-md mgz-hidden-sm mgz-hidden-xs">
-                          <div class="mgz-element-inner g00ywqa-s">
-                            <div class="bw5xvyo mgz-element mgz-child mgz-element-single_image mgz-hidden-sm mgz-hidden-xs mgz-image-hovers">
-                              <div class="mgz-element-inner bw5xvyo-s">
-                                <div class="mgz-single-image-wrapper">
-                                  <div class="mgz-single-image-inner mgz-flex-position-top-right mgz-image-link">
-                                    <a
-                                      class=""
-                                      href="/magazines/cooking-food-beverage"
-                                      data-type="image"
-                                      data-title=""
-                                      data-zoom="1"><img
-                                        class="ninjamenus-lazy mgz-hover-main ninjamenus-lazy-loaded"
-                                        src="https://www.booksio.com/media/BKSIO-Food-Dropdown.png"
-                                        data-amsrc=""
-                                        data-src="https://www.booksio.com/media/BKSIO-Food-Dropdown.png"
-                                        alt="BKSIO-Food-Dropdown"
-                                        title=""
-                                        data-loaded="true"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                {% else %}
+                  <div class="mgz-element nav-item level0">
+                    <a href="{{ link.url }}">
+                      <span class="title">{{ link.title }}</span>
+                    </a>
                   </div>
-                </div>
-              </div>
-              <div class="dom7ma3 mgz-element nav-item level0">
-                <a href="https://www.booksio.com/ny-times-bestsellers">
-                  <span class="title">NY Times® Bestsellers</span>
-                </a>
-              </div>
-              <div class="tw55wug mgz-element main-joinmenu nav-item mega left_edge_menu_bar level0">
-                <a href="https://www.booksio.com/charities-directory">
-                  <span class="title">Charities</span>
-                </a>
-                <span class="opener"></span>
-                <div class="item-submenu mgz-element-inner tw55wug-s main-joinmenu">
-                  <div class="u1kt9ce mgz-element mgz-element-row full_width_row mgz-row-equal-height content-top">
-                    <div class="mgz-element-inner u1kt9ce-s">
-                      <div class="inner-content mgz-container">
-                        <div class="r0l69rj mgz-element mgz-element-column mgz-col-xl-8 mgz-col-lg-7 mgz-col-md-7 mgz-col-sm-12 mgz-col-xs-12">
-                          <div class="mgz-element-inner r0l69rj-s">
-                            <div class="tusmlps mgz-element mgz-element-row full_width_row">
-                              <div class="mgz-element-inner tusmlps-s">
-                                <div class="inner-content mgz-container">
-                                  <div class="ukmomn3 mgz-element mgz-element-column mgz-col-xl-25 mgz-col-lg-3 mgz-col-md-3 mgz-col-sm-12 mgz-col-xs-12 mgz-row-gap-margin">
-                                    <div class="mgz-element-inner ukmomn3-s">
-                                      <div class="clipp53 mgz-element nav-item stack left_edge_parent_item">
-                                        <a href="#">
-                                          <span class="title">BOOKSIO FEATURED CAUSE</span>
-                                        </a>
-                                        <span class="opener"></span>
-                                        <div class="item-submenu mgz-element-inner clipp53-s">
-                                          <div class="hpymwyu mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/charitable-cause-july">
-                                              <span class="title">July Featured Cause</span>
-                                            </a>
-                                          </div>
-                                          <div class="h6qe8wc mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/charitable-cause-june">
-                                              <span class="title">June Featured Cause</span>
-                                            </a>
-                                          </div>
-                                          <div class="px9dla0 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/charitable-cause-may">
-                                              <span class="title">May Featured Cause</span>
-                                            </a>
-                                          </div>
-                                          <div class="uce4bfq mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/charitable-cause-april">
-                                              <span class="title">April Featured Cause</span>
-                                            </a>
-                                          </div>
-                                          <div class="kgf5tqc mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/charitable-cause-march">
-                                              <span class="title">March Featured Cause</span>
-                                            </a>
-                                          </div>
-                                          <div class="kmmqiy4 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/charitable-cause-february-23">
-                                              <span class="title">February Featured Cause</span>
-                                            </a>
-                                          </div>
-                                          <div class="xrh5gdw mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/charitable-cause-january-23">
-                                              <span class="title">January Featured Cause</span>
-                                            </a>
-                                          </div>
-                                          <div class="o2gmic8 mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/charitable-cause-december">
-                                              <span class="title">December Featured Cause</span>
-                                            </a>
-                                          </div>
-                                          <div class="k2jbqdm mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/charitable-cause-november">
-                                              <span class="title">November Featured Cause</span>
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="bedfuq6 mgz-element mgz-element-column mgz-col-xl-6 mgz-col-lg-3 mgz-col-md-3 mgz-col-sm-12 mgz-col-xs-12 mgz-row-gap-margin">
-                                    <div class="mgz-element-inner bedfuq6-s">
-                                      <div class="voiihxx mgz-element nav-item stack left_edge_parent_item">
-                                        <a href="#">
-                                          <span class="title">BOOKSIO CHOSEN CHARITIES</span>
-                                        </a>
-                                        <span class="opener"></span>
-                                        <div class="item-submenu mgz-element-inner voiihxx-s">
-                                          <div class="vsoueah mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/charities-directory">
-                                              <span class="title">Charities Listed Alphabetically</span>
-                                            </a>
-                                          </div>
-                                          <div class="pxohchu mgz-element nav-item" data-icon="fas mgz-fa-angle-right">
-                                            <a href="https://www.booksio.com/charities-by-cause">
-                                              <span class="title">Charities Listed By Cause</span>
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="k9hwun8 mgz-element mgz-element-column menu-image-cols mgz-col-xl-4 mgz-col-lg-5 mgz-col-md-5 mgz-col-sm-12 mgz-col-xs-12 mgz-hidden-md mgz-hidden-sm mgz-hidden-xs">
-                          <div class="mgz-element-inner k9hwun8-s">
-                            <div class="jf3fjnb mgz-element mgz-child mgz-element-single_image mgz-hidden-sm mgz-hidden-xs mgz-image-hovers">
-                              <div class="mgz-element-inner jf3fjnb-s">
-                                <div class="mgz-single-image-wrapper">
-                                  <div class="mgz-single-image-inner "><img
-                                      class="ninjamenus-lazy mgz-hover-main ninjamenus-lazy-loaded"
-                                      src="https://www.booksio.com/media/wysiwyg/CHARITY-MENU-IMAGE.png"
-                                      data-amsrc=""
-                                      data-src="https://www.booksio.com/media/wysiwyg/CHARITY-MENU-IMAGE.png"
-                                      alt="CHARITY-MENU-IMAGE"
-                                      width="210PX"
-                                      title=""
-                                      data-loaded="true"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="nth6vp1 mgz-element nav-item level0">
-                <a href="https://www.booksio.com/fiction">
-                  <span class="title">Fiction</span>
-                </a>
-              </div>
-              <div class="fls5gw7 mgz-element nav-item level0">
-                <a href="https://www.booksio.com/comics-graphic-novels/nonfiction">
-                  <span class="title">Nonfiction</span>
-                </a>
-              </div>
-              <div class="xs3etqy mgz-element nav-item level0">
-                <a href="https://www.booksio.com/young-adult-fiction">
-                  <span class="title">Young Adult</span>
-                </a>
-              </div>
+                {% endif %}
+              {% endfor %}
             </div>
           </div>
         </nav>

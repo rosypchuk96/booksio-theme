@@ -1,0 +1,154 @@
+<div class="trendsellers-blocks box-model-64a73e701b1d4" data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="XE1LPO6">
+  <div class="row-full-width-inner" data-element="inner">
+    <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="PPJL2S3" data-decoded="true" class="box-model-64a73e701b1f5">
+      <style>
+        .faq-title h3 span {
+        font-family: "lora";
+        font-size: 53px !important;
+        font-weight: bold;
+        line-height: 62px !important;
+        font-style: normal;
+        color: #212322 !important;
+        }
+        .faq-wrapper a,
+        .faq-lists a {
+          text-decoration: underline;
+        }
+        .faq-lists a {
+          color: inherit;
+        }
+        .faq-wrapper .collapsible-item > button {
+        background: transparent;
+        border: none;
+        color: #212322;
+        font-weight: bold;
+        font-family: "lato";
+        margin: 10px 0;
+        font-size: 20px;
+        width: 100%;
+        position: relative;
+        text-align: left;
+        padding-left: 0 !important;
+        }
+        .faq-wrapper .collapsible-item > .content > p {
+        font-size: 20px;
+        font-weight: normal;
+        padding: 10px 0;
+        font-family: "lato";
+        text-align: left;
+        }
+        .faq-wrapper .collapsible-item > .content > p a {
+        text-decoration: underline;
+        }
+        .collapsible-item {
+        border-bottom: 1px solid #b3b3b2;
+        }
+        .faq-wrapper .collapsible-item > button:after {
+        content: '\e608';
+        font-family: 'luma-icons';
+        position: absolute;
+        right: 0;
+        }
+        .faq-wrapper .collapsible-item.active > button:after {
+        content: '\e622';
+        }
+        .faq-wrapper {
+        border-top: 1px solid #b3b3b2;
+        }
+        .faq-lists p span {
+        font-size: 18px !important;
+        line-height: 32px !important;
+        }
+        @media screen and (max-width: 1280px){
+        .main-hero-home {min-height: auto !important;padding: 0 0 70px 0;}
+        }
+        @media screen and (max-width: 1200px){
+        .main-hero-home {background: #fff;}
+        }
+        @media (max-width: 767px) {
+        .faq-title h3 span {
+        font-size: 33px !important;
+        line-height: 40px !important;
+        }
+        .faq-wrapper .collapsible-item > .content > p, 
+        .faq-wrapper .collapsible-item > button {
+        font-size: 16px !important;
+        line-height: 25px !important;
+        }
+        .faq-lists p span {
+        font-size: 14px !important;
+        line-height: 20px !important;
+        }
+        }
+      </style>
+    </div>
+    <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+      <div class="pagebuilder-column box-model-64a73e701b1fd" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="IWMFM7R">
+        <div class="lora-font faq-title" data-content-type="text" data-appearance="default" data-box-model="{}" data-element="main" data-pb-style="SQQMEHQ">
+          <h3><span style="font-size: 36px; line-height: 42px;"><span style="color: #202020;">{{ section.settings.title }}</span></span></h3>
+        </div>
+        <div class="faq-lists lato-font box-model-64a73e701b204" data-content-type="text" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;bottom&quot;:&quot;30px&quot;}}}" data-element="main" data-pb-style="H2EIPJL">
+          <div style="font-size: 18px; line-height: 32px; color: #212322;">
+            {{ section.settings.text }}
+          </div>
+        </div>
+        <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="HE8SUUI" data-decoded="true" class="box-model-64a73e701b20b">
+          <div class="faq-wrapper">
+            {% for block in section.blocks %}
+            <div class="collapsible-item {% if forloop.index == 1 %}active{% endif %}">
+                <button type="button" class="collapsible">{{ block.settings.title }}</button>
+                <div class="content" {% if forloop.index == 1 %}style="display: block;"{% else %}style="display: none;"{% endif %}>
+                  {{ block.settings.answer }}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <style type="text/css">.box-model-64a73e701b204 {margin-bottom: 30px;}</style>
+      </div>
+      <style type="text/css">.box-model-64a73e701b1fd {margin-top: 0px;margin-bottom: 20px;}</style>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "FAQ"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,58 @@
+<div class="count-num-block box-model-64a73e701b0af" data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-element="main" data-pb-style="ER1SL46">
+  <div class="row-full-width-inner" data-element="inner">
+    <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+      {% for block in section.blocks %}
+        <div class="pagebuilder-column count-num-col box-model-64a73e701b0cf" data-content-type="column" data-appearance="align-center" data-background-images="{}" data-element="main" data-pb-style="UUUXSDO">
+          <div class="lora-font box-model-64a73e701b0d8" data-content-type="text" data-appearance="default" data-element="main" data-pb-style="CVI2OR3">
+            <p><span style="line-height: 52px; color: #212322;"><strong><span id="KKY8JHQ" style="font-size: 52px;">
+              {% if block.settings.icon != blank %}
+                <img id="EQ118KS" style="width: 75px; height: 68px;" src="{{ block.settings.icon | img_url: 'master' }}" alt="" width="52" height="61" data-loaded="true">
+              {% endif %}
+              {{ block.settings.title }}</span></strong></span></p>
+          </div>
+          <div class="lato-font count-num-text box-model-64a73e701b0e1" data-content-type="text" data-appearance="default" data-element="main" data-pb-style="Y7SBCA7">
+            <p style="text-align: center;"><span style="color: #212322; font-size: 16px;">{{ block.settings.text }}</span></p>
+          </div>
+        </div>
+      {% endfor %}
+      <style type="text/css">.box-model-64a73e701b0cf {padding-top: 15px;padding-right: 15px;padding-bottom: 15px;padding-left: 15px;}</style>
+      <style type="text/css">.box-model-64a73e701b0ea {padding-top: 15px;padding-right: 15px;padding-bottom: 15px;padding-left: 15px;}</style>
+      <style type="text/css">.box-model-64a73e701b102 {padding-top: 15px;padding-right: 15px;padding-bottom: 15px;padding-left: 15px;}</style>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Numbers",
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Value"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Numbers"
+      }
+    ]
+  }
+{% endschema %}

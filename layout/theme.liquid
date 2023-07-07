@@ -18,6 +18,8 @@
       crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
+    {{ 'slick.css' | asset_url | stylesheet_tag }}
+    {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
     {{ 'styles-m.min.css' | asset_url | stylesheet_tag }}
     {{ 'styles.min.css' | asset_url | stylesheet_tag }}
     {{ 'styles-l.min.css' | asset_url | stylesheet_tag }}
@@ -30,10 +32,12 @@
     <div class="page-wrapper">
       {% section 'header' %}
       {{ content_for_layout }}
+      {% section 'subscribe' %}
       {% section 'footer' %}
     </div>
 
     {{ 'jquery.min.js' | asset_url | script_tag }}
+    {{ 'slick.min.js' | asset_url | script_tag }}
     {{ 'theme.min.js' | asset_url | script_tag }}
   </body>
 </html>
