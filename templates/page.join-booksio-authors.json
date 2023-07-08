@@ -1,0 +1,116 @@
+{
+  "wrapper": "main.cms-page-view",
+  "sections": {
+    "9c64fa83-a913-43a3-916e-62a82bfc8f98": {
+      "type": "join-booksio-hero",
+      "settings": {
+        "title": "Authors",
+        "subtitle": "<strong>FIND<\/strong> NEW AUDIENCES AS A FEATURED AUTHOR",
+        "text": "<p>We believe in the power of great storytelling — and we want you to share yours! We can work directly with you or your publisher to get your titles listed with Booksio, which opens up opportunities for you to be a featured author, get highlighted in our content and promotional efforts, and reach a wider audience.<\/p><p>We build a charitable donation of 10% into every single purchase, every time — without changing how much you make from your work. As a featured author, you’re able to encourage your fans and readers to snag your latest release AND support your favorite charity at the same time.<\/p>",
+        "color": "#6183d5",
+        "url": "https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-become-a-booksio-author",
+        "button_text": "JOIN BOOKSIO",
+        "bg": "shopify:\/\/shop_images\/memebership-author.jpg"
+      }
+    },
+    "c59baec0-345f-4a28-84e6-3b85ecddd85e": {
+      "type": "join-booksio-icons",
+      "blocks": {
+        "841e2937-cf8b-4ed1-ae64-fc7fb95989a4": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img1.png",
+            "title": "Target Engaged Readers",
+            "text": "<p>Showcase your titles with custom author pages to our engaged readers.<\/p>"
+          }
+        },
+        "fcab65aa-25b7-4a63-825e-c54f30c14690": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img2.png",
+            "title": "Bundle With Charities",
+            "text": "<p>Promote your work with donations to your favorite charities, without affecting your profits<\/p>"
+          }
+        },
+        "7874a92f-2b6d-4627-ae08-d959a1e3dec2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img3.png",
+            "title": "Feature Your Work",
+            "text": "<p>Get featured as our monthly author and topic highlights<\/p>"
+          }
+        },
+        "35a6054b-d3c9-4c62-bb21-e1febf475e4b": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img4.png",
+            "title": "Be Recommended",
+            "text": "<p>Access even more of our audience through title recommendations<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "841e2937-cf8b-4ed1-ae64-fc7fb95989a4",
+        "fcab65aa-25b7-4a63-825e-c54f30c14690",
+        "7874a92f-2b6d-4627-ae08-d959a1e3dec2",
+        "35a6054b-d3c9-4c62-bb21-e1febf475e4b"
+      ],
+      "settings": {
+        "title": "Become a Featured Author",
+        "text": "<p>Connect with the Booksio audience, give back, and do good in the world. Join the Booksio family today.<\/p>"
+      }
+    },
+    "bfd7a965-4dfc-4b72-9d0e-813c5a73e8b1": {
+      "type": "join-booksio-faq",
+      "blocks": {
+        "3c04fad5-1dfa-4b51-a2bb-8ffe1dbf5668": {
+          "type": "item",
+          "settings": {
+            "title": "How can I become a featured author?",
+            "text": "<p>If you want to connect with our Booksio audience, give back, and do good in the world. Submit your information to join the Booksio family. Fill out this form, and we’ll get back to you with next steps ASAP.<\/p>"
+          }
+        },
+        "947ec23a-42f3-4400-b9b2-6ee644df8b6a": {
+          "type": "item",
+          "settings": {
+            "title": "Which charities does Booksio support?",
+            "text": "<p>As a featured author, you can specify the charity supported by your branded store. Otherwise, the donations from guest purchases all go to Booksio’s featured charity, which changes each month. Booksio account holders can select from more than 100 partner organizations to support with their purchases.<\/p>"
+          }
+        },
+        "0e14edfe-2fad-4679-97b3-63c85ef4ea55": {
+          "type": "item",
+          "settings": {
+            "title": "Can I work with Booksio on promo content?",
+            "text": "<p>If you’d like to be considered for inclusion in the Booksio blog, on our podcast, or in some other capacity, submit your information to become a featured author and then please reach out to our marketing team.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "3c04fad5-1dfa-4b51-a2bb-8ffe1dbf5668",
+        "947ec23a-42f3-4400-b9b2-6ee644df8b6a",
+        "0e14edfe-2fad-4679-97b3-63c85ef4ea55"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "text": "<p>Booksio connects authors, readers, and charities to share stories and support our communities.<\/p>",
+        "url": "#",
+        "button_text": "SEE MORE FAQS"
+      }
+    },
+    "1d91126f-d1eb-4de5-8b18-19087c9b97e8": {
+      "type": "join-booksio-signup",
+      "settings": {
+        "title": "<p>Sign up to become a <a href=\"https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-become-a-booksio-author\">featured author<\/a> today.<\/p>",
+        "url": "https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-become-a-booksio-author",
+        "button_text": "SIGN UP NOW",
+        "color": "#6183d5"
+      }
+    }
+  },
+  "order": [
+    "9c64fa83-a913-43a3-916e-62a82bfc8f98",
+    "c59baec0-345f-4a28-84e6-3b85ecddd85e",
+    "bfd7a965-4dfc-4b72-9d0e-813c5a73e8b1",
+    "1d91126f-d1eb-4de5-8b18-19087c9b97e8"
+  ]
+}

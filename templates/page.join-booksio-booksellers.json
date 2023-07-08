@@ -1,0 +1,116 @@
+{
+  "wrapper": "main.cms-page-view",
+  "sections": {
+    "8f004672-0c5a-4fa5-8f13-54ef585fefdd": {
+      "type": "join-booksio-hero",
+      "settings": {
+        "title": "Booksellers",
+        "subtitle": "<strong>SELL BOOKS<\/strong> AND EMPOWER CHANGE WITH EVERY SALE",
+        "text": "<p>Selling books has never been easier. Once you receive your Booksio branded storefront, the world is your oyster! Our white-labeled store becomes your newest revenue opportunity. 10% of every purchase made on your storefront is now yours to play with. Whether it's donating the commission to a charity you are passionate about or investing it back into your brand, our branded stores offer something for everyone.<\/p>",
+        "color": "#ec94c4",
+        "url": "https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-create-a-booksio-branded-store",
+        "button_text": "JOIN BOOKSIO",
+        "bg": "shopify:\/\/shop_images\/memebers-affiliates.png"
+      }
+    },
+    "f8eeb9f7-d16e-476a-afb2-6d5ee29dd942": {
+      "type": "join-booksio-icons",
+      "blocks": {
+        "26eaa2c0-ee27-4d90-bdda-6e4d1604e6fe": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img1.png",
+            "title": "Your Branded Storefront",
+            "text": "<p>Millions of titles available for you to promote on a Booksio store co-branded with your company logo.<\/p>"
+          }
+        },
+        "d19e3caa-f669-4caa-aae7-1411ee7dd9dc": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img2.png",
+            "title": "Customize Your Selection",
+            "text": "<p>Eliminate any book categories you'd like to exclude.<\/p>"
+          }
+        },
+        "9578601d-daec-436f-a68f-1fa88c8f9803": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img3.png",
+            "title": "Pick Your Preferred Charity",
+            "text": "<p>Have a cause that speaks to you? Elect to donate 10% of each purchase on your storefront to the charity closest to your heart.<\/p>"
+          }
+        },
+        "2a48635e-07e4-4cf4-9d81-0d1669514609": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img4.png",
+            "title": "Something For Everyone",
+            "text": "<p>Bring the power of books and magazines to your audience<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "26eaa2c0-ee27-4d90-bdda-6e4d1604e6fe",
+        "d19e3caa-f669-4caa-aae7-1411ee7dd9dc",
+        "9578601d-daec-436f-a68f-1fa88c8f9803",
+        "2a48635e-07e4-4cf4-9d81-0d1669514609"
+      ],
+      "settings": {
+        "title": "Become a Booksio Bookseller",
+        "text": "<p>The one-stop-shop for bookselling.<\/p>"
+      }
+    },
+    "c8778ad6-66ee-4364-8c8a-469f4c54c48f": {
+      "type": "join-booksio-faq",
+      "blocks": {
+        "4df70663-688c-4c21-be85-04edacb2e71c": {
+          "type": "item",
+          "settings": {
+            "title": "How much does it cost to have a branded store?",
+            "text": "<p>Booksio branded storefronts are completely free. We set up everything on our end and then pass on the store link to you to promote as you wish.<\/p>"
+          }
+        },
+        "72462823-a039-431f-9b80-ecdccc13f94f": {
+          "type": "item",
+          "settings": {
+            "title": "How can my organization create a branded store?",
+            "text": "<p>Interested organizations should submit this<a href=\"https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-create-a-booksio-branded-store\">form<\/a>and a member of our team will be in touch shortly.<\/p>"
+          }
+        },
+        "642fad77-48fd-4f27-ba11-2c524001d490": {
+          "type": "item",
+          "settings": {
+            "title": "Can I limit which titles can be purchased through our storefront?",
+            "text": "<p>Yes — Booksio partners have the option to limit their storefronts to show or exclude certain authors, titles, or topics.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "4df70663-688c-4c21-be85-04edacb2e71c",
+        "72462823-a039-431f-9b80-ecdccc13f94f",
+        "642fad77-48fd-4f27-ba11-2c524001d490"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "text": "",
+        "url": "",
+        "button_text": "SEE MORE FAQS"
+      }
+    },
+    "f695d883-d334-4792-9366-b84874865ee2": {
+      "type": "join-booksio-signup",
+      "settings": {
+        "title": "<p>Sign up to create a <a href=\"https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-create-a-booksio-branded-store\">Booksio Branded Store<\/a> today.<\/p>",
+        "url": "https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-create-a-booksio-branded-store",
+        "button_text": "SIGN UP NOW",
+        "color": "#ec94c4"
+      }
+    }
+  },
+  "order": [
+    "8f004672-0c5a-4fa5-8f13-54ef585fefdd",
+    "f8eeb9f7-d16e-476a-afb2-6d5ee29dd942",
+    "c8778ad6-66ee-4364-8c8a-469f4c54c48f",
+    "f695d883-d334-4792-9366-b84874865ee2"
+  ]
+}

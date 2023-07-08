@@ -1,0 +1,78 @@
+{
+  "wrapper": "main.cms-page-view",
+  "sections": {
+    "eb0ac2b6-9a76-407b-81b6-88d38091c988": {
+      "type": "join-booksio-hero",
+      "settings": {
+        "title": "Affiliates",
+        "subtitle": "<strong>A PARTNERSHIP<\/strong> TO FEEL GOOD ABOUT",
+        "text": "<p>Partnering with Booksio goes a long way. Becoming an affiliate not only racks in the dough- but more importantly helps the world! For each purchase you drive, 10% automatically is donated back to a charity of the customer's choice- a transaction you can stand behind. Charitable giving has never been more effortless than working with Booksio. Business can be both profitable and for the greater good!<\/p>",
+        "color": "#ec94c4",
+        "url": "https:\/\/www.shareasale.com\/join\/booksio",
+        "button_text": "JOIN BOOKSIO",
+        "bg": "shopify:\/\/shop_images\/gift-banner_1.jpg"
+      }
+    },
+    "e7ac4cc7-adbd-489e-bad5-8eafe264e215": {
+      "type": "join-booksio-icons",
+      "blocks": {
+        "fe2534b6-da5d-4cb1-93e3-d43e98d34074": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img1.png",
+            "title": "Affiliate Commission",
+            "text": "<p>6% CPA.<\/p>"
+          }
+        },
+        "2e58f074-9555-4345-a999-fd6163cf010f": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img2.png",
+            "title": "All Products Are Commissionable",
+            "text": "<p>Products Categories Include: Print Books, eBooks, Audio Books, Print Magazines, Digital Magazines & Gift Cards.<\/p>"
+          }
+        },
+        "6b098fff-8898-4d02-8dba-6fe98908af03": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img3.png",
+            "title": "10% Charitable Donation",
+            "text": "<p>10% of each purchase will be donated to a charity of the customer's choice.<\/p>"
+          }
+        },
+        "cb43b5ce-0532-4cd6-8328-89b88ad966e6": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img4.png",
+            "title": "Boost Morale With Freebies",
+            "text": "<p>Boost team morale when you offer free titles each month.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "fe2534b6-da5d-4cb1-93e3-d43e98d34074",
+        "2e58f074-9555-4345-a999-fd6163cf010f",
+        "6b098fff-8898-4d02-8dba-6fe98908af03",
+        "cb43b5ce-0532-4cd6-8328-89b88ad966e6"
+      ],
+      "settings": {
+        "title": "Become a Booksio Affiliate",
+        "text": "<p>Booksio connects the content you want with the causes you care about most. Through our extensive catalog of books, magazines, and more, you can get inspired, learn a skill, and explore new worlds — all while supporting the charity of your choice.<\/p>"
+      }
+    },
+    "a197fcd1-ae5c-4b31-a76b-5c29273c152a": {
+      "type": "join-booksio-signup",
+      "settings": {
+        "title": "<p>Sign up to become a <a href=\"https:\/\/www.shareasale.com\/join\/booksio\" target=\"_blank\">Booksio Affiliate<\/a> today.<\/p>",
+        "url": "https:\/\/www.shareasale.com\/join\/booksio",
+        "button_text": "SIGN UP NOW",
+        "color": "#ec94c4"
+      }
+    }
+  },
+  "order": [
+    "eb0ac2b6-9a76-407b-81b6-88d38091c988",
+    "e7ac4cc7-adbd-489e-bad5-8eafe264e215",
+    "a197fcd1-ae5c-4b31-a76b-5c29273c152a"
+  ]
+}

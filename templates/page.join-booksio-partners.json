@@ -1,0 +1,116 @@
+{
+  "wrapper": "main.cms-page-view",
+  "sections": {
+    "29878b58-4fb8-4f14-b580-cd5e5d94fb1b": {
+      "type": "join-booksio-hero",
+      "settings": {
+        "title": "Partners",
+        "subtitle": "<strong>GIFT<\/strong> YOUR EMPLOYEES BOOKS THAT GIVE BACK",
+        "text": "<p>As a Booksio partner, you get more than just a branded storefront. You can offer free books, magazines, or audiobooks to your employees every month, for only the cost of the titles they buy. Not only will they appreciate a unique perk, but they might even use it to continue to level up their skills.<\/p><p>More than ever, employees and customers want to see organizations take a stand on issues that matter. With your custom storefront, ten percent will go to your preferred charity (or you can let your team each select their own). Booksio gives you the easiest way to tangibly support the causes you care about.<\/p>",
+        "color": "#ec94c4",
+        "url": "https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-become-a-booksio-partner",
+        "button_text": "JOIN BOOKSIO",
+        "bg": "shopify:\/\/shop_images\/gift-banner.jpg"
+      }
+    },
+    "96fcb850-b381-4b89-820b-1db8269f2a9f": {
+      "type": "join-booksio-icons",
+      "blocks": {
+        "0b95e88d-3712-4faa-a96c-df1146c6375a": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img1.png",
+            "title": "Your Branded Storefront",
+            "text": "<p>Your Branded Storefront.<\/p>"
+          }
+        },
+        "94b0d177-4581-406d-90e9-f128231c817e": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img2.png",
+            "title": "Customize Your Selections",
+            "text": "<p>Offer a custom selection of authors, titles, or topics for users to purchase.<\/p>"
+          }
+        },
+        "8dce2389-c6e5-4f75-91ce-b97460dcdc4c": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img3.png",
+            "title": "Pick Your Preferred Charity",
+            "text": "<p>Donate 10% of every purchase to your preferred charity, automatically.<\/p>"
+          }
+        },
+        "b6b70afb-c87a-495e-91d4-0c8a03ff7315": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/becomes-partner-img4.png",
+            "title": "Boost Morale With Freebies",
+            "text": "<p>Boost team morale when you offer free titles each month.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "0b95e88d-3712-4faa-a96c-df1146c6375a",
+        "94b0d177-4581-406d-90e9-f128231c817e",
+        "8dce2389-c6e5-4f75-91ce-b97460dcdc4c",
+        "b6b70afb-c87a-495e-91d4-0c8a03ff7315"
+      ],
+      "settings": {
+        "title": "Become a Booksio Partner",
+        "text": "<p>Employee Perks + Charitable Donations Booksio lets you do both with one simple tool.<\/p>"
+      }
+    },
+    "200d52a9-e2d8-4476-8911-703c2cee2a26": {
+      "type": "join-booksio-faq",
+      "blocks": {
+        "0fb8b194-6bcb-4708-81ba-244e6a4aa912": {
+          "type": "item",
+          "settings": {
+            "title": "How can my organization become a Booksio partner?",
+            "text": "<p>Interested organizations should submit the form below and a member of our team will be in touch shortly.<\/p>"
+          }
+        },
+        "4365e49c-b614-4aeb-9922-4c3516c1b307": {
+          "type": "item",
+          "settings": {
+            "title": "How much does it cost to be a Booksio partner?",
+            "text": "<p>Booksio branded storefronts are completely free to use. If you’d like to offer credits or free titles to your employees or customers, there would be an agreed-upon cost per redemption to your organization.<\/p>"
+          }
+        },
+        "83ab252c-b31c-450b-a34f-e2de3c539264": {
+          "type": "item",
+          "settings": {
+            "title": "Can I limit which titles can be purchased through our storefront?",
+            "text": "<p>Yes — Booksio partners have the option to limit their storefronts to show or exclude certain authors, titles, or topics.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "0fb8b194-6bcb-4708-81ba-244e6a4aa912",
+        "4365e49c-b614-4aeb-9922-4c3516c1b307",
+        "83ab252c-b31c-450b-a34f-e2de3c539264"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "text": "<p>Show appreciation for your employees with free gifts that support your favorite charities.<\/p>",
+        "url": "",
+        "button_text": "SEE MORE FAQS"
+      }
+    },
+    "cf84b4f0-7f46-4b33-868c-1a07dbdfcf04": {
+      "type": "join-booksio-signup",
+      "settings": {
+        "title": "<p>Sign up to become a <a href=\"https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-become-a-booksio-partner\">Booksio Partner<\/a> today.<\/p>",
+        "url": "https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-become-a-booksio-partner",
+        "button_text": "SIGN UP NOW",
+        "color": "#ec94c4"
+      }
+    }
+  },
+  "order": [
+    "29878b58-4fb8-4f14-b580-cd5e5d94fb1b",
+    "96fcb850-b381-4b89-820b-1db8269f2a9f",
+    "200d52a9-e2d8-4476-8911-703c2cee2a26",
+    "cf84b4f0-7f46-4b33-868c-1a07dbdfcf04"
+  ]
+}
