@@ -1,0 +1,56 @@
+<style>
+  .cms-page-view .sign-up-to-become h2 a {
+    color: {{ section.settings.color }};
+  }
+  .cms-page-view .sign-up-to-become .join-books.chrts>a {
+    border-color:{{ section.settings.color }};
+    color: {{ section.settings.color }};
+  }
+  .sign-up-to-become-wrapper {
+    justify-content: center;
+  }
+</style>
+<div class="main_content box-model-64a7cf716a6a1" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="H5SYREB">
+  <div class="pagebuilder-column-group sign-up-to-become-wrapper" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+    <div class="pagebuilder-column sign-up-to-become box-model-64a7cf716a6aa" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="X8T7XSA">
+      <div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="T7QTH8D" class="box-model-64a7cf716a6b3">
+        <h2>{{ section.settings.title | replace: '<p>', ''  | replace: '</p>', '' }}</h2>
+      </div>
+      <div data-content-type="buttons" data-appearance="inline" data-same-width="false" data-box-model="{}" data-element="main" data-pb-style="O2D7OIN">
+        <div class="join-books chrts" data-content-type="button-item" data-appearance="default" data-element="main" data-pb-style="FQJ7IAK">
+          {% if section.settings.url != blank or section.settings.button_text != blank %}
+            <a class="pagebuilder-button-link box-model-64a7cf716a6bd" href="{{ section.settings.url }}" target="" data-link-type="default" data-element="link" data-pb-style="Y1GLUSK"><span data-element="link_text">{{ section.settings.button_text }}</span></a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Sign Up",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Color"
+      }
+    ]
+  }
+{% endschema %}
