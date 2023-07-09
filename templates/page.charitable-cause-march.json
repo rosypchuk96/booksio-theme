@@ -1,0 +1,200 @@
+{
+  "wrapper": "div.lgbt-text.cms-page-view#main-content",
+  "sections": {
+    "ffedcb60-8316-4f3a-8206-76d0a67a0958": {
+      "type": "charitable-cause-hero",
+      "settings": {
+        "title": "Booksio",
+        "subtitle": "WHERE EVERYDAY",
+        "subtitle_2": "PURCHASES MAKE A DIFFERENCE",
+        "text": "<p><br\/>Here at Booksio, each month we’ll highlight a specific charitable theme close to our hearts, and the highlighted organization(s) with the core mission to improve and address it. 10% of your sales will automatically go to making a difference towards our theme, so sit back, shop, and let us take care of the rest! If another cause or charity is dearer to your heart, just visit your account profile and pick a charity from our approved list.<\/p><p>Thank you for joining the Booksio community and making an impact on the world around you.<\/p>",
+        "url": "shopify:\/\/pages\/charities-directory",
+        "button_text": "SEE OUR CHOSEN CHARITIES",
+        "image": "shopify:\/\/shop_images\/calender-banner.jpg"
+      }
+    },
+    "626b057e-667b-43be-be18-49423b21a10c": {
+      "type": "charitable-cause-featured-books",
+      "settings": {
+        "title": "Women’s Equality",
+        "color": "#2b2b2b",
+        "subtitle": "Featured Books",
+        "subtitle_color": "",
+        "collection": "charitable-cause-march"
+      }
+    },
+    "514d4fbe-59fe-440e-a392-0006706e0701": {
+      "type": "charitable-featured-cause",
+      "blocks": {
+        "a0bdb406-eebe-49ce-8c8f-194bf6ebed5b": {
+          "type": "item",
+          "settings": {
+            "text": "Flo Charlotte"
+          }
+        },
+        "fa6d5b53-2797-492d-98ab-f8a2f9b6e265": {
+          "type": "item",
+          "settings": {
+            "text": "Girls Who Code"
+          }
+        },
+        "07f2dd2d-7e6c-4264-aa01-a8b93bbce4af": {
+          "type": "item",
+          "settings": {
+            "text": "Planned Parenthood"
+          }
+        }
+      },
+      "block_order": [
+        "a0bdb406-eebe-49ce-8c8f-194bf6ebed5b",
+        "fa6d5b53-2797-492d-98ab-f8a2f9b6e265",
+        "07f2dd2d-7e6c-4264-aa01-a8b93bbce4af"
+      ],
+      "settings": {
+        "badge": "shopify:\/\/shop_images\/March-Featured-Charity-SM.png",
+        "title": "March Featured Cause",
+        "subtitle": "Women’s Equality",
+        "subtitle_color": "#b4192e",
+        "featuring_color": "#20aeae",
+        "text_1": "<p>Featured Cause Page Content: The modern women’s rights movement began in the 19th century when feminists focused on women’s legal rights, especially the right to vote. In the 1960s and 70s, women’s rights focused on bodily autonomy and the liberation of women’s lived experiences. Today, we’ve seen the increasing politicization of women’s bodies and a fierce debate over trans rights and who gets to call themselves women.<\/p><p>Here at Booksio, we stand with all women. We recognize that women’s rights are human rights. We want to do what we can to make sure that all women’s bodies, minds, and spirits are nurtured and valued. Through hyper local and national organizations, we want to do our part in improving quality of life and increasing opportunities for over half of American citizens. Therefore, during the month of March, we will give 10% of all profits to these fantastic organizations:<\/p>",
+        "text_2": "<p><strong>Flo Charlotte<\/strong> – Based in North Carolina, Flo Charlotte aims to provide hygiene supplies to adults and teens who may not have access to them otherwise. They focus their efforts primarily on families experiencing homelessness, but they also support domestic violence shelters, schools, and safe havens for LGBTQ+ teens and young adults. <\/p><p><strong>Girls Who Code<\/strong> – Begun under the White House Science & Technology Initiative in 2012, Girls Who Code runs programs during the academic year teaching high school girls computing skills like programming, robotics and web design. As of 2022, there were more than 8,500 Girls Who Code clubs across America and the world, with 500,000 girls and non-binary people coding worldwide.<\/p>",
+        "text_3": "<p><strong>Planned Parenthood<\/strong> – In 1916, the idea of Planned Parenthood began at the first birth control clinic, in Brownsville, Brooklyn. Today, Planned Parenthood operates more than 600 health centers across the United States and is the nation’s leading provider and advocate of high-quality, affordable health care for women, men, and young people. Planned Parenthood is also the nation’s largest provider of sex education.<\/p>",
+        "accents": "#7e4888",
+        "image_bottom": "shopify:\/\/shop_images\/MARCH-Charity-Theme-Page_BKGRD.png"
+      }
+    },
+    "6e07a32f-fe66-41f8-b697-8f45973f8be8": {
+      "type": "charity-causes",
+      "blocks": {
+        "7d9c9f02-ec72-4668-b24f-0c2fb5a80ff9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jan-tag.png",
+            "title": "January <br>Preserving Democracy",
+            "text": "<p>American Civil Liberties Union<\/p><p>Electronic Frontier Foundation<\/p><p>ProPublica<\/p>"
+          }
+        },
+        "6bac9ac4-4fd4-4540-a11a-9bb88675f1b2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/feb-tag.png",
+            "title": "February <br>Black Lives Matter",
+            "text": "<p>Equal Justice Initiative<\/p><p>Thurgood Marshall College Fund<\/p><p>National Civil Rights Museum<\/p>"
+          }
+        },
+        "b0ec5dc1-4efd-4f1d-a244-9ba3dbf58722": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/mar-tag.png",
+            "title": "March <br>Women’s Equality",
+            "text": "<p>Flo Charlotte<\/p><p>Girls Who Code<\/p><p>Planned Parenthood<\/p>"
+          }
+        },
+        "16afee89-c1f3-4d5f-b0f0-47f06491a997": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/apr-tag.png",
+            "title": "April <br>Earth Day, Every Day",
+            "text": "<p>Clean Air Task Force<\/p><p>Environmental Defense Fund<\/p><p>Nature Conservancy<\/p>"
+          }
+        },
+        "b08646e5-d2b2-44b4-9ce7-608e66647786": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/may-tag.png",
+            "title": "May <br>Finding the Cure (Cancer Research)",
+            "text": "<p>City of Hope<\/p><p>Dana-Farber Cancer Institute<\/p><p>Leukemia-Lymphoma Society<\/p>"
+          }
+        },
+        "712dba31-6980-43ef-b46d-0e0401399853": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jun-tag.png",
+            "title": "June <br>LGBTQIA+ Pride",
+            "text": "<p>National Center for Transgender Equality<\/p><p>Point Foundation<\/p><p>Trevor Project<\/p>"
+          }
+        },
+        "8bf40f4a-af42-4ca5-94da-611b1b6d6d05": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jul-tag.png",
+            "title": "July <br>Celebrate the Arts",
+            "text": "<p>Metropolitan Museum of Art<\/p><p>Metropolitan Opera Association<\/p><p>Young Musicians Unite<\/p>"
+          }
+        },
+        "596d1f93-bb59-4b47-acb4-a6b8ca6442f9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/aug-tag.png",
+            "title": "August <br>Supporting Our Veterans",
+            "text": "<p>Heart of the Horse Therapy<\/p><p>Hope for the Warriors<\/p><p>United Services Organization<\/p>"
+          }
+        },
+        "d14d1d2e-ad2d-439b-954a-ebd4bd88e5e9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sep-tag.png",
+            "title": "September <br>Back to School for All",
+            "text": "<p>Book Trust<\/p><p>Step Up for Students<\/p><p>Teach For America<\/p>"
+          }
+        },
+        "adaf0066-0940-4381-8151-6016fc97fb81": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/oct-tag.png",
+            "title": "October <br>Making A Global Impact",
+            "text": "<p>Charity: Water<\/p><p>Doctors Without Borders<\/p><p>Smile Train<\/p>"
+          }
+        },
+        "80f0e993-94aa-4d55-b1b6-0ae7861a741d": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nov-tag.png",
+            "title": "November <br>Everyone Deserves A Home (homelessness)",
+            "text": "<p>Covenant House<\/p><p>Habitat for Humanity Philadelphia<\/p><p>Struggles to Strengths<\/p>"
+          }
+        },
+        "b1446a5b-5418-452a-9120-9c7c4acbfaac": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/dec-tag.png",
+            "title": "December <br>The Gift of Fun",
+            "text": "<p>Babe Ruth League, Inc.<\/p><p>Child’s Play<\/p><p>Marines’ Toys for Tots<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7d9c9f02-ec72-4668-b24f-0c2fb5a80ff9",
+        "6bac9ac4-4fd4-4540-a11a-9bb88675f1b2",
+        "b0ec5dc1-4efd-4f1d-a244-9ba3dbf58722",
+        "16afee89-c1f3-4d5f-b0f0-47f06491a997",
+        "b08646e5-d2b2-44b4-9ce7-608e66647786",
+        "712dba31-6980-43ef-b46d-0e0401399853",
+        "8bf40f4a-af42-4ca5-94da-611b1b6d6d05",
+        "596d1f93-bb59-4b47-acb4-a6b8ca6442f9",
+        "d14d1d2e-ad2d-439b-954a-ebd4bd88e5e9",
+        "adaf0066-0940-4381-8151-6016fc97fb81",
+        "80f0e993-94aa-4d55-b1b6-0ae7861a741d",
+        "b1446a5b-5418-452a-9120-9c7c4acbfaac"
+      ],
+      "settings": {
+        "title": "Causes we’re focused on every month.",
+        "subtitle": "Each month we’ll highlight a specific charitable theme close to our hearts"
+      }
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "ffedcb60-8316-4f3a-8206-76d0a67a0958",
+    "626b057e-667b-43be-be18-49423b21a10c",
+    "514d4fbe-59fe-440e-a392-0006706e0701",
+    "6e07a32f-fe66-41f8-b697-8f45973f8be8",
+    "subscribe"
+  ]
+}

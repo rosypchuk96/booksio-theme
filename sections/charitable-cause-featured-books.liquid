@@ -1,0 +1,106 @@
+<div data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="E86SVUE" class="box-model-64a8f6960491a charity-featured-books">
+  <div class="row-full-width-inner" data-element="inner">
+    <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+      <div class="pagebuilder-column calendar-add box-model-64a8f69604924" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="PNCJ3UW">
+        <div data-content-type="block" data-appearance="default" data-element="main" data-pb-style="HDWRC78" class="box-model-64a8f6960492e">
+          <div class="widget block block-static-block">
+            <style>#html-body [data-pb-style=BKXT3SL]{border-width:0}#html-body [data-pb-style=A3G35D8],#html-body [data-pb-style=G1VM5DT],#html-body [data-pb-style=M94391H]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0}#html-body [data-pb-style=A3G35D8],#html-body [data-pb-style=M94391H]{width:100%;align-self:stretch}#html-body [data-pb-style=RX1NRJ1],#html-body [data-pb-style=VQD9CQA]{border-width:0}</style>
+            <div data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="G1VM5DT" class="box-model-64a8f695f0389 box-model-64a8f69604937">
+              <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+                <div class="pagebuilder-column wellness-heading box-model-64a8f695f03a1 box-model-64a8f69604941" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="A3G35D8">
+                  <div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="RX1NRJ1" class="box-model-64a8f695f03ae box-model-64a8f6960494a">
+                    <figure><img style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_white.png?v=1688806895" alt=""></figure>
+                    <h1 id="page-title-heading" class="page-title" style="text-align: center;" aria-labelledby="page-title-heading toolbar-amount"><span style="color: {{ section.settings.color  }};">{{ section.settings.title }}</span></h1>
+                    <p style="text-align: center;"><span style="font-size: 28px; color: {{ section.settings.subtitle_color  }};">{{ section.settings.subtitle }}</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+                <div class="pagebuilder-column calendar-add charity-products box-model-64a8f695f03b8 box-model-64a8f69604954" data-content-type="column" data-appearance="full-height" data-element="main" data-pb-style="M94391H">
+                  <div class="product-items widget-product-grid box-model-64a8f695f03c2 box-model-64a8f6960495d" data-content-type="products" data-appearance="grid" data-element="main" data-pb-style="VQD9CQA">
+                    <div class="block widget block-products-list grid">
+                      <div class="block-content">
+                        <!-- new_products_content_widget_grid--> 
+                        <div class="products-grid grid">
+                          <ol class="product-items widget-product-grid">
+                            {% assign collection_handle = section.settings.collection %}
+                            {% if collection_handle != blank and collections[collection_handle] %}
+                              <div class="products-grid grid">
+                                <ol class="product-items widget-product-grid">
+                                  {% for product in collections[collection_handle].products %}
+                                    {% include 'card-product-v2' with product %}
+                                  {% endfor %}
+                                </ol>
+                              </div>
+                            {% endif %}
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="BKXT3SL" data-decoded="true" class="box-model-64a8f695f03cb box-model-64a8f69604967">
+              <style>
+                .charity-products .product-image-wrapper {
+                display: initial;
+                }
+                .charity-products .product-items.widget-product-grid {
+                place-items: flex-end;
+                }
+                @media (min-width: 1025px) {
+                .charity-products .products-grid.grid .product-item .product-item-photo .product-image-container {
+                width: 80% !important;
+                }
+                }
+                .charity-featured-books {
+                  overflow: hidden;
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Charitable Featured Books",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Title Color"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "color",
+        "id": "subtitle_color",
+        "label": "Subtitle Color"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Charitable Featured Books"
+      }
+    ]
+  }
+{% endschema %}

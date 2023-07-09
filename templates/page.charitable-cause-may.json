@@ -1,0 +1,172 @@
+{
+  "wrapper": "main.cms-page-view",
+  "sections": {
+    "ffedcb60-8316-4f3a-8206-76d0a67a0958": {
+      "type": "charitable-cause-hero",
+      "settings": {
+        "title": "Booksio",
+        "subtitle": "WHERE EVERYDAY",
+        "subtitle_2": "PURCHASES MAKE A DIFFERENCE",
+        "text": "<p><br\/>Here at Booksio, each month we’ll highlight a specific charitable theme close to our hearts, and the highlighted organization(s) with the core mission to improve and address it. 10% of your sales will automatically go to making a difference towards our theme, so sit back, shop, and let us take care of the rest! If another cause or charity is dearer to your heart, just visit your account profile and pick a charity from our approved list.<\/p><p>Thank you for joining the Booksio community and making an impact on the world around you.<\/p>",
+        "url": "shopify:\/\/pages\/charities-directory",
+        "button_text": "SEE OUR CHOSEN CHARITIES",
+        "image": "shopify:\/\/shop_images\/calender-banner.jpg"
+      }
+    },
+    "590e65ba-9483-4fcc-8f0a-c8faf99be104": {
+      "type": "charitable-cause-featured-books",
+      "settings": {
+        "title": "Finding the Cure",
+        "color": "#684a87",
+        "subtitle": "Featured Books",
+        "subtitle_color": "#197366",
+        "collection": "charitable-cause-may"
+      }
+    },
+    "16501287-2b90-46e8-93b1-85cc32a61b51": {
+      "type": "charitable-featured-cause-fullwidth",
+      "settings": {
+        "image_heading": "shopify:\/\/shop_images\/MAY_Charity-Title.png",
+        "image_heading_mobile": "shopify:\/\/shop_images\/MAY_Charity-Title-MOBILE.png",
+        "text_1": "<p>When you consider cancer statistics, the numbers are shocking:<\/p><ul><li>Over 1.5 million people are diagnosed with cancer in the United States per year – that’s 5,000 people every single day.<\/li><li>Despite improved detection and treatment options, 600,000 people die from cancer every year in the United States<\/li><li>Cancer is the #1 cause of death for middle-aged Americans<\/li><\/ul><p>Cancer is a dreaded disease that affects millions of individuals and families around the world. At Booksio, cancer has impacted our families, friends, and colleagues, so this fight is personal. That’s why we’re donating 10% of all sales for the month of May to three worthwhile organizations. Each of the following charities combines research with patient care with the express hope of one day ridding the world of cancer. <\/p>",
+        "text_2": "<p><strong>City of Hope<br\/><\/strong>With locations in California, Arizona, Illinois, and Georgia, our 11,000-person team City of Hope has a mission to transform the future of cancer care. By unifying the branches of biomedical research, treatment and academia, City of Hope helps treatment advances travel from laboratory to patient with life-saving speed.<\/p><p><strong><br\/>Dana-Farber Institute<br\/><\/strong>Pioneering chemical therapies to treat children with leukemia since 1947, Dana-Farber’s groundbreaking path of research, discovery, and innovation have revolutionized cancer diagnosis and treatment, for the benefit of all our patients, adult and pediatric. Their equal emphasis on patient care and research means leading-edge research is informed by patient care and vice versa.<\/p>",
+        "text_3": "<p><strong>The Leukemia & Lymphoma Society<br\/><\/strong>For over 75 years, The Leukemia & Lymphoma Society has been dedicated to curing leukemia, lymphoma, myeloma, and other blood cancers. LLS is the world's largest voluntary (nonprofit) health organization dedicated to funding blood cancer research and providing education and patient services.<\/p>",
+        "image": "shopify:\/\/shop_images\/MAY_Charity-Background.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/MAY_Charity-Background-MOBILE.jpg"
+      }
+    },
+    "6e07a32f-fe66-41f8-b697-8f45973f8be8": {
+      "type": "charity-causes",
+      "blocks": {
+        "7d9c9f02-ec72-4668-b24f-0c2fb5a80ff9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jan-tag.png",
+            "title": "January <br>Preserving Democracy",
+            "text": "<p>American Civil Liberties Union<\/p><p>Electronic Frontier Foundation<\/p><p>ProPublica<\/p>"
+          }
+        },
+        "6bac9ac4-4fd4-4540-a11a-9bb88675f1b2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/feb-tag.png",
+            "title": "February <br>Black Lives Matter",
+            "text": "<p>Equal Justice Initiative<\/p><p>Thurgood Marshall College Fund<\/p><p>National Civil Rights Museum<\/p>"
+          }
+        },
+        "b0ec5dc1-4efd-4f1d-a244-9ba3dbf58722": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/mar-tag.png",
+            "title": "March <br>Women’s Equality",
+            "text": "<p>Flo Charlotte<\/p><p>Girls Who Code<\/p><p>Planned Parenthood<\/p>"
+          }
+        },
+        "16afee89-c1f3-4d5f-b0f0-47f06491a997": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/apr-tag.png",
+            "title": "April <br>Earth Day, Every Day",
+            "text": "<p>Clean Air Task Force<\/p><p>Environmental Defense Fund<\/p><p>Nature Conservancy<\/p>"
+          }
+        },
+        "b08646e5-d2b2-44b4-9ce7-608e66647786": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/may-tag.png",
+            "title": "May <br>Finding the Cure (Cancer Research)",
+            "text": "<p>City of Hope<\/p><p>Dana-Farber Cancer Institute<\/p><p>Leukemia-Lymphoma Society<\/p>"
+          }
+        },
+        "712dba31-6980-43ef-b46d-0e0401399853": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jun-tag.png",
+            "title": "June <br>LGBTQIA+ Pride",
+            "text": "<p>National Center for Transgender Equality<\/p><p>Point Foundation<\/p><p>Trevor Project<\/p>"
+          }
+        },
+        "8bf40f4a-af42-4ca5-94da-611b1b6d6d05": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jul-tag.png",
+            "title": "July <br>Celebrate the Arts",
+            "text": "<p>Metropolitan Museum of Art<\/p><p>Metropolitan Opera Association<\/p><p>Young Musicians Unite<\/p>"
+          }
+        },
+        "596d1f93-bb59-4b47-acb4-a6b8ca6442f9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/aug-tag.png",
+            "title": "August <br>Supporting Our Veterans",
+            "text": "<p>Heart of the Horse Therapy<\/p><p>Hope for the Warriors<\/p><p>United Services Organization<\/p>"
+          }
+        },
+        "d14d1d2e-ad2d-439b-954a-ebd4bd88e5e9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sep-tag.png",
+            "title": "September <br>Back to School for All",
+            "text": "<p>Book Trust<\/p><p>Step Up for Students<\/p><p>Teach For America<\/p>"
+          }
+        },
+        "adaf0066-0940-4381-8151-6016fc97fb81": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/oct-tag.png",
+            "title": "October <br>Making A Global Impact",
+            "text": "<p>Charity: Water<\/p><p>Doctors Without Borders<\/p><p>Smile Train<\/p>"
+          }
+        },
+        "80f0e993-94aa-4d55-b1b6-0ae7861a741d": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nov-tag.png",
+            "title": "November <br>Everyone Deserves A Home (homelessness)",
+            "text": "<p>Covenant House<\/p><p>Habitat for Humanity Philadelphia<\/p><p>Struggles to Strengths<\/p>"
+          }
+        },
+        "b1446a5b-5418-452a-9120-9c7c4acbfaac": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/dec-tag.png",
+            "title": "December <br>The Gift of Fun",
+            "text": "<p>Babe Ruth League, Inc.<\/p><p>Child’s Play<\/p><p>Marines’ Toys for Tots<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7d9c9f02-ec72-4668-b24f-0c2fb5a80ff9",
+        "6bac9ac4-4fd4-4540-a11a-9bb88675f1b2",
+        "b0ec5dc1-4efd-4f1d-a244-9ba3dbf58722",
+        "16afee89-c1f3-4d5f-b0f0-47f06491a997",
+        "b08646e5-d2b2-44b4-9ce7-608e66647786",
+        "712dba31-6980-43ef-b46d-0e0401399853",
+        "8bf40f4a-af42-4ca5-94da-611b1b6d6d05",
+        "596d1f93-bb59-4b47-acb4-a6b8ca6442f9",
+        "d14d1d2e-ad2d-439b-954a-ebd4bd88e5e9",
+        "adaf0066-0940-4381-8151-6016fc97fb81",
+        "80f0e993-94aa-4d55-b1b6-0ae7861a741d",
+        "b1446a5b-5418-452a-9120-9c7c4acbfaac"
+      ],
+      "settings": {
+        "title": "Causes we’re focused on every month.",
+        "subtitle": "Each month we’ll highlight a specific charitable theme close to our hearts"
+      }
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "ffedcb60-8316-4f3a-8206-76d0a67a0958",
+    "590e65ba-9483-4fcc-8f0a-c8faf99be104",
+    "16501287-2b90-46e8-93b1-85cc32a61b51",
+    "6e07a32f-fe66-41f8-b697-8f45973f8be8",
+    "subscribe"
+  ]
+}

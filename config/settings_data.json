@@ -265,7 +265,8 @@
           "bbcb5a78-c492-4522-96ad-c58df676b99c",
           "230c58ff-d4ad-4c37-876b-73e999a896a4"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "812b9706-4dcd-47ef-ad0f-c54f3e27736b": {
         "type": "home-whats-new",
@@ -455,111 +456,6 @@
           "button_text": "SIGN UP NOW",
           "color": "#67ebd2"
         }
-      },
-      "join-booksio-authors-hero": {
-        "type": "join-booksio-authors-hero",
-        "settings": {
-          "title": "Authors",
-          "subtitle": "<strong>FIND<\/strong> NEW AUDIENCES AS A FEATURED AUTHOR",
-          "text": "<p>We believe in the power of great storytelling — and we want you to share yours! We can work directly with you or your publisher to get your titles listed with Booksio, which opens up opportunities for you to be a featured author, get highlighted in our content and promotional efforts, and reach a wider audience.<\/p><p>We build a charitable donation of 10% into every single purchase, every time — without changing how much you make from your work. As a featured author, you’re able to encourage your fans and readers to snag your latest release AND support your favorite charity at the same time.<\/p>",
-          "color": "#6183d5",
-          "url": "https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-become-a-booksio-author",
-          "button_text": "JOIN BOOKSIO",
-          "bg": "shopify:\/\/shop_images\/memebership-author.jpg"
-        }
-      },
-      "join-booksio-authors-signup": {
-        "type": "join-booksio-authors-signup",
-        "settings": {
-          "title": "<p>Sign up to become a <a href=\"https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-become-a-booksio-author\">featured author<\/a> today.<\/p>",
-          "url": "https:\/\/booksio-8349744.hs-sites.com\/sign-up-to-become-a-booksio-author",
-          "button_text": "SIGN UP NOW",
-          "color": "#6183d5"
-        }
-      },
-      "join-booksio-authors-icons": {
-        "type": "join-booksio-authors-icons",
-        "blocks": {
-          "8f2e2cbc-8a9f-4a76-994c-650f42b084d5": {
-            "type": "item",
-            "settings": {
-              "icon": "shopify:\/\/shop_images\/becomes-partner-img1.png",
-              "title": "Target Engaged Readers",
-              "text": "<p>Showcase your titles with custom author pages to our engaged readers.<\/p>"
-            }
-          },
-          "76e86d78-ea58-4007-9c90-7a3135d448c8": {
-            "type": "item",
-            "settings": {
-              "icon": "shopify:\/\/shop_images\/becomes-partner-img2.png",
-              "title": "Bundle With Charities",
-              "text": "<p>Promote your work with donations to your favorite charities, without affecting your profits<\/p>"
-            }
-          },
-          "5dab229d-50c2-4a0a-bba2-f5176aaed161": {
-            "type": "item",
-            "settings": {
-              "icon": "shopify:\/\/shop_images\/becomes-partner-img3.png",
-              "title": "Feature Your Work",
-              "text": "<p>Get featured as our monthly author and topic highlights<\/p>"
-            }
-          },
-          "82e7709d-f59e-4074-8616-d7f62dc3a1b1": {
-            "type": "item",
-            "settings": {
-              "icon": "shopify:\/\/shop_images\/becomes-partner-img4.png",
-              "title": "Be Recommended",
-              "text": "<p>Access even more of our audience through title recommendations<\/p>"
-            }
-          }
-        },
-        "block_order": [
-          "8f2e2cbc-8a9f-4a76-994c-650f42b084d5",
-          "76e86d78-ea58-4007-9c90-7a3135d448c8",
-          "5dab229d-50c2-4a0a-bba2-f5176aaed161",
-          "82e7709d-f59e-4074-8616-d7f62dc3a1b1"
-        ],
-        "settings": {
-          "title": "Become a Featured Author",
-          "text": "<p>Connect with the Booksio audience, give back, and do good in the world. Join the Booksio family today.<\/p>"
-        }
-      },
-      "join-booksio-authors-faq": {
-        "type": "join-booksio-authors-faq",
-        "blocks": {
-          "98a71359-5101-481e-957a-20c1d192ec59": {
-            "type": "item",
-            "settings": {
-              "title": "How can I become a featured author?",
-              "text": "<p>If you want to connect with our Booksio audience, give back, and do good in the world. Submit your information to join the Booksio family. Fill out this form, and we’ll get back to you with next steps ASAP.<\/p>"
-            }
-          },
-          "a188f550-92cc-4dc2-be64-7b8fab7cc1ae": {
-            "type": "item",
-            "settings": {
-              "title": "Which charities does Booksio support?",
-              "text": "<p>As a featured author, you can specify the charity supported by your branded store. Otherwise, the donations from guest purchases all go to Booksio’s featured charity, which changes each month. Booksio account holders can select from more than 100 partner organizations to support with their purchases.<\/p>"
-            }
-          },
-          "1a7dc45f-a56d-4b0e-a892-f7ed7561d1e3": {
-            "type": "item",
-            "settings": {
-              "title": "Can I work with Booksio on promo content?",
-              "text": "<p>If you’d like to be considered for inclusion in the Booksio blog, on our podcast, or in some other capacity, submit your information to become a featured author and then please reach out to our marketing team.<\/p>"
-            }
-          }
-        },
-        "block_order": [
-          "98a71359-5101-481e-957a-20c1d192ec59",
-          "a188f550-92cc-4dc2-be64-7b8fab7cc1ae",
-          "1a7dc45f-a56d-4b0e-a892-f7ed7561d1e3"
-        ],
-        "settings": {
-          "title": "Frequently Asked Questions",
-          "text": "<p>Booksio connects authors, readers, and charities to share stories and support our communities.<\/p>",
-          "url": "",
-          "button_text": "SEE MORE FAQS"
-        }
       }
     },
     "content_for_index": [
@@ -576,6 +472,7 @@
     ]
   },
   "presets": {
-    "Default": {}
+    "Default": {
+    }
   }
 }

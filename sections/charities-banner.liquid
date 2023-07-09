@@ -1,0 +1,41 @@
+<div data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="QBO7DGH" class="box-model-64a8dd47199c6">
+  <figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="HT2X6D5" class="box-model-64a8dd47199db">
+    <a href="{{ section.settings.url }}" target="" data-link-type="default" title="Where Everyday Purchases Make a Difference. Each month we'll highlight a specific charitable theme close to our hearts and donate 10% of sales to thoses supporting organizations. See Our Chosen Charities." data-element="link">
+      {% if section.settings.image != blank %}
+        <img class="pagebuilder-mobile-hidden box-model-64a8dd47199e6" src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" data-element="desktop_image" data-pb-style="FE9591H" style="display: inline-block;">
+      {% endif %}
+      {% if section.settings.image_mobile != blank %}
+        <img class="pagebuilder-mobile-only box-model-64a8dd47199f1" src="{{ section.settings.image_mobile | img_url: 'master' }}" alt="{{ section.settings.image_mobile.alt }}" data-element="mobile_image" data-pb-style="STBPSRP" style="display: inline-block;">
+      {% endif %}
+    </a>
+  </figure>
+</div>
+
+{% schema %}
+  {
+    "name": "Charities Banner",
+    "settings": [
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Charities Banner"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,72 @@
+<div class="partners-gift calender box-model-64a8f696048e9" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src=""  data-element="main" data-pb-style="R8MN5MS">
+  <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+    <div class="pagebuilder-column partners-gift-left background-image-64a8f69602e9d" data-content-type="column" data-appearance="full-height" data-element="main" data-pb-style="GD0LV46"></div>
+    <div class="pagebuilder-column partners-gift-right box-model-64a8f69604901" data-content-type="column" data-appearance="full-height" data-element="main" data-pb-style="CGBR8S5">
+      <div data-content-type="text" data-appearance="default" data-box-model="{}" data-element="main" data-pb-style="RL6MYR0">
+        <h3>{{ section.settings.title }}</h3>
+        <h2><span style="color: #f38087;">{{ section.settings.subtitle }}</span></h2>
+        <h2>{{ section.settings.subtitle_2 }}</h2>
+        {{ section.settings.text }}
+      </div>
+      <div data-content-type="buttons" data-appearance="inline" data-same-width="false" data-box-model="{}" data-element="main" data-pb-style="XMUBU6W">
+        <div class="join-books-link" data-content-type="button-item" data-appearance="default" data-element="main" data-pb-style="DQEY2F3">
+          {% if section.settings.button_text != blank or section.settings.url != blank %}
+            <a class="pagebuilder-button-link box-model-64a8f6960490f" href="{{ section.settings.url }}" target="" data-link-type="default" data-element="link" data-pb-style="X6JEX6T"><span data-element="link_text">{{ section.settings.button_text }}</span></a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% if section.settings.image != blank %}
+      <style type="text/css">.background-image-64a8f69602e9d {background-image: url({{ section.settings.image | img_url: 'master' }});}</style>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Charitable Cause Hero",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "subtitle_2",
+        "label": "Subtitle 2"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Charitable Cause Hero"
+      }
+    ]
+  }
+{% endschema %}

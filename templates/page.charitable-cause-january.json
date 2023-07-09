@@ -1,0 +1,201 @@
+{
+  "wrapper": "main.cms-page-view",
+  "sections": {
+    "ffedcb60-8316-4f3a-8206-76d0a67a0958": {
+      "type": "charitable-cause-hero",
+      "settings": {
+        "title": "Booksio",
+        "subtitle": "WHERE EVERYDAY",
+        "subtitle_2": "PURCHASES MAKE A DIFFERENCE",
+        "text": "<p><br\/>Here at Booksio, each month we’ll highlight a specific charitable theme close to our hearts, and the highlighted organization(s) with the core mission to improve and address it. 10% of your sales will automatically go to making a difference towards our theme, so sit back, shop, and let us take care of the rest! If another cause or charity is dearer to your heart, just visit your account profile and pick a charity from our approved list.<\/p><p>Thank you for joining the Booksio community and making an impact on the world around you.<\/p>",
+        "url": "shopify:\/\/pages\/charities-directory",
+        "button_text": "SEE OUR CHOSEN CHARITIES",
+        "image": "shopify:\/\/shop_images\/calender-banner.jpg"
+      }
+    },
+    "329969e4-5613-42d0-9e9c-0ba242ccec3c": {
+      "type": "charitable-cause-featured-books",
+      "settings": {
+        "title": "Preserving Democracy and Individual Freedoms",
+        "color": "#2b2b2b",
+        "subtitle": "Featured Books",
+        "subtitle_color": "",
+        "collection": "charitable-cause-january"
+      }
+    },
+    "63e2bda3-1261-44f4-8266-4a0591e53c53": {
+      "type": "charitable-featured-cause",
+      "blocks": {
+        "4b35da4b-4280-4245-b651-236554a346da": {
+          "type": "item",
+          "settings": {
+            "text": "American Civil Liberties Union"
+          }
+        },
+        "5e6b5c4b-5d0f-4810-baa7-7b9549b6eefa": {
+          "type": "item",
+          "settings": {
+            "text": "Electronic Frontier Foundation"
+          }
+        },
+        "da886e7f-a52e-4b5b-9615-783e179c9eeb": {
+          "type": "item",
+          "settings": {
+            "text": "ProPublica"
+          }
+        }
+      },
+      "block_order": [
+        "4b35da4b-4280-4245-b651-236554a346da",
+        "5e6b5c4b-5d0f-4810-baa7-7b9549b6eefa",
+        "da886e7f-a52e-4b5b-9615-783e179c9eeb"
+      ],
+      "settings": {
+        "badge": "shopify:\/\/shop_images\/Featured-Charity-jan23-sm_9b412e80-51b4-4fa5-a216-7106761b8429.png",
+        "title": "January Featured Cause",
+        "subtitle": "Preserving Democracy and Individual Freedoms",
+        "subtitle_color": "#b4192e",
+        "featuring_color": "#5a86e0",
+        "text_1": "<p>If we’ve learned anything in the past few years, it’s that democracy is fragile. Fake news, foreign interference, and conspiracy theories have all led to an erosion of civil institutions and democratic norms which have defined how Americans and their government relate to and support each other. Meanwhile, we’ve also recognized that the individual liberties enshrined in the U.S. Constitution must always be vigorously defended from government overreach and popular opinion.<\/p><p>With the tumultuous midterm elections behind us, here at Booksio we would like to kick off 2023 by reaffirming our belief in a strong and vibrant democracy governed by a free and engaged citizenry. We know there are many ways to engage in the democratic process – organizing protests, writing to representatives, or signing petitions. We also know Booksio’s best tool for affecting change is our charitable giving.During the month of January, Booksio has chosen Preserving Democracy and Individual Freedoms as our charitable theme.We are donating 10% of our profits to organizations whose missions are focused on preserving our democracy and individual freedoms against forces bent on weakening them.<\/p>",
+        "text_2": "<p>During January, Booksio is proud to donate 10% of all book and magazine sales to the following three charities:<\/p><p><strong>American Civil Liberties Union<\/strong>– Since its foundation in 1920, the ACLU has evolved in the years since from this small group of idealists into the nation’s premier defender of the rights enshrined in the U.S. Constitution. Focused on mounting legal defenses for individuals against government overreach, the ACLU fights government abuse and vigorously defends individual freedoms including speech and religion, a woman’s right to choose, the right to due process, citizens’ rights to privacy and much more.<\/p><p><strong>Electronic Frontier Foundation<\/strong>– Founded in 1990, EFF champions user privacy, free expression, and innovation through impact litigation, policy analysis, grassroots activism, and technology development. EFF uses the unique expertise of leading technologists, activists, and attorneys in our efforts to defend free speech online, fight illegal surveillance, advocate for users and innovators, and support freedom-enhancing technologies.<\/p>",
+        "text_3": "<p><strong>ProPublica<\/strong>– An independent, nonprofit newsroom founded in 2008, ProPublica adheres to its mission to expose abuses of power and betrayals of the public trust by government, business, and other institutions, using the moral force of investigative journalism to spur reform through the sustained spotlighting of wrongdoing. The vast bulk of the money donated to ProPublica is spent directly to support their staff of 100 dedicated journalists who engage in world-class, deep-dive, award-winning journalism.<\/p><p>Regardless of your politics, we hope you agree that democracy, individual liberty, and the rule of law are bedrock principles of the United States. These three great nonprofit organizations tirelessly work for the greater good of all citizens to engage with each other in a civil society that protects and values their contributions, efforts, and voices.<\/p><p>Want to learn more about how you can help preserve democracy and individual freedom? Check out the above important reads on Booksio.<\/p>",
+        "accents": "#5a86e0",
+        "image_bottom": "shopify:\/\/shop_images\/charity-bottom-jan23.png",
+        "image": "shopify:\/\/shop_images\/charity-background-jan23.jpg"
+      }
+    },
+    "6e07a32f-fe66-41f8-b697-8f45973f8be8": {
+      "type": "charity-causes",
+      "blocks": {
+        "7d9c9f02-ec72-4668-b24f-0c2fb5a80ff9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jan-tag.png",
+            "title": "January <br>Preserving Democracy",
+            "text": "<p>American Civil Liberties Union<\/p><p>Electronic Frontier Foundation<\/p><p>ProPublica<\/p>"
+          }
+        },
+        "6bac9ac4-4fd4-4540-a11a-9bb88675f1b2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/feb-tag.png",
+            "title": "February <br>Black Lives Matter",
+            "text": "<p>Equal Justice Initiative<\/p><p>Thurgood Marshall College Fund<\/p><p>National Civil Rights Museum<\/p>"
+          }
+        },
+        "b0ec5dc1-4efd-4f1d-a244-9ba3dbf58722": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/mar-tag.png",
+            "title": "March <br>Women’s Equality",
+            "text": "<p>Flo Charlotte<\/p><p>Girls Who Code<\/p><p>Planned Parenthood<\/p>"
+          }
+        },
+        "16afee89-c1f3-4d5f-b0f0-47f06491a997": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/apr-tag.png",
+            "title": "April <br>Earth Day, Every Day",
+            "text": "<p>Clean Air Task Force<\/p><p>Environmental Defense Fund<\/p><p>Nature Conservancy<\/p>"
+          }
+        },
+        "b08646e5-d2b2-44b4-9ce7-608e66647786": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/may-tag.png",
+            "title": "May <br>Finding the Cure (Cancer Research)",
+            "text": "<p>City of Hope<\/p><p>Dana-Farber Cancer Institute<\/p><p>Leukemia-Lymphoma Society<\/p>"
+          }
+        },
+        "712dba31-6980-43ef-b46d-0e0401399853": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jun-tag.png",
+            "title": "June <br>LGBTQIA+ Pride",
+            "text": "<p>National Center for Transgender Equality<\/p><p>Point Foundation<\/p><p>Trevor Project<\/p>"
+          }
+        },
+        "8bf40f4a-af42-4ca5-94da-611b1b6d6d05": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jul-tag.png",
+            "title": "July <br>Celebrate the Arts",
+            "text": "<p>Metropolitan Museum of Art<\/p><p>Metropolitan Opera Association<\/p><p>Young Musicians Unite<\/p>"
+          }
+        },
+        "596d1f93-bb59-4b47-acb4-a6b8ca6442f9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/aug-tag.png",
+            "title": "August <br>Supporting Our Veterans",
+            "text": "<p>Heart of the Horse Therapy<\/p><p>Hope for the Warriors<\/p><p>United Services Organization<\/p>"
+          }
+        },
+        "d14d1d2e-ad2d-439b-954a-ebd4bd88e5e9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sep-tag.png",
+            "title": "September <br>Back to School for All",
+            "text": "<p>Book Trust<\/p><p>Step Up for Students<\/p><p>Teach For America<\/p>"
+          }
+        },
+        "adaf0066-0940-4381-8151-6016fc97fb81": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/oct-tag.png",
+            "title": "October <br>Making A Global Impact",
+            "text": "<p>Charity: Water<\/p><p>Doctors Without Borders<\/p><p>Smile Train<\/p>"
+          }
+        },
+        "80f0e993-94aa-4d55-b1b6-0ae7861a741d": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nov-tag.png",
+            "title": "November <br>Everyone Deserves A Home (homelessness)",
+            "text": "<p>Covenant House<\/p><p>Habitat for Humanity Philadelphia<\/p><p>Struggles to Strengths<\/p>"
+          }
+        },
+        "b1446a5b-5418-452a-9120-9c7c4acbfaac": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/dec-tag.png",
+            "title": "December <br>The Gift of Fun",
+            "text": "<p>Babe Ruth League, Inc.<\/p><p>Child’s Play<\/p><p>Marines’ Toys for Tots<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7d9c9f02-ec72-4668-b24f-0c2fb5a80ff9",
+        "6bac9ac4-4fd4-4540-a11a-9bb88675f1b2",
+        "b0ec5dc1-4efd-4f1d-a244-9ba3dbf58722",
+        "16afee89-c1f3-4d5f-b0f0-47f06491a997",
+        "b08646e5-d2b2-44b4-9ce7-608e66647786",
+        "712dba31-6980-43ef-b46d-0e0401399853",
+        "8bf40f4a-af42-4ca5-94da-611b1b6d6d05",
+        "596d1f93-bb59-4b47-acb4-a6b8ca6442f9",
+        "d14d1d2e-ad2d-439b-954a-ebd4bd88e5e9",
+        "adaf0066-0940-4381-8151-6016fc97fb81",
+        "80f0e993-94aa-4d55-b1b6-0ae7861a741d",
+        "b1446a5b-5418-452a-9120-9c7c4acbfaac"
+      ],
+      "settings": {
+        "title": "Causes we’re focused on every month.",
+        "subtitle": "Each month we’ll highlight a specific charitable theme close to our hearts"
+      }
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "ffedcb60-8316-4f3a-8206-76d0a67a0958",
+    "329969e4-5613-42d0-9e9c-0ba242ccec3c",
+    "63e2bda3-1261-44f4-8266-4a0591e53c53",
+    "6e07a32f-fe66-41f8-b697-8f45973f8be8",
+    "subscribe"
+  ]
+}

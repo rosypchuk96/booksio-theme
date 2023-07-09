@@ -2818,12 +2818,70 @@ list-style: none;
 }
 
 .box-model-64a73e701b215 {
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
   padding-top: 80px;
-  padding-right: 0px;
   padding-bottom: 90px;
-  padding-left: 0px;
+}
+
+.box-model-64a8dd4719a05 {
+  margin-top: 30px;
+}
+
+.lgbt-text ul {
+   padding-left: 15px;
+   margin-bottom: 0;
+}
+.lgbt-text h2 {
+  font-family: 'lora';
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+.lgbt-content > .row-full-width-inner > .pagebuilder-column-group {
+  border-bottom: 2px solid;
+}
+.lgbt-text p:nth-child(1) {
+  margin-bottom: 25px;
+}
+
+.box-model-64a8dd4719a5b {
+  margin-top: 30px;
+}
+
+#html-body [data-pb-style=CGBR8S5], #html-body [data-pb-style=GD0LV46], #html-body [data-pb-style=GSJMSMU] {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  background-attachment: scroll;
+  border-width: 0;
+  width: 50%;
+  align-self: stretch;
+}
+
+#html-body [data-pb-style=E86SVUE], #html-body [data-pb-style=LP640I0], #html-body [data-pb-style=LTGBQFY], #html-body [data-pb-style=R8MN5MS] {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  border-width: 0;
+}
+
+@media (min-width: 1025px) {
+  #maincontent .charity-products .products-grid.grid .product-item .product-item-info .product-item-photo .product-image-container {
+     width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .lgbt-content > .row-full-width-inner > .pagebuilder-column-group {
+     flex-direction: column;
+  }
+
+  .lgbt-content > .row-full-width-inner > .pagebuilder-column-group .pagebuilder-column {
+     width: 100% !important;
+     margin-left: 0 !important;
+  }
 }

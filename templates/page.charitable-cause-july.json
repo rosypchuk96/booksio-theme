@@ -1,0 +1,155 @@
+{
+  "wrapper": "div.lgbt-text.cms-page-view#main-content",
+  "sections": {
+    "9f1dd1d2-79df-47c4-970f-31ae73af2ed7": {
+      "type": "charities-banner",
+      "settings": {
+        "link": "shopify:\/\/pages\/charities-directory",
+        "image": "shopify:\/\/shop_images\/BKSIO_CharityPage_Header.png",
+        "image_mobile": "shopify:\/\/shop_images\/BKSIO_CharityPage_Header.-Mobile.png"
+      }
+    },
+    "fbd3bd84-97d4-4869-a688-46c3d943a6db": {
+      "type": "charitable-cause-main",
+      "settings": {
+        "title": "Celebrate the Arts",
+        "subtitle": "JULY FEATURED CAUSE",
+        "collection": "charitable-cause-july",
+        "image": "shopify:\/\/shop_images\/BKSIO_CharityFeature-JULY-Image.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/BKSIO_CharityFeature-JULY-Image.jpg"
+      }
+    },
+    "6e07a32f-fe66-41f8-b697-8f45973f8be8": {
+      "type": "charity-causes",
+      "blocks": {
+        "7d9c9f02-ec72-4668-b24f-0c2fb5a80ff9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jan-tag.png",
+            "title": "January <br>Preserving Democracy",
+            "text": "<p>American Civil Liberties Union<\/p><p>Electronic Frontier Foundation<\/p><p>ProPublica<\/p>"
+          }
+        },
+        "6bac9ac4-4fd4-4540-a11a-9bb88675f1b2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/feb-tag.png",
+            "title": "February <br>Black Lives Matter",
+            "text": "<p>Equal Justice Initiative<\/p><p>Thurgood Marshall College Fund<\/p><p>National Civil Rights Museum<\/p>"
+          }
+        },
+        "b0ec5dc1-4efd-4f1d-a244-9ba3dbf58722": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/mar-tag.png",
+            "title": "March <br>Women’s Equality",
+            "text": "<p>Flo Charlotte<\/p><p>Girls Who Code<\/p><p>Planned Parenthood<\/p>"
+          }
+        },
+        "16afee89-c1f3-4d5f-b0f0-47f06491a997": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/apr-tag.png",
+            "title": "April <br>Earth Day, Every Day",
+            "text": "<p>Clean Air Task Force<\/p><p>Environmental Defense Fund<\/p><p>Nature Conservancy<\/p>"
+          }
+        },
+        "b08646e5-d2b2-44b4-9ce7-608e66647786": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/may-tag.png",
+            "title": "May <br>Finding the Cure (Cancer Research)",
+            "text": "<p>City of Hope<\/p><p>Dana-Farber Cancer Institute<\/p><p>Leukemia-Lymphoma Society<\/p>"
+          }
+        },
+        "712dba31-6980-43ef-b46d-0e0401399853": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jun-tag.png",
+            "title": "June <br>LGBTQIA+ Pride",
+            "text": "<p>National Center for Transgender Equality<\/p><p>Point Foundation<\/p><p>Trevor Project<\/p>"
+          }
+        },
+        "8bf40f4a-af42-4ca5-94da-611b1b6d6d05": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jul-tag.png",
+            "title": "July <br>Celebrate the Arts",
+            "text": "<p>Metropolitan Museum of Art<\/p><p>Metropolitan Opera Association<\/p><p>Young Musicians Unite<\/p>"
+          }
+        },
+        "596d1f93-bb59-4b47-acb4-a6b8ca6442f9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/aug-tag.png",
+            "title": "August <br>Supporting Our Veterans",
+            "text": "<p>Heart of the Horse Therapy<\/p><p>Hope for the Warriors<\/p><p>United Services Organization<\/p>"
+          }
+        },
+        "d14d1d2e-ad2d-439b-954a-ebd4bd88e5e9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sep-tag.png",
+            "title": "September <br>Back to School for All",
+            "text": "<p>Book Trust<\/p><p>Step Up for Students<\/p><p>Teach For America<\/p>"
+          }
+        },
+        "adaf0066-0940-4381-8151-6016fc97fb81": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/oct-tag.png",
+            "title": "October <br>Making A Global Impact",
+            "text": "<p>Charity: Water<\/p><p>Doctors Without Borders<\/p><p>Smile Train<\/p>"
+          }
+        },
+        "80f0e993-94aa-4d55-b1b6-0ae7861a741d": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nov-tag.png",
+            "title": "November <br>Everyone Deserves A Home (homelessness)",
+            "text": "<p>Covenant House<\/p><p>Habitat for Humanity Philadelphia<\/p><p>Struggles to Strengths<\/p>"
+          }
+        },
+        "b1446a5b-5418-452a-9120-9c7c4acbfaac": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/dec-tag.png",
+            "title": "December <br>The Gift of Fun",
+            "text": "<p>Babe Ruth League, Inc.<\/p><p>Child’s Play<\/p><p>Marines’ Toys for Tots<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7d9c9f02-ec72-4668-b24f-0c2fb5a80ff9",
+        "6bac9ac4-4fd4-4540-a11a-9bb88675f1b2",
+        "b0ec5dc1-4efd-4f1d-a244-9ba3dbf58722",
+        "16afee89-c1f3-4d5f-b0f0-47f06491a997",
+        "b08646e5-d2b2-44b4-9ce7-608e66647786",
+        "712dba31-6980-43ef-b46d-0e0401399853",
+        "8bf40f4a-af42-4ca5-94da-611b1b6d6d05",
+        "596d1f93-bb59-4b47-acb4-a6b8ca6442f9",
+        "d14d1d2e-ad2d-439b-954a-ebd4bd88e5e9",
+        "adaf0066-0940-4381-8151-6016fc97fb81",
+        "80f0e993-94aa-4d55-b1b6-0ae7861a741d",
+        "b1446a5b-5418-452a-9120-9c7c4acbfaac"
+      ],
+      "settings": {
+        "title": "Causes we’re focused on every month.",
+        "subtitle": "Each month we’ll highlight a specific charitable theme close to our hearts"
+      }
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "9f1dd1d2-79df-47c4-970f-31ae73af2ed7",
+    "fbd3bd84-97d4-4869-a688-46c3d943a6db",
+    "6e07a32f-fe66-41f8-b697-8f45973f8be8",
+    "subscribe"
+  ]
+}

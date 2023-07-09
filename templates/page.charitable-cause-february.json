@@ -1,0 +1,200 @@
+{
+  "wrapper": "main.cms-page-view",
+  "sections": {
+    "ffedcb60-8316-4f3a-8206-76d0a67a0958": {
+      "type": "charitable-cause-hero",
+      "settings": {
+        "title": "Booksio",
+        "subtitle": "WHERE EVERYDAY",
+        "subtitle_2": "PURCHASES MAKE A DIFFERENCE",
+        "text": "<p><br\/>Here at Booksio, each month we’ll highlight a specific charitable theme close to our hearts, and the highlighted organization(s) with the core mission to improve and address it. 10% of your sales will automatically go to making a difference towards our theme, so sit back, shop, and let us take care of the rest! If another cause or charity is dearer to your heart, just visit your account profile and pick a charity from our approved list.<\/p><p>Thank you for joining the Booksio community and making an impact on the world around you.<\/p>",
+        "url": "shopify:\/\/pages\/charities-directory",
+        "button_text": "SEE OUR CHOSEN CHARITIES",
+        "image": "shopify:\/\/shop_images\/calender-banner.jpg"
+      }
+    },
+    "d310dd71-b4a3-4510-92a1-e77b8e9c4fbf": {
+      "type": "charitable-cause-featured-books",
+      "settings": {
+        "title": "Black Lives Matter",
+        "color": "#2b2b2b",
+        "subtitle": "Featured Books",
+        "subtitle_color": "",
+        "collection": "charitable-cause-february"
+      }
+    },
+    "1e5ff0e9-18c3-4fc9-b3c3-ce7f4b9e5953": {
+      "type": "charitable-featured-cause",
+      "blocks": {
+        "396f2e14-4467-4159-bfc2-4a1ac34df875": {
+          "type": "item",
+          "settings": {
+            "text": "Equal Justice Initiative"
+          }
+        },
+        "d52ba92a-b2c3-4c3b-9d20-f76943502015": {
+          "type": "item",
+          "settings": {
+            "text": "Thurgood Marshall College Fund"
+          }
+        },
+        "a75b5e1f-dc02-4135-99ac-3b71328d5524": {
+          "type": "item",
+          "settings": {
+            "text": "National Civil Rights Museum"
+          }
+        }
+      },
+      "block_order": [
+        "396f2e14-4467-4159-bfc2-4a1ac34df875",
+        "d52ba92a-b2c3-4c3b-9d20-f76943502015",
+        "a75b5e1f-dc02-4135-99ac-3b71328d5524"
+      ],
+      "settings": {
+        "badge": "shopify:\/\/shop_images\/Featured-Charity-feb23-sm.png",
+        "title": "February Featured Cause",
+        "subtitle": "Black Lives Matter",
+        "subtitle_color": "#b4192e",
+        "featuring_color": "#5a86e0",
+        "text_1": "<p>Begun in 2013 after the shooting death of Black American teen Trayvon Martin, Black Lives Matter grew into a global social movement in the summer of 2020 seeking to highlight the racism, discrimination, and racial inequality experienced by Black people. At its core is a simple belief: All Lives Can’t Matter Until Black Lives Matter.<\/p><p>Here at Booksio, we believe Black Lives Matter is a social, political, and legal reality grounded in the lived experience of millions of our fellow American citizens. We want to do what we can to make a difference. In honor of Black Americans’ struggles for basic human rights and in the hopes of creating a more equitable and just American society, we will give 10% of all profits to the following transformative organizations:<\/p>",
+        "text_2": "<p><strong>Equal Justice Initiative<\/strong>– Founded in 1989 by Bryan Stevenson, a widely acclaimed public interest lawyer and bestselling author of <a href=\"https:\/\/www.booksio.com\/catalog\/product\/view\/id\/3817274\/basid\/3572950\/category\/13921\">Just Mercy<\/a>, Equal Justice Initiative provides legal representation to people who have been illegally convicted, unfairly sentenced, or abused in state jails and prisons. EJI challenges the death penalty and excessive punishment and provides re-entry assistance to formerly incarcerated people.<\/p><p><strong>Thurgood Marshall College Fund<\/strong>– Established in 1987, the Thurgood Marshall College Fund is the nation’s largest organization exclusively representing Historically Black Colleges and Universities (HBCUs). Through scholarships, research initiatives, innovative programs, and strategic partnerships, TMCF is a vital resource in the K-12 and higher education space. TMCF also helps top employers seeking talent for competitive internships and good jobs.<\/p>",
+        "text_3": "<p><strong>National Civil Rights Museum<\/strong>– Established in 1991, the National Civil Rights Museum is located at the former Lorraine Motel, where civil rights leader Dr. Martin Luther King Jr. was assassinated on April 4, 1968. Through interactive exhibits, historic collections, dynamic speakers and special events, the museum offers visitors a chance to walk through history and learn more about a tumultuous and inspiring period of change.<\/p><p>Basic human rights are always worth fighting for, and now more than ever, it’s important to stay informed. Learn more about Black Americans’ lives, their challenges and triumphs, and ways you can affect change in your own communities.<\/p>",
+        "accents": "#5a86e0",
+        "image_bottom": "shopify:\/\/shop_images\/charity-section-bottom-feb23.png"
+      }
+    },
+    "6e07a32f-fe66-41f8-b697-8f45973f8be8": {
+      "type": "charity-causes",
+      "blocks": {
+        "7d9c9f02-ec72-4668-b24f-0c2fb5a80ff9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jan-tag.png",
+            "title": "January <br>Preserving Democracy",
+            "text": "<p>American Civil Liberties Union<\/p><p>Electronic Frontier Foundation<\/p><p>ProPublica<\/p>"
+          }
+        },
+        "6bac9ac4-4fd4-4540-a11a-9bb88675f1b2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/feb-tag.png",
+            "title": "February <br>Black Lives Matter",
+            "text": "<p>Equal Justice Initiative<\/p><p>Thurgood Marshall College Fund<\/p><p>National Civil Rights Museum<\/p>"
+          }
+        },
+        "b0ec5dc1-4efd-4f1d-a244-9ba3dbf58722": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/mar-tag.png",
+            "title": "March <br>Women’s Equality",
+            "text": "<p>Flo Charlotte<\/p><p>Girls Who Code<\/p><p>Planned Parenthood<\/p>"
+          }
+        },
+        "16afee89-c1f3-4d5f-b0f0-47f06491a997": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/apr-tag.png",
+            "title": "April <br>Earth Day, Every Day",
+            "text": "<p>Clean Air Task Force<\/p><p>Environmental Defense Fund<\/p><p>Nature Conservancy<\/p>"
+          }
+        },
+        "b08646e5-d2b2-44b4-9ce7-608e66647786": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/may-tag.png",
+            "title": "May <br>Finding the Cure (Cancer Research)",
+            "text": "<p>City of Hope<\/p><p>Dana-Farber Cancer Institute<\/p><p>Leukemia-Lymphoma Society<\/p>"
+          }
+        },
+        "712dba31-6980-43ef-b46d-0e0401399853": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jun-tag.png",
+            "title": "June <br>LGBTQIA+ Pride",
+            "text": "<p>National Center for Transgender Equality<\/p><p>Point Foundation<\/p><p>Trevor Project<\/p>"
+          }
+        },
+        "8bf40f4a-af42-4ca5-94da-611b1b6d6d05": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/jul-tag.png",
+            "title": "July <br>Celebrate the Arts",
+            "text": "<p>Metropolitan Museum of Art<\/p><p>Metropolitan Opera Association<\/p><p>Young Musicians Unite<\/p>"
+          }
+        },
+        "596d1f93-bb59-4b47-acb4-a6b8ca6442f9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/aug-tag.png",
+            "title": "August <br>Supporting Our Veterans",
+            "text": "<p>Heart of the Horse Therapy<\/p><p>Hope for the Warriors<\/p><p>United Services Organization<\/p>"
+          }
+        },
+        "d14d1d2e-ad2d-439b-954a-ebd4bd88e5e9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sep-tag.png",
+            "title": "September <br>Back to School for All",
+            "text": "<p>Book Trust<\/p><p>Step Up for Students<\/p><p>Teach For America<\/p>"
+          }
+        },
+        "adaf0066-0940-4381-8151-6016fc97fb81": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/oct-tag.png",
+            "title": "October <br>Making A Global Impact",
+            "text": "<p>Charity: Water<\/p><p>Doctors Without Borders<\/p><p>Smile Train<\/p>"
+          }
+        },
+        "80f0e993-94aa-4d55-b1b6-0ae7861a741d": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nov-tag.png",
+            "title": "November <br>Everyone Deserves A Home (homelessness)",
+            "text": "<p>Covenant House<\/p><p>Habitat for Humanity Philadelphia<\/p><p>Struggles to Strengths<\/p>"
+          }
+        },
+        "b1446a5b-5418-452a-9120-9c7c4acbfaac": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/dec-tag.png",
+            "title": "December <br>The Gift of Fun",
+            "text": "<p>Babe Ruth League, Inc.<\/p><p>Child’s Play<\/p><p>Marines’ Toys for Tots<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7d9c9f02-ec72-4668-b24f-0c2fb5a80ff9",
+        "6bac9ac4-4fd4-4540-a11a-9bb88675f1b2",
+        "b0ec5dc1-4efd-4f1d-a244-9ba3dbf58722",
+        "16afee89-c1f3-4d5f-b0f0-47f06491a997",
+        "b08646e5-d2b2-44b4-9ce7-608e66647786",
+        "712dba31-6980-43ef-b46d-0e0401399853",
+        "8bf40f4a-af42-4ca5-94da-611b1b6d6d05",
+        "596d1f93-bb59-4b47-acb4-a6b8ca6442f9",
+        "d14d1d2e-ad2d-439b-954a-ebd4bd88e5e9",
+        "adaf0066-0940-4381-8151-6016fc97fb81",
+        "80f0e993-94aa-4d55-b1b6-0ae7861a741d",
+        "b1446a5b-5418-452a-9120-9c7c4acbfaac"
+      ],
+      "settings": {
+        "title": "Causes we’re focused on every month.",
+        "subtitle": "Each month we’ll highlight a specific charitable theme close to our hearts"
+      }
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "ffedcb60-8316-4f3a-8206-76d0a67a0958",
+    "d310dd71-b4a3-4510-92a1-e77b8e9c4fbf",
+    "1e5ff0e9-18c3-4fc9-b3c3-ce7f4b9e5953",
+    "6e07a32f-fe66-41f8-b697-8f45973f8be8",
+    "subscribe"
+  ]
+}
