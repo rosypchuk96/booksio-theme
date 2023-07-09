@@ -1,0 +1,152 @@
+<div class="make-a-difference box-model-64aa9bd53f2e4" data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-element="main" data-pb-style="ONS3WP5">
+  <div class="row-full-width-inner" data-element="inner">
+    <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="JIJG2S3" data-decoded="true" class="box-model-64aa9bd53f306">
+      <style>
+        .pagebuilder-button-primary {
+        padding: 14px 35px !important;
+        font-size: 18px !important;
+        letter-spacing: 0.6px !important;
+        font-family: "Lato" !important;
+        font-weight: bold !important;
+        line-height: 32px !important;
+        font-style: normal !important;
+        color: #ffffff !important;
+        margin: 0 !important;
+        }
+        .make-a-difference * {
+        font-family: 'lato';
+        }
+        .make-a-difference h2, .make-a-difference h2 span {
+        margin: 0;
+        font-family: "lora";
+        font-size: 51px !important;
+        font-weight: bold;
+        line-height: 60px !important;
+        font-style: normal;
+        text-align: left;
+        color: #212322;
+        }
+        .make-a-difference figure, .make-a-difference img {
+        height: 100%;
+        }
+        .highlight-text-img img {
+        height: auto !important;
+        }
+        .make-a-difference p {
+        margin-top: 28px;
+        }
+        .make-a-difference div[data-content-type=text] > p {
+        margin-top: 0;
+        margin-bottom: 0;
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+        .make-a-difference .pagebuilder-column-group {
+        position: relative;
+        }
+        .make-a-difference  .pagebuilder-column-group .pagebuilder-column:first-child {
+        margin-right: 45px;
+        align-self: baseline !important;
+        }
+        .highlight-text-img img {
+        height: 50% !important;
+        }
+        }
+        @media (max-width: 767px) {
+        .pagebuilder-button-primary {
+        font-size: 16px !important;
+        line-height: 32px !important;
+        }
+        .make-a-difference .pagebuilder-column-group {
+        position: relative;
+        flex-direction: column-reverse;
+        }
+        .make-a-difference.normal-order .pagebuilder-column-group {
+        flex-direction: column;
+        }
+        .make-a-difference .pagebuilder-column {
+        width: 100% !important;
+        }
+        .make-a-difference [data-content-type=buttons] {
+        display: flex;
+        justify-content: flex-start;   
+        }
+        .make-a-difference p, .make-a-difference p span, .make-a-difference span {
+        font-size: 16px !important;
+        line-height: 25px !important;
+        }
+        .make-a-difference h2, .make-a-difference h2 span {
+        font-size: 35px !important;
+        line-height: 41px !important;
+        }
+        .make-a-difference-img {
+        width: 100% !important;
+        }
+        }
+        @media (max-width: 320px) {
+        .make-a-difference h2, .make-a-difference h2 span {
+        font-size: 24px !important;
+        line-height: 32px !important;
+        }
+        }
+      </style>
+    </div>
+    <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+      <div class="pagebuilder-column make-a-difference-img box-model-64aa9bd53f30e" data-content-type="column" data-appearance="full-height" data-element="main" data-pb-style="BY9LN25">
+        <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="ATVEONF">
+          {% if section.settings.bg != blank %}
+            <img class="pagebuilder-mobile-hidden" src="{{ section.settings.bg | img_url: 'master' }}" alt="{{ section.settings.bg.alt }}" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="N5OG4T4" style="display: inline-block;">
+          {% endif %}
+          {% if section.settings.bg_mobile != blank %}
+            <img class="pagebuilder-mobile-only" src="{{ section.settings.bg_mobile | img_url: 'master' }}" alt="{{ section.settings.bg_mobile.alt }}" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="GIIPRU7">
+          {% endif %}
+        </figure>
+      </div>
+      <div class="pagebuilder-column box-model-64aa9bd53f330" data-content-type="column" data-element="main" data-pb-style="RJGC4SN">
+        <div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="CNTIQ26" class="box-model-64aa9bd53f350">
+          <h2><span style="font-size: 52px; line-height: 48px;">{{ section.settings.title }}</span></h2>
+          <div class="sp">
+            <div class="inspectLayerContent block inspectRow" style="font-size: 18px; line-height: 28px;">
+              {{ section.settings.text }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <style type="text/css">@media only screen and (max-width: 768px) {.box-model-64aa9bd53f30e {margin-top: 25px;margin-bottom: 20px;}}</style>
+      <style type="text/css">.box-model-64aa9bd53f330 {margin-bottom: 0px;}@media only screen and (max-width: 768px) {.box-model-64aa9bd53f330 {margin-right: 0px;margin-bottom: 20px;}}</style>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Reader App About",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Reader App About"
+      }
+    ]
+  }
+{% endschema %}

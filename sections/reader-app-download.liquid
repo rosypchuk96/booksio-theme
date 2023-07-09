@@ -1,0 +1,87 @@
+<div class="make-a-difference normal-order box-model-64aa9bd53f35a" data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-element="main" data-pb-style="PAHHJXH">
+  <div class="row-full-width-inner" data-element="inner">
+    <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+      <div class="pagebuilder-column box-model-64aa9bd53f37c" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="E6YFH13">
+        <div data-content-type="text" data-element="main" data-pb-style="Y82A55V" class="box-model-64aa9bd53f39b">
+          <h2><span style="font-size: 52px;">{{ section.settings.title }}</span></h2>
+          <div class="sp">
+            <div class="inspectLayerContent block inspectRow">
+              <div class="content">
+                <div class="sp">
+                  <div class="inspectLayerContent block inspectRow">
+                    <div class="content" style="font-size: 18px; line-height: 28px;">{{ section.settings.text }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-content-type="buttons" data-appearance="inline" data-element="main" data-pb-style="RAMK618" class="box-model-64aa9bd53f3a3">
+          <div class="download-app-btn" data-content-type="button-item" data-appearance="default" data-element="main" data-pb-style="DGO4GQY">
+            {% if section.settings.button_text != blank or section.settings.button_link != blank %}
+              <a class="pagebuilder-button-primary box-model-64aa9bd53f3ab" href="{{ section.settings.button_link }}" target="_blank" data-link-type="default"  data-element="link" data-pb-style="I86EYLP"><span data-element="link_text">{{ section.settings.button_text }}</span></a>
+            {%endif %}
+          </div>
+        </div>
+        <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="OUPXVFA" data-decoded="true" class="box-model-64aa9bd53f415"></div>
+        <style type="text/css">.box-model-64aa9bd53f3a3 {margin-top: 35px;}</style>
+      </div>
+      <div class="pagebuilder-column make-a-difference-img box-model-64aa9bd53f41d" data-content-type="column" data-appearance="full-height" data-element="main" data-pb-style="NPMOUWK">
+        <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="KAVK1DO">
+          {% if section.settings.bg != blank %}
+            <img class="pagebuilder-mobile-hidden" src="{{ section.settings.bg | img_url: 'master' }}" alt="{{ section.settings.bg.alt }}" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="GIIPRU7">
+          {% endif %}
+          {% if section.settings.bg_mobile != blank %}
+            <img class="pagebuilder-mobile-only" src="{{ section.settings.bg_mobile | img_url: 'master' }}" alt="{{ section.settings.bg_mobile.alt }}" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="XP7TC7L">
+          {% endif %}
+        </figure>
+      </div>
+      <style type="text/css">.box-model-64aa9bd53f37c {margin-right: 40px;margin-bottom: 0px;}@media only screen and (max-width: 768px) {.box-model-64aa9bd53f37c {margin-right: 0px;margin-bottom: 20px;}}</style>
+      <style type="text/css">@media only screen and (max-width: 768px) {.box-model-64aa9bd53f41d {padding-top: 30px;}}</style>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Reader App Download",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Reader App Download"
+      }
+    ]
+  }
+{% endschema %}
