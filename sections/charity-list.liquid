@@ -1,0 +1,129 @@
+<div class="columns">
+  <div class="column main">
+    <input name="form_key" type="hidden" value="UxbR7TJdQwixPtD6"> 
+    <div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}" style="display: none;">
+      <!-- ko template: getTemplate() -->
+      <!-- /ko -->
+    </div>
+    <div></div>
+    <!-- Yotpo - Add body class --><!--/ Yotpo - Add body class --><!-- Yotpo - Widget Script --><!--/ Yotpo - Widget Script -->
+    <style>#html-body [data-pb-style=DOVG14W]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0}#html-body [data-pb-style=COEYVTQ]{text-align:center;border-style:none}#html-body [data-pb-style=IJ04SCK],#html-body [data-pb-style=MDB2UUT]{border-width:0;max-width:100%;height:auto}#html-body [data-pb-style=I0W7UPG],#html-body [data-pb-style=KV2Q798]{border-width:0}#html-body [data-pb-style=GWCAG5F]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0}#html-body [data-pb-style=YVMROGC]{border-width:0}#html-body [data-pb-style=NA88HIS]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0}#html-body [data-pb-style=UYEWYNC]{border-style:none}#html-body [data-pb-style=JU9COTW],#html-body [data-pb-style=KHNHH3O]{border-width:0;max-width:100%;height:auto}@media only screen and (max-width: 768px) { #html-body [data-pb-style=COEYVTQ],#html-body [data-pb-style=UYEWYNC]{border-style:none} }</style>
+    <div data-content-type="row" data-appearance="contained" data-element="main">
+      <div class="any-questions choos-charities box-model-64a945e741085" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="DOVG14W">
+        <figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="COEYVTQ" class="box-model-64a945e74109f">
+          <img class="pagebuilder-mobile-hidden box-model-64a945e7410ab" src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_white.png?v=1688806895" alt="Heading" title="Heading" data-element="desktop_image" data-pb-style="IJ04SCK" style="display: inline-block;"><img class="pagebuilder-mobile-only box-model-64a945e7410b5" src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_white.png?v=1688806895" alt="Heading" title="Heading" data-element="mobile_image" data-pb-style="MDB2UUT">
+        </figure>
+        <div class="lato-font box-model-64a945e7410bf" data-content-type="text" data-appearance="default" data-element="main" data-pb-style="I0W7UPG">
+          <h3 style="text-align: center;">{{ section.settings.title }}</h3>
+        </div>
+        <div class="font-lato box-model-64a945e7410c8" data-content-type="text" data-appearance="default" data-element="main" data-pb-style="KV2Q798">
+          <p style="text-align: center;"><span style="color: #939393; font-size: 24px;">{{ section.settings.subtitle }}</span></p>
+        </div>
+      </div>
+    </div>
+    <div data-content-type="row" data-appearance="contained" data-element="main">
+      <div class="chosen-charities charities-by-letter box-model-64a945e7410d2" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="GWCAG5F">
+        <div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="YVMROGC" class="box-model-64a945e741106">
+          <ul class="chosen-charities">
+            <li>
+              {% for block in section.blocks %}
+                {% if forloop.index < 8 %}
+                  <h4 class="text-letter-box">{{ block.settings.title }}</h4>
+                  {% assign charities = block.settings.charities | split: ',' %}
+                  <ul>
+                    {% for item in charities %}
+                      <li>{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              {% endfor %}
+            </li>
+            <li>
+              {% for block in section.blocks %}
+                {% if forloop.index >= 8 and forloop.index < 16 %}
+                  <h4 class="text-letter-box">{{ block.settings.title }}</h4>
+                  {% assign charities = block.settings.charities | split: ',' %}
+                  <ul>
+                    {% for item in charities %}
+                      <li>{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              {% endfor %}
+            </li>
+            <li>
+              {% for block in section.blocks %}
+                {% if forloop.index >= 16 %}
+                  <h4 class="text-letter-box">{{ block.settings.title }}</h4>
+                  {% assign charities = block.settings.charities | split: ',' %}
+                  <ul>
+                    {% for item in charities %}
+                      <li>{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              {% endfor %}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <style type="text/css">.box-model-64a945e7410d2 {margin-top: 60px;margin-right: 0px;margin-bottom: 60px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}@media only screen and (max-width: 768px) {.box-model-64a945e7410d2 {margin-top: 20px;margin-bottom: 60px;}}</style>
+    </div>
+    <div class="be-the-change box-model-64a945e741110" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-element="main" data-pb-style="NA88HIS">
+      <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="UYEWYNC">
+        {% if section.settings.image != blank %}
+          <img class="pagebuilder-mobile-hidden" src="{{ section.settings.image | img_url: 'master' }}" alt="" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="KHNHH3O" style="display: inline-block;">
+          <img class="pagebuilder-mobile-only" src="{{ section.settings.image | img_url: 'master' }}" alt="" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="JU9COTW">
+        {% endif %}
+      </figure>
+    </div>
+    <style type="text/css">.box-model-64a945e741110 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Charity List",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subitle"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "category",
+        "name": "Category",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Name"
+          },
+          {
+            "type": "html",
+            "id": "charities",
+            "label": "Charities"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Charity List"
+      }
+    ]
+  }
+{% endschema %}

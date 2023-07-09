@@ -206,7 +206,8 @@
         "type": "home-ny-times",
         "settings": {
           "title": "NY Times Bestsellers",
-          "link": "#"
+          "link": "shopify:\/\/collections\/ny-times-bestsellers",
+          "collection": "ny-times-bestsellers"
         }
       },
       "d698e2f4-b588-4fd8-8bb5-ebe3989b9e6b": {
@@ -214,7 +215,8 @@
         "settings": {
           "title": "Celebrate The Arts",
           "text": "Shop our charitable theme collection for July, benefitting The Metropolitan Museum of Art, The Metropolitan Opera Association and the Young Musicians Unite.",
-          "link": "#"
+          "link": "shopify:\/\/collections\/charitable-cause-july",
+          "collection": "charitable-cause-july"
         }
       },
       "8a81265a-496f-4b48-b66e-142e3e55b9ef": {
@@ -273,7 +275,8 @@
         "settings": {
           "title": "What's New?",
           "text": "Check out the freshest releases in our catalog.",
-          "link": "#",
+          "collection": "new-arrivals",
+          "link": "shopify:\/\/collections\/new-arrivals",
           "url": "",
           "button_text": "Sign Up For Your Account"
         }

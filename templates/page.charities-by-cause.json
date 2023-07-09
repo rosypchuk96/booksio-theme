@@ -1,0 +1,92 @@
+{
+  "wrapper": "main.cms-page-view",
+  "sections": {
+    "ba949dbe-9586-4f9c-ac6e-d4431ccd56f6": {
+      "type": "charities-by-cause",
+      "blocks": {
+        "62f5a5f4-ba4c-4f3e-bddc-32e4799332dd": {
+          "type": "category",
+          "settings": {
+            "title": "Arts, Culture and Humanities",
+            "charities": "Babe Ruth League Inc.,\nBinc,\nBook Trust,\nEntertainment Industry Foundation,\nMetropolitan Museum of Art,\nMetropolitan Opera Association,\nNation Civil Rights Museum,\nNPR,\nSmithsonian Institution"
+          }
+        },
+        "b318454f-3c64-40f7-b59c-d7ef9900ac24": {
+          "type": "category",
+          "settings": {
+            "title": "Education and Research",
+            "charities": "Boys &amp; Girls Clubs of America,\nGirls Inc.,\nGirls Who Code,\nJunior Achievement USA,\nReading is Fundamental,\nScholarship America,\nStep Up for Students,\nTeach for America"
+          }
+        },
+        "d1e53e98-344a-4b81-901b-25db0cff6bba": {
+          "type": "category",
+          "settings": {
+            "title": "Environment and Animals",
+            "charities": "American SPCA,\nClean Air Task Force,\nEnvironmental Defense Fund,\nHumane Society of the United States,\nNational Deer Association,\nNature Conservancy,\nOcean Conservancy,\nWildlife Conservation Society,\nWorld Wildlife Fund"
+          }
+        },
+        "afc72990-bd56-41fc-8253-222df6761021": {
+          "type": "category",
+          "settings": {
+            "title": "Health",
+            "charities": "Alzheimer's Association,\nAmerican Cancer Society,\nAmerican Heart Association,\nAmerican Kidney Fund,\nC.H.I.N. Congenital Heart,\nCancer Research Institute,\nCedars-Sinai Health System,\nCity of Hope,\nDana-Farber Cancer Institute,\nDirect Relief"
+          }
+        },
+        "ee4a6286-8bb7-494a-968c-faa1e2a28a30": {
+          "type": "category",
+          "settings": {
+            "title": "Health",
+            "charities": "HealthWell Foundation,\nHeart to Heart International,\nHelen Keller International,\nJDRF International,\nLeukemia &amp; Lymphoma Society,\nMayo Clinic,\nMemorial Sloan Kettering Cancer Center,\nMount Sinai Health Systems,\nNational Multiple Sclerosis Society,\nNew York-Presbyterian Hospital,\nPatient Access Network Foundation,\nPostpartum Support International,\nShriners Hospitals for Children,\nSmile Train,\nSt. Jude Children's Research Hospital,\nTask Force for Global Health,\nThe Boomer Esiason Foundation,\nWorld Vision"
+          }
+        },
+        "dab69c98-34ab-4341-8d0f-d063872ff76f": {
+          "type": "category",
+          "settings": {
+            "title": "Human Services",
+            "charities": "American National Red Cross,\nChild's Play,\nCovenant House,\nDisabled American Veterans,\nEaster Seals,\nFather Flanagan's Boys' Home\/Boys' Town,\nFeed the Children,\nFeeding America,\nFlo Charlotte,\nFood for the Poor,\nGood 360,\nHabitat for Humanity Philadelphia,\nHeart of the Horse Therapy,\nHope for the Warriors,\nHouston Food Bank,\niFoster,\nMake-A-Wish Foundation of America,\nMarine Toys for Tots Foundation,\nMarjaree Mason Center,\nMercy Corps,\nNational Coalition Against Domestic Violence,\nNational Domestic Violence Hotline"
+          }
+        },
+        "25db5b45-139f-4b33-8362-0b845f9ca960": {
+          "type": "category",
+          "settings": {
+            "title": "Human Services",
+            "charities": "Planned Parenthood Federation of America,\nPoverello House,\nRAINN,\nReading Heart Incorporated,\nRonald McDonald House Charities,\nSave the Children Federation,\nSpecial Olympics,\nSt. Mary's Food Bank Alliance,\nStruggles to Strengths,\nThe Arc,\nThe Assistance Fund,\nThe Sunshine Kids Foundation,\nThe Tom Coughlin Jay Fund,\nThe Trevor Project,\nTogether Rising,\nUJA\/Federation of New York,\nUnited Through Reading,\nUnited Way Worldwide,\nWilliam Way Center,\nYMCA of the USA"
+          }
+        },
+        "9d81129a-2685-4de9-b586-eb108bb5ee77": {
+          "type": "category",
+          "settings": {
+            "title": "International",
+            "charities": "Americares Foundation,\nCARE USA,\nCharity: Water,\nChildFund International,\nConvoy of Hope,\nDoctors Without Borders USA,\nInternational Rescue Committee,\nMAP International,\nPATH,\nPopulation Services International,\nRotary Foundation of Rotary International,\nUnited States Fund for UNICEF"
+          }
+        },
+        "1d480a57-84eb-4b3e-9d70-2678c0776d3c": {
+          "type": "category",
+          "settings": {
+            "title": "Other",
+            "charities": "Blue Star Mothers of America,\nThe Outdoor Foundation,\nUnited Service Organizations"
+          }
+        }
+      },
+      "block_order": [
+        "62f5a5f4-ba4c-4f3e-bddc-32e4799332dd",
+        "b318454f-3c64-40f7-b59c-d7ef9900ac24",
+        "d1e53e98-344a-4b81-901b-25db0cff6bba",
+        "afc72990-bd56-41fc-8253-222df6761021",
+        "ee4a6286-8bb7-494a-968c-faa1e2a28a30",
+        "dab69c98-34ab-4341-8d0f-d063872ff76f",
+        "25db5b45-139f-4b33-8362-0b845f9ca960",
+        "9d81129a-2685-4de9-b586-eb108bb5ee77",
+        "1d480a57-84eb-4b3e-9d70-2678c0776d3c"
+      ],
+      "settings": {
+        "title": "<span style=\"font-size: 34px; line-height: 42px;\"><span style=\"color: #41c2ff;\">CHOSEN<\/span> <span style=\"color: #000000;\">CHARITIES<\/span><\/span>",
+        "subtitle": "Our charities have been vetted and chosen with care.",
+        "image": "shopify:\/\/shop_images\/bethechange.png"
+      }
+    }
+  },
+  "order": [
+    "ba949dbe-9586-4f9c-ac6e-d4431ccd56f6"
+  ]
+}
