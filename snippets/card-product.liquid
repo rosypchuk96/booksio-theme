@@ -20,7 +20,9 @@
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
 
+{% comment %}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
+{% endcomment %}
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
