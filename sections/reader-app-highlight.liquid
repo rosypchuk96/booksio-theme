@@ -1,0 +1,75 @@
+<div class="make-a-difference box-model-64aa9bd53f4df" data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-element="main" data-pb-style="P5CXV55">
+  <div class="row-full-width-inner" data-element="inner">
+    <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+      <div class="pagebuilder-column box-model-64aa9bd53f500" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="Q61JBUK">
+        <div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="N1IQQN4" class="box-model-64aa9bd53f520">
+          <div class="sp">
+            <div class="inspectLayerContent block inspectRow">
+              <div class="sp">
+                <div class="inspectLayerContent block inspectRow">
+                  <h2 class="content"><span style="font-size: 52px; line-height: 48px;">{{ section.settings.title }}</span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sp pagebuilder-mobile-only">&nbsp;</div>
+          <div class="sp">
+            <div class="inspectLayerContent block inspectRow">
+              <div class="content">
+                <div class="sp" style="font-size: 18px; line-height: 28px;">
+                  {{ section.settings.text }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pagebuilder-column make-a-difference-img highlight-text-img box-model-64aa9bd53f527" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-box-model="{&quot;mobile&quot;:{&quot;margin&quot;:{&quot;bottom&quot;:&quot;20px&quot;}}}" data-element="main" data-pb-style="J1730WU">
+        <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="D0PAPKV">
+          {% if section.settings.bg != blank %}
+            <img class="pagebuilder-mobile-hidden" src="{{ section.settings.bg | img_url: 'master' }}" alt="{{ section.settings.bg.alt }}" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="N5OG4T4" style="display: inline-block;">
+          {% endif %}
+          {% if section.settings.bg_mobile != blank %}
+            <img class="pagebuilder-mobile-only" src="{{ section.settings.bg_mobile | img_url: 'master' }}" alt="{{ section.settings.bg_mobile.alt }}" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="GIIPRU7">
+          {% endif %}
+        </figure>
+      </div>
+      <style type="text/css">.box-model-64aa9bd53f500 {margin-right: 35px;margin-bottom: 0px;}@media only screen and (max-width: 768px) {.box-model-64aa9bd53f500 {margin-right: 0px;margin-bottom: 20px;}}</style>
+      <style type="text/css">@media only screen and (max-width: 768px) {.box-model-64aa9bd53f527 {margin-bottom: 20px;}}</style>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Reader App Highlight",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Reader App Highlight"
+      }
+    ]
+  }
+{% endschema %}

@@ -81,6 +81,13 @@
         .make-a-difference-img {
         width: 100% !important;
         }
+        .product-image-wrapper {
+          height: 100%;
+          padding: 0;
+        }
+        .new-arrivals-block.download-products [data-content-type=products][data-appearance=carousel] .slick-initialized li.product-item {
+            padding: 14px;
+        }
         }
         @media (max-width: 320px) {
         .make-a-difference h2, .make-a-difference h2 span {
@@ -104,6 +111,7 @@
       <div class="pagebuilder-column box-model-64aa9bd53f330" data-content-type="column" data-element="main" data-pb-style="RJGC4SN">
         <div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="CNTIQ26" class="box-model-64aa9bd53f350">
           <h2><span style="font-size: 52px; line-height: 48px;">{{ section.settings.title }}</span></h2>
+          <p class="pagebuilder-mobile-only">&nbsp;</p>
           <div class="sp">
             <div class="inspectLayerContent block inspectRow" style="font-size: 18px; line-height: 28px;">
               {{ section.settings.text }}

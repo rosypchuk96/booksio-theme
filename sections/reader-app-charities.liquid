@@ -1,0 +1,69 @@
+<div class="make-a-difference normal-order box-model-64aa9bd53f470" data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-element="main" data-pb-style="LVW5TX2">
+  <div class="row-full-width-inner" data-element="inner">
+    <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+      <div class="pagebuilder-column make-a-difference-img box-model-64aa9bd53f491" data-content-type="column" data-appearance="align-center" data-background-images="{}" data-element="main" data-pb-style="XEWAEAQ">
+        <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="O4NGQSJ">
+          {% if section.settings.bg != blank %}
+            <img class="pagebuilder-mobile-hidden" src="{{ section.settings.bg | img_url: 'master' }}" alt="" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="XXNP5TD" style="display: inline-block;">
+          {% endif %}
+          {% if section.settings.bg_mobile != blank %}
+            <img class="pagebuilder-mobile-only" src="{{ section.settings.bg_mobile | img_url: 'master' }}" alt="" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="GJXR5KN">
+          {% endif %}
+        </figure>
+      </div>
+      <div class="pagebuilder-column box-model-64aa9bd53f4b4" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="YXTCAUM">
+        <div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="L0IYLB2" class="box-model-64aa9bd53f4d4">
+          <div class="sp">
+            <div class="inspectLayerContent block inspectRow">
+              <h2 class="content"><span style="font-size: 52px; line-height: 48px;">{{ section.settings.title }}</span></h2>
+            </div>
+          </div>
+          <div class="sp pagebuilder-mobile-only">&nbsp;</div>
+          <div class="sp">
+            <div class="inspectLayerContent block inspectRow">
+              <div class="content" style="font-size: 18px; line-height: 28px;">
+                {{ section.settings.text }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style type="text/css">.box-model-64aa9bd53f491 {margin-right: 40px;}@media only screen and (max-width: 768px) {.box-model-64aa9bd53f491 {margin-right: 0px;margin-bottom: 30px;}}</style>
+      <style type="text/css">.box-model-64aa9bd53f4b4 {margin-right: 40px;margin-bottom: 0px;}@media only screen and (max-width: 768px) {.box-model-64aa9bd53f4b4 {margin-right: 0px;margin-bottom: 20px;}}</style>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Reader App Charities",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Reader App Charities"
+      }
+    ]
+  }
+{% endschema %}

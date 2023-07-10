@@ -1,0 +1,33 @@
+<li class="product-item">
+  <div
+    class="product-item-info"
+    role="group"
+    aria-label="product">
+    <a href="{{ product.url }}" class="product-item-photo">
+      <span class="product-image-container product-image-container-8573004" style="width: 351px;">
+        <span class="product-image-wrapper" style="padding-bottom: 125%;">
+          {% if product.featured_image %}
+            <img
+              class=""
+              src="{{ product.featured_image | img_url: 'master' }}"
+              width="351"
+              height="561"
+              alt="{{ product.featured_media.alt }}"
+              style="display: inline-block;">
+          {% endif %}
+        </span>
+      </span>
+      <style>
+        .product-image-container-8573004 {
+          width: 351px;
+        }
+        .product-image-container-8573004 span.product-image-wrapper {
+          padding-bottom: 125%;
+        }
+      </style>
+    </a>
+    <div class="free-download-link">
+      <a href="{{ product.url }}">Free Download</a>
+    </div>
+  </div>
+</li>

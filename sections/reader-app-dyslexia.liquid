@@ -1,0 +1,172 @@
+<div class="make-a-difference normal-order dyslexic-content box-model-64aa9bd53f54a" data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-element="main" data-pb-style="UKL1IFG">
+  <div class="row-full-width-inner" data-element="inner">
+    <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+      <div class="pagebuilder-column make-a-difference-img box-model-64aa9bd53f56a" data-content-type="column" data-appearance="align-top" data-element="main" data-pb-style="SYQJGJ0">
+        <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="Y02ITE8">
+          {% if section.settings.bg != blank %}
+            <img class="pagebuilder-mobile-hidden" src="{{ section.settings.bg | img_url: 'master' }}" alt="{{ section.settings.bg.alt }}" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="N5OG4T4" style="display: inline-block;">
+          {% endif %}
+          {% if section.settings.bg_mobile != blank %}
+            <img class="pagebuilder-mobile-only" src="{{ section.settings.bg_mobile | img_url: 'master' }}" alt="{{ section.settings.bg_mobile.alt }}" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="GIIPRU7">
+          {% endif %}
+        </figure>
+      </div>
+      <div class="pagebuilder-column box-model-64aa9bd53f58c" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="IMK3WAI">
+        <div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="JRHIOKU" class="box-model-64aa9bd53f5ac">
+          <div class="sp">
+            <div class="inspectLayerContent block inspectRow">
+              <h2 class="content"><span style="font-size: 52px; line-height: 48px;">{{ section.settings.title }}</span></h2>
+            </div>
+          </div>
+          <div class="sp pagebuilder-mobile-only">&nbsp;</div>
+          <div class="sp">
+            <div class="inspectLayerContent block inspectRow">
+              <div class="content">
+                <div class="sp" style="font-size: 18px; line-height: 28px;">
+                  {{ section.settings.text }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="M7E7O5A" data-decoded="true" class="box-model-64aa9bd53f5b5">
+          <label class="toggle">
+            <span class="toggle-label">Try Open Dyslexic:</span>
+            <input class="toggle-checkbox" type="checkbox">
+            <div class="toggle-switch"></div>
+          </label>
+          <style>
+            .toggle {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            }
+            .toggle-switch {
+            display: inline-block;
+            background: #ccc;
+            border-radius: 40px;
+            width: 74px;
+            height: 35px;
+            position: relative;
+            vertical-align: middle;
+            transition: background 0.25s;
+            }
+            .toggle-switch:before, .toggle-switch:after {
+            content: "";
+            }
+            .toggle-switch:before {
+            display: block;
+            background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 5px;
+            left: 6px;
+            transition: left 0.25s;
+            }
+            .toggle:hover .toggle-switch:before {
+            background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+            }
+            .toggle-checkbox:checked + .toggle-switch {
+            background: #56c080;
+            }
+            .toggle-checkbox:checked + .toggle-switch:before {
+            left: 44px;
+            }
+            .toggle-checkbox {
+            position: absolute;
+            visibility: hidden;
+            }
+            .toggle-label {
+            margin-right: 0px;
+            font-size: 20px;
+            position: relative;
+            top: 2px;
+            font-family: 'lato' !important;
+            }
+          </style>
+        </div>
+      </div>
+      <style type="text/css">.box-model-64aa9bd53f56a {margin-right: 60px;}@media only screen and (max-width: 768px) {.box-model-64aa9bd53f56a {margin-bottom: 20px;}}</style>
+      <style type="text/css">.box-model-64aa9bd53f58c {margin-right: 0px;margin-bottom: 0px;}@media only screen and (max-width: 768px) {.box-model-64aa9bd53f58c {margin-right: 0px;margin-bottom: 20px;}}</style>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleElem = document.querySelector('.toggle .toggle-checkbox');
+
+  if(toggleElem) {
+     toggleElem.addEventListener('change', function(event) {
+        const isChecked = event.target.checked;
+        const css = `
+               .dyslexic-content.make-a-difference * { font-family: OpenDyslexic !important; }
+               .dyslexic-content.make-a-difference span {
+                    font-size: 16px !important;
+                    line-height: 26px !important;
+               }
+               .dyslexic-content.make-a-difference h2, .dyslexic-content.make-a-difference h2 span { 
+                    font-size: 41px !important;
+                    line-height: 55px !important;
+               }
+          `,
+          head = document.head || document.getElementsByTagName('head')[0],
+          style = document.createElement('style');
+
+        head.appendChild(style);
+        style.type = 'text/css';
+        style.classList.add('dyslexic-style');
+ 
+        if(isChecked) {
+          if (style.styleSheet){
+            style.styleSheet.cssText = css;
+          } else {
+            style.appendChild(document.createTextNode(css));
+          }
+        } else {
+          Array.from(document.querySelectorAll('.dyslexic-style'), function(elem) {
+            elem.remove();
+          });
+        }
+     });
+  }
+});
+</script>
+
+{% schema %}
+  {
+    "name": "Reader App Dyslexia",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Reader App Dyslexia"
+      }
+    ]
+  }
+{% endschema %}

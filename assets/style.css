@@ -2977,6 +2977,72 @@ list-style: none;
   padding-top: 40px;
   padding-bottom: 240px;
 }
+#html-body [data-pb-style=XEWAEAQ] {
+  text-align: center;
+  width: 33.3333%;
+  align-self: center;
+}
+#html-body [data-pb-style=YXTCAUM] {
+  width: 66.6667%;
+}
+.box-model-64aa9bd53f470 {
+  margin-top: -30px;
+  padding-bottom: 55px;
+}
+#html-body [data-pb-style=J1730WU] {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  text-align: center;
+  border-width: 0;
+  width: 41.6667%;
+  align-self: stretch;
+}
+#html-body [data-pb-style=Q61JBUK] {
+  width: 58.3333%;
+  align-self: stretch;
+}
+.box-model-64aa9bd53f4df {
+  padding-top: 40px;
+  padding-bottom: 150px;
+}
+.box-model-64aa9bd53f54a {
+  padding-top: 40px;
+  padding-bottom: 55px;
+}
+#html-body [data-pb-style=UKL1IFG] {
+  background-color: #f1f1f1;
+}
+#html-body [data-pb-style=SYQJGJ0] {
+  text-align: center;
+  width: 33.3333%;
+  align-self: flex-start;
+}
+#html-body [data-pb-style=IMK3WAI] {
+  width: 66.6667%;
+}
+.box-model-64aa9bd53f5bf {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 102px;
+  padding-bottom: 90px;
+}
+#html-body [data-pb-style=TVGL614] {
+  background-color: #e6f2f9;
+}
+#html-body [data-pb-style=EIVKGNT] {
+  text-align: center;
+  width: 100%;
+  align-self: stretch;
+}
+.new-arrivals-block.download-products .ny-times-subtitle {
+  max-width: 860px;
+  margin: auto;
+}
 
 @media (min-width: 768px) {
   #html-body [data-pb-style=LXEXW89] {
@@ -2993,12 +3059,67 @@ list-style: none;
     padding-top: 65px;
     padding-bottom: 190px;
   }
-
   .make-a-difference p:last-child {
     margin-top: 28px;
+  }
+  .make-a-difference p:last-child:first-child,
+  .make-a-difference p:first-child {
+    margin-top: 0;
   }
   .box-model-64aa9bd53f2e4 {
     padding-top: 65px;
     padding-bottom: 25px;
+  }
+  .box-model-64aa9bd53f470 {
+    margin-top: -70px;
+    padding-top: 0px;
+    padding-bottom: 25px;
+  }
+  .box-model-64aa9bd53f4df {
+    padding-top: 45px;
+    padding-bottom: 25px;
+  }
+  .box-model-64aa9bd53f54a {
+    padding-top: 45px;
+    padding-bottom: 25px;
+  }
+  .box-model-64aa9bd53f5bf {
+    margin-top: 0px;
+    margin-bottom: 36px;
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+  .hero-banner-content-wrapper {
+    max-width: 100% !important;
+  }
+  .box-model-64aa9bd53f130 {
+    margin-bottom: 20px;
+  }
+  .box-model-64aa9bd53f163 {
+    margin-top: 20px;
+  }
+  .make-a-difference .pagebuilder-column.make-a-difference-img-homepage {
+    position: absolute;
+    width: 50% !important;
+    right: 0;
+    top: 25px;
+  }
+  .make-a-difference-homepage {
+    padding-top: 45px;
+    padding-bottom: 25px;
+  }
+  .homepage-faq {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .home-newsletter-block {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .box-model-64a5c65d8cb9a {
+    margin-top: 30px !important;
+  }
+  .widget-product-carousel-free-download .product-item-info {
+    width: 195px;
   }
 }
