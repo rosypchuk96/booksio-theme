@@ -3043,11 +3043,42 @@ list-style: none;
   max-width: 860px;
   margin: auto;
 }
+#html-body [data-pb-style=CLNSTOU] {
+  width: 16.6667%;
+}
+.at-booksio strong {
+  font-size: 28px;
+  color: #939393;
+  font-weight: 900;
+}
+.about-us-main {
+  flex-wrap: wrap;
+}
 
+#html-body [data-pb-style=C9NUS1P] {
+  align-items: center;
+  display: flex;
+}
 @media (min-width: 768px) {
   #html-body [data-pb-style=LXEXW89] {
     padding-top: 40px;
     padding-bottom: 30px;
+  }
+  #html-body [data-pb-style=BWP6CD0], #html-body [data-pb-style=C9NUS1P], #html-body [data-pb-style=DL94UR2], #html-body [data-pb-style=G52LP9B], #html-body [data-pb-style=H7U8ATR], #html-body [data-pb-style=JQMQKWV], #html-body [data-pb-style=OQLQWVD]  {
+    width: 41.6667%;
+  }
+  #html-body [data-pb-style=CY5W0X7],
+  #html-body [data-pb-style=DL94UR2] {
+    width: 16.6667%;
+  }
+  #html-body [data-pb-style=C9NUS1P], #html-body [data-pb-style=G52LP9B], #html-body [data-pb-style=JQMQKWV], #html-body [data-pb-style=OQLQWVD] {
+    width: 83.3333%;
+  }
+  #html-body [data-pb-style=C9NUS1P], #html-body [data-pb-style=JQMQKWV] {
+    width: 41.6667%;
+  }
+  #html-body [data-pb-style=OQLQWVD] {
+    width: 16.6667%;
   }
 }
 
@@ -3121,5 +3152,14 @@ list-style: none;
   }
   .widget-product-carousel-free-download .product-item-info {
     width: 195px;
+  }
+  .about-us-main .at-booksio.pagebuilder-column-group .about-right:nth-child(3) {
+    order: 1;
+  }
+  .about-us-main .at-booksio.pagebuilder-column-group .about-right:nth-child(2) {
+    order: 2;
+  }
+  .box-model-64aaaacc318ae {
+    order: -1;
   }
 }

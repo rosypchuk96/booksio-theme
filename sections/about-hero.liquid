@@ -1,0 +1,75 @@
+<div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+  <div class="pagebuilder-column about-left box-model-64aaaacc31708" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="CLNSTOU">
+    <h2 data-content-type="heading" data-appearance="default" data-box-model="{}" data-element="main" data-pb-style="IJ7PLIY">{{ section.settings.left_text }}</h2>
+  </div>
+  <div class="pagebuilder-column about-right giving-back box-model-64aaaacc31717" data-content-type="column" data-appearance="full-height" data-element="main" data-pb-style="CVPTIK8">
+    <figure class="equality-img box-model-64aaaacc31722" data-content-type="image" data-element="main" data-pb-style="AQ394JV">
+      {% if section.settings.bg != blank %}
+        <img class="pagebuilder-mobile-hidden box-model-64aaaacc31751" src="{{ section.settings.bg | img_url: 'master' }}" alt="{{ section.settings.bg.alt }}" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="N5OG4T4" style="display: inline-block;">
+      {% endif %}
+      {% if section.settings.bg_mobile != blank %}
+        <img class="pagebuilder-mobile-only box-model-64aaaacc31776" src="{{ section.settings.bg_mobile | img_url: 'master' }}" alt="{{ section.settings.bg_mobile.alt }}" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="GIIPRU7">
+      {% endif %}
+      <style type="text/css">.box-model-64aaaacc31751 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}@media only screen and (max-width: 768px) {.box-model-64aaaacc31751 {margin-top: 15px;}}</style>
+      <style type="text/css">.box-model-64aaaacc31776 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}@media only screen and (max-width: 768px) {.box-model-64aaaacc31776 {margin-top: 15px;}}</style>
+    </figure>
+    <style type="text/css">.box-model-64aaaacc31722 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}@media only screen and (max-width: 768px) {.box-model-64aaaacc31722 {margin-top: 15px;}}</style>
+  </div>
+  <div class="pagebuilder-column about-right box-model-64aaaacc31799" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="Y17EMUK">
+    <div class="booksio-content giving-back box-model-64aaaacc317bb" data-content-type="text" data-appearance="default"  data-element="main" data-pb-style="BA2JVUX">
+      <h2><span style="color: #9f9f9f; font-size: 26px;">{{ section.settings.title }}</span></h2>
+      <h2>{{ section.settings.subtitle }}<br><span style="color: #f16169;">{{ section.settings.subtitle_2 }}</span></h2>
+      {{ section.settings.text }}
+    </div>
+  </div>
+  <style type="text/css">.box-model-64aaaacc31799 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}@media only screen and (max-width: 768px) {.box-model-64aaaacc31799 {padding-right: 15px;padding-left: 15px;}}</style>
+</div>
+
+{% schema %}
+  {
+    "name": "About Hero",
+    "settings": [
+      {
+        "type": "text",
+        "id": "left_text",
+        "label": "Left Text"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle Line 1"
+      },
+      {
+        "type": "text",
+        "id": "subtitle_2",
+        "label": "Subtitle Line 2"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "About Hero"
+      }
+    ]
+  }
+{% endschema %}

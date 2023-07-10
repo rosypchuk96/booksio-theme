@@ -1,0 +1,37 @@
+<div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+  <div class="pagebuilder-column empty-col box-model-64aaaacc31856" data-content-type="column" data-appearance="full-height" data-element="main" data-pb-style="DL94UR2"></div>
+  <div class="pagebuilder-column about-right box-model-64aaaacc3185f" data-content-type="column" data-appearance="full-height" data-element="main" data-pb-style="G52LP9B">
+    <figure class="about-us-banner box-model-64aaaacc31868" data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="L4LV6WJ">
+      {% if section.settings.bg != blank %}
+        <img class="pagebuilder-mobile-hidden box-model-64aaaacc31871" src="{{ section.settings.bg | img_url: 'master' }}" alt="{{ section.settings.bg.alt }}" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="N5OG4T4" style="display: inline-block;">
+      {% endif %}
+      {% if section.settings.bg_mobile != blank %}
+        <img class="pagebuilder-mobile-only box-model-64aaaacc31879" src="{{ section.settings.bg_mobile | img_url: 'master' }}" alt="{{ section.settings.bg_mobile.alt }}" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="GIIPRU7">
+      {% endif %}
+    </figure>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "About Images",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "About Images"
+      }
+    ]
+  }
+{% endschema %}

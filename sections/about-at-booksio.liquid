@@ -1,0 +1,73 @@
+<div class="pagebuilder-column-group at-booksio" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+  <div class="pagebuilder-column empty-col box-model-64aaaacc317c5" data-content-type="column" data-appearance="full-height" data-element="main" data-pb-style="CY5W0X7"></div>
+  <div class="pagebuilder-column about-right box-model-64aaaacc317d0" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="BWP6CD0">
+    <div class="booksio-content box-model-64aaaacc317f2" data-content-type="text" data-appearance="default" data-element="main" data-pb-style="POQEWXM">
+      <h2>{{ section.settings.title }}</h2>
+      {{ section.settings.text }}
+    </div>
+    <figure class="signature-img box-model-64aaaacc317fb" data-content-type="image" data-element="main" data-pb-style="UHF966R">
+      {% if section.settings.signatures != blank %}
+        <img class="pagebuilder-mobile-hidden box-model-64aaaacc31805" src="{{ section.settings.signatures | img_url: 'master' }}" alt="{{ section.settings.signatures.alt }}" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="N5OG4T4" style="display: inline-block;">
+      {% endif %}
+      {% if section.settings.signatures_mobile != blank %}
+        <img class="pagebuilder-mobile-only box-model-64aaaacc3180e" src="{{ section.settings.signatures_mobile | img_url: 'master' }}" alt="{{ section.settings.signatures_mobile.alt }}" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="GIIPRU7">
+      {% endif %}
+    </figure>
+  </div>
+  <div class="pagebuilder-column about-right box-model-64aaaacc31819" data-content-type="column" data-appearance="full-height" data-element="main" data-pb-style="H7U8ATR">
+    <figure class="equality-img box-model-64aaaacc3183b" data-content-type="image" data-element="main" data-pb-style="KWOL7P8">
+      {% if section.settings.bg != blank %}
+        <img class="pagebuilder-mobile-hidden box-model-64aaaacc31844" src="{{ section.settings.bg | img_url: 'master' }}" alt="{{ section.settings.bg.alt }}" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="N5OG4T4" style="display: inline-block;">
+      {% endif %}
+      {% if section.settings.bg_mobile != blank %}
+        <img class="pagebuilder-mobile-only box-model-64aaaacc3184d" src="{{ section.settings.bg_mobile | img_url: 'master' }}" alt="{{ section.settings.bg_mobile.alt }}" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="GIIPRU7">
+      {% endif %}
+    </figure>
+  </div>
+  <style type="text/css">.box-model-64aaaacc317d0 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}@media only screen and (max-width: 768px) {.box-model-64aaaacc317d0 {padding-right: 15px;padding-bottom: 30px;padding-left: 15px;}}</style>
+  <style type="text/css">.box-model-64aaaacc31819 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}@media only screen and (max-width: 768px) {.box-model-64aaaacc31819 {padding-top: 30px;padding-right: 15px;padding-left: 15px;}}</style>
+</div>
+
+{% schema %}
+  {
+    "name": "About at Booksio",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Image Mobile"
+      },
+      {
+        "type": "image_picker",
+        "id": "signatures",
+        "label": "Signatures"
+      },
+      {
+        "type": "image_picker",
+        "id": "signatures_mobile",
+        "label": "Signatures Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "About at Booksio"
+      }
+    ]
+  }
+{% endschema %}

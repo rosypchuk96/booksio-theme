@@ -1,0 +1,115 @@
+<div
+  class="pagebuilder-column-group"
+  style="display: flex;"
+  data-content-type="column-group"
+  data-grid-size="12"
+  data-element="main">
+  <div
+    class="pagebuilder-column empty-col box-model-64aaaacc31882"
+    data-content-type="column"
+    data-appearance="full-height"
+    data-element="main"
+    data-pb-style="OQLQWVD"></div>
+  <div
+    class="pagebuilder-column about-right box-model-64aaaacc3188b"
+    data-content-type="column"
+    data-appearance="full-height"
+    data-element="main"
+    data-pb-style="JQMQKWV">
+    <figure
+      class="equality-img full-w box-model-64aaaacc31894"
+      data-content-type="image"
+      data-appearance="full-width"
+      data-element="main"
+      data-pb-style="WV9WCGK">
+      {% if section.settings.bg != blank %}
+        <img
+          class="pagebuilder-mobile-hidden box-model-64aaaacc3189d"
+          src="{{ section.settings.bg | img_url: 'master' }}"
+          alt="{{ section.settings.bg.alt }}"
+          title=""
+          data-box-model="{}"
+          data-element="desktop_image"
+          data-pb-style="N5OG4T4"
+          style="display: inline-block;">
+      {% endif %}
+      {% if section.settings.bg_mobile != blank %}
+        <img
+          class="pagebuilder-mobile-only box-model-64aaaacc318a5"
+          src="{{ section.settings.bg_mobile | img_url: 'master' }}"
+          alt="{{ section.settings.bg_mobile.alt }}"
+          title=""
+          data-box-model="{}"
+          data-element="mobile_image"
+          data-pb-style="GIIPRU7">
+      {% endif %}
+    </figure>
+  </div>
+  <div
+    class="pagebuilder-column about-right box-model-64aaaacc318ae"
+    data-content-type="column"
+    data-appearance="full-height"
+    data-element="main"
+    data-pb-style="C9NUS1P">
+    <div
+      class="say-hello box-model-64aaaacc318b7"
+      data-content-type="text"
+      data-appearance="default"
+      data-element="main"
+      data-pb-style="SW21C1I">
+      <p>
+        <span style="color: #41c2ff;">
+          <a style="color: #41c2ff;" href="{{ section.settings.link }}">{{ section.settings.text }}</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .shopify-section {
+    width: 100%;
+  }
+
+  .home-newsletter-block  > .row-full-width-inner {
+    border-top: 1px solid #212322;
+  }
+
+  @media (min-width: 768px) {
+    .home-newsletter-block {
+      padding-top: 20px;
+      padding-bottom: 90px;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "About Charity",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text"
+      }, {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      }, {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Image"
+      }, {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "About Charity"
+      }
+    ]
+  }
+{% endschema %}

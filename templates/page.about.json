@@ -1,0 +1,58 @@
+{
+  "wrapper": "main.cms-page-view.about-us-main",
+  "sections": {
+    "e94f6768-7c43-431a-8360-d440d3f33895": {
+      "type": "about-hero",
+      "settings": {
+        "left_text": "#booksiogives",
+        "title": "About Us",
+        "subtitle": "THE BOOKSTORE FOR",
+        "subtitle_2": "GIVING BACK",
+        "text": "<p>We know you probably have at least a dozen places to buy books and magazines from. Why do you need Booksio?<\/p><p>The obvious answer is our giving — ten percent of every Booksio purchase goes to a charitable organization. We have more than 16 million titles available, covering print books, digital books and magazines, and audiobooks, so you’re sure to find your next favorite story. But it’s more than just that.<\/p><p>Our team believes in a fundamental truth — reading makes people happier, more fulfilled, and excited to learn about experiences and cultures outside of their own. And when that happens, we become more connected: to ourselves, to our communities, and to the world at large. Storytelling empowers us to believe in bigger things and create real, positive change in the world.<\/p>",
+        "bg": "shopify:\/\/shop_images\/giving-back.jpg",
+        "bg_mobile": "shopify:\/\/shop_images\/giving-back.jpg"
+      }
+    },
+    "7ca73e66-f0ec-486e-bd89-11df7fbdfd01": {
+      "type": "about-at-booksio",
+      "settings": {
+        "title": "At Booksio",
+        "text": "<p><strong>we value<\/strong> honesty, integrity, and compassion in leadership. We’re dedicated to supporting charities that move the needle on causes we believe in; that starts with dedicated leaders exercising fair compensation and maximizing their impact with funds raised and allocated in transparent ways.<\/p><p><strong>we stand<\/strong> for improving our planet for future generations, striving for cleaner air, oceans, and a stable environment. We believe basic needs are a right of all people regardless of geography, nationality, or financial standing. Every person deserves access to water, food, health care, and education.<\/p><p><strong>we believe<\/strong> that everyone deserves access to the same opportunities and quality of life regardless of race, gender, sexuality, disability, or circumstances outside of their own informed choices. We believe that the world’s agents for positive change are defined by the things and people they love and stand in opposition to groups defined by intolerant bias.<\/p><h3>Best,<\/h3>",
+        "bg": "shopify:\/\/shop_images\/equality-img.png",
+        "bg_mobile": "shopify:\/\/shop_images\/equality-img.png",
+        "signatures": "shopify:\/\/shop_images\/signatures_1.png",
+        "signatures_mobile": "shopify:\/\/shop_images\/signatures_1.png"
+      }
+    },
+    "3c6a3c46-b8b9-4523-8808-0e540023d20a": {
+      "type": "about-images",
+      "settings": {
+        "bg": "shopify:\/\/shop_images\/collage-new-img_1.jpg",
+        "bg_mobile": "shopify:\/\/shop_images\/collage-new-img_1.jpg"
+      }
+    },
+    "4b930177-2a0c-4854-80da-8ce20a00cd25": {
+      "type": "about-charity",
+      "settings": {
+        "text": "Say hello to the new way of charitable giving.",
+        "link": "#",
+        "bg": "shopify:\/\/shop_images\/support-new-image.jpg",
+        "bg_mobile": "shopify:\/\/shop_images\/support-new-image.jpg"
+      }
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "e94f6768-7c43-431a-8360-d440d3f33895",
+    "7ca73e66-f0ec-486e-bd89-11df7fbdfd01",
+    "3c6a3c46-b8b9-4523-8808-0e540023d20a",
+    "4b930177-2a0c-4854-80da-8ce20a00cd25",
+    "subscribe"
+  ]
+}
