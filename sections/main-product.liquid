@@ -3,7 +3,6 @@
   class="page-width section-{{ section.id }}-padding"
   data-section="{{ section.id }}"
 >
-{% comment %}
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -11,8 +10,15 @@
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
-{% endcomment %}
 
+
+   {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+    {{ 'section-related-products.css' | asset_url | stylesheet_tag }}
+
+
+
+  
   {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -27,7 +33,6 @@
     }
   {%- endstyle -%}
 
-{% comment %}
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   {% if section.settings.image_zoom == 'hover' %}
@@ -36,10 +41,8 @@
   {%- if request.design_mode -%}
     <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
-{% endcomment %}
 
   {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
-  {% comment %}
   {%- if first_3d_model -%}
     {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
     <link
@@ -57,7 +60,6 @@
       onload="this.media='all'"
     >
   {%- endif -%}
-{% endcomment %}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 
@@ -87,11 +89,25 @@
               </p>
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
-                <h1>{{ product.title | escape }}</h1>
+                <h1>{{ product.title | escape }}
+            
+               {% if product.metafields.custom.author != blank %}
+  <h2>by <span class="author">{{ product.metafields.custom.author }}</span></h2>
+{% endif %}
+            
+            </h1>
                 <a href="{{ product.url }}" class="product__title">
                   <h2 class="h1">
                     {{ product.title | escape }}
                   </h2>
+<style>
+            span.author{
+            font-weight: bold;
+            color: #298FC2;
+            
+            }
+            </style>
+
                 </a>
               </div>
             {%- when 'price' -%}
@@ -427,14 +443,12 @@
                     </div>
                   </aside>
                 {%- endif -%}
-                {% comment %}
                 {{ 'component-card.css' | asset_url | stylesheet_tag }}
                 {{ 'component-complementary-products.css' | asset_url | stylesheet_tag }}
                 {%- if block.settings.enable_quick_add -%}
                   {{ 'quick-add.css' | asset_url | stylesheet_tag }}
                   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
                 {%- endif -%}
-                {% endcomment %}
               </product-recommendations>
             {%- when 'icon-with-text' -%}
               {% render 'icon-with-text',

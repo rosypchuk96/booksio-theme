@@ -2886,6 +2886,10 @@ list-style: none;
   }
 }
 
+body{overflow-x: hidden;}
+
+fieldset.product-form__input .form__label{display: none;}
+
 #html-body [data-pb-style=RXRCNQH] {
   justify-content: flex-start;
   display: flex;
