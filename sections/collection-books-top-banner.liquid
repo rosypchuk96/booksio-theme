@@ -1,0 +1,72 @@
+<div
+  class="main-hero-home box-model-64af6aa1e460e books-banner"
+  data-content-type="row"
+  data-appearance="full-bleed"
+  data-enable-parallax="0"
+  data-parallax-speed="0.5"
+  data-background-images="{}"
+  data-background-type="image"
+  data-video-loop="true"
+  data-video-play-only-visible="true"
+  data-video-lazy-load="true"
+  data-element="main"
+  data-pb-style="LTAOP0M">
+  <figure
+    data-content-type="image"
+    data-appearance="full-width"
+    data-element="main"
+    data-pb-style="YR494OF"
+    class="box-model-64af6aa1e4632">
+    <a
+      href="{{ section.settings.link }}"
+      target=""
+      data-link-type="default"
+      data-element="link">
+      {% if section.settings.image != blank %}
+        <img
+          class="pagebuilder-mobile-hidden box-model-64a8dd47199e6"
+          src="{{ section.settings.image | img_url: 'master' }}"
+          alt="{{ section.settings.image.alt }}"
+          data-element="desktop_image"
+          data-pb-style="FE9591H"
+          style="display: inline-block;">
+      {% endif %}
+      {% if section.settings.image_mobile != blank %}
+        <img
+          class="pagebuilder-mobile-only box-model-64a8dd47199f1"
+          src="{{ section.settings.image_mobile | img_url: 'master' }}"
+          alt="{{ section.settings.image_mobile.alt }}"
+          data-element="mobile_image"
+          data-pb-style="STBPSRP"
+          style="display: inline-block;">
+      {% endif %}
+    </a>
+  </figure>
+</div>
+
+{% schema %}
+  {
+    "name": "Books Top Banner",
+    "settings": [
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }, {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Books Top Banner"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,322 @@
+{
+  "wrapper": "main.cms-page-view",
+  "sections": {
+    "aaa1cb3d-8919-4e6b-9dec-52c48fb9ba4a": {
+      "type": "home-hero",
+      "blocks": {
+        "fc2b8047-c775-479c-b4fd-bcd05e6340cc": {
+          "type": "item",
+          "settings": {
+            "text": "<strong> Easy<\/strong>   Browse our site of 15 million books and select the cause you support"
+          }
+        },
+        "55f0cf68-0057-4e42-8e9d-e5c3a3e56755": {
+          "type": "item",
+          "settings": {
+            "text": "<strong> Empowering<\/strong>   We feature a wide spectrum of vetted charities chosen with care"
+          }
+        },
+        "f59fde65-a6a8-41c4-87be-f280ab2af714": {
+          "type": "item",
+          "settings": {
+            "text": "<strong> Charitable<\/strong>    10% of every purchase goes to the charity you choose"
+          }
+        }
+      },
+      "block_order": [
+        "fc2b8047-c775-479c-b4fd-bcd05e6340cc",
+        "55f0cf68-0057-4e42-8e9d-e5c3a3e56755",
+        "f59fde65-a6a8-41c4-87be-f280ab2af714"
+      ],
+      "settings": {
+        "title": "Changing Lives,",
+        "title_2": "Book by Book",
+        "text": "Booksio is a charitably-driven bookstore that gives 10% of every book purchase to a charity you choose.",
+        "url": "#",
+        "bg": "shopify:\/\/shop_images\/BKSIO_HomepageHeader-BestSellers.png",
+        "bg_mobile": "shopify:\/\/shop_images\/BKSIO_HomepageHeader-BestSellers-Mobile.png"
+      }
+    },
+    "f3728c13-0a1d-4ca3-8e05-00ff2f4b2ae8": {
+      "type": "home-categories",
+      "blocks": {
+        "8d272ef4-5455-45ee-9815-2e456bd52ffe": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/tnyt.png",
+            "title": "Bestsellers",
+            "link": "#"
+          }
+        },
+        "8368d82b-85de-4127-a0e0-f9337fa62f36": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/book2_6.png",
+            "title": "New Arrivals",
+            "link": ""
+          }
+        },
+        "fac14508-9afe-43de-a355-7867b8d0eeaf": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/graph.png",
+            "title": "Trending Books",
+            "link": ""
+          }
+        },
+        "9465c9fc-cd32-4b1d-8eee-1d8568f535c2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/calendar.png",
+            "title": "Coming Soon",
+            "link": ""
+          }
+        },
+        "0d70d4d8-dc2f-46cd-b7f4-04d50617008f": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/fire.png",
+            "title": "Booksio Top 100",
+            "link": ""
+          }
+        },
+        "dece5718-1f22-40b4-9c74-342d94c60dcc": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/book.png",
+            "title": "Top Magazines",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "8d272ef4-5455-45ee-9815-2e456bd52ffe",
+        "8368d82b-85de-4127-a0e0-f9337fa62f36",
+        "fac14508-9afe-43de-a355-7867b8d0eeaf",
+        "9465c9fc-cd32-4b1d-8eee-1d8568f535c2",
+        "0d70d4d8-dc2f-46cd-b7f4-04d50617008f",
+        "dece5718-1f22-40b4-9c74-342d94c60dcc"
+      ],
+      "settings": {
+        "title": "Top Categories"
+      }
+    },
+    "6ce5279d-7c8f-4e3c-b794-2a8b5c0d93a4": {
+      "type": "home-charities",
+      "settings": {
+        "title": "Make a Difference,",
+        "title_2": "By Buying Books",
+        "text": "Here at Booksio, each month we'll highlight a charitable theme close to our hearts, and the organizations with a core mission to improve and address it. <strong>10% of your sales will automatically go to making a difference<\/strong> towards our theme. So sit back, shop, and let us take care of the rest! If another cause or charity is dearer to your heart, just visit your account profile and pick a charity from our approved list.",
+        "url": "#",
+        "button_text": "See The Charities",
+        "image": "shopify:\/\/shop_images\/TimeIsMoney.png"
+      }
+    },
+    "46d2f072-5be1-488a-9bbe-19522d2ab2ba": {
+      "type": "home-how-it-works",
+      "blocks": {
+        "97b286fe-bea1-4a7a-9406-4343950f6644": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/one.png",
+            "title": "Browse Our Collection",
+            "text": "Search for a book or browse through categories to find over 15 million titles of books."
+          }
+        },
+        "f894fb82-598b-4f91-abb8-496aeb348b5d": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/two.png",
+            "title": "Purchase Your Books",
+            "text": "Create an account and complete your purchase, we’ll ship your books within 3-4 business days."
+          }
+        },
+        "c1d3d0ba-46ad-49c4-a868-ec42c0e0cee7": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/three.png",
+            "title": "Read With A Purpose",
+            "text": "10% of all of your purchases will go towards the charity you choose. Support a good cause and read at the same time!"
+          }
+        }
+      },
+      "block_order": [
+        "97b286fe-bea1-4a7a-9406-4343950f6644",
+        "f894fb82-598b-4f91-abb8-496aeb348b5d",
+        "c1d3d0ba-46ad-49c4-a868-ec42c0e0cee7"
+      ],
+      "settings": {
+        "title": "Making a Difference",
+        "title_2": "How Booksio Works",
+        "text": "<strong>It’s possible to purchase books at almost any store, so why Booksio?<\/strong> With every book you buy from us, we donate 10% of the total cost to charity. Every month, we pick a new charitable cause for which you can receive literary support with your purchase. And we’re not just about selling books - we’re about reading and storytelling that makes a difference in this world.",
+        "url": "",
+        "button_text": "Start Reading Today"
+      }
+    },
+    "e1296779-6394-4547-8a8c-a9e8ebc37c80": {
+      "type": "home-ny-times",
+      "settings": {
+        "title": "NY Times Bestsellers",
+        "link": "shopify:\/\/collections\/ny-times-bestsellers",
+        "collection": "ny-times-bestsellers"
+      }
+    },
+    "d698e2f4-b588-4fd8-8bb5-ebe3989b9e6b": {
+      "type": "home-charitable-collection",
+      "settings": {
+        "title": "Celebrate The Arts",
+        "text": "Shop our charitable theme collection for July, benefitting The Metropolitan Museum of Art, The Metropolitan Opera Association and the Young Musicians Unite.",
+        "link": "shopify:\/\/collections\/charitable-cause-july",
+        "collection": "charitable-cause-july"
+      }
+    },
+    "8a81265a-496f-4b48-b66e-142e3e55b9ef": {
+      "type": "home-featured-book",
+      "settings": {
+        "quote": "EMMA MAKEPEACE IS A WORTHY HEIR TO THE JAMES BOND MANTLE.",
+        "quote_author": "James Patterson",
+        "text": "<p>Nothing about Emma Makepeace is real. Not even her name. A newly minted secret agent, Emma's barely graduated from basic training when she gets the call for her first major assignment. Eager to serve her country and prove her worth, she dives in headfirst.<\/p>",
+        "book_name": "Alias Emma",
+        "book_author": "By Ava Glass",
+        "url": "",
+        "button_text": "BUY IT NOW",
+        "cover": "shopify:\/\/shop_images\/BKSIO_Homepage-BOOK-July_1.png",
+        "bg": "shopify:\/\/shop_images\/BKSIO_Homepage-BKGRD-July.png",
+        "bg_mobile": "shopify:\/\/shop_images\/BKSIO_Homepage-BKGRD-July-Mobile.png"
+      }
+    },
+    "cb2001a8-6453-4fc4-a2ff-735438337699": {
+      "type": "home-numbers",
+      "blocks": {
+        "a7effa68-2207-4cb7-8324-e55d437da355": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/count_1.png",
+            "title": "100+",
+            "text": "Charities to Support Year One"
+          }
+        },
+        "bbcb5a78-c492-4522-96ad-c58df676b99c": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/countone.png",
+            "title": "$1+M",
+            "text": "Goal to Raise Year One"
+          }
+        },
+        "230c58ff-d4ad-4c37-876b-73e999a896a4": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/counttwo.png",
+            "title": "15+M",
+            "text": "Books, Audiobooks, eBooks & Magazines"
+          }
+        }
+      },
+      "block_order": [
+        "a7effa68-2207-4cb7-8324-e55d437da355",
+        "bbcb5a78-c492-4522-96ad-c58df676b99c",
+        "230c58ff-d4ad-4c37-876b-73e999a896a4"
+      ],
+      "settings": {}
+    },
+    "812b9706-4dcd-47ef-ad0f-c54f3e27736b": {
+      "type": "home-whats-new",
+      "settings": {
+        "title": "What's New?",
+        "text": "Check out the freshest releases in our catalog.",
+        "collection": "new-arrivals",
+        "link": "shopify:\/\/collections\/new-arrivals",
+        "url": "",
+        "button_text": "Sign Up For Your Account"
+      }
+    },
+    "39ad66a3-cd71-4da1-aa8a-1a22e15c2fa6": {
+      "type": "home-faq",
+      "blocks": {
+        "5f98969b-5e2e-4c38-813b-ad90fb906f07": {
+          "type": "item",
+          "settings": {
+            "title": "How do I track my book order?",
+            "answer": "<p>You will receive an email with the tracking number, as well as a link, as soon as your order ships.<\/p>"
+          }
+        },
+        "7f7e7ded-6483-47d8-a6ce-8f91b5537c19": {
+          "type": "item",
+          "settings": {
+            "title": "Do gift cards provide a charitable donation?",
+            "answer": "<p>Buying a gift card doesn't trigger the 10% charitable donation, but don't worry! When the recipient redeems their gift card and makes a purchase, the donation happens at that point.<\/p>"
+          }
+        },
+        "6561b044-1386-4752-aef3-d7f3b62522cf": {
+          "type": "item",
+          "settings": {
+            "title": "How can I access my ebook and audiobook purchases?",
+            "answer": "<p>All of your digital purchases from Booksio can be accessed through our app, available on both the <a href=\"https:\/\/apps.apple.com\/tt\/app\/booksio\/id1590368314\">Apple App Store<\/a> for iOS devices and in the <a href=\"https:\/\/play.google.com\/store\/search?q=booksio&c=apps\">Google Play Store<\/a> for Android devices. You can sign in with your existing Booksio.com account to find your entire digital library.<\/p>"
+          }
+        },
+        "215f6f7a-e389-4b2c-b5e1-9a2540a61b00": {
+          "type": "item",
+          "settings": {
+            "title": "If I don’t live in the US, can I still make digital purchases?",
+            "answer": "<p>At this time, Booksio is ONLY available to US customers, both for print and digital orders. We are working to start accepting non-US orders in 2023. <\/p>"
+          }
+        },
+        "88632477-b041-4719-a56d-bdf5e424fa3f": {
+          "type": "item",
+          "settings": {
+            "title": "How do I update my billing information?",
+            "answer": "<p>After placing your first order with Booksio, you can change your billing information for future orders by logging into your account and selecting <a href=\"https:\/\/www.booksio.com\/customer\/paymentinfo\/\">\"My Payment Options\"<\/a>.<\/p>"
+          }
+        },
+        "0747c9d6-35cf-4bd1-9afa-b479beede976": {
+          "type": "item",
+          "settings": {
+            "title": "Can I cancel my order?",
+            "answer": "<p>Yes, you have the ability to cancel your order. Please reach out to our customer care team on this <a href=\"https:\/\/www.booksio.com\/contact\/\">page<\/a>, and we will be happy to assist you.<\/p>"
+          }
+        },
+        "1601d07f-8ed8-4163-830e-4084f0e8b941": {
+          "type": "item",
+          "settings": {
+            "title": "Something's wrong with my order! What can I do?",
+            "answer": "<p>We’re so sorry this happened! Don’t hesitate to get in touch with our customer care team on this <a href=\"https:\/\/www.booksio.com\/contact\/\">page<\/a> within two weeks of delivery to describe what you received. Please include your order number (it looks like “BOOK-############” and was included in your confirmation email) and email address used for the purchase. A photo of the product in question is helpful too! We’ll work with you to resolve the problem as soon as possible.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "5f98969b-5e2e-4c38-813b-ad90fb906f07",
+        "7f7e7ded-6483-47d8-a6ce-8f91b5537c19",
+        "6561b044-1386-4752-aef3-d7f3b62522cf",
+        "215f6f7a-e389-4b2c-b5e1-9a2540a61b00",
+        "88632477-b041-4719-a56d-bdf5e424fa3f",
+        "0747c9d6-35cf-4bd1-9afa-b479beede976",
+        "1601d07f-8ed8-4163-830e-4084f0e8b941"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "text": "<p>Have an unanswered question? Please <a href=\"#\" title=\"#\">contact us<\/a> and we'll be happy to help.<\/p>"
+      }
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "aaa1cb3d-8919-4e6b-9dec-52c48fb9ba4a",
+    "f3728c13-0a1d-4ca3-8e05-00ff2f4b2ae8",
+    "6ce5279d-7c8f-4e3c-b794-2a8b5c0d93a4",
+    "e1296779-6394-4547-8a8c-a9e8ebc37c80",
+    "46d2f072-5be1-488a-9bbe-19522d2ab2ba",
+    "d698e2f4-b588-4fd8-8bb5-ebe3989b9e6b",
+    "8a81265a-496f-4b48-b66e-142e3e55b9ef",
+    "cb2001a8-6453-4fc4-a2ff-735438337699",
+    "812b9706-4dcd-47ef-ad0f-c54f3e27736b",
+    "39ad66a3-cd71-4da1-aa8a-1a22e15c2fa6",
+    "subscribe"
+  ]
+}

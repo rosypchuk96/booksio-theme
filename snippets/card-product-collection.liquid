@@ -1,0 +1,80 @@
+<li class="item product product-item">
+   <div role="group" aria-label="product" class="product-item-info" id="product-item-info_14882867" data-container="product-grid">
+      <a href="{{ product.url }}" class="product-item-photo">
+        <span class="product-image-container product-image-container-8573004" style="width: 351px;">
+          <span class="product-image-wrapper" style="padding-bottom: 125%;">
+            {% if product.featured_image %}
+              <img
+                class=""
+                src="{{ product.featured_image | img_url: 'master' }}"
+                width="351"
+                height="561"
+                alt="{{ product.featured_media.alt }}"
+                style="display: inline-block;">
+            {% endif %}
+          </span>
+        </span>
+        <style>
+          .product-image-container-8573004 {
+            width: 351px;
+          }
+          .product-image-container-8573004 span.product-image-wrapper {
+            padding-bottom: 125%;
+          }
+        </style>
+      </a>
+      <div class="product details product-item-details">
+         <a href="{{ product.url }}" title="{{ product.title }}"><strong class="product name product-item-name">{{ product.title }}</strong></a> 
+         <div class="author-wrapper">
+          {% if product.metafields.accentuate.author %}
+            <a target="_blank" href="{{ product.url }}">
+               <p class="author">{{ product.metafields.accentuate.author }}</p>
+            </a>
+          {% endif %}
+            <div class="PriceMain">
+              <div
+              class="price-box price-final_price"
+              data-role="priceBox"
+              data-product-id="8573004"
+              data-price-box="product-id-8573004">
+                <span class="normal-price">
+                  <span class="pricing-element price-container ">
+                    <span class="price-label">Regular Price</span>
+                    <span
+                      id="old-price-8573004-widget-product-grid"
+                      data-price-amount="13.99"
+                      data-price-type="finalPrice"
+                      class="price-wrapper price-range ">
+                      <span class="price">{{ product.price_min | money }}</span>
+                      {% if product.price_min != product.price_max %}
+                        -
+                        <span class="price">{{ product.price_max | money }}</span>
+                      {% endif %}
+                    </span>
+                  </span>
+                </span>
+                <span class="old-price sly-old-price no-display">
+                  <span class="pricing-element price-container ">
+                    <span class="price-label">Regular Price</span>
+                    <span
+                      id="old-price-8573004-widget-product-grid"
+                      data-price-amount="13.99"
+                      data-price-type="oldPrice"
+                      class="price-wrapper single-price ">
+                      <span class="price">{{ product.compare_at_price_max | money }}</span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+            </div>
+         </div>
+         <div class="star_rating">
+            <div class="yotpo bottomLine yotpo-small" data-product-id="14882867" data-name="Soul Taken" data-yotpo-element-id="5">
+               <div class="yotpo-display-wrapper" style="visibility: hidden;">
+                  <div class="yotpo-clr"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</li>

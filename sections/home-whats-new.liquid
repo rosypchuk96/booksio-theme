@@ -227,7 +227,7 @@
           {% assign collection_handle = section.settings.collection %}
           {% if collection_handle != blank and collections[collection_handle] %}
             <ol class="product-items widget-product-carousel">
-              {% for product in collections[collection_handle].products %}
+              {% for product in collections[collection_handle].products limit: 20 %}
                 <div>
                   <div>
                     {% include 'card-product-v2' with product %}
@@ -252,7 +252,7 @@
         <div data-content-type="buttons" data-appearance="inline" data-same-width="false" data-box-model="{}" data-element="main" data-pb-style="UE9R88S">
           {% if section.settings.link != blank or section.settings.button_text != blank %}
             <div data-content-type="button-item" data-appearance="default" data-element="main" data-pb-style="G9PHXMA">
-              <a class="pagebuilder-button-primary box-model-64a73e701b1cc" href="{{ section.settings.link }}" target="" data-link-type="default" data-element="link" data-pb-style="TPHR3L7"><span data-element="link_text">{{ section.settings.button_text }}</span></a>
+              <a class="pagebuilder-button-primary box-model-64a73e701b1cc" href="/login" target="" data-link-type="default" data-element="link" data-pb-style="TPHR3L7"><span data-element="link_text">{{ section.settings.button_text }}</span></a>
             </div>
           {% endif %}
         </div>

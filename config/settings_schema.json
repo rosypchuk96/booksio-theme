@@ -6,5 +6,20 @@
     "theme_author": "THEME_AUTHOR",
     "theme_documentation_url": "https:\/\/THEME_DOCUMENTATION_URL.com\/",
     "theme_support_url": "https:\/\/THEME_SUPPORT_URL.com\/"
+  },
+  {
+    "name": "Sidebar",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "sidebar_banner_img",
+        "label": "Banner Image"
+      },
+      {
+        "type": "url",
+        "id": "sidebar_banner_link",
+        "label": "Banner Link"
+      }
+    ]
   }
 ]

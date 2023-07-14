@@ -3162,4 +3162,11 @@ list-style: none;
   .box-model-64aaaacc318ae {
     order: -1;
   }
+  #html-body .main-hero-home {
+      padding: 20px 0 0 !important;
+  }
+  .filter.active .filter-title,
+  .filter.active .filter-options {
+    z-index: 100;
+  }
 }

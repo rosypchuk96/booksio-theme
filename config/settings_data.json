@@ -1,10 +1,17 @@
 {
   "current": {
+    "sidebar_banner_img": "shopify:\/\/shop_images\/BKSIO_CharityFeature-JULY.jpg",
+    "sidebar_banner_link": "shopify:\/\/pages\/charitable-cause-july",
     "sections": {
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/booksio_rgb_logo_web.png"
+          "logo": "shopify:\/\/shop_images\/booksio_rgb_logo_web.png",
+          "books_image": "shopify:\/\/shop_images\/BKSIO_DropDown-MadHoney.png",
+          "books_link": "",
+          "magazines_image": "shopify:\/\/shop_images\/BKSIO-Men-Dropdown.png",
+          "magazines_link": "",
+          "charities_image": "shopify:\/\/shop_images\/CHARITY-MENU-IMAGE.png"
         }
       },
       "footer": {
@@ -62,7 +69,7 @@
           "55f0cf68-0057-4e42-8e9d-e5c3a3e56755": {
             "type": "item",
             "settings": {
-              "text": "<strong> Easy<\/strong>   Browse our site of 15 million books and select the cause you support"
+              "text": "<strong> Empowering<\/strong>   We feature a wide spectrum of vetted charities chosen with care"
             }
           },
           "f59fde65-a6a8-41c4-87be-f280ab2af714": {
@@ -267,8 +274,7 @@
           "bbcb5a78-c492-4522-96ad-c58df676b99c",
           "230c58ff-d4ad-4c37-876b-73e999a896a4"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "812b9706-4dcd-47ef-ad0f-c54f3e27736b": {
         "type": "home-whats-new",
@@ -475,7 +481,6 @@
     ]
   },
   "presets": {
-    "Default": {
-    }
+    "Default": {}
   }
 }

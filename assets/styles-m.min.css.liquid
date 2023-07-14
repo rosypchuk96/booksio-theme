@@ -467,7 +467,7 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-appearance: none;
 }
 select {
-    background: #fff url("./images/select-bg.svg") no-repeat 100% 45%;
+    background: #fff url("https://cdn.shopify.com/s/files/1/0789/2592/2613/files/select-bg.svg") no-repeat 100% 45%;
     background-clip: padding-box;
     border: 3px solid #ccc;
     border-radius: 50px;
@@ -45099,7 +45099,7 @@ div.minicart-wrapper.active .action.showcart.active:hover:before {
     border-left: none;
     border-right: none;
 }
-.page-header {
+#shopify-section-header {
     border: none;
     position: -webkit-sticky;
     position: sticky;
@@ -45109,8 +45109,12 @@ div.minicart-wrapper.active .action.showcart.active:hover:before {
     box-shadow: 0 7px 4px -5px #d3d3d3;
     background: #fcfcfc;
 }
+.page-header {
+    z-index: 10;
+    position: relative;
+}
 @media (min-width: 768px) {
-    .page-header {
+    #shopify-section-header {
         position: relative;
     }
 }
