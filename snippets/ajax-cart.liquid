@@ -1,0 +1,289 @@
+<div data-block="minicart" class="minicart-wrapper">
+  <a
+    class="action showcart"
+    href="/cart"
+    data-bind="scope: 'minicart_content'">
+    <i class="icon" aria-hidden="true"></i>
+    <span class="cart-label">My Cart</span>
+    {% if cart.item_count > 0 %}
+      <span class="counter qty">
+        {{ cart.item_count }}
+      </span>
+    {% endif %}
+  </a>
+  <div
+    class="mage-dropdown-dialog mini-cart-content"
+    tabindex="-1"
+    role="dialog"
+    aria-describedby="ui-id-1"
+    style="display: none;"
+    aria-labelledby="ui-id-2">
+    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+      <span id="ui-id-2" class="ui-dialog-title">Cart Dropdown</span>
+      <button
+        type="button"
+        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close"
+        role="button"
+        aria-disabled="false"
+        title="close">
+        <span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+        <span class="ui-button-text">close</span>
+      </button>
+    </div>
+    <div
+      class="block block-minicart ui-dialog-content ui-widget-content"
+      data-role="dropdownDialog"
+      id="ui-id-1"
+      style="display: block;">
+      <h1 class="visually-hidden">Cart Dropdown</h1>
+      <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+        <div class="block-title">
+          <strong>
+            <span class="text" data-bind="i18n: 'My Cart'">My Cart</span>
+          </strong>
+        </div>
+        {% if cart.item_count > 0 %}
+          <div class="block-content">
+            <button
+              type="button"
+              id="btn-minicart-close"
+              class="action close"
+              data-action="close"
+              title="Close">
+              <span data-bind="i18n: 'Close'">Close</span>
+              <i class="icon" aria-hidden="true"></i>
+            </button>
+
+            <div
+              data-action="scroll"
+              class="minicart-items-wrapper"
+              style="height: 139px;">
+              <ol
+                id="mini-cart"
+                class="minicart-items"
+                data-bind="foreach: { data: getCartItems(), as: 'item' }">
+                {% for line_item in cart.items %}
+                  <li
+                    class="item product product-item"
+                    data-role="product-item"
+                    data-collapsible="true">
+                    <div
+                      class="product"
+                      role="group"
+                      aria-label="product">
+                      <a
+                        data-bind="attr: {href: product_url, title: product_name}"
+                        tabindex="-1"
+                        class="product-item-photo"
+                        href="{{ line_item.url }}"
+                        title="Spare">
+                        <span
+                          class="product-image-container"
+                          data-bind="style: {width: width/2 + 'px'}"
+                          style="width: 75px;">
+                          <span
+                            class="product-image-wrapper"
+                            data-bind="style: {'padding-bottom': height/width*100 + '%'}"
+                            style="padding-bottom: 100%;">
+                            {% if line_item.image %}
+                              <img
+                                class="product-image-photo"
+                                src="{{ line_item.image | img_url: 'master' }}"
+                                alt="Spare"
+                                style="width: auto; height: auto;">
+                            {% endif %}
+                          </span>
+                        </span>
+                      </a>
+
+                      <div class="product-item-details">
+                        <strong class="product-item-name">
+                          <span data-bind="html: $parent.getProductNameUnsanitizedHtml(product_name)">{{ line_item.product.title }}</span>
+                        </strong>
+                        {% unless line_item.product.has_only_default_variant %}
+                          <div
+                            class="product options"
+                            data-bind="style: {visibility: options.length || customOptions.length ? 'visible' : 'hidden'}"
+                            role="tablist"
+                            data-collapsible="true"
+                            style="visibility: visible;">
+                            <span
+                              data-role="title"
+                              class="toggle"
+                              role="tab"
+                              aria-selected="false"
+                              aria-expanded="false"
+                              tabindex="0">
+                              <span>See Details</span>
+                            </span>
+                            <div
+                              data-role="content"
+                              class="content"
+                              role="tabpanel"
+                              aria-hidden="true"
+                              style="display: none;">
+                              <strong class="subtitle">
+                                <span>Options Details</span>
+                              </strong>
+                              <dl class="product options list">
+                                {% for option in line_item.options_with_values %}
+                                  {% if option.name != 'Title' %}
+                                    <dt class="label">
+                                      {{ option.name }}
+                                    </dt>
+                                    <dd class="values">
+                                      <span data-bind="text: option.value">{{ option.value }}</span>
+                                    </dd>
+                                  {% endif %}
+                                {% endfor %}
+                              </dl>
+                            </div>
+                          </div>
+                        {% endunless %}
+                        <div class="product-item-pricing">
+                          <div class="price-container">
+                            <span class="price-wrapper" data-bind="html: price">
+                              <span class="price-excluding-tax" data-label="Excl. Tax">
+                                <span class="minicart-price">
+                                  <span class="price">{{ line_item.price | money }}</span>
+                                </span>
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="details-qty qty"
+                            data-dashlane-rid="0fe1c0f715ffc8ac"
+                            data-form-type="other">
+                            <label class="label" for="cart-item-30948-qty">Qty</label>
+                            <input
+                              type="number"
+                              size="4"
+                              class="item-qty cart-item-qty"
+                              data-item-qty="{{ line_item.quantity }}"
+                              value="{{ line_item.quantity }}">
+                            <button
+                              class="update-cart-item"
+                              style="display: none"
+                              id="update-cart-item-30948"
+                              data-cart-item="30948"
+                              title="Update">
+                              <span data-bind="i18n: 'Update'">Update</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="product actions">
+                          <div class="primary">
+                            <a
+                              data-bind="attr: {href: configure_url, title: $t('Edit item')}"
+                              class="action edit"
+                              href="https://www.booksio.com/checkout/cart/configure/id/30948/product_id/15443735/"
+                              title="Edit item">
+                              <i class="icon edit-icon" aria-hidden="true"></i>
+                              <span data-bind="i18n: 'Edit'">Edit</span>
+                            </a>
+                          </div>
+                          <div class="secondary">
+                            <a
+                              href="#"
+                              data-bind="attr: {'data-cart-item': item_id, title: $t('Remove item')}"
+                              class="action delete"
+                              data-cart-item="30948"
+                              title="Remove item">
+                              <i class="icon delete-icon" aria-hidden="true"></i>
+                              <span data-bind="i18n: 'Remove'">Remove</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                {% endfor %}
+              </ol>
+            </div>
+
+            <div class="items-total">
+              <span class="count" data-bind="text: getCartParam('summary_count')">1</span>
+              <span data-bind="i18n: 'Item in Cart'">Item in Cart</span>
+            </div>
+            <div class="subtotal">
+              <span class="label">
+                <!-- ko i18n: 'Cart Subtotal' -->
+                <span>Cart Subtotal</span>
+                <!-- /ko -->
+              </span>
+
+              <div class="amount price-container">
+                <span class="price-wrapper" data-bind="html: cart().subtotal_excl_tax">
+                  <span class="price">{{ cart.total_price | money }}</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="minicart-actions">
+              <div class="actions">
+                <div class="primary">
+                  <a
+                    class="action primary checkout"
+                    data-bind="attr: {title: $t('View Cart &amp; Check Out'), href: shoppingCartUrl}, i18n: 'View Cart &amp; Check Out'"
+                    title="View Cart &amp; Check Out"
+                    href="/cart/">View Cart &amp; Check Out</a>
+                </div>
+              </div>
+            </div>
+
+            <div id="minicart-widgets" class="minicart-widgets"></div>
+          </div>
+        {% else %}
+          <div class="block-content empty-cart">
+            <button
+              type="button"
+              id="btn-minicart-close"
+              class="action close"
+              data-action="close"
+              title="Close">
+              <span data-bind="i18n: 'Close'">Close</span>
+              <i class="icon" aria-hidden="true"></i>
+            </button>
+            <strong class="subtitle empty" data-bind="i18n: 'You have no items in your shopping cart.'">
+              You have no items in your shopping cart.</strong>
+            <div class="minicart-actions">
+              <div class="actions">
+                <div class="primary">
+                  <a
+                    href="/ny-times-bestsellers"
+                    id="top-cart-btn-shop-now"
+                    type="button"
+                    class="action primary checkout"
+                    data-action="close"
+                    title="Shop Now">Shop Now
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="minicart-widgets" class="minicart-widgets"></div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('#mini-cart .product.options .toggle').click(function() {
+      $(this).closest('.options').find('.content').toggle(0);
+      $(this).closest('.options').toggleClass('active');
+    });
+
+    $('.showcart').click(function(e) {
+      e.preventDefault();
+      $('.mini-cart-content').toggle(0);
+    });
+
+    $('#btn-minicart-close').click(function(e) {
+      e.preventDefault();
+      $('.mini-cart-content').hide(0);
+    });
+  });
+</script>

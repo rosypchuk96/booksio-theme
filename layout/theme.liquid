@@ -40,25 +40,5 @@
 
     {{ 'slick.min.js' | asset_url | script_tag }}
     {{ 'theme.min.js' | asset_url | script_tag }}
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script>
-      $(document).ready(function() {
-        $('.collapsible-item-tab').click(function() {
-          // Remove 'active' class from all tabs
-          $('.collapsible-item-tab').removeClass('active');
-          
-          // Add 'active' class to the clicked tab
-          $(this).addClass('active');
-          
-          // Hide all tab contents
-          $('.content').hide();
-          
-          // Show the corresponding tab content based on the clicked tab
-          var tabContentId = $(this).attr('class').split(' ')[1].split('-')[0] + '-content';
-          $('#' + tabContentId).show();
-        });
-      });
-    </script>
   </body>
 </html>
