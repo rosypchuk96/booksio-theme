@@ -3174,3 +3174,64 @@ fieldset.product-form__input .form__label{display: none;}
     z-index: 100;
   }
 }
+
+.scDiscount input[type=text] {
+  border: 1px solid #ebebeb;
+  height: 40px;
+  border-radius: 4px;
+  color: #b8b8b8;
+  font-size: 15px;
+  font-family: "Lato";
+  font-weight: 700;
+  padding: 0 15px;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+}
+
+.scDiscount input[type=text]::-webkit-input-placeholder { 
+  font-size: 15px;
+  font-weight: 700;
+  color: #b8b8b8;
+  text-transform: uppercase;
+}
+.scDiscount input[type=text]::-moz-placeholder { 
+  font-size: 15px;
+  font-weight: 700;
+  color: #b8b8b8;
+  text-transform: uppercase;
+}
+.scDiscount input[type=text]:-ms-input-placeholder {
+  font-size: 15px;
+  font-weight: 700;
+  color: #b8b8b8;
+  text-transform: uppercase;
+}
+.scDiscount input[type=text]:-moz-placeholder {
+  font-size: 15px;
+  font-weight: 700;
+  color: #b8b8b8;
+  text-transform: uppercase;
+}
+#scDiscountApp .sc_simple-container {
+  display: block;
+}
+#scDiscountApp .sc_simple-container .sc_code-btn input[type=button] {
+  left: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  padding: 12px 20px 10px;
+  line-height: 1 !important;
+}
+.sc_simple-container .sc_code-btn {  
+  margin: 14px 0 0;
+}
+.totals.sub s {
+  display: none;
+}
+.sc_simple-info__row:not(.sc_code-info) {
+  display: none !important;
+}

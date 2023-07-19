@@ -1,0 +1,353 @@
+{% assign charities = shop.metaobjects["charity_settings"]['charity-settings'].supported_charities %}
+
+<div class="columns">
+      <div class="column main">
+         <nav class="breadcrumbs" aria-label="breadcrumbs">
+            <ul class="items">
+               <li class="item Home"> <a href="/" title="Home">Home</a> <span class="icon" aria-hidden="true"></span> </li>
+               <li class="item Cart"> <strong>Cart</strong> </li>
+            </ul>
+         </nav>
+         <style>#html-body [data-pb-style=VBSU45J]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;text-align:center;border-width:0}#html-body [data-pb-style=HRIO2V2]{border-style:none}#html-body [data-pb-style=T6MYVOR],#html-body [data-pb-style=YU8R2AL]{border-width:0;max-width:100%;height:auto}#html-body [data-pb-style=GC6FPL7],#html-body [data-pb-style=L5NKV5F]{border-width:0}@media only screen and (max-width: 768px) { #html-body [data-pb-style=HRIO2V2]{border-style:none} }
+          .checkout-cart-index.page-main {
+              padding-left: 15px;
+              padding-right: 15px;
+          }
+         </style>
+         <div class="heading-one-sec box-model-64b13f0b7362e" data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-element="main" data-pb-style="VBSU45J">
+            <div class="row-full-width-inner" data-element="inner">
+               <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="HRIO2V2">
+                <img class="pagebuilder-mobile-hidden" src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_1.png" alt="" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="YU8R2AL">
+                <img class="pagebuilder-mobile-only" src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_1.png" alt="" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="T6MYVOR"></figure>
+               <div class="lato-font box-model-64b13f0b73672" data-content-type="text" data-appearance="default" data-element="main" data-pb-style="L5NKV5F">
+                  <h3><span style="font-size: 34px; line-height: 42px;"><span style="color: #41c2ff;">YOUR</span> <span style="color: #202020;">CART</span></span></h3>
+               </div>
+               <div class="lato-font box-model-64b13f0b7367e" data-content-type="text" data-appearance="default" data-element="main" data-pb-style="GC6FPL7">
+                  <p><span style="font-size: 24px; color: #939393;"><span style="color: #b8b8b8;"><strong><span style="font-size: 18px;"><span style="font-size: 14px;">VIEW/EDIT YOUR SHOPPING CART</span></span></strong></span></span></p>
+               </div>
+            </div>
+         </div>
+         <style type="text/css">.box-model-64b13f0b7362e {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 40px;padding-left: 0px;}@media only screen and (max-width: 768px) {.box-model-64b13f0b7362e {padding-top: 40px;}}</style>
+         <input name="form_key" type="hidden" value="UxbR7TJdQwixPtD6"> 
+         <div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}" style="display: none;">
+            <!-- ko template: getTemplate() --><!-- /ko -->
+         </div>
+         <div></div>
+         <!-- Yotpo - Add body class --><!--/ Yotpo - Add body class --><!-- Yotpo - Widget Script --><!--/ Yotpo - Widget Script --> 
+         {% if cart.items.size > 0 %}
+         <div class="cart-container">
+            <div class="top-content-cart">
+               <div class="head"><strong>YOUR CART</strong></div>
+               <div class="shopping"> <a class="action continue" href="/" title="Continue Shopping"><span>Continue Shopping</span></a> </div>
+            </div>
+            <form action="/cart" method="post" class="form form-cart" id="cart-form">
+               <div class="cart table-wrapper">
+                  <table id="shopping-cart-table" class="cart items data table">
+                     <caption class="table-caption">Shopping Cart Items</caption>
+                     <thead>
+                        <tr>
+                           <th class="col item" scope="col"><span>Item</span></th>
+                           <th class="col price" scope="col"><span>Filter by Price</span></th>
+                           <th class="col qty" scope="col"><span>Qty</span></th>
+                           <th class="col subtotal" scope="col"><span>Subtotal</span></th>
+                        </tr>
+                     </thead>
+                     {% for line_item in cart.items %}
+                      <tbody class="cart item">
+                          <tr class="item-info">
+                            <td data-th="Item" class="col item">
+                                <a href="{{ line_item.url }}" title="Spare" tabindex="-1" class="product-item-photo">
+                                  <span class="product-image-container product-image-container-15443735" style="width: 165px;"><span class="product-image-wrapper" style="padding-bottom: 100%;">
+                                    {% if line_item.image %}
+                                      <img
+                                        class="product-image-photo"
+                                        src="{{ line_item.image | img_url: 'master' }}"
+                                        alt="Spare"
+                                        style="width: auto; height: auto;">
+                                    {% endif %}
+                                  </span></span>  
+                                  <style>.product-image-container-15443735 {
+                                      width: 165px;
+                                      }
+                                      .product-image-container-15443735 span.product-image-wrapper {
+                                      padding-bottom: 100%;
+                                      }
+                                  </style>
+                                </a>
+                                <div class="product-item-details">
+                                  <strong class="product-item-name"> <a href="{{ line_item.url }}">{{ line_item.product.title }}</a> </strong> 
+                                  {% if line_item.product.metafields.custom.author %}
+                                    <p class="author">{{ line_item.product.metafields.custom.author }}</p>
+                                  {% endif %}
+                                  <dl class="item-options">
+                                    {% for option in line_item.options_with_values %}
+                                      {% if option.name != 'Title' %}
+                                        <dt class="label">
+                                          {{ option.name }}
+                                        </dt>
+                                        <dd class="values">
+                                          <span>{{ option.value }}</span>
+                                        </dd>
+                                      {% endif %}
+                                    {% endfor %}
+                                  </dl>
+                                </div>
+                            </td>
+                            <td class="col price" data-th="Filter by Price">   <span class="price-excluding-tax" data-label="Excl. Tax"> <span class="cart-price"> <span class="price">{{ line_item.price | money }}</span></span> </span> </td>
+                            <td class="col qty" data-th="Qty">
+                                <div class="field qty">
+                                  <label class="label" for="cart-30948-qty"><span>Qty</span></label> 
+                                  <div class="control qty">
+                                      <div class="more"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+                                      <input id="cart-30948-qty" name="updates[]" data-cart-item-id="9780593677865" value="{{ line_item.quantity }}" type="number" size="4" title="Qty" class="input-text qty" data-cart-ordered="1" data-validate="{required:true,'validate-greater-than-zero':true}" data-role="cart-item-qty" data-dashlane-rid="e93fe378347e6a01" data-form-type="other">
+                                      <div class="less"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                                  </div>
+                                </div>
+                            </td>
+                            <td class="col subtotal" data-th="Subtotal">    <span class="price-excluding-tax" data-label="Excl. Tax"> <span class="cart-price"> <span class="price">{{ line_item.line_price | money }}</span></span> </span>  </td>
+                          </tr>
+                          <tr class="item-actions">
+                            <td colspan="4">
+                                <div class="actions-toolbar">     <a class="action action-edit" href="https://www.booksio.com/checkout/cart/configure/id/30948/product_id/15443735/" title="Edit item parameters"><span>Edit</span></a>  <a href="/cart/change?line={{ forloop.index }}&quantity=0" title="Remove item" class="action action-delete cart-remove-item"><span> Remove item</span></a> </div>
+                            </td>
+                          </tr>
+                          <tr class="gift-card">
+                            <td colspan="4">
+                              <div id="gift-options-cart-item-30954" data-bind="scope:'giftOptionsCartItem-30954'" class="gift-options-cart-item"></div>
+                            </td>
+                          </tr>
+                      </tbody>
+                     {% endfor %}
+                  </table>
+               </div>
+               <div class="cart main actions"> <a class="action continue" href="/" title="Continue Shopping"><span>Continue Shopping</span></a>   <button id="update-cart-btn" type="submit" name="update_cart_action" data-cart-item-update="" value="update_qty" title="Update Shopping Cart" class="action update"><span>Update Shopping Cart</span></button> <input type="hidden" value="" id="update_cart_action_container" data-cart-item-update=""></div>
+
+                <div class="cart-summary">
+                  <strong class="summary title">Summary</strong>   
+                  {% include 'shipping-calculator' %}
+                  <div id="cart-totals" class="cart-totals" data-bind="scope:'block-totals'">
+                    <div class="title" data-role="title"><strong id="block-total-heading" role="heading" aria-level="2"> CART TOTAL</strong></div>
+                    <!-- ko template: getTemplate() -->
+                    <div class="table-wrapper" data-bind="blockLoader: isLoading">
+                        <table class="data table totals">
+                          <caption class="table-caption" data-bind="text: $t('Total')">Total</caption>
+                          <tbody>
+                              <tr class="totals sub">
+                                <th data-bind="i18n: title" class="mark" scope="row">Subtotal</th>
+                                <td class="amount">
+                                  <span class="price" data-subtotal="{{ cart.total_price | money_without_currency }}" data-bind="text: getValue(), attr: {'data-th': title}" data-th="Subtotal">{{ cart.total_price | money }}</span>
+                                </td>
+                              </tr>
+                              <tr class="totals shipping excl">
+                                <th class="mark" scope="row">
+                                    <span class="label" data-bind="i18n: title">Shipping</span>
+                                    <!-- ko if: haveToShowCoupon() --><!-- /ko -->
+                                    <span class="value">(DELIVERY - Economy Mail)</span>
+                                </th>
+                                <td class="amount">
+                                    <span class="price" id="shipping-price" data-bind="text: getValue(), attr: {'data-th': title}" data-th="Shipping">$3.55</span>
+                                </td>
+                              </tr>
+                              <tr class="grand totals">
+                                <th class="mark" scope="row">
+                                    <strong data-bind="i18n: title">Order Total</strong>
+                                </th>
+                                <td data-bind="attr: {'data-th': title}" class="amount" data-th="Order Total">
+                                    <strong><span class="price">{{ cart.total_price | plus: 355 | money }}</span></strong>
+                                </td>
+                              </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                  </div>
+                  <div class="cart-discount">
+                    <div class="block discount" id="block-discount" data-collapsible="true" role="tablist">
+                        <div class="title" data-role="title" role="tab" aria-selected="false" aria-expanded="false" tabindex="0"><strong id="block-discount-heading" role="heading" aria-level="2">Apply COUPON Code</strong></div>
+                        <div class="content" data-role="content" aria-labelledby="block-discount-heading" role="tabpanel" aria-hidden="true" style="display: none;">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="page messages">
+                    <div data-placeholder="messages"></div>
+                    <div data-bind="scope: 'messages'">
+                        <!-- ko if: cookieMessages && cookieMessages.length > 0 --><!-- /ko --><!-- ko if: messages().messages && messages().messages.length > 0 --><!-- /ko -->
+                    </div>
+                    <!-- /** * @author Blue Acorn iCi <code@blueacornici.com> * @copyright 2021 Blue Acorn iCi. All Rights Reserved. */ -->
+                    <div data-bind="scope: 'checkout-gift-messages'">
+                        <!-- ko template: getTemplate() -->
+                        <div data-role="checkout-messages" class="messages" data-bind="visible: isVisible(), click: removeAll">
+                          <!-- ko foreach: messageContainer.getErrorMessages() --><!--/ko-->
+                          <!-- ko foreach: messageContainer.getSuccessMessages() --><!--/ko-->
+                        </div>
+                        <!-- /ko -->
+                    </div>
+                  </div>
+                  <ul class="checkout methods items checkout-methods-items">
+                    <li class="item">  <button type="submit" name="checkout" data-role="proceed-to-checkout" title="Proceed to Checkout" class="action primary checkout"><span>Proceed to Checkout</span></button> </li>
+                    <li class="item"> <a class="action multicheckout" href="https://www.booksio.com/multishipping/checkout/"><span>Check Out with Multiple Addresses</span></a></li>
+                  </ul>
+              </div>
+            </form>
+            <div id="gift-options-cart" data-bind="scope:'giftOptionsCart'">
+               <!-- ko template: getTemplate() -->
+               <!-- ko if: isActive() || hasActiveOptions() -->
+               <div class="cart-gift-item">
+                  <div class="gift-item-block block" data-collapsible="true" data-bind="css: {_active: formBlockVisibility() || resultBlockVisibility()}">
+                     <div class="title" data-role="title" data-bind="click: $data.toggleFormBlockVisibility.bind($data)">
+                        <span data-bind="i18n: 'Gift options'">Gift options</span>
+                     </div>
+                     <div class="content" data-role="content" data-bind="visible: formBlockVisibility() || resultBlockVisibility()" style="display: none;">
+                        <!-- ko ifnot: resultBlockVisibility() -->
+                        <div class="gift-options">
+                           <!-- ko foreach: getRegion('additionalOptions') -->
+                           <!-- ko template: getTemplate() -->
+                           <!-- ko if: isActive() --><!-- /ko -->
+                           <!-- /ko -->
+                           <!-- /ko -->
+                           <!-- ko template: formTemplate -->
+                           <!-- ko if: isActive() -->
+                           <div class="gift-message">
+                              <div class="gift-options-title">
+                                 <span data-bind="i18n: 'Gift Message (optional)'">Gift Message (optional)</span>
+                              </div>
+                              <div class="gift-options-content">
+                                 <fieldset class="fieldset">
+                                    <!-- ko foreach: getRegion('messageType') --><!-- /ko -->
+                                    <div class="field field-to required">
+                                       <div class="control">
+                                          <input type="text" class="input-text required-entry" data-bind="value: getObservable('recipient'),
+                                             attr: { id: 'gift-message-whole-to-' + index, name: 'gm_whole_to[' + index + ']' }" placeholder="To" id="gift-message-whole-to-giftOptionsCart" name="gm_whole_to[giftOptionsCart]">
+                                       </div>
+                                    </div>
+                                    <div class="field field-from required">
+                                       <div class="control">
+                                          <input type="text" class="input-text required-entry" data-bind="value: getObservable('sender'),
+                                             attr: { id: 'gift-message-whole-from-' + index, name: 'gm_whole_from[' + index + ']' }" placeholder="From" id="gift-message-whole-from-giftOptionsCart" name="gm_whole_from[giftOptionsCart]">
+                                       </div>
+                                    </div>
+                                    <div class="field text required">
+                                       <div class="control">
+                                          <textarea class="input-text required-entry validate-length maximum-length-255" maxlength="255" rows="5" cols="10" data-bind="attr: {id: 'gift-message-whole-message-' + index, name: 'gm_whole_message[' + index + ']' },
+                                             value: getObservable('message')" placeholder="Message" id="gift-message-whole-message-giftOptionsCart" name="gm_whole_message[giftOptionsCart]"></textarea>
+                                       </div>
+                                    </div>
+                                 </fieldset>
+                              </div>
+                           </div>
+                           <!-- /ko -->
+                           <div class="actions-toolbar">
+                              <div class="secondary">
+                                 <button type="submit" class="action secondary action-update" data-bind="
+                                    attr: {title: $t('Update')},
+                                    click: $data.submitOptions.bind($data)" title="Update">
+                                 <span data-bind="i18n: 'Update'">Update</span>
+                                 </button>
+                                 <button class="action action-cancel" data-bind="
+                                    attr: {title: $t('Cancel')},
+                                    click: $data.hideFormBlock.bind($data)" title="Cancel">
+                                 <span data-bind="i18n: 'Cancel'">Cancel</span>
+                                 </button>
+                              </div>
+                           </div>
+                           <!--/ko-->
+                        </div>
+                        <!-- /ko -->
+                        <div class="gift-summary">
+                           <!-- ko if: resultBlockVisibility() --><!-- /ko -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- /ko -->
+               <!-- /ko -->
+            </div>
+         </div>
+         <style>#html-body [data-pb-style=S021H04],#html-body [data-pb-style=T1CPXYQ]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;text-align:center;border-width:0}#html-body [data-pb-style=T1CPXYQ]{background-color:#fff}#html-body [data-pb-style=S021H04]{width:100%;align-self:stretch}#html-body [data-pb-style=FRKOJ09],#html-body [data-pb-style=R52YKLA]{border-width:0}#html-body [data-pb-style=UIWT9XD]{text-align:left;border-width:0}#html-body [data-pb-style=MB5Q2IC]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;text-align:left;border-width:0;width:100%;align-self:center}#html-body [data-pb-style=EGA0V30]{border-width:0}</style>
+
+        {% else %}
+          <div class="cart-empty"> <p>You have no items in your shopping cart.</p><p>Click <a href="/">here</a> to continue shopping.</p></div>
+        {% endif %}
+   </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('.control.qty .more').click(function() {
+      var qty = +$(this).siblings('input').val();
+      $(this).siblings('input').val(++qty);
+      $('#cart-form').submit();
+    });
+    $('.control.qty .less').click(function() {
+      var qty = +$(this).siblings('input').val();
+      if (qty > 1) {
+        $(this).siblings('input').val(--qty);
+        $('#cart-form').submit();
+      }
+    });
+    if ($('.sc_simple-container').hasClass('sc_simple-container--loading')) {
+      updateTotal();
+    }
+
+    $('#scDiscountApp form #submit, .sc-tag .button').on('click', function() {
+      updateTotal();
+    });
+    $('#scDiscountApp form input').on('keypress',function(e) {
+      if(e.which == 13) {
+        updateTotal();
+      }
+    });
+    function updateTotal() {
+      var t = setTimeout(function() {
+        let i = setInterval(function() {
+          if (!$('.sc_simple-container').hasClass('sc_simple-container--loading')){
+            clearInterval(i);
+            $('.sc-tag .button').on('click', function() {
+              updateTotal();
+            });
+            var t1 = setTimeout(function() {
+              calculateTotal();
+              clearTimeout(t1);
+            }, 100);
+          }
+        }, 300);
+        clearTimeout(t);
+      }, 100);
+    }
+    var t = setTimeout(function() {
+      calculateTotal();
+    }, 100);
+    function calculateTotal() {
+      $('.totals.sub .price').attr('data-subtotal', $('.totals.sub .price > .money').text().replace('$',''));
+      var subtotal = +$('.totals.sub .price').attr('data-subtotal');
+      var shippingPrice = +$('#shipping-price').text().replace('$','');
+      var total = subtotal + shippingPrice;
+      $('.grand.totals .price').text('$' + total);
+    }
+    $('.get-rates').click(function() {
+      let i = setInterval(function() {
+        if (document.querySelector("#shipping-rates-feedback")){
+          clearInterval(i);
+          if ($('#shipping-rates-val').length) {
+            var shippingPrice = $('#shipping-rates-val').data('val').replace(' USD', '');
+            $('#shipping-price').text(shippingPrice);
+            var subtotal = +$('.totals.sub .price').data('subtotal');
+            var total = subtotal + +shippingPrice.replace('$', '');
+            $('.grand.totals .price').text('$' + total);
+          }
+        }
+      }, 300);
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Cart",
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Cart"
+      }
+    ]
+  }
+{% endschema %}

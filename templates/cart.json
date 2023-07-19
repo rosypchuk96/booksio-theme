@@ -1,0 +1,21 @@
+{
+  "wrapper": "main#maincontent.page-main.checkout-cart-index",
+  "sections": {
+    "2f5dd2b8-1ab8-4ea1-9e4a-b51e1d158356": {
+      "type": "cart",
+      "settings": {
+      }
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "2f5dd2b8-1ab8-4ea1-9e4a-b51e1d158356",
+    "subscribe"
+  ]
+}

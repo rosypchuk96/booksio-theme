@@ -6,6 +6,13 @@
         <a href="/" title="Go to Home Page">Home</a>
         <span class="icon" aria-hidden="true"></span>
       </li>
+      {% if collection.metafields.custom.parent_category %}
+        <li class="item">
+          {% assign collection_parent = collections[collection.metafields.custom.parent_category] %}
+          <a href="{{ collection_parent.url }}" >{{ collection_parent.title }}</a>
+          <span class="icon" aria-hidden="true"></span>
+        </li>
+      {% endif %}
       <li class="item category6940">
         <strong>{{ collection.title }}</strong>
       </li>

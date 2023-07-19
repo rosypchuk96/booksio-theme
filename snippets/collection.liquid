@@ -1,0 +1,20 @@
+<div class="products wrapper grid products-grid">
+  <ol class="products list items product-items"></ol>
+</div>
+
+<div class="toolbar toolbar-products"></div>
+
+<script>
+  jQuery(document).ready(function($) {
+    var gridSize = +"{{ grid_size }}";
+    var productUrlJson = '/bc-sf-filter/filter';
+    var products;
+    var sortParam;
+    $.get(productUrlJson, function(data) {
+      products = data.products;
+      console.log(data);
+    });
+
+    function drawGrid() {}
+  });
+</script>

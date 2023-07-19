@@ -1,3 +1,9 @@
+{% assign host = request.host %}
+{% assign host_arr = host | split: '.' %}
+{% if host_arr.size >= 3 %}
+  {% assign subdomain = host_arr[0] %}
+{% endif %}
+
 <div data-content-type="block" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="DK6VPW6" class="box-model-64a5c65d8ca89">
   <div class="widget block block-static-block">
     <style>#html-body [data-pb-style=DU3NDJX]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0}#html-body [data-pb-style=LAKM42B]{border-width:0}#html-body [data-pb-style=NYSM7SJ],#html-body [data-pb-style=Y6PWKG8]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0;width:75%;align-self:stretch}#html-body [data-pb-style=NYSM7SJ]{text-align:center;width:25%}#html-body [data-pb-style=WJK9MDH]{border-width:0}#html-body [data-pb-style=UTTIU5I]{text-align:right;border-width:0}#html-body [data-pb-style=I21I1XA]{text-align:center;border-width:0}</style>
@@ -8,7 +14,6 @@
             <div class="lora-font ny-times heading-title box-model-64a5c65d77922 box-model-64a5c65d8cad3" data-content-type="text" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;bottom&quot;:&quot;10px&quot;}}}" data-element="main" data-pb-style="WJK9MDH">
               <h3><span style="font-size: 32px; line-height: 26px;"><span style="color: #202020;">{{ section.settings.title  }}</span></span></h3>
             </div>
-            <div class="lato-font ny-times-subtitle box-model-64a73e701afe7" data-content-type="text" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;10px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="J4KSD74"><p><span style="font-size: 18px; line-height: 32px; color: #212322;">{{ section.settings.text }}</span></p></div>
             <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="I21I1XA" data-decoded="true" class="box-model-64a5c65d7792c box-model-64a5c65d8cadb">
               <style>
                 .trendsellers-blocks .trendingbook-col figure {
@@ -213,11 +218,9 @@
             <style type="text/css">.box-model-64a5c65d8cad3 {margin-bottom: 10px;}</style>
             <style type="text/css">.box-model-64a5c65d8cadb {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
           </div>
-          <div class="pagebuilder-column box-model-64a5c65d77937 box-model-64a5c65d8cae5 preserving-democracy-view" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="NYSM7SJ">
-            <div class="lato-font ny-times-view box-model-64a5c65d7795a box-model-64a5c65d8cb05 box-model-64a73e701b010" data-content-type="text" data-appearance="default" data-element="main" data-pb-style="UTTIU5I">
-              {% if section.settings.link != blank %}
-                <p><span style="color: #212322;"><a style="color: #212322;" tabindex="0" href="{{ section.settings.link }}"><span style="text-decoration: underline;"><span style="font-size: 16px;">View All</span></span></a></span></p>
-              {% endif %}
+          <div class="pagebuilder-column box-model-64a5c65d77937 box-model-64a5c65d8cae5" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-box-model="{&quot;mobile&quot;:{&quot;margin&quot;:{&quot;right&quot;:&quot;0px&quot;}},&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;20px&quot;}}}" data-element="main" data-pb-style="NYSM7SJ">
+            <div class="lato-font ny-times-view box-model-64a5c65d7795a box-model-64a5c65d8cb05" data-content-type="text" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="UTTIU5I">
+              <p><span style="color: #212322;"><a style="color: #212322;" tabindex="0" href="{{ section.settings.link }}"><span style="text-decoration: underline;"><span style="font-size: 16px;">View All</span></span></a></span></p>
             </div>
             <style type="text/css">.box-model-64a5c65d7795a {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
             <style type="text/css">.box-model-64a5c65d8cb05 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
@@ -227,20 +230,51 @@
           <style type="text/css">.box-model-64a5c65d8cab3 {margin-top: 0px;margin-bottom: 20px;margin-left: 14px;}@media only screen and (max-width: 768px) {.box-model-64a5c65d8cab3 {margin-bottom: 0px;margin-left: 14px;}}</style>
           <style type="text/css">.box-model-64a5c65d8cae5 {margin-top: 0px;margin-right: 0px;margin-bottom: 20px;}@media only screen and (max-width: 768px) {.box-model-64a5c65d8cae5 {margin-right: 0px;}}</style>
         </div>
-        <div data-content-type="products" data-appearance="carousel" data-autoplay="false" data-autoplay-speed="4000" data-infinite-loop="true" data-show-arrows="true" data-show-dots="false" data-carousel-mode="default" data-center-padding="90px" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="LAKM42B" class="box-model-64a5c65d77965 box-model-64a5c65d8cb32">
+
+        {% assign restricted_collections = shop.metaobjects["partner_store_settings"][subdomain].restricted_collections.value %}
+        {% assign restricted_formats = shop.metaobjects["partner_store_settings"][subdomain].restricted_formats.value | downcase | newline_to_br | split: '<br />' %}
+        <div data-content-type="products" data-appearance="carousel" data-autoplay="false" data-autoplay-speed="4000" data-infinite-loop="true" data-show-arrows="true" data-show-dots="false" data-carousel-mode="default" data-center-padding="90px" data-element="main" data-pb-style="LAKM42B" class="box-model-64a5c65d77965 box-model-64a5c65d8cb32">
           {% assign collection_handle = section.settings.collection %}
           {% if collection_handle != blank and collections[collection_handle] %}
             <ol class="product-items widget-product-carousel">
               {% for product in collections[collection_handle].products limit: 20 %}
-                <div>
+                {% assign is_restricted = false %}
+                {% if restricted_formats != blank and product.options_by_name['format'] %}
+                  {% assign counter = 0 %}
+                  {% assign downcase_values = product.options_by_name['format'].values | join: ',' | downcase | split: ',' %}
+                  {% for format in restricted_formats %}
+                    {% assign format_strip = format | strip %}
+                    {% if downcase_values contains format_strip %}
+                      {% assign counter = counter | plus: 1 %}
+                    {% endif %}
+                  {% endfor %}
+                  {% if counter == product.options_by_name['format'].values.size  %}
+                    {% assign is_restricted = true %}
+                  {% endif %}
+                {% endif %}
+                {% if restricted_collections != blank %}
+                  {% for restricted_collection in restricted_collections %}
+                    {% for prod_collection in product.collections %}
+                      {% if prod_collection.handle == restricted_collection.handle %}
+                        {% assign is_restricted = true %}
+                        {% break %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+                {% endif %}
+                {% unless is_restricted %}
                   <div>
-                    {% include 'card-product-v2' with product %}
+                    <div>
+                      {% include 'card-product-v2' with product %}
+                    </div>
                   </div>
-                </div>
+                {% endunless %}
               {% endfor %}
             </ol>
           {% endif %}
         </div>
+        <style type="text/css">.box-model-64a5c65d77965 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+        <style type="text/css">.box-model-64a5c65d8cb32 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
       </div>
     </div>
     <style type="text/css">.box-model-64a5c65d778b9 {margin-top: 50px;margin-bottom: 60px;}@media only screen and (max-width: 768px) {.box-model-64a5c65d778b9 {margin-top: 50px;margin-bottom: 36px;}}</style>
@@ -250,17 +284,12 @@
 
 {% schema %}
   {
-    "name": "Charitable Collection",
+    "name": "Partner NY Times",
     "settings": [
       {
         "type": "text",
         "id": "title",
         "label": "Title"
-      },
-      {
-        "type": "html",
-        "id": "text",
-        "label": "Text"
       },
       {
         "type": "url",
@@ -276,7 +305,7 @@
     "presets": [
       {
         "category": "Custom Content",
-        "name": "Charitable Collection"
+        "name": "Partner NY Times"
       }
     ]
   }

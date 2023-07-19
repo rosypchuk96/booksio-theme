@@ -1,0 +1,281 @@
+{
+  "wrapper": "main.partners-index-index",
+  "sections": {
+    "8d3eb1f6-c716-41dc-a41e-3069f9392dee": {
+      "type": "partner-hero",
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/CAA3.png",
+        "title_img": "shopify:\/\/shop_images\/Find-next-read-new.png",
+        "bg": "shopify:\/\/shop_images\/chuttersnap-1_Aojfv58_s-unsplash.jpg"
+      }
+    },
+    "10e88fc4-3963-45f4-aa18-acf416c9dd94": {
+      "type": "partner-bestsellers",
+      "settings": {
+        "title": "NY Times Bestsellers",
+        "link": "shopify:\/\/collections\/ny-times-bestsellers",
+        "collection": "ny-times-bestsellers"
+      }
+    },
+    "dd62d6af-f450-4cc3-bc3b-610896888ae8": {
+      "type": "home-categories",
+      "blocks": {
+        "98908a2d-30cb-4a69-8497-274945c70a1a": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/tnyt.png",
+            "title": "Bestsellers",
+            "link": ""
+          }
+        },
+        "97ed7cc4-b5d6-45cf-ab55-fa9b201d09f9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/book2_6.png",
+            "title": "New Arrivals",
+            "link": ""
+          }
+        },
+        "84469f63-7ad9-4229-9617-1e2a46446db9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/graph.png",
+            "title": "Trending Books",
+            "link": ""
+          }
+        },
+        "219f18fd-b155-499d-88e7-be64921b60c3": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/calendar.png",
+            "title": "Coming Soon",
+            "link": ""
+          }
+        },
+        "7355d6eb-0bb4-4af4-b42a-3e2a127eb1d7": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/fire.png",
+            "title": "Booksio Top 100",
+            "link": ""
+          }
+        },
+        "099754a8-49dc-44b0-a54f-3ae64ba2a9c3": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/book2_6.png",
+            "title": "Top Magazines",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "98908a2d-30cb-4a69-8497-274945c70a1a",
+        "97ed7cc4-b5d6-45cf-ab55-fa9b201d09f9",
+        "84469f63-7ad9-4229-9617-1e2a46446db9",
+        "219f18fd-b155-499d-88e7-be64921b60c3",
+        "7355d6eb-0bb4-4af4-b42a-3e2a127eb1d7",
+        "099754a8-49dc-44b0-a54f-3ae64ba2a9c3"
+      ],
+      "settings": {
+        "title": "Top Categories"
+      }
+    },
+    "a0a2df59-a1f3-4d92-bbd4-68017b6db4f9": {
+      "type": "partner-featured-category",
+      "settings": {
+        "title": "Kids Tested & Mom Approved",
+        "text": "",
+        "link": "shopify:\/\/collections\/kids-tested-mom-approved",
+        "collection": "kids-tested-mom-approved"
+      }
+    },
+    "d6052a09-c1d6-4025-8c18-32601b46fc74": {
+      "type": "home-how-it-works",
+      "blocks": {
+        "bca3d61b-3e0e-4965-ae8f-d7e522a06f52": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/one.png",
+            "title": "Browse Our Collection",
+            "text": "Search for a book or browse through categories to find over 15 million titles of books."
+          }
+        },
+        "68a1b93f-5a94-48bf-b919-dcc8ff4a10ea": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/two.png",
+            "title": "Purchase Your Books",
+            "text": "Create an account and complete your purchase, we’ll ship your books within 3-4 business days."
+          }
+        },
+        "b71ca466-dec5-40a6-9a01-f64d1b047286": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/three.png",
+            "title": "Read With A Purpose",
+            "text": "10% of all of your purchases will go towards the charity you choose. Support a good cause and read at the same time!"
+          }
+        }
+      },
+      "block_order": [
+        "bca3d61b-3e0e-4965-ae8f-d7e522a06f52",
+        "68a1b93f-5a94-48bf-b919-dcc8ff4a10ea",
+        "b71ca466-dec5-40a6-9a01-f64d1b047286"
+      ],
+      "settings": {
+        "title": "Making a Difference",
+        "title_2": "How Booksio Works",
+        "text": "<strong>It’s possible to purchase books at almost any store, so why Booksio?<\/strong> With every book you buy from us, we donate 10% of the total cost to charity. Every month, we pick a new charitable cause for which you can receive literary support with your purchase. And we’re not just about selling books - we’re about reading and storytelling that makes a difference in this world.",
+        "url": "shopify:\/\/collections\/ny-times-bestsellers",
+        "button_text": "Start Reading Today"
+      }
+    },
+    "f45ddb73-23fa-4561-a708-c81331050d08": {
+      "type": "partner-featured-book",
+      "settings": {
+        "title_img": "shopify:\/\/shop_images\/BKSIO_Spare_Title_1.png",
+        "text": "<p>Get Prince Harry’s hot new book, “Spare.” Buy the E-book now for only $17.99!<\/p>",
+        "text_color": "#c0a482",
+        "url": "",
+        "button_text": "BUY NOW!",
+        "button_color": "",
+        "cover": "shopify:\/\/shop_images\/BKSIO_Spare_Book.png",
+        "bg": "shopify:\/\/shop_images\/BKSIO_Spare_Bkgrd.jpg"
+      }
+    },
+    "cb2001a8-6453-4fc4-a2ff-735438337699": {
+      "type": "home-numbers",
+      "blocks": {
+        "a7effa68-2207-4cb7-8324-e55d437da355": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/count_1.png",
+            "title": "100+",
+            "text": "Charities to Support Year One"
+          }
+        },
+        "bbcb5a78-c492-4522-96ad-c58df676b99c": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/countone.png",
+            "title": "$1+M",
+            "text": "Goal to Raise Year One"
+          }
+        },
+        "230c58ff-d4ad-4c37-876b-73e999a896a4": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/counttwo.png",
+            "title": "15+M",
+            "text": "Books, Audiobooks, eBooks & Magazines"
+          }
+        }
+      },
+      "block_order": [
+        "a7effa68-2207-4cb7-8324-e55d437da355",
+        "bbcb5a78-c492-4522-96ad-c58df676b99c",
+        "230c58ff-d4ad-4c37-876b-73e999a896a4"
+      ],
+      "settings": {
+      }
+    },
+    "27f2367a-87ea-4517-a8f8-7a17b40bc59b": {
+      "type": "partners-whats-new",
+      "settings": {
+        "title": "What's New?",
+        "text": "Check out the freshest releases in our catalog.",
+        "collection": "new-arrivals",
+        "link": "shopify:\/\/collections\/new-arrivals",
+        "url": "\/login",
+        "button_text": "Sign Up For Your Account"
+      }
+    },
+    "39ad66a3-cd71-4da1-aa8a-1a22e15c2fa6": {
+      "type": "home-faq",
+      "blocks": {
+        "5f98969b-5e2e-4c38-813b-ad90fb906f07": {
+          "type": "item",
+          "settings": {
+            "title": "How do I track my book order?",
+            "answer": "<p>You will receive an email with the tracking number, as well as a link, as soon as your order ships.<\/p>"
+          }
+        },
+        "7f7e7ded-6483-47d8-a6ce-8f91b5537c19": {
+          "type": "item",
+          "settings": {
+            "title": "Do gift cards provide a charitable donation?",
+            "answer": "<p>Buying a gift card doesn't trigger the 10% charitable donation, but don't worry! When the recipient redeems their gift card and makes a purchase, the donation happens at that point.<\/p>"
+          }
+        },
+        "6561b044-1386-4752-aef3-d7f3b62522cf": {
+          "type": "item",
+          "settings": {
+            "title": "How can I access my ebook and audiobook purchases?",
+            "answer": "<p>All of your digital purchases from Booksio can be accessed through our app, available on both the <a href=\"https:\/\/apps.apple.com\/tt\/app\/booksio\/id1590368314\">Apple App Store<\/a> for iOS devices and in the <a href=\"https:\/\/play.google.com\/store\/search?q=booksio&c=apps\">Google Play Store<\/a> for Android devices. You can sign in with your existing Booksio.com account to find your entire digital library.<\/p>"
+          }
+        },
+        "215f6f7a-e389-4b2c-b5e1-9a2540a61b00": {
+          "type": "item",
+          "settings": {
+            "title": "If I don’t live in the US, can I still make digital purchases?",
+            "answer": "<p>At this time, Booksio is ONLY available to US customers, both for print and digital orders. We are working to start accepting non-US orders in 2023. <\/p>"
+          }
+        },
+        "88632477-b041-4719-a56d-bdf5e424fa3f": {
+          "type": "item",
+          "settings": {
+            "title": "How do I update my billing information?",
+            "answer": "<p>After placing your first order with Booksio, you can change your billing information for future orders by logging into your account and selecting <a href=\"https:\/\/www.booksio.com\/customer\/paymentinfo\/\">\"My Payment Options\"<\/a>.<\/p>"
+          }
+        },
+        "0747c9d6-35cf-4bd1-9afa-b479beede976": {
+          "type": "item",
+          "settings": {
+            "title": "Can I cancel my order?",
+            "answer": "<p>Yes, you have the ability to cancel your order. Please reach out to our customer care team on this <a href=\"https:\/\/www.booksio.com\/contact\/\">page<\/a>, and we will be happy to assist you.<\/p>"
+          }
+        },
+        "1601d07f-8ed8-4163-830e-4084f0e8b941": {
+          "type": "item",
+          "settings": {
+            "title": "Something's wrong with my order! What can I do?",
+            "answer": "<p>We’re so sorry this happened! Don’t hesitate to get in touch with our customer care team on this <a href=\"https:\/\/www.booksio.com\/contact\/\">page<\/a> within two weeks of delivery to describe what you received. Please include your order number (it looks like “BOOK-############” and was included in your confirmation email) and email address used for the purchase. A photo of the product in question is helpful too! We’ll work with you to resolve the problem as soon as possible.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "5f98969b-5e2e-4c38-813b-ad90fb906f07",
+        "7f7e7ded-6483-47d8-a6ce-8f91b5537c19",
+        "6561b044-1386-4752-aef3-d7f3b62522cf",
+        "215f6f7a-e389-4b2c-b5e1-9a2540a61b00",
+        "88632477-b041-4719-a56d-bdf5e424fa3f",
+        "0747c9d6-35cf-4bd1-9afa-b479beede976",
+        "1601d07f-8ed8-4163-830e-4084f0e8b941"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "text": "<p>Have an unanswered question? Please <a href=\"#\" title=\"#\">contact us<\/a> and we'll be happy to help.<\/p>"
+      }
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "8d3eb1f6-c716-41dc-a41e-3069f9392dee",
+    "10e88fc4-3963-45f4-aa18-acf416c9dd94",
+    "dd62d6af-f450-4cc3-bc3b-610896888ae8",
+    "a0a2df59-a1f3-4d92-bbd4-68017b6db4f9",
+    "d6052a09-c1d6-4025-8c18-32601b46fc74",
+    "f45ddb73-23fa-4561-a708-c81331050d08",
+    "cb2001a8-6453-4fc4-a2ff-735438337699",
+    "27f2367a-87ea-4517-a8f8-7a17b40bc59b",
+    "39ad66a3-cd71-4da1-aa8a-1a22e15c2fa6",
+    "subscribe"
+  ]
+}

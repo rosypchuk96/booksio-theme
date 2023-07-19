@@ -4,7 +4,7 @@
   {% assign subdomain = host_arr[0] %}
 {% endif %}
 
-{% paginate collection.products by 5 %}
+{% paginate collection.products by 32 %}
   <div id="main-content" class="page-main page-wrapper">
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul class="items">
@@ -62,14 +62,13 @@
        </div>
 
        <div class="products wrapper grid products-grid">
-          <ol class="products list items product-items boost-pfs-filter-products">
+          <ol class="products list items product-items">
             {% for product in collection.products %}
               {% include 'card-product-collection' with product %}
             {% endfor %}
           </ol>
        </div>
        
-       {% comment %}
        <div class="toolbar toolbar-products">
         {%- if paginate.pages > 1 -%}
           <div class="pages">
@@ -125,15 +124,84 @@
             </div>
         </div>
        </div>
-      {% endcomment %}
-      <div class="boost-pfs-filter-bottom-pagination"></div><div class="boost-pfs-filter-load-more"></div>
     </div>
     <div class="sidebar sidebar-main" {% if subdomain %}style="display: none;"{% endif %}>
+
+
         <div class="block filter" id="layered-filter-block" data-collapsible="true">
           <div class="block-title filter-title" data-count="0" role="tablist"><strong data-role="title" role="tab" aria-selected="false" aria-expanded="false" tabindex="0">Shop By</strong></div>
           <div class="block-content filter-content">
-            <strong role="heading" aria-level="2" class="block-subtitle filter-subtitle">Filter By</strong>
-            <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v"></div>
+            {% for filter in collection.filters %}
+              {% if filter.active_values.size > 0 or filter.max_value.value or filter.min_value.value %}
+                <div class="filter-current active" data-collapsible="true" role="tablist">
+                  <strong class="block-subtitle filter-current-subtitle" id="nowShoppingBy" role="tab" aria-level="2" data-role="title" data-count="2" aria-selected="false" aria-expanded="true" tabindex="0">Now Shopping by</strong> 
+                  {% for filter_2 in collection.filters %}
+                    {% if filter_2.type == 'price_range' %}
+                      <ol class="items">
+                          <li class="item"> <span class="filter-label filter-price">{{ filter_2.label }}</span>  <span class="filter-value">{{ filter_2.min_value.value | money }} - {{ filter_2.max_value.value | money }}</span>   <a class="action remove" href="{{ filter_2.url_to_remove }}" title="Remove Filter by Price {{ filter_2.min_value.value | money }} - {{ filter_2.max_value.value | money }}"><span>Remove This Item</span> <i class="icon" aria-hidden="true"></i></a> </li>
+                      </ol>
+                    {% endif %}
+                    {% if filter_2.type == 'list'  %}
+                      <ol class="items">  
+                        {% for value in filter_2.active_values %}
+                          <li class="item"> 
+                            <span class="filter-label">{{ filter_2.label }}</span> 
+                            <span class="filter-value">{{ value.label }}</span>   <a class="action remove" href="{{ value.url_to_remove }}" title="Remove"><span>Remove This Item</span> <i class="icon" aria-hidden="true"></i></a> </li>  
+                        {% endfor %} 
+                        </ol>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+                <div class="block-actions filter-actions"><a href="#" class="action clear filter-clear"><span></span></a></div>
+                {% break %}
+              {% endif %}
+            {% endfor %}
+             <strong role="heading" aria-level="2" class="block-subtitle filter-subtitle">Filter By</strong> 
+             <div class="filter-options" id="narrow-by-list" data-role="content" role="tablist">
+                {% for filter in collection.filters %}
+                  {% if filter.type == 'price_range' %}
+                    <div data-role="collapsible" class="filter-options-item allow" role="presentation" data-collapsible="true">
+                      <div data-role="title" class="filter-options-title" role="tab" aria-selected="true" aria-expanded="true" tabindex="0"><span> {{ filter.label }}</span> <i class="icon" aria-hidden="true"></i></div>
+                      <div data-role="content" class="filter-options-content" role="tabpanel" style="display: none;">
+                        <div class="smile-es-range-slider" data-role="range-price-slider-price">
+                          <div class="from-label" data-role="from-label" data-val="0.00">$0.00</div>
+                          <div class="to-label" data-role="to-label" data-val="{{ filter.range_max | money_without_currency }}">{{ filter.range_max | money_without_currency }}</div>
+                          <div id="slider-bar">
+                          </div>
+                          <div class="actions-toolbar">
+                              <div data-role="message-box"></div>
+                              <div class="actions-primary"><a class="action primary small" id="update-price" data-role="apply-range" data-url-to-remove="{{ filter.url_to_remove }}"><span>OK</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {% elsif filter.type == 'list' %}
+                    <div data-role="collapsible" class="filter-options-item" role="presentation" data-collapsible="true">
+                      <div data-role="title" class="filter-options-title" role="tab" aria-selected="false" aria-expanded="false" tabindex="0"><span> {{ filter.label }}</span> <i class="icon" aria-hidden="true"></i></div>
+                      <div data-role="content" class="filter-options-content" role="tabpanel" style="display: none;">
+                          <div data-bind="scope: 'product_type_indicatorFilter'">
+                            <ol class="items" id="bookFormatSelector" data-bind="foreach: getDisplayedItems()">
+                              {% for value in filter.values %}
+                                <li class="item" data-bind="attr: { 'data-label': label }" data-label="Paperback">
+                                  {% if value.active %}
+                                  <a href="{{ value.url_to_remove }}" rel="">
+                                  {% else %}
+                                  <a href="{{ value.url_to_add }}" rel="">
+                                  {% endif %}
+                                    <input type="checkbox" {% if value.active %}checked{% endif %}>
+                                    <label data-bind="attr: { for: id }" for="product_type_indicatorFilter_option_1">
+                                    <span data-bind="html: label">{{ value.label }}</span>
+                                    </label>
+                                  </a>
+                                </li>
+                              {% endfor %}
+                            </ol>
+                          </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+             </div>
           </div>
        </div>
        <div class="row image-middel">
@@ -201,132 +269,6 @@
     Shopify.queryParams.sort_by = value;
     location.search = new URLSearchParams(Shopify.queryParams).toString();
   });
-</script>
-
-<script>
-
-   // Declare boostPFSThemeConfig
-
-var boostPFSThemeConfig = {
-
-         label: {
-
-             sorting: {% assign temp = 'collections.sorting.title' | t  %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Sorting" {% endunless %},
-
-             sorting_best_selling: {% assign temp = collection.sort_options[1].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Best Selling" {% endunless %},
-
-             sorting_manual: {% assign temp = collection.sort_options[0].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Featured" {% endunless %},
-
-             sorting_title_ascending: {% assign temp = collection.sort_options[2].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Alphabetically, A-Z" {% endunless %},
-
-             sorting_title_descending: {% assign temp = collection.sort_options[3].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Alphabetically, Z-A" {% endunless %},
-
-             sorting_price_ascending: {% assign temp = collection.sort_options[4].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Lowest Price" {% endunless %},
-
-             sorting_price_descending: {% assign temp = collection.sort_options[5].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Highest Price" {% endunless %},
-
-             sorting_date_ascending: {% assign temp = collection.sort_options[6].name %} {% unless temp == nil  %} {{ temp | json }} {% else %} "Date, Old to New" {% endunless %},
-
-             sorting_date_descending: {% assign temp = collection.sort_options[7].name %} {% unless temp == nil  %} {{ temp | json }} {% else %} "Date, New to Old" {% endunless %},
-
-             sorting_relevance: {% assign temp = 'collections.sorting.relevance' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Relevance" {% endunless %},
-
-             sale: {{ 'products.product.on_sale' | t | json }},
-
-             sale_price: {{ 'products.product.sale_price' | t | json }},
-
-             sold_out: {{ 'products.product.sold_out' | t | json }},
-
-             vendor: {{ 'products.product.vendor' | t |json }},
-
-             regular_price: {{ 'products.product.regular_price' | t | json }},
-
-             items_with_count_one: {{ 'collections.general.items_with_count.one' | t | json}},
-
-             items_with_count_other: {{ 'collections.general.items_with_count.other' | t | json }},
-
-             current_page: {{ 'general.pagination.current_page' | t | json }},
-
-     },
-
-         custom: {
-
-             // Add custom value here
-
-        products_per_page: 5,
-
-        product_grid_class: '',
-
-    }
-
-   };// Declare Templates
-
-var boostPFSTemplate = {
-
-    'soldOutClass': ' sold-out',
-
-    'saleClass': ' on-sale',
-
-    'soldOutLabelHtml': {% render 'boost-pfs-filter-html', layout: 'soldOutLabelHtml' %},
-
-    'saleLabelHtml': {% render 'boost-pfs-filter-html', layout: 'saleLabelHtml' %},
-
-    'tagLabelHtml': {% render 'boost-pfs-filter-html', layout: 'tagLabelHtml' %},
-
-    'vendorHtml': {% render 'boost-pfs-filter-html', layout: 'vendorHtml' %},
-
-    // Grid Template
-
-    'productGridItemHtml': {% render 'boost-pfs-filter-html', layout: 'productGridItemHtml' %},
-
-    // For List View
-
-    // List Template
-
-    'productListItemHtml': {% render 'boost-pfs-filter-html', layout: 'productListItemHtml' %},
-
-    // End For List View
-
-    // Pagination Template
-
-    'previousActiveHtml': {% render 'boost-pfs-filter-html', layout: 'previousActiveHtml' %},
-
-    'previousDisabledHtml': {% render 'boost-pfs-filter-html', layout: 'previousDisabledHtml' %},
-
-    'nextActiveHtml': {% render 'boost-pfs-filter-html', layout: 'nextActiveHtml' %},
-
-    'nextDisabledHtml': {% render 'boost-pfs-filter-html', layout: 'nextDisabledHtml' %},
-
-    'pageItemHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemHtml' %},
-
-    'pageItemSelectedHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemSelectedHtml' %},
-
-    'pageItemRemainHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemRemainHtml' %},
-
-    'paginateHtml': {% render 'boost-pfs-filter-html', layout: 'paginateHtml' %},
-
-    // Sorting Template
-
-    'sortingHtml': {% render 'boost-pfs-filter-html', layout: 'sortingHtml' %},
-
-    // Show Limit Template
-
-    'showLimitHtml': {% render 'boost-pfs-filter-html', layout: 'showLimitHtml' %},
-
-    // Breadcrumb Template
-
-    'breadcrumbHtml': {% render 'boost-pfs-filter-html', layout: 'breadcrumbHtml' %},
-
-    'breadcrumbDivider': {% render 'boost-pfs-filter-html', layout: 'breadcrumbDivider' %},
-
-    'breadcrumbItemLink': {% render 'boost-pfs-filter-html', layout: 'breadcrumbItemLink' %},
-
-    'breadcrumbItemSelected': {% render 'boost-pfs-filter-html', layout: 'breadcrumbItemSelected'
-
- %},
-
-};
-
 </script>
 
 {% schema %}

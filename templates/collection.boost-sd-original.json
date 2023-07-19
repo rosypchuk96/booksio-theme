@@ -1,0 +1,29 @@
+{
+  "wrapper": "div.catalog-category-view.cms-page-view.page-layout-2columns-left.page-products.page-with-filter",
+  "sections": {
+    "f8a13a2b-138c-4898-bb38-c4e09ea9dee2": {
+      "type": "collection-books-top-banner",
+      "settings": {
+        "link": "#",
+        "image": "shopify:\/\/shop_images\/BKSIO_CategoryBanner-Skinny_JULY-Secrets.png",
+        "image_mobile": "shopify:\/\/shop_images\/BKSIO_CategoryBanner-Skinny_JULY-Secrets-Mobile.png"
+      }
+    },
+    "97ce74a1-c09a-4932-83a1-a73947f6cec1": {
+      "type": "collection",
+      "settings": {}
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "f8a13a2b-138c-4898-bb38-c4e09ea9dee2",
+    "97ce74a1-c09a-4932-83a1-a73947f6cec1",
+    "subscribe"
+  ]
+}

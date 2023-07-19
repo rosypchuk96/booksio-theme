@@ -26,9 +26,9 @@
       <div class="product details product-item-details">
          <a href="{{ product.url }}" title="{{ product.title }}"><strong class="product name product-item-name">{{ product.title }}</strong></a> 
          <div class="author-wrapper">
-          {% if product.metafields.accentuate.author %}
+          {% if product.metafields.custom.author %}
             <a target="_blank" href="{{ product.url }}">
-               <p class="author">{{ product.metafields.accentuate.author }}</p>
+               <p class="author">{{ product.metafields.custom.author }}</p>
             </a>
           {% endif %}
             <div class="PriceMain">

@@ -1,0 +1,106 @@
+<div data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-element="main" data-pb-style="LQJQA16" class="background-image-64b4d4383320a box-model-64b4d438394ff">
+   <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+      <div class="pagebuilder-column box-model-64b4d4383951e" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="PWXNGUP">
+         <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="E27A7SR">
+          {% if section.settings.logo != blank %}
+            <img class="pagebuilder-mobile-hidden" src="{{ section.settings.logo | img_url: 'master' }}" alt="" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="RRBVKPJ">
+            <img class="pagebuilder-mobile-only" src="{{ section.settings.logo | img_url: 'master' }}" alt="" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="VQWHNQK">
+          {% endif %}
+         </figure>
+         <figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="FQRC3F4" class="box-model-64b4d4383952f">
+          {% if section.settings.title_img != blank %}
+            <picture>
+               <source srcset="{{ section.settings.title_img | img_url: 'master' }}" media="(max-width: 768px)and (min-width: 480px)">
+               <source srcset="{{ section.settings.title_img | img_url: 'master' }}" media="(max-width: 480px)">
+               <source srcset="{{ section.settings.title_img | img_url: 'master' }}">
+               <img class="pagebuilder-mobile-hidden box-model-64b4d4383953a" src="{{ section.settings.title_img | img_url: 'master' }}" alt="" title="" data-element="desktop_image" data-pb-style="BTBF3JT">
+            </picture>
+            <picture>
+               <source srcset="{{ section.settings.title_img | img_url: 'master' }}" media="(max-width: 768px)and (min-width: 480px)">
+               <source srcset="{{ section.settings.title_img | img_url: 'master' }}" media="(max-width: 480px)">
+               <source srcset="{{ section.settings.title_img | img_url: 'master' }}">
+               <img class="pagebuilder-mobile-only box-model-64b4d43839545" src="{{ section.settings.title_img | img_url: 'master' }}" alt="" title="" data-element="mobile_image" data-pb-style="XX7A5DU">
+            </picture>
+          {% endif %}
+          <style type="text/css">.box-model-64b4d4383953a {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 100px;padding-bottom: 20px;padding-left: 100px;}</style>
+          <style type="text/css">.box-model-64b4d43839545 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 100px;padding-bottom: 20px;padding-left: 100px;}</style>
+         </figure>
+         <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="G2ENVSU" data-decoded="true" class="box-model-64b4d4383954f">
+            <div class="search-form-box">
+               <form class="form minisearch" id="search_main_form" action="{{ routes.search_url }}" method="get" data-hs-cf-bound="true" data-dashlane-rid="69c180747fcd2b05" data-form-type="">
+                  <div class="search-form">
+                     <div class="search-input">
+                        <input id="main_search" type="text" name="q" placeholder="Search by Author, Title or Category" maxlength="128" data-dashlane-rid="41a7f7891eaaae34" data-form-type="" autocomplete="off">
+                        <div id="main_search_autocomplete" class="search-autocomplete" style="display: none;"></div>
+                     </div>
+                     <div class="search-action"><button type="submit" data-dashlane-label="true" data-dashlane-rid="dfd0f1e656d41726" data-form-type=""><img src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/search-icon_1.png?v=1689574930" alt="Search Icon"></button></div>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <style type="text/css">.box-model-64b4d4383952f {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 100px;padding-bottom: 20px;padding-left: 100px;}</style>
+         <style type="text/css">.box-model-64b4d4383954f {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+      </div>
+   </div>
+</div>
+
+{% if section.settings.bg != blank %}
+  <style>
+    .background-image-64b4d4383320a {
+      background-image: url("{{ section.settings.bg | img_url: 'master' }}");
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      text-align: center;
+      border-width: 0;
+      min-height: 700px;
+    }
+    #html-body [data-pb-style=PWXNGUP] {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0,0,0,.6);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      border-width: 0;
+      min-height: 700px;
+      width: 100%;
+      align-self: stretch;
+  }
+  </style>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Partner Hero",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "title_img",
+        "label": "Title Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Background"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Partner Hero"
+      }
+    ]
+  }
+{% endschema %}

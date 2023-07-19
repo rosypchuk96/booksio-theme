@@ -1,3 +1,10 @@
+{% assign host = request.host %}
+{% assign host_arr = host | split: '.' %}
+{% assign is_subdomain = false %}
+{% if host_arr.size >= 3 %}
+  {% assign is_subdomain = true %}
+  {% assign subdomain = host_arr[0] %}
+{% endif %}
 <header class="page-header">
   <a href="#maincontent" class="main-skip-link">Skip to main content</a>
   <div class="panel wrapper">
@@ -13,7 +20,12 @@
           data-type="horizontal"
           data-mobile-type="accordion">
           <div class="magezon-builder header-links-menu">
-            {% for link in linklists.header-top-menu.links %}
+            {% if is_subdomain %}
+              {% assign top_nav = 'partners-header-top-menu' %}
+            {% else %}
+              {% assign top_nav = 'header-top-menu' %}
+            {% endif %}
+            {% for link in linklists[top_nav].links %}
               {% if link.links != blank %}
                 <div class="mgz-element nav-item mega left_edge_parent_item level0">
                   <a href="{{ link.url }}">
@@ -203,15 +215,22 @@
             class="ninjamenus  ninjamenus-horizontal ninjamenus-mobile-accordion ninjamenus-desktop  ninjamenus-top"
             data-type="horizontal"
             data-mobile-type="accordion">
-            <div class="magezon-builder">
-              {% for link in linklists.main-menu.links %}
+            <div class="magezon-builder {% if is_subdomain %}white-label-partner{% endif %}">
+              {% if is_subdomain %}
+                {% assign link_list = shop.metaobjects["partner_store_settings"][subdomain].main_menu_handle %}
+              {% else %}
+                {% assign link_list = 'main-menu' %}
+              {% endif %}
+              {% if linklists[link_list] %}
+              {% for link in linklists[link_list].links %}
                 {% assign current_index = forloop.index0 %}
                 {% assign column_num = 4 %}
                 {% assign column_width = 3 %}
-                {% if current_index == 1 %}
+                {% assign link_title = link.title | downcase %}
+                {% if link_title contains 'magazines' %}
                   {% assign column_num = 3 %}
                   {% assign column_width = 4 %}
-                {% elsif current_index == 3 %}
+                {% elsif link_title contains 'charities' %}
                   {% assign column_num = 2 %}
                   {% assign column_width = 25 %}
                 {% endif %}
@@ -386,6 +405,7 @@
                   </div>
                 {% endif %}
               {% endfor %}
+              {% endif %}
             </div>
           </div>
         </nav>

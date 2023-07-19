@@ -30,8 +30,8 @@
       <strong class="product-item-name">{{ product.title }}</strong>
       <div class="author-wrapper">
         <a target="_blank" href="{{ product.url }}">
-          {% if product.metafields.accentuate.author %}
-            <p class="author">{{ product.metafields.accentuate.author }}</p>
+          {% if product.metafields.custom.author %}
+            <p class="author">{{ product.metafields.custom.author }}</p>
           {% endif %}
         </a>
       </div>
