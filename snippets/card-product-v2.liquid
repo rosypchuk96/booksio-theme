@@ -64,10 +64,8 @@
                   data-price-type="finalPrice"
                   class="price-wrapper price-range ">
                   <span class="price">{{ product.price_min | money }}</span>
-                  {% if product.price_min != product.price_max %}
-                    -
-                    <span class="price">{{ product.price_max | money }}</span>
-                  {% endif %}
+                  -
+                  <span class="price">{{ product.price_max | money }}</span>
                 </span>
               </span>
             </span>
