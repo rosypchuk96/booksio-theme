@@ -1,20 +1,21 @@
 {
-  "wrapper": "main#maincontent.page-main.checkout-cart-index",
+  "wrapper": "div.catalog-category-view.cms-page-view.page-layout-2columns-left.page-products.page-with-filter",
   "sections": {
-    "2f5dd2b8-1ab8-4ea1-9e4a-b51e1d158356": {
-      "type": "cart",
-      "settings": {}
-    },
     "subscribe": {
       "type": "subscribe",
       "settings": {
         "title": "Subscribe To Our Newsletter",
         "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
       }
+    },
+    "b9e37596-8603-4614-98df-e8766cf9671b": {
+      "type": "search",
+      "settings": {
+      }
     }
   },
   "order": [
-    "2f5dd2b8-1ab8-4ea1-9e4a-b51e1d158356",
+    "b9e37596-8603-4614-98df-e8766cf9671b",
     "subscribe"
   ]
 }

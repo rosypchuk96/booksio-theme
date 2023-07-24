@@ -79,7 +79,7 @@
               class="customer-menu"
               data-target="dropdown"
               aria-hidden="true">
-              <ul class="header links">
+              <ul class="header links" style="display: none;">
                 <li>
                   <a href="/account" id="id9tMm8h9N_mobile">My Account</a>
                 </li>
@@ -95,6 +95,9 @@
                 </li>
               </ul>
             </div>
+          </li>
+          <li class="link authorization-link" data-label="or">
+            <a href="/account/logout">Sign Out</a>
           </li>
         {% else %}
           <li class="link authorization-link" data-label="or">
@@ -511,6 +514,7 @@
                 </ul>
               </div>
             </li>
+            <li class="link authorization-link" data-label="or"><a href="/account/logout">Sign Out</a></li>
           {% else %}
             <li class="link authorization-link" data-label="or">
               <a href="/account/login">Sign In</a>

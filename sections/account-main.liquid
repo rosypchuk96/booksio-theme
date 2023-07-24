@@ -1,0 +1,157 @@
+<div class="page-main">
+<div class="lato-font box-model-64be653d4dac8" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-element="main" data-pb-style="PQ8YRYA">
+   <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="EXHNDHH"><img class="pagebuilder-mobile-hidden" src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_1.png?v=1689338176" alt="" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="B2K4GBR"><img class="pagebuilder-mobile-only" src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_1.png?v=1689338176" alt="" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="PO0IE6K"></figure>
+   <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="ITD7974" data-decoded="true" class="box-model-64be653d4dae0">
+      <h3 style="margin: 0;">
+         <span style="font-size: 34px; line-height: 42px;">
+         <span style="color: #41c2ff;">MY ACCOUNT</span>
+         </span>
+      </h3>
+   </div>
+</div>
+
+<div class="columns">
+   <div class="sidebar sidebar-main">
+      <div class="block block-collapsible-nav">
+         <div class="title block-collapsible-nav-title"><strong> My Account</strong> <span class="icon" aria-hidden="true"></span></div>
+         <div class="content block-collapsible-nav-content" id="block-collapsible-nav">
+            <ul class="nav items">
+               <li class="nav item current"><strong>My Account</strong></li>
+               <li class="nav item"><a href="#orders">My Orders</a></li>
+               <li class="nav item"><a href="#products">My Library</a></li>
+               <li class="nav item"><a href="#wishlist">My Wish List</a></li>
+               <li class="nav item"><span class="delimiter"></span></li>
+               <li class="nav item"><a href="#addresses">Address Book</a></li>
+               <li class="nav item"><a href="#account-info">Account Information</a></li>
+               <li class="nav item"><a href="#store-credit">Store Credit</a></li>
+               <li class="nav item"><a href="#gift-card">Gift Card</a></li>
+               <li class="nav item"><span class="delimiter"></span></li>
+               <li class="nav item"><a href="#gift-registry">Gift Registry</a></li>
+               <li class="nav item"><a href="#payment-methods">My Payment Options</a></li>
+               <li class="nav item"><a href="#returns">My Returns</a></li>
+               <li class="nav item"><a href="#social-accounts">My Social Accounts</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="tabs">
+    <div class="column main">
+        <input name="form_key" type="hidden" value="opij28QGNnAoMoTX"> 
+        <div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}" style="display: none;">
+          <!-- ko template: getTemplate() --><!-- /ko -->
+        </div>
+        <div></div>
+        <!-- Yotpo - Add body class --><!--/ Yotpo - Add body class --><!-- Yotpo - Widget Script --><!--/ Yotpo - Widget Script --> 
+        <div class="block block-dashboard-info">
+          <div class="block-title"><strong>Account Information</strong></div>
+          <div class="block-content">
+              <div class="box box-information">
+                <strong class="box-title"><span>Contact Information</span></strong> 
+                <div class="box-content">
+                    <p><strong>Name</strong>{{ customer.name }}<br> <strong>Email</strong>{{ customer.email }}<br></p>
+                </div>
+                <div class="box-actions"><a class="action edit" href="#account-info"><span>Edit</span></a></div>
+              </div>
+              <div class="box box-newsletter">
+                <strong class="box-title"><span>Newsletters</span></strong> 
+                {% if customer.accepts_marketing == true %}
+                  <div class="box-content">
+                      <p> You are subscribed to our newsletter. </p>
+                  </div>
+                {% else %}
+                  <div class="box-content">
+                      <p> You aren't subscribed to our newsletter. </p>
+                  </div>
+                  <div class="box-actions"><a class="action edit" href="#manage-subscription"><span>Edit</span></a></div>
+                {% endif %}
+              </div>
+          </div>
+        </div>
+        <div class="block block-dashboard-addresses">
+          <div class="block-title"><strong>Address Book</strong> <a class="action edit" href="https://www.booksio.com/customer/address/"><span>Manage Addresses</span></a></div>
+          <div class="block-content">
+              <div class="box box-billing-address">
+                <strong class="box-title"><span>Default Billing Address</span></strong> 
+                <div class="box-content">
+                  {% if customer.addresses_count > 1 %}
+                    {% for address in customer.addresses %}
+                      {% if address != customer.default_address %}
+                        {% assign billing_address = address %}
+                        {% break %}
+                      {% endif %}
+                      {% assign billing_address = customer.default_address %}
+                    {% endfor %}
+                  {% endif %}
+                  {% if billing_address %}
+                    <address>
+                      <div class="address-name">
+                          <strong>Name</strong>
+                          <p>
+                            {{ billing_address.first_name }}
+                            {{ billing_address.last_name }}
+                          </p>
+                      </div>
+                      <div class="address-address">
+                          <div class="address-item">
+                            <strong>Address</strong>
+                            <p>
+                                <span>{{ billing_address.address1 }} {{ billing_address.address2 }}</span><br>
+                                <span>{{ billing_address.city }}</span>
+                                <span>, {{ billing_address.province }}</span>
+                                <span>, {{ billing_address.zip }}</span>
+                                <br><span>{{ billing_address.country }}</span>
+                            </p>
+                          </div>
+                      </div>
+                      <div class="address-phone">{{ billing_address.phone }}</div>
+                    </address>
+                  {% else %}
+                    <address>You have not set a default billing address.</address>
+                  {% endif %}
+                </div>
+                <div class="box-actions"><a class="action edit" href="https://www.booksio.com/customer/address/edit/id/1089/" data-ui-id="default-billing-edit-link"><span>Edit</span></a></div>
+              </div>
+              <div class="box box-shipping-address">
+                <strong class="box-title"><span>Default Shipping Address</span></strong> 
+                <div class="box-content">
+                  {% if customer.default_address %}
+                    <address>
+                      <div class="address-name">
+                          <strong>Name</strong>
+                          <p>
+                            {{ customer.default_address.first_name }}
+                            {{ customer.default_address.last_name }}
+                          </p>
+                      </div>
+                      <div class="address-address">
+                          <div class="address-item">
+                            <strong>Address</strong>
+                            <p>
+                                <span>{{ customer.default_address.address1 }} {{ customer.default_address.address2 }}</span><br>
+                                <span>{{ customer.default_address.city }}</span>
+                                <span>, {{ customer.default_address.province }}</span>
+                                <span>, {{ customer.default_address.zip }}</span>
+                                <br><span>{{ customer.default_address.country }}</span>
+                            </p>
+                          </div>
+                      </div>
+                      <div class="address-phone">{{ customer.default_address.phone }}</div>
+                    </address>
+                  {% else %}
+                    <address>You have not set a default billing address.</address>
+                  {% endif %}
+                </div>
+                <div class="box-actions"><a class="action edit" href="https://www.booksio.com/customer/address/edit/id/1089/" data-ui-id="default-shipping-edit-link"><span>Edit</span></a></div>
+              </div>
+          </div>
+        </div>
+    </div>
+   </div>
+</div>
+</div>
+
+<style>
+  .sidebar .block:last-child {
+    margin-bottom: 56px;
+  }
+</style>

@@ -1,0 +1,12 @@
+{
+  "wrapper": "main#html-body.account.customer-account-index.page-layout-2columns-left",
+  "sections": {
+    "account-section": {
+      "type": "account-main",
+      "settings": {}
+    }
+  },
+  "order": [
+    "account-section"
+  ]
+}

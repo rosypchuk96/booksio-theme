@@ -1,12 +1,12 @@
 {
   "wrapper": "div.catalog-category-view.cms-page-view.page-layout-2columns-left.page-products.page-with-filter",
   "sections": {
-    "1d268838-f7bf-40f5-924f-ea81e4128b6f": {
-      "type": "collection-magazines-top-banner",
+    "f8a13a2b-138c-4898-bb38-c4e09ea9dee2": {
+      "type": "collection-books-top-banner",
       "settings": {
         "link": "#",
-        "image": "shopify:\/\/shop_images\/BKSIO_CategoryBanner-Skinny_JULY-Kimetsu.png",
-        "image_mobile": "shopify:\/\/shop_images\/BKSIO_CategoryBanner-Skinny_JULY-Kimetsu-Mobile.png"
+        "image": "shopify:\/\/shop_images\/BKSIO_CategoryBanner-Skinny_JULY-Secrets.png",
+        "image_mobile": "shopify:\/\/shop_images\/BKSIO_CategoryBanner-Skinny_JULY-Secrets-Mobile.png"
       }
     },
     "97ce74a1-c09a-4932-83a1-a73947f6cec1": {
@@ -22,7 +22,7 @@
     }
   },
   "order": [
-    "1d268838-f7bf-40f5-924f-ea81e4128b6f",
+    "f8a13a2b-138c-4898-bb38-c4e09ea9dee2",
     "97ce74a1-c09a-4932-83a1-a73947f6cec1",
     "subscribe"
   ]

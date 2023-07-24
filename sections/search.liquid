@@ -1,0 +1,130 @@
+<div style="display: none !important;">
+  <div id="usf_container"></div>
+</div>
+
+{% assign host = request.host %}
+{% assign host_arr = host | split: '.' %}
+{% assign is_subdomain = false %}
+{% if host_arr.size >= 3 %}
+  {% assign is_subdomain = true %}
+  {% assign subdomain = host_arr[0] %}
+{% endif %}
+<div id="main-content" class="page-main page-wrapper">
+    <nav class="breadcrumbs" aria-label="breadcrumbs">
+      <ul class="items">
+        <li class="item home">
+          <a href="/" title="Go to Home Page">Home</a>
+          <span class="icon" aria-hidden="true"></span>
+        </li>
+        <li class="item category6940">
+          <strong>SEARCH RESULTS FOR: '<span id="search-query-breadcrumbs"></span>'</strong>
+        </li>
+      </ul>
+    </nav>
+    <div class="page-title-wrapper"><h1 class="page-title"><span class="base" data-ui-id="page-title-wrapper">Search results for: '<span id="search-query-title"></span>'</span></h1></div>
+    <div class="columns">
+      <div class="column main">
+         <input name="form_key" type="hidden" value="UxbR7TJdQwixPtD6"> 
+         <div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}" style="display: none;">
+            <!-- ko template: getTemplate() -->
+            <!-- /ko -->
+         </div>
+         <div></div>
+         <!-- Yotpo - Add body class --><!--/ Yotpo - Add body class --><!-- Yotpo - Widget Script --><!--/ Yotpo - Widget Script -->           
+         <div class="toolbar toolbar-products">
+            {% assign shown = paginate.page_size | plus: paginate.current_offset %}
+      <p class="toolbar-amount" id="toolbar-amount"> Show <span class="toolbar-number" id="shown-number"></span> Items total of <span class="toolbar-number" id="collection-size" data-collection-size="{{ collection.products_count }}">{% unless is_subdomain %}{{ collection.products_count }}{% endunless %}</span> </p>
+            <div class="toolbar-sorter sorter">
+               <label class="sorter-label" for="sorter">Sort By</label> 
+               <select id="sorter" data-role="sorter" class="sorter-options">
+                  <option value="" {% unless collection.sort_by %}selected="selected"{% endunless %} disabled="true">Sort By</option>
+                  <option value="best-selling" {% if collection.sort_by == 'best-selling' %}selected="selected"{% endif %}>Best Sellers</option>
+                  <option value="title-ascending"{% if collection.sort_by == 'title-ascending' %}selected="selected"{% endif %}>Product Name</option>
+                  <option value="created-descending"{% if collection.sort_by == 'created-descending' %}selected="selected"{% endif %}>Publish Date</option>
+               </select>
+               <a title="Set Ascending Direction" href="#" class="action sorter-action sort-desc" data-role="direction-switcher" data-value="asc"><span class="visually-hidden">Set Ascending Direction</span> <i class="icon" aria-hidden="true"></i></a> 
+            </div>
+            <div class="field limiter">
+               <label class="label" for="limiter"></label> 
+               <div class="control">
+                  <select id="limiter" data-role="limiter" class="limiter-options">
+                     <option value="32" selected="selected">32</option>
+                     <option value="48">48</option>
+                  </select>
+                  <ul>
+                     <li data-value="32" class="active grid-size-selector"><a style="color:inherit;" href="{{ collection.url | append: '?view=32' }}">32</a></li>
+                     <li data-value="48" class="grid-size-selector"><a style="color:inherit;" href="{{ collection.url | append: '?view=48' }}">48</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+  
+         <div class="products wrapper grid products-grid">
+            <ol class="products list items product-items">
+            </ol>
+         </div>
+         
+         <div class="toolbar toolbar-products">
+            <div class="pages" id="pagination"></div>
+         </div>
+      </div>
+      <div class="sidebar sidebar-main" {% if is_subdomain %}style="display: none;"{% endif %}>
+        {% render 'collection-filters' %}
+      </div>
+    </div>
+  </div>
+
+<script>
+  var gridSize = 32;
+</script>
+
+{{ 'jquery-ui.min.css' | asset_url | stylesheet_tag }}
+{{ 'jquery-ui.theme.min.css' | asset_url | stylesheet_tag }}
+{{ 'jquery-ui.min.js' | asset_url | script_tag }}
+{{ 'jquery.ui.touch-punch.min.js' | asset_url | script_tag }}
+{{ 'search.js' | asset_url | script_tag }}
+
+<style>
+  .breadcrumbs,
+  html .catalog-category-view .page-title-wrapper {
+    display: block !important;
+  }
+
+  .catalog-category-view .page-main#main-content {
+    padding-top: 20px !important;
+  }
+
+  html .catalog-category-view .page-title-wrapper .page-title .base {
+    font-size: 25px;
+    font-family: "Lato";
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-bottom: 12px;
+    line-height: normal;
+    color: #2b2b2b;
+  }
+
+  .ui-slider-horizontal .ui-slider-handle {
+    top: 0 !important;
+  }
+
+  @media (max-width: 767px) {
+    .page-with-filter .columns .sidebar-main {
+      margin-bottom: 50px;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Search",
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Search"
+      }
+    ]
+  }
+{% endschema %}

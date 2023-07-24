@@ -66,6 +66,16 @@
                           <input type="checkbox" id="printed-book" data-option-value="Printed Book">
                           <label for="printed-book"><span>Printed Book</span></label>
                         </li>
+                        {% if template contains 'search' %}
+                          <li class="item">
+                            <input type="checkbox" id="print-magazine" data-option-value="Print Magazine">
+                            <label for="print-magazine"><span>Print Magazine</span></label>
+                          </li>
+                          <li class="item">
+                            <input type="checkbox" id="digital-magazine" data-option-value="Digital Magazine">
+                            <label for="digital-magazine"><span>Digital Magazine</span></label>
+                          </li>
+                        {% endif %}
                       {% endif %}
                     </ol>
                   </div>

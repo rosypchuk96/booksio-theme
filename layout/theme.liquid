@@ -29,13 +29,33 @@
     {{ 'jquery.min.js' | asset_url | script_tag }}
 
     {{ content_for_header }}
+{% render 'usf' %}
+
   </head>
 
   <body id="html-body">
     <div class="page-wrapper">
-      {% section 'header' %}
       {% assign host = request.host %}
       {% assign host_arr = host | split: '.' %}
+      {% assign is_subdomain = false %}
+      {% if host_arr.size >= 3 %}
+        {% assign is_subdomain = true %}
+        {% assign subdomain = host_arr[0] %}
+      {% endif %}
+
+      <script>
+        var restrictedFormats, restrictedTags, isPartnerSite;
+        {% if is_subdomain %}
+          restrictedFormats = '{{ shop.metaobjects["partner_store_settings"][subdomain].restricted_formats }}';
+          restrictedTags = `{{ shop.metaobjects["partner_store_settings"][subdomain].restricted_tags | strip | newline_to_br | strip_newlines }}`;
+          isPartnerSite = true;
+
+          restrictedFormats = restrictedFormats.toLowerCase().replace(/["']/g, "").replace('[', '').replace(']', '').split(',');
+          restrictedTags = restrictedTags.toLowerCase().split('<br />');
+        {% endif %}
+      </script>
+
+      {% section 'header' %}
 
       {% if host_arr.size < 3 or template != 'index' or host contains 'shopify' %}
         {{ content_for_layout }}
