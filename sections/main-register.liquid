@@ -1,0 +1,224 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-main">
+  <div class="columns">
+    <div class="column main">
+      <div
+        class="heading-one-sec box-model-64b0d75e7fb42"
+      >
+        <div class="row-full-width-inner" data-element="inner">
+          <figure>
+            <img
+              class="pagebuilder-mobile-hidden"
+              loading="lazy"
+              src="{{ 'heading_icon_1.png' | asset_url }}"
+              alt="">
+            <img
+              class="pagebuilder-mobile-only"
+              src="{{ 'heading_icon_1.png' | asset_url }}"
+              alt=""
+            >
+          </figure>
+        </div>
+        <div
+          class="lato-font box-model-64b0d75e7fb83"
+        >
+          <h3>
+            <span style="line-height: 42px;"
+              ><span style="font-size: 34px;"><span style="color: #41c2ff;">CREATE NEW </span></span></span
+            ><span style="line-height: 42px;"
+              ><span style="font-size: 34px;"><span style="color: #202020;">ACCOUNT</span></span></span
+            >
+          </h3>
+        </div>
+        <div
+          class="lato-font box-model-64b0d75e7fb90"
+        >
+          <p>
+            <span style="font-size: 24px; color: #939393;"
+              ><span style="color: #b8b8b8;"
+                ><strong
+                  ><span style="font-size: 18px;"
+                    ><span style="font-size: 14px;">SIGN IN OR CREATE A NEW ACCOUNT</span></span
+                  ></strong
+                ></span
+              ></span
+            >
+          </p>
+        </div>
+
+        <div class="login-container">
+          <div class="block block-customer-login">
+            <div class="block-title">
+              <strong id="block-customer-login-heading" role="heading" aria-level="2">PERSONAL INFORMATION</strong>
+            </div>
+            <div class="block-content" aria-labelledby="block-customer-login-heading">
+              {%- form 'create_customer', novalidate: 'novalidate' -%}
+                {%- if form.errors -%}
+                  <h2 class="form__message" tabindex="-1" autofocus>
+                    <svg aria-hidden="true" focusable="false">
+                      <use href="#icon-error" />
+                    </svg>
+                    {{ 'templates.contact.form.error_heading' | t }}
+                  </h2>
+                  <ul>
+                    {%- for control in form.errors -%}
+                      <li>
+                        {%- if control == 'form' -%}
+                          {{ form.errors.messages[control] }}
+                        {%- else -%}
+                          <a href="#RegisterForm-{{ control }}">
+                            {{ form.errors.translated_controls[control] | capitalize }}
+                            {{ form.errors.messages[control] }}
+                          </a>
+                        {%- endif -%}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+                <div class="control">
+                  <input
+                    type="text"
+                    name="customer[first_name]"
+                    id="RegisterForm-FirstName"
+                    {% if form.first_name %}
+                      value="{{ form.first_name }}"
+                    {% endif %}
+                    autocomplete="given-name"
+                    placeholder="{{ 'customer.register.first_name' | t }}"
+                  >
+                </div>
+
+                <br>
+                <div class="control">
+                  <input
+                    type="text"
+                    name="customer[last_name]"
+                    id="RegisterForm-LastName"
+                    {% if form.last_name %}
+                      value="{{ form.last_name }}"
+                    {% endif %}
+                    autocomplete="family-name"
+                    placeholder="{{ 'customer.register.last_name' | t }}"
+                  >
+                </div>
+                <br>
+                <div class="control">
+                  <input
+                    type="email"
+                    name="customer[email]"
+                    id="RegisterForm-email"
+                    {% if form.email %}
+                      value="{{ form.email }}"
+                    {% endif %}
+                    spellcheck="false"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    aria-required="true"
+                    {% if form.errors contains 'email' %}
+                      aria-invalid="true"
+                      aria-describedby="RegisterForm-email-error"
+                    {% endif %}
+                    placeholder="{{ 'customer.register.email' | t }}"
+                  >
+                </div>
+                <br>
+                {%- if form.errors contains 'email' -%}
+                  <span id="RegisterForm-email-error" class="form__message">
+                    <svg aria-hidden="true" focusable="false">
+                      <use href="#icon-error" />
+                    </svg>
+                    {{ form.errors.translated_controls.email | capitalize }}
+                    {{ form.errors.messages.email }}.
+                  </span>
+                {%- endif -%}
+
+                <div class="control">
+                  <input
+                    type="password"
+                    name="customer[password]"
+                    id="RegisterForm-password"
+                    aria-required="true"
+                    {% if form.errors contains 'password' %}
+                      aria-invalid="true"
+                      aria-describedby="RegisterForm-password-error"
+                    {% endif %}
+                    placeholder="{{ 'customer.register.password' | t }}"
+                  >
+                </div>
+
+                {%- if form.errors contains 'password' -%}
+                  <span id="RegisterForm-password-error" class="form__message">
+                    <svg aria-hidden="true" focusable="false">
+                      <use href="#icon-error" />
+                    </svg>
+                    {{ form.errors.translated_controls.password | capitalize }}
+                    {{ form.errors.messages.password }}.
+                  </span>
+                {%- endif -%}
+                <br>
+                <button
+                  class="action create primary"
+                  style="
+                    border-radius: 4px !important;
+                        text-transform: uppercase;
+                        font-weight: 600 !important;
+                        line-height: normal;
+                    }
+                  "
+                >
+                  {{ 'customer.register.submit' | t }}
+                </button>
+              {%- endform -%}
+            </div>
+
+            {%- if shop.checkout.guest_login -%}
+              <div>
+                <hr>
+                <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
+
+                {%- form 'guest_login' -%}
+                  <button>
+                    {{ 'customer.login_page.guest_continue' | t }}
+                  </button>
+                {%- endform -%}
+              </div>
+            {%- endif -%}
+          </div>
+
+          <div class="block block-new-customer">
+            <div class="block-title">
+              <strong id="block-new-customer-heading" role="heading" aria-level="2">REGISTERED CUSTOMERS</strong>
+            </div>
+            <div class="block-content" aria-labelledby="block-new-customer-heading">
+              <h3>SIGN IN NOW</h3>
+              <p>
+                Click here to sign into your existing account to check out faster, keep more than one address, track
+                orders and more.
+              </p>
+              <div class="actions-toolbar">
+                <div class="primary">
+                  <a href="{{ routes.account_login_url }}" class="action create primary"><span>SIGN IN</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,180 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-main">
+  <div class="columns">
+    <div class="column main">
+      <div
+        class="heading-one-sec box-model-64b0d75e7fb42"
+      >
+        <div class="row-full-width-inner" data-element="inner">
+          <figure>
+            <img
+              class="pagebuilder-mobile-hidden"
+              loading="lazy"
+              src="{{ 'heading_icon_1.png' | asset_url }}"
+              alt=""
+
+            ><img
+              class="pagebuilder-mobile-only"
+              src="{{ 'heading_icon_1.png' | asset_url }}"
+              alt=""
+            >
+          </figure>
+          <div
+            class="lato-font box-model-64b0d75e7fb83"
+          >
+            <h3>
+              <span style="line-height: 42px;"
+                ><span style="font-size: 34px;"><span style="color: #41c2ff;">CUSTOMER </span></span></span
+              ><span style="line-height: 42px;"
+                ><span style="font-size: 34px;"><span style="color: #202020;">LOGIN</span></span></span
+              >
+            </h3>
+          </div>
+          <div
+            class="lato-font box-model-64b0d75e7fb90"
+          >
+            <p>
+              <span style="font-size: 24px; color: #939393;"
+                ><span style="color: #b8b8b8;"
+                  ><strong
+                    ><span style="font-size: 18px;"
+                      ><span style="font-size: 14px;">SIGN IN OR CREATE A NEW ACCOUNT</span></span
+                    ></strong
+                  ></span
+                ></span
+              >
+            </p>
+          </div>
+
+          <div class="login-container">
+            <div class="block block-customer-login">
+              <div class="block-title">
+                <strong id="block-customer-login-heading" role="heading" aria-level="2">Registered Customers</strong>
+              </div>
+              <div class="block-content" aria-labelledby="block-customer-login-heading">
+                {%- form 'customer_login', novalidate: 'novalidate' -%}
+                  {%- if form.errors -%}
+                    <h2 class="form__message" tabindex="-1" autofocus>
+                      <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
+                        <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                        <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                        <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                        <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                      </svg>
+                      {{ 'templates.contact.form.error_heading' | t }}
+                    </h2>
+                    {{ form.errors | default_errors }}
+                  {%- endif -%}
+
+                  <div class="control">
+                    <input
+                      type="email"
+                      name="customer[email]"
+                      id="CustomerEmail"
+                      autocomplete="email"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      {% if form.errors contains 'form' %}
+                        aria-invalid="true"
+                      {% endif %}
+                      placeholder="{{ 'customer.login_page.email' | t }}"
+                    >
+                    {% comment %}
+                      <label for="CustomerEmail">
+                        {{ 'customer.login_page.email' | t }}
+                      </label>
+                    {% endcomment %}
+                  </div>
+                  <br>
+                  {%- if form.password_needed -%}
+                    <div class="control">
+                      <input
+                        type="password"
+                        value=""
+                        name="customer[password]"
+                        id="CustomerPassword"
+                        autocomplete="current-password"
+                        {% if form.errors contains 'form' %}
+                          aria-invalid="true"
+                        {% endif %}
+                        placeholder="{{ 'customer.login_page.password' | t }}"
+                      >
+                      {% comment %}
+                        <label for="CustomerPassword">
+                          {{ 'customer.login_page.password' | t }}
+                        </label>
+                      {% endcomment %}
+                    </div>
+                    <br>
+                  {%- endif -%}
+
+                  <button
+                    class="action login primary"
+                    style="
+                      border-radius: 4px !important;
+                      text-transform: uppercase;
+                      font-weight: 600 !important;
+                      line-height: normal;
+                    "
+                  >
+                    {{ 'customer.login_page.sign_in' | t }}
+                  </button>
+
+                  <a href="#recover" style="float: right !important; font-size: 12px !important;">
+                    {{ 'customer.login_page.forgot_password' | t }}
+                  </a>
+                {%- endform -%}
+              </div>
+
+              {%- if shop.checkout.guest_login -%}
+                <div>
+                  <hr>
+                  <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
+
+                  {%- form 'guest_login' -%}
+                    <button>
+                      {{ 'customer.login_page.guest_continue' | t }}
+                    </button>
+                  {%- endform -%}
+                </div>
+              {%- endif -%}
+            </div>
+
+            <div class="block block-new-customer">
+              <div class="block-title">
+                <strong id="block-new-customer-heading" role="heading" aria-level="2">New Customers</strong>
+              </div>
+              <div class="block-content" aria-labelledby="block-new-customer-heading">
+                <h3>CREATE AN ACCOUNT</h3>
+                <p>Create an account to check out faster, keep more than one address, track orders and more.</p>
+                <div class="actions-toolbar">
+                  <div class="primary">
+                    <a href="{{ routes.account_register_url }}" class="action create primary"
+                      ><span>Create an Account</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
