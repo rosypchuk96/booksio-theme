@@ -1,4 +1,13 @@
-{% assign charities = shop.metaobjects["charity_settings"]['charity-settings'].supported_charities %}
+{% assign charities = shop.metaobjects["charity_settings"]['charity-settings'].supported_charities.value %}
+{% assign current_charities = shop.metaobjects["charity_settings"]['charity-settings'].featured_charities_ei_ns %}
+
+{% assign host = request.host %}
+{% assign host_arr = host | split: '.' %}
+{% assign is_subdomain = false %}
+{% if host_arr.size >= 3 %}
+  {% assign is_subdomain = true %}
+  {% assign subdomain = host_arr[0] %}
+{% endif %}
 
 <div class="columns">
       <div class="column main">
@@ -47,7 +56,7 @@
                      <thead>
                         <tr>
                            <th class="col item" scope="col"><span>Item</span></th>
-                           <th class="col price" scope="col"><span>Filter by Price</span></th>
+                           <th class="col price" scope="col"><span>Price</span></th>
                            <th class="col qty" scope="col"><span>Qty</span></th>
                            <th class="col subtotal" scope="col"><span>Subtotal</span></th>
                         </tr>
@@ -122,6 +131,38 @@
                </div>
                <div class="cart main actions"> <a class="action continue" href="/" title="Continue Shopping"><span>Continue Shopping</span></a>   <button id="update-cart-btn" type="submit" name="update_cart_action" data-cart-item-update="" value="update_qty" title="Update Shopping Cart" class="action update"><span>Update Shopping Cart</span></button> <input type="hidden" value="" id="update_cart_action_container" data-cart-item-update=""></div>
 
+               {% assign partner_charities = shop.metaobjects["partner_store_settings"][subdomain].charity_partner_ein %}
+               {% if is_subdomain %}
+                 {% if partner_charities %}
+                  {% assign order_charities = partner_charities | strip | newline_to_br | strip_newlines | split: "<br />" %}
+                 {% endif %}
+                 {% assign commission = shop.metaobjects["partner_store_settings"][subdomain].charity_payout %}
+                 {% if commission %}
+                  {% assign commission_attribute = shop.metaobjects["partner_store_settings"][subdomain].name | append: ':' | append: commission %}
+                 {% endif %}
+               {% else %}
+                 {% assign order_charities = current_charities | strip | newline_to_br | strip_newlines | split: "<br />"  %}
+               {% endif %}
+
+              {% if order_charities %}
+                {% assign charities_attribute = '' %}
+                <div class="cart-summary">
+                  <div class="cart-totals cart-charity">
+                    <div class="title" data-role="title"><strong id="block-total-heading" role="heading" aria-level="2">CHARITABLE DONATIONS</strong></div>
+                    <p>Your order supports the following charities:</p>
+                    <ul>
+                      {% for charity in charities %}
+                        {% assign ein = charity.ein | strip %}
+                        {% if order_charities contains ein %}
+                          <li>{{ charity.legal_name }}</li>
+                          {% assign charities_attribute = charities_attribute | append: charity.legal_name | append: ',' %}
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              {% endif %}
+                
                 <div class="cart-summary">
                   <strong class="summary title">Summary</strong>   
                   {% include 'shipping-calculator' %}
@@ -184,9 +225,14 @@
                   </div>
                   <ul class="checkout methods items checkout-methods-items">
                     <li class="item">  <button type="submit" name="checkout" data-role="proceed-to-checkout" title="Proceed to Checkout" class="action primary checkout"><span>Proceed to Checkout</span></button> </li>
-                    <li class="item"> <a class="action multicheckout" href="https://www.booksio.com/multishipping/checkout/"><span>Check Out with Multiple Addresses</span></a></li>
                   </ul>
               </div>
+              {% if charities_attribute %}
+                <input id="donations" type="text" name="attributes[Donations]" value="{{ charities_attribute }}" style="display: none;">
+              {% endif %}
+              {% if commission_attribute %}
+                <input id="commission" type="text" name="attributes[Commission]" value="{{ commission_attribute }}" style="display: none;">
+              {% endif %}
             </form>
             <div id="gift-options-cart" data-bind="scope:'giftOptionsCart'">
                <!-- ko template: getTemplate() -->
@@ -269,6 +315,18 @@
         {% endif %}
    </div>
 </div>
+
+<style>
+  .checkout-cart-index .cart-summary .cart-totals.cart-charity {
+    padding: 0;
+    width: 100%;
+  }
+
+  .checkout-cart-index .cart-summary .cart-totals.cart-charity:after,
+  .checkout-cart-index .cart-summary .cart-totals.cart-charity:before {
+    display: none;
+  }
+</style>
 
 <script>
   $(document).ready(function() {

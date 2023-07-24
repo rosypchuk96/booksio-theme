@@ -20,7 +20,9 @@
           data-type="horizontal"
           data-mobile-type="accordion">
           <div class="magezon-builder header-links-menu">
-            {% if is_subdomain %}
+            {% if is_subdomain and host contains 'shopify' %}
+              {% assign top_nav = 'header-top-menu' %}
+            {% elsif is_subdomain %}
               {% assign top_nav = 'partners-header-top-menu' %}
             {% else %}
               {% assign top_nav = 'header-top-menu' %}
@@ -216,7 +218,9 @@
             data-type="horizontal"
             data-mobile-type="accordion">
             <div class="magezon-builder {% if is_subdomain %}white-label-partner{% endif %}">
-              {% if is_subdomain %}
+              {% if is_subdomain and host contains 'shopify' %}
+                {% assign link_list = 'main-menu' %}
+              {% elsif is_subdomain %}
                 {% assign link_list = shop.metaobjects["partner_store_settings"][subdomain].main_menu_handle %}
               {% else %}
                 {% assign link_list = 'main-menu' %}

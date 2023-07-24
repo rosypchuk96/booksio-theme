@@ -1,3 +1,100 @@
+<div class="form">
+        <form
+          action="/cart/add"
+          method="post"
+          id="product-form-{{ product.id }}">
+          <input
+            type="hidden"
+            name="id"
+            value="{{ product.selected_or_first_available_variant.id }}">
+          {%- unless product.has_only_default_variant -%}
+            <div class="variant-selector">
+              {% for variant in product.variants %}
+                <div class="item">
+                  <input
+                    type="radio"
+                    id="variant-{{ variant.id }}"
+                    name="options"
+                    value="{{ variant.id }}"
+                    {% if product.selected_or_first_available_variant.id == variant.id %}checked{% endif %}>
+                  <label for="variant-{{ variant.id }}">
+                      {% if variant.title == "Print" %}
+                        {{ variant.title }} Only
+                      {% else %}
+                        {{ variant.title }}
+                      {% endif %}
+                  </label>
+                </div>
+              {% endfor %}
+<!--               <div class="item" id="all-variants">
+                <input
+                  type="radio"
+                  id="variant-all"
+                  name="options"
+                  value="{% for variant in product.variants %}{{ variant.id }},{% endfor %}">
+                <label for="variant-all">
+                    Print and Digital
+                </label>
+              </div> -->
+            </div>
+          {%- endunless -%}
+          {% if product.selling_plan_groups %}
+            <div class="subscription-widget" id="subscription-widget">
+              {% assign selling_plans = product.selling_plan_groups[0].selling_plans %}
+              <div class="block active" id="subscribe">
+                <div class="name">Subscribe & Save</div>
+                <div class="dropdown">
+                  <div class="current dropdown-line">
+                    {% assign years = selling_plans[0].name | replace: 'years', '' | replace: 'year', '' | replace: ' ', ''   %}
+                    {% assign issues = product.metafields.accentuate.issues | times: years  %}
+                    <div class="frequency">{{ selling_plans[0].options[0].value }}</div>
+                    <div class="issues">{{ issues }} issues</div>
+                    <div class="discount">{% if product.metafields.accentuate.first_order_discount_ %} Save {{ product.metafields.accentuate.first_order_discount_ }}%{% endif %}</div>
+                    <div class="price">{{ selling_plans[0].price_adjustments[0].value | money }}</div>
+                  </div>
+                  <div class="dropdown-content">
+                    {% for plan in selling_plans %}
+                      {% unless plan.name contains 'Free' or plan.name contains 'free' %}
+                        {% assign years = plan.name | replace: 'years', '' | replace: 'year', '' | replace: ' ', ''   %}
+                        {% assign issues = product.metafields.accentuate.issues | times: years  %}
+                        <div class="dropdown-line {% if forloop.index == 1 %}active{% endif %}" data-plan-id="{{ plan.id }}" data-plan-name="{{ plan.name }}">
+                          <div class="line-wrap">
+                            <div class="frequency">{{ plan.name }}</div>
+                            <div class="issues">{{ issues }} issues</div>
+                            <div class="discount">{% if product.metafields.accentuate.first_order_discount_ %}Save {{ product.metafields.accentuate.first_order_discount_ }}%{% endif %}</div>
+                            <div class="price">{{ plan.price_adjustments[0].value | money }}</div>
+                          </div>
+                        </div>
+                      {% endunless %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+<!--               <div class="block" id="single-issue">
+                <div class="name">Single issue</div>
+                <div class="single-issue">{{ product.selected_or_first_available_variant.price | money }}</div>
+              </div> -->
+            </div>
+          {% endif %}
+          <div class="row">
+            <div class="quantity">
+              <span>Quantity</span>
+              <input
+                min="1"
+                type="number"
+                id="quantity"
+                name="quantity"
+                value="1" />
+            </div>
+            <button
+              type="submit"
+              name="add"
+              class="btn"
+              id="submit">ADD TO CART</button>
+          </div>
+        </form>
+      </div>
+
 <section
   id="MainProduct-{{ section.id }}"
   class="page-width section-{{ section.id }}-padding"
@@ -136,6 +233,10 @@
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
+
+
+
+            
             {%- when 'inventory' -%}
               <p
                 class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"

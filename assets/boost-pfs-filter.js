@@ -70,7 +70,7 @@ function prepareShopifyData(data) {
 /************************** END CUSTOMIZE DATA BEFORE BUILDING PRODUCT ITEM **************************/
 /************************** BUILD PRODUCT LIST **************************/
 // Build Product Grid Item
-  ProductGridItem.prototype.compileTemplate = function (data) {
+ProductGridItem.prototype.compileTemplate = function(data) {
   if (!data) data = this.data;
   // Customize API data to get the Shopify data
   data = prepareShopifyData(data);
@@ -117,27 +117,10 @@ function prepareShopifyData(data) {
   itemHtml = itemHtml.replace(/{{itemHandle}}/g, data.handle);
   itemHtml = itemHtml.replace(/{{itemVendorLabel}}/g, data.vendor);
   itemHtml = itemHtml.replace(/{{itemUrl}}/g, Utils.buildProductItemUrlWithVariant(data));
-
-  var minPrice = data.price_min;
-  var maxPrice = data.price_max;
-  if (minPrice != maxPrice) {
-    itemHtml = itemHtml.replace(/{{customPrice}}/g, `<span
-                    id="old-price-8573004-widget-product-grid"
-                    class="price-wrapper price-range ">
-                    <span class="price">$${minPrice.toFixed(2)}</span>
-                    - $${maxPrice.toFixed(2)}
-                  </span>`);
-  } else {
-    itemHtml = itemHtml.replace(/{{customPrice}}/g, `<span
-                    id="old-price-8573004-widget-product-grid"
-                    class="price-wrapper price-range ">
-                    <span class="price">$${minPrice.toFixed(2)}</span>
-                  </span>`);
-  }
   return itemHtml;
 };
 // Build Product List Item
-  ProductListItem.prototype.compileTemplate = function (data) {
+ProductListItem.prototype.compileTemplate = function(data) {
   if (!data) data = this.data;
   // Customize API data to get the Shopify data
   data = prepareShopifyData(data);

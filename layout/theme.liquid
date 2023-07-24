@@ -27,8 +27,7 @@
     {{ 'style.css' | asset_url | stylesheet_tag }}
 
     {{ 'jquery.min.js' | asset_url | script_tag }}
-    {% include 'boost-pfs-style' %}
-    
+
     {{ content_for_header }}
   </head>
 
@@ -45,7 +44,9 @@
         {% assign lp_url = shop.metaobjects["partner_store_settings"][subdomain].landing_page %}
         {% assign lp_page = pages[lp_url] %}
         {% if lp_page %}
-          <script>window.location.href = "{{ lp_page.url }}"</script>
+          <script>
+            window.location.href = "{{ lp_page.url }}"
+          </script>
         {% endif %}
       {% endif %}
       {% section 'footer' %}
@@ -73,6 +74,5 @@
         });
       });
     </script>
-    {% include 'boost-pfs' %}
-	</body>
+  </body>
 </html>

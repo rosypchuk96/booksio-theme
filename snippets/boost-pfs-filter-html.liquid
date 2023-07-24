@@ -1,55 +1,26 @@
 {%- comment -%} VERSION: 1.0.0 Please do not delete this line. {%- endcomment -%}
-{% assign max_price = '' %}
-{% if product.price_min != product.price_max %}
-  {% assign max_price = '-' | append: product.price_max %}
-{% endif %}
 {%- capture bc_layout -%}
 {%- case layout -%}
 {%- when 'productGridItemHtml' -%}
 {% raw %}
-<li class="item product product-item">
-   <div role="group" aria-label="product" class="product-item-info" id="product-item-info_14882867" data-container="product-grid">
-      
-    {{itemImages}}
-      <div class="product details product-item-details">
-         <a href="{{itemUrl}}" title="{{product.title}}"><strong class="product name product-item-name">{{product.title}}</strong></a> 
-         <div class="author-wrapper">
-          <p class="author">{{product.metafields.custom.author}}</p>
-          <div class="PriceMain">
-            <div
-            class="price-box price-final_price"
-            data-role="priceBox"
-            data-product-id="8573004"
-            data-price-box="product-id-8573004">
-              <span class="normal-price">
-                <span class="pricing-element price-container ">
-                  <span class="price-label">Regular Price</span>
-                  {{customPrice}}
-                </span>
-              </span>
-              <span class="old-price sly-old-price no-display">
-                <span class="pricing-element price-container ">
-                  <span class="price-label">Regular Price</span>
-                  <span
-                    id="old-price-8573004-widget-product-grid"
-                    class="price-wrapper single-price ">
-                    <span class="price">{{product.compare_at_price}}</span>
-                  </span>
-                </span>
-              </span>
-            </div>
+<div class="boost-pfs-filter-product-item boost-pfs-filter-product-item-grid {{gridWidthClass}}{{soldOutClass}}{{saleClass}} {{itemActiveSwapClass}}">
+    <div class="boost-pfs-filter-product-item-inner">
+        <div class="boost-pfs-filter-product-item-image">
+            {{itemImages}}
+            <div class="boost-pfs-filter-product-item-label">{{itemLabels}}{{itemTagLabels}}</div>
+        </div>
+
+        <div class="boost-pfs-filter-product-bottom">
+          <div class="boost-pfs-filter-product-bottom-inner">
+            <a href="{{itemUrl}}#" class="boost-pfs-filter-product-item-title">{{itemTitle}}</a>
+            {{itemVendor}}
+            {{itemReviews}}
+            {{itemPrice}}
+            {{itemSwatches}}
           </div>
-         </div>
-         <div class="star_rating">
-            <div class="yotpo bottomLine yotpo-small" data-product-id="14882867" data-name="Soul Taken" data-yotpo-element-id="5">
-               <div class="yotpo-display-wrapper" style="visibility: hidden;">
-                  <div class="yotpo-clr"></div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</li>
+        </div>
+    </div>
+</div>
 {% endraw %}
 {%- when 'productListItemHtml' -%}
 {% raw %}

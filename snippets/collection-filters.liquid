@@ -1,0 +1,76 @@
+
+<div class="block filter" id="layered-filter-block" data-collapsible="true">
+  <div class="block-title filter-title" data-count="0" role="tablist"><strong data-role="title" role="tab" aria-selected="false" aria-expanded="false" tabindex="0">Shop By</strong></div>
+  <div class="block-content filter-content">
+        <div class="filter-current active" data-collapsible="true" role="tablist" style="display: none;">
+          <strong class="block-subtitle filter-current-subtitle" id="nowShoppingBy" role="tab" aria-level="2" data-role="title" data-count="2" aria-selected="false" aria-expanded="true" tabindex="0">Now Shopping by</strong> 
+          <ol class="items">
+              <li class="item"> <span class="filter-label filter-price">{{ filter_2.label }}</span>  <span class="filter-value">{{ filter_2.min_value.value | money }} - {{ filter_2.max_value.value | money }}</span>   <a class="action remove" href="{{ filter_2.url_to_remove }}" title="Remove Filter by Price {{ filter_2.min_value.value | money }} - {{ filter_2.max_value.value | money }}"><span>Remove This Item</span> <i class="icon" aria-hidden="true"></i></a> </li>
+          </ol>
+          <ol class="items">
+              <li class="item"> 
+                <span class="filter-label">{{ filter_2.label }}</span> 
+                <span class="filter-value">{{ value.label }}</span>   <a class="action remove" href="{{ value.url_to_remove }}" title="Remove"><span>Remove This Item</span> <i class="icon" aria-hidden="true"></i></a> </li>  
+            </ol>
+        </div>
+        <div class="block-actions filter-actions"><a href="#" class="action clear filter-clear"><span></span></a></div>
+     <strong role="heading" aria-level="2" class="block-subtitle filter-subtitle">Filter By</strong> 
+     <div class="filter-options" id="narrow-by-list" data-role="content" role="tablist">
+            <div data-role="collapsible" class="filter-options-item allow" role="presentation" data-collapsible="true">
+              <div data-role="title" class="filter-options-title" role="tab" aria-selected="true" aria-expanded="true" tabindex="0"><span>FILTER BY PRICE</span> <i class="icon" aria-hidden="true"></i></div>
+              <div data-role="content" class="filter-options-content" role="tabpanel" style="display: none;">
+                <div class="smile-es-range-slider" data-role="range-price-slider-price">
+                  <div class="from-label" data-role="from-label" data-val="0.00">$0.00</div>
+                  <div class="to-label" data-role="to-label" data-val="100.00">$100.00</div>
+                  <div id="slider-bar">
+                  </div>
+                  <div class="actions-toolbar">
+                      <div data-role="message-box"></div>
+                      <div class="actions-primary"><a class="action primary small" id="update-price" data-role="apply-range" data-url-to-remove="{{ filter.url_to_remove }}"><span>OK</span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-role="collapsible" class="filter-options-item" role="presentation" data-collapsible="true">
+              <div data-role="title" class="filter-options-title" role="tab" aria-selected="false" aria-expanded="false" tabindex="0"><span>BOOK FORMAT</span> <i class="icon" aria-hidden="true"></i></div>
+              <div data-role="content" class="filter-options-content" role="tabpanel" style="display: none;">
+                  <div data-bind="scope: 'product_type_indicatorFilter'">
+                    <ol class="items" id="bookFormatSelector">
+                      {% if template contains 'magazines' %}
+                        <li class="item">
+                          <input type="checkbox" id="print-magazine" data-option-value="Print Magazine">
+                          <label for="print-magazine"><span>Print Magazine</span></label>
+                        </li>
+                        <li class="item">
+                          <input type="checkbox" id="digital-magazine" data-option-value="Digital Magazine">
+                          <label for="digital-magazine"><span>Digital Magazine</span></label>
+                        </li>
+                      {% else %}
+                        <li class="item">
+                          <input type="checkbox" id="ebook" data-option-value="EBook">
+                          <label for="ebook"><span>EBook</span></label>
+                        </li>
+                        <li class="item">
+                          <input type="checkbox" id="audiobook" data-option-value="Audiobook">
+                          <label for="audiobook"><span>Audiobook</span></label>
+                        </li>
+                        <li class="item">
+                          <input type="checkbox" id="paperback" data-option-value="Paperback">
+                          <label for="paperback"><span>Paperback</span></label>
+                        </li>
+                        <li class="item">
+                          <input type="checkbox" id="hardcover" data-option-value="Hardcover">
+                          <label for="hardcover"><span>Hardcover</span></label>
+                        </li>
+                        <li class="item">
+                          <input type="checkbox" id="printed-book" data-option-value="Printed Book">
+                          <label for="printed-book"><span>Printed Book</span></label>
+                        </li>
+                      {% endif %}
+                    </ol>
+                  </div>
+              </div>
+            </div>
+     </div>
+  </div>
+</div>
