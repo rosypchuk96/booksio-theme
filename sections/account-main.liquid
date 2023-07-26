@@ -11,12 +11,12 @@
 </div>
 
 <div class="columns">
-   <div class="sidebar sidebar-main">
+   <div class="sidebar sidebar-main account-navigation">
       <div class="block block-collapsible-nav">
          <div class="title block-collapsible-nav-title"><strong> My Account</strong> <span class="icon" aria-hidden="true"></span></div>
          <div class="content block-collapsible-nav-content" id="block-collapsible-nav">
             <ul class="nav items">
-               <li class="nav item current"><strong>My Account</strong></li>
+               <li class="nav item current"><a href="#account">My Account</a></li>
                <li class="nav item"><a href="#orders">My Orders</a></li>
                <li class="nav item"><a href="#products">My Library</a></li>
                <li class="nav item"><a href="#wishlist">My Wish List</a></li>
@@ -35,7 +35,7 @@
       </div>
    </div>
    <div class="tabs">
-    <div class="column main">
+    <div class="column main" id="account">
         <input name="form_key" type="hidden" value="opij28QGNnAoMoTX"> 
         <div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}" style="display: none;">
           <!-- ko template: getTemplate() --><!-- /ko -->
@@ -75,7 +75,7 @@
                 <div class="box-content">
                   {% if customer.addresses_count > 1 %}
                     {% for address in customer.addresses %}
-                      {% if address != customer.default_address %}
+                      {% if address != customer.default_address and address.last_name %}
                         {% assign billing_address = address %}
                         {% break %}
                       {% endif %}
@@ -146,8 +146,128 @@
           </div>
         </div>
     </div>
-   </div>
-</div>
+
+    <div class="column main" id="manage-subscription">
+      <input name="form_key" type="hidden" value="opij28QGNnAoMoTX"> 
+      <div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}" style="display: none;">
+          <!-- ko template: getTemplate() -->
+          <!-- /ko -->
+      </div>
+      <div></div>
+      <!-- Yotpo - Add body class --><!--/ Yotpo - Add body class --><!-- Yotpo - Widget Script --><!--/ Yotpo - Widget Script -->  
+      <div class="form form-newsletter-manage" method="post" id="form-validate" data-hs-cf-bound="true">
+          <fieldset class="fieldset">
+            <input name="form_key" type="hidden" value="opij28QGNnAoMoTX"> 
+            <legend class="legend"><span>Subscription option</span></legend>
+            <br> 
+            <div class="field choice"><input type="radio" name="is_subscribed" id="subscription" value="1" title="General Subscription" class="checkbox" checked><label for="subscription" class="label"><span>General Subscription</span></label></div>
+          </fieldset>
+          <div class="actions-toolbar">
+            <div class="primary"><button id="subscribe-btn" type="submit" title="Save" class="action save primary"><span>Save</span></button></div>
+          </div>
+      </div>
+      <div style="display: none !important;" class="subscribe-form">
+      {% form 'customer', id: formId, novalidate: 'novalidate' %}
+        <input
+          type="hidden"
+          name="contact[tags]"
+          value="newsletter">
+        <div class="field newsletter">
+          <div class="control"><input name="contact[email]" type="email" value="{{ customer.email }}"></div>
+        </div>
+        <div class="actions"><button class="action subscribe primary" title="Sign Up" type="submit" data-form-type="action,subscribe"><span>Sign Up</span></button></div>
+      {% endform %}
+      </div>
+    </div>
+
+    <div class="column main" id="orders">
+      <div class="block block-order-history">
+        <div class="block-title"><strong>My Orders</strong></div>
+        <div class="block-content">
+        {% if customer.orders.size != 0 %}
+          <div class="table-wrapper orders-history">
+            <table class="data table table-order-items history" id="my-orders-table">
+                <caption class="table-caption">Orders</caption>
+                <thead>
+                  <tr>
+                      <th scope="col" class="col id">Order #</th>
+                      <th scope="col" class="col date">Date</th>
+                      <th scope="col" class="col shipping">Ship To</th>
+                      <th scope="col" class="col total">Total</th>
+                      <th scope="col" class="col status">Status</th>
+                      <th scope="col" class="col actions">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for order in customer.orders %}
+                    <tr class="order-line">
+                        <td data-th="Order #" class="col id">{{ order.order_number }}</td>
+                        <td data-th="Date" class="col date">{{ order.created_at | date: "%m/%e/%y" }}</td>
+                        <td data-th="Ship To" class="col shipping">
+                          {% if order.shipping_address %}
+                            <span>{{ order.shipping_address.address1 }} {{ order.shipping_address.address2 }}</span><br>
+                            <span>{{ order.shipping_address.city }}</span>
+                            <span>, {{ order.shipping_address.province }}</span>
+                            <span>, {{ order.shipping_address.zip }}</span>
+                            <br><span>{{ order.shipping_address.country }}</span>
+                          {% endif %}
+                        </td>
+                        <td data-th="Order Total" class="col total"><span class="price">{{ order.total_price | money }}</span></td>
+                        <td data-th="Status" class="col status">{{ order.fulfillment_status_label }}</td>
+                        <td data-th="Actions" class="col actions"><span class="arrow-icon" style="display: none;"></span> <a href="{{ order.customer_url }}" class="action view"><span>View Order</span></a> 
+                    </tr>
+                  {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        {% else %}
+          <div class="message info empty"><span>You have placed no orders.</span></div>
+        {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="column main active">
+      <div class="products wrapper grid products-grid">
+        {% assign digital_products = "" | split: '' %}
+        {% for order in customer.orders %}
+          {% for item in order.line_items %}
+            {% unless item.requires_shipping or item.gift_card %}
+              {% assign digital_products = digital_products | push: item %}
+            {% endunless %}
+          {% endfor %}
+        {% endfor %}
+        {% if digital_products %}
+          <ol class="products list items product-items products-grid">
+            {% for line_item in digital_products %}
+              <li class="item product product-item">
+                  <div role="group" aria-label="product" class="product-item-info" id="product-item-info_5101">
+                    <a href="" class="product photo product-item-photo">
+                      {{ line_item | img_url: '500x500' | img_tag }}
+                    </a> 
+                    <div class="product details product-item-details">
+                        <strong class="product name product-item-name">{{ line_item.product.title }}</strong> 
+                        <div class="author-wrapper"> 
+                          {% if line_item.product.metafields.custom.author %}
+                            <a target="_blank" href="/search?q={{ line_item.product.metafields.custom.author }}">
+                                <p class="author">{{ line_item.product.metafields.custom.author }}</p>
+                            </a>
+                          {% endif %}
+                        </div>
+                        {% comment %}
+                        <div class="button-wrapper"> <button data-link="https://read.booksio.com/magento/Eve%27s+Diary/d82c7617-8d71-489b-b35a-bafb6d7dc28b/8u2rcyee3uukw2is0mf04dtkul93we6v/digital" id="download_" title="Read Online" class="button online action primary read-online">Read Online</button>  </div>
+                        {% endcomment %}
+                    </div>
+                  </div>
+              </li>
+            {% endfor %}
+          </ol>
+        {% else %}
+          <div class="message info empty"><span>You have not purchased any downloadable products yet.</span></div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
 
 <style>
@@ -155,3 +275,5 @@
     margin-bottom: 56px;
   }
 </style>
+
+{{ 'account.js' | asset_url | script_tag }}

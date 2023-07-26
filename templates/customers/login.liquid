@@ -1,0 +1,33 @@
+<section class="hero login-hero">
+  <div class="wrapper">
+    <h1>Access Your Account</h1>
+  </div>
+</section>
+
+<section class="login-form faq-section">
+  <div class="wrapper">
+    <h2>Sign In</h2>
+    {% form 'customer_login' %}
+      {{ form.errors | default_errors }}
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        name="customer[email]"
+        id="email" />
+      <label for="password">Password</label>
+      <div class="password-wrap">
+        <input
+          type="password"
+          name="customer[password]"
+          id="password" />
+        <a href="/pages/password-recovery" class="forgot-pass">Forgot Password</a>
+      </div>
+      <button type="submit" class="btn btn-dark">Sign In</button>
+      <a href="/account/register" class="btn btn-transparent-dark">CREATE ACCOUNT</a>
+      <div class="one-click-social-login"></div>
+    {% endform %}
+  </div>
+  <div class="contact">We're here to help !
+    <a href="/pages/contact">Contact us</a>
+  </div>
+</section>

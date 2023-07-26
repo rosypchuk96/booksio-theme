@@ -152,7 +152,7 @@
                     <p>Your order supports the following charities:</p>
                     <ul>
                       {% for charity in charities %}
-                        {% assign ein = charity.ein | strip %}
+                        {% assign ein = charity.id | strip %}
                         {% if order_charities contains ein %}
                           <li>{{ charity.legal_name }}</li>
                           {% assign charities_attribute = charities_attribute | append: charity.legal_name | append: ',' %}

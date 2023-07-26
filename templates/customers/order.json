@@ -1,0 +1,12 @@
+{
+  "wrapper": "main#html-body.account.customer-account-index.page-layout-2columns-left.sales-order-view",
+  "sections": {
+    "order-details": {
+      "type": "order-details",
+      "settings": {}
+    }
+  },
+  "order": [
+    "order-details"
+  ]
+}

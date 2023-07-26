@@ -198,6 +198,10 @@ header .sections .active>a {
   .usf-popup .usf-is-products .usf-is-product:nth-child(6) {
     display: none !important;
   }
+
+  .columns .sidebar-main.account-navigation {
+    order: -1;
+  }
 }
 .books-banner {
   padding: 10px 0 0;
@@ -223,4 +227,58 @@ header .sections .active>a {
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
+}
+.account-navigation .item.current a {
+  color: #41c2ff;
+  border: none;
+  font-weight: 700;
+  font-family: "LatoBold";
+}
+#html-body.account .block-collapsible-nav .block-collapsible-nav-title strong {
+  font-family: "LatoBold";
+}
+#html-body.account .tabs .column {
+  display: none;
+}
+#html-body.account .tabs .column.active {
+  display: block;
+}
+body .shopify-challenge__container {
+  margin: 50px auto;
+}
+body .shopify-challenge__container .shopify-challenge__button {
+  margin-top: 20px;
+  height: 30px;
+  width: 100px;
+}
+#html-body.account .order .product {
+  display: flex;
+  align-items: center;
+}
+#html-body.account .order h4 {
+  font-family: "LatoBold";
+}
+#html-body.account .order .image {
+  margin-right: 15px;
+}
+#html-body.account .order .image img {
+  display: block;
+}
+#html-body.account .order .price {
+  margin: 0 0 0 auto;
+}
+#html-body.account .order {
+  max-width: 500px;
+}
+#html-body.account .order .title {
+  margin: 0 15px 0 0;
+}
+#html-body.account .order .product {
+  margin-bottom: 15px;
+}
+#html-body.account .order .product.total .price {
+  margin-left: 15px;
+}
+#html-body.account .order .product.total {
+  justify-content: flex-end;
 }

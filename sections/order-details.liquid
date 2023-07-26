@@ -1,0 +1,192 @@
+<div class="page-main">
+<div class="lato-font box-model-64be653d4dac8" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-element="main" data-pb-style="PQ8YRYA">
+   <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="EXHNDHH"><img class="pagebuilder-mobile-hidden" src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_1.png?v=1689338176" alt="" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="B2K4GBR"><img class="pagebuilder-mobile-only" src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_1.png?v=1689338176" alt="" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="PO0IE6K"></figure>
+   <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="ITD7974" data-decoded="true" class="box-model-64be653d4dae0">
+      <h3 style="margin: 0;">
+         <span style="font-size: 34px; line-height: 42px;">
+         <span style="color: #41c2ff;">MY ACCOUNT</span>
+         </span>
+      </h3>
+   </div>
+</div>
+
+<div class="columns">
+   <div class="sidebar sidebar-main account-navigation">
+      <div class="block block-collapsible-nav">
+         <div class="title block-collapsible-nav-title"><strong> My Account</strong> <span class="icon" aria-hidden="true"></span></div>
+         <div class="content block-collapsible-nav-content" id="block-collapsible-nav">
+            <ul class="nav items">
+               <li class="nav item"><a href="/account">My Account</a></li>
+               <li class="nav item current"><a href="/account#orders">My Orders</a></li>
+               <li class="nav item"><a href="/account#products">My Library</a></li>
+               <li class="nav item"><a href="/account#wishlist">My Wish List</a></li>
+               <li class="nav item"><span class="delimiter"></span></li>
+               <li class="nav item"><a href="/account#addresses">Address Book</a></li>
+               <li class="nav item"><a href="/account#account-info">Account Information</a></li>
+               <li class="nav item"><a href="/account#store-credit">Store Credit</a></li>
+               <li class="nav item"><a href="/account#gift-card">Gift Card</a></li>
+               <li class="nav item"><span class="delimiter"></span></li>
+               <li class="nav item"><a href="/account#gift-registry">Gift Registry</a></li>
+               <li class="nav item"><a href="/account#payment-methods">My Payment Options</a></li>
+               <li class="nav item"><a href="/account#returns">My Returns</a></li>
+               <li class="nav item"><a href="/account#social-accounts">My Social Accounts</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="tabs">
+    <div class="column main active">
+      <ul class="items order-links">
+          <li class="nav item current"><strong>Items Ordered</strong></li>
+          <button class="order-status-button">{{ order.fulfillment_status_label }}</button> 
+      </ul>
+      <div class="order-details-items ordered">
+          <div class="table-wrapper order-items">
+            <table class="data table table-order-items" id="order-details-table" summary="Items Ordered">
+                <caption class="table-caption">Items Ordered</caption>
+                <thead>
+                  <tr>
+                      <th class="col name" colspan="3">Product Name</th>
+                      <th class="col sku">SKU</th>
+                      <th class="col price">Price</th>
+                      <th class="col qty">Qty</th>
+                      <th class="col subtotal">Subtotal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for line_item in order.line_items %}
+                    <tr id="order-item-row-10938">
+                        <td class="col name" data-th="Product Name" colspan="3">
+                          <div class="product-wrapper">
+                              <div class="image-wrapper">
+                                <a href="{{ line_item.url }}" target="_blank">
+                                  {{ line_item.image | img_url: '500x500' | img_tag }}
+                                </a>
+                              </div>
+                              <div class="info-wrapper">
+                                <div class="product-name-wrapper"><strong class="product name product-item-name"><a href="{{ line_item.url }}" target="_blank">{{ line_item.product.title }}</a></strong> 
+                                  {% if line_item.product.metafields.custom.author %}
+                                    <span class="product-author-name">{{ line_item.product.metafields.custom.author }}</span>
+                                  {% endif %}
+                                </div>
+                                <dl class="item-options">
+                                  {% for option in line_item.options_with_values %}
+                                    {% if option.name == 'Format' %}
+                                      <dt>Format</dt>
+                                      <dd>{{ option.value }}</dd>
+                                      {% break %}
+                                    {% endif %}
+                                  {% endfor %}
+                                </dl>
+                              </div>
+                          </div>
+                        </td>
+                        <td class="col sku" data-th="SKU"><a href="{{ line_item.url }}" target="_blank">{{ line_item.sku }}</a></td>
+                        <td class="col price" data-th="Filter by Price">   <span class="price-excluding-tax" data-label="Excl. Tax"> <span class="cart-price"> <span class="price">{{ line_item.original_price | money }}</span></span> </span> </td>
+                        <td class="col qty" data-th="Qty">
+                          <ul class="items-qty">
+                              <li class="item"><span class="content">{{ line_item.quantity }}</span></li>
+                          </ul>
+                        </td>
+                        <td class="col subtotal" data-th="Subtotal">   <span class="price-excluding-tax" data-label="Excl. Tax"> <span class="cart-price"> <span class="price">{{ line_item.original_price | money }}</span></span> </span> </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+            </table>
+          </div>
+      </div>
+      <div class="order-additional-information">
+          <div class="additional-information">
+            <style>#html-body [data-pb-style=W3O4JVT]{border-width:0}</style>
+            <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="W3O4JVT" data-decoded="true" class="box-model-64bfc68389adf">
+                <h3> DIGITAL BOOK PURCHASES </h3>
+                <p>Your digital book is ready now! Please download our <a href="/pages/booksio-reader-app"><b>Booksio reader app</b></a> and log in to begin reading!&nbsp; Booksio digital books are not compatible with Kindle, Apple Books, or other proprietary devices.</p>
+            </div>
+          </div>
+          <div class="order-summary">
+            <div class="column-value subtotal"><span>Subtotal</span> <span><span class="price">{{ order.subtotal_price | money }}</span></span></div>
+            <div class="column-value grand_total"><span>Grand Total</span> <span><span class="price">{{ order.total_price | money }}</span></span></div>
+          </div>
+      </div>
+      <div class="block block-order-details-view">
+          <div class="block-content">
+            <div class="success_left">
+                <h1>Order Details</h1>
+                <div class="success_left_content">
+                  <div class="box box-top-main">
+                      <strong class="box-title">Order details</strong> 
+                      <div class="box-content">
+                        <div class="order-number"><span class="text">Order Number</span> <span class="value">{{ order.order_number }}</span></div>
+                        <div class="order-date"><span class="text">Order Date</span> <span class="value">{{ order.created_at | date: "%Y-%m-%d %T" }}</span></div>
+                      </div>
+                  </div>
+                  <div class="box box-order-billing-method">
+                      <strong class="box-title"><span>Payment Method</span></strong> 
+                      <div class="box-content">
+                        <dl class="payment-method">
+                          {% for transaction in order.transactions %}
+                            {% if transaction.kind == 'sale' and transaction.payment_details %}
+                              <dt>
+                                <span>{{ transaction.payment_details.credit_card_company }}</span><br>
+                                <span>{{ transaction.payment_details.credit_card_number }}</span><br>
+                              </dt>
+                            {% endif %}
+                          {% endfor %}
+                        </dl>
+                      </div>
+                  </div>
+                  {% if order.billing_address %}
+                    <div class="box box-order-billing-address">
+                      <strong class="box-title"><span>Billing Details</span></strong> 
+                      <div class="box-content">
+                        {% assign address = order.billing_address %}
+                        <p><span class="text_use"> Name</span> <span class="value_use">{{ address.name }}</span></p>
+                        <p><span class="text_use">Address</span> <span class="value_use">
+                          <span>{{ address.address1 }} {{ address.address2 }}</span><br>
+                          <span>{{ address.city }}</span>
+                          <span>, {{ address.province }}</span>
+                          <span>, {{ address.zip }}</span>
+                          <br><span>{{ address.country }}</span>
+                        </span></p>
+                      </div>
+                    </div>
+                  {% endif %}
+                  {% if order.shipping_address %}
+                    <div class="box box-order-billing-address">
+                      <strong class="box-title"><span>Shipping Details</span></strong> 
+                      <div class="box-content">
+                        {% assign address = order.shipping_address %}
+                        <p><span class="text_use"> Name</span> <span class="value_use">{{ address.name }}</span></p>
+                        <p><span class="text_use">Address</span> <span class="value_use">
+                          <span>{{ address.address1 }} {{ address.address2 }}</span><br>
+                          <span>{{ address.city }}</span>
+                          <span>, {{ address.province }}</span>
+                          <span>, {{ address.zip }}</span>
+                          <br><span>{{ address.country }}</span>
+                        </span></p>
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+            </div>
+            <div class="success_right">
+                <h1>ADDITIONAL INFORMATION</h1>
+                <div class="success_right_content">
+                  <style>#html-body [data-pb-style=W3O4JVT]{border-width:0}</style>
+                  <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="W3O4JVT" data-decoded="true" class="box-model-64bfc6838d392">
+                      <h3> DIGITAL BOOK PURCHASES </h3>
+                      <p>Your digital book is ready now! Please download our <a href="https://www.booksio.com/booksio_reader_app"><b>Booksio reader app</b></a> and log in to begin reading!&nbsp; Booksio digital books are not compatible with Kindle, Apple Books, or other proprietary devices.</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .sidebar .block:last-child {
+    margin-bottom: 56px;
+  }
+</style>

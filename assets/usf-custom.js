@@ -48,7 +48,6 @@ var _usfSearchResultsSkeletonItemTpl = /*inc_begin_search-skeleton-item*/
     <div class="usf-info-column">
         <div class="usf-title"></div>
         <div class="usf-vendor"></div>
-        <div class="usf-price-wrapper"></div>
     </div>
 </div>`
 /*inc_end_search-skeleton-item*/;
@@ -604,12 +603,13 @@ usf.templates = {
                 <div class="usf-is-matches usf-is-products">
                     <div class="usf-title" v-html="queryOrTerm ? loc.productMatches : loc.trending"></div>
                     
-                    <div class="usf-is-list" v-if="result.items.length">
+                    
+                    <div class="usf-is-list products-wrap" v-if="result.items.length">
                         <!-- Did you mean -->
                         <span class="usf-is-did-you-mean" v-html="usf.utils.format(loc.didYouMean, usf.utils.encodeHtml(term), result.query)" v-if="termDiffers"></span>
 
                         <!-- Product -->
-                        <usf-is-item v-for="p in result.items" :product="p" :result="result" :key="p.id + '-' + p.selectedVariantId"></usf-is-item>
+                        {{getSearchBarItems(result.items)}}
                     </div>
                     <div class="usf-is-list" v-else style="background:url('//cdn.shopify.com/s/files/1/0257/0108/9360/t/85/assets/no-products.png?t=2') center no-repeat;min-height:250px"></div>
                 </div>
@@ -653,12 +653,6 @@ usf.templates = {
 
         <!-- Vendor -->
         <div class="usf-vendor" v-html="product.vendor" v-if="usf.settings.search.showVendor"></div>
-
-        <!-- Prices -->
-        <div class="usf-price-wrapper">
-            <span class="usf-price" :class="{ 'usf-has-discount': hasDiscount }" v-html="displayPrice"></span>
-            <span v-if="hasDiscount" class="usf-discount" v-html="displayDiscountedPrice"></span>
-        </div>
 
         <div v-if="getAuthor(product)">
             <div class="usf-author usf-vendor" v-html="getAuthor(product)"></div>
@@ -867,6 +861,10 @@ function getAuthorsForBar(results){
 }
 
 function getSearchResults(results) {
-    console.log(results)
+    Window.searchResults = results;
+}
+
+function getSearchBarItems(items) {
+    Window.searchBarResults = items;
 }
 
