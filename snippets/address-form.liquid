@@ -1,0 +1,152 @@
+{% if address_to_update %}
+  {% assign address = address_to_update %}
+{% else %}
+  {% assign address = customer.new_address %}
+{% endif %}
+{% form 'customer_address', address %}
+  <div class="form-address-edit">
+    <fieldset class="fieldset">
+      <legend class="legend"><span>Contact Information</span></legend>
+      <div class="field field-name-firstname required">
+          <label class="label" for="firstname"><span>First Name</span></label> 
+          <div class="control"><input type="text" id="firstname" name="address[first_name]" value="{{ address.first_name }}" title="First Name" placeholder="First Name" class="input-text required-entry" data-validate="{required:true}" aria-required="true"></div>
+          <span class="error" style="display: none; font-size: 14px;color: red;">The field is required</span>
+      </div>
+      <div class="field field-name-lastname required">
+          <label class="label" for="lastname"><span>Last Name</span></label> 
+          <div class="control"><input type="text" id="lastname" name="address[last_name]" value="{{ address.last_name }}" title="Last Name" placeholder="Last Name" class="input-text required-entry" data-validate="{required:true}" aria-required="true"></div>
+          <span class="error" style="display: none; font-size: 14px;color: red;">The field is required</span>
+      </div>
+      <div class="field company ">
+          <label class="label" for="company"><span>Company</span></label> 
+          <div class="control"> <input type="text" name="address[company]" id="company" title="Company" value="{{ address.company }}" class="input-text "></div>
+      </div>
+      <div class="field telephone ">
+          <label class="label" for="telephone"><span>Phone Number</span></label> 
+          <div class="control"> <input type="text" name="address[phone]" value="{{ address.phone }}" title="Phone Number" class="input-text validate-phoneLax-custom" id="telephone"></div>
+      </div>
+    </fieldset>
+    <fieldset class="fieldset">
+      <legend class="legend"><span>Address</span></legend>
+      <br>  
+      <div class="field street required">
+          <label for="street_1" class="label"><span>Street Address</span></label> 
+          <div class="control">
+            <div class="field primary"><label for="street_1" class="label"><span> Street Address: Line 1</span></label></div>
+            <input type="text" name="address[address1]" value="{{ address.address1 }}" title="Street Address" id="street_1" class="input-text required-entry" aria-required="true">
+            <div class="nested"> </div>
+            <span class="error" style="display: none; font-size: 14px;color: red;">The field is required</span>
+          </div>
+      </div>
+      <div class="field city required">
+          <label class="label" for="city"><span>City</span></label> 
+          <div class="control"><input type="text" name="address[city]" value="{{ address.city }}" title="City" class="input-text required-entry" id="city" aria-required="true"></div>
+          <span class="error" style="display: none; font-size: 14px;color: red;">The field is required</span>
+      </div>
+      <div class="field region required">
+          <label class="label" for="region_id"><span>State/Province</span></label> 
+          <div class="control">
+            <select id="region_id" name="address[province]" title="State/Province" class="validate-select region_id required-entry" style="display: inline-block;" data-default="{{ form.province }}" aria-required="true">
+              <option disabled {% if address.province == blank %}selected{% endif %}>Select State</option>
+              <option {% if address.province == 'Alabama' %}selected{% endif %}value="AL">Alabama</option>
+              <option {% if address.province == 'Alaska' %}selected{% endif %} value="AK">Alaska</option>
+              <option {% if address.province == 'Arizona' %}selected{% endif %} value="AZ">Arizona</option>
+              <option {% if address.province == 'Arkansas' %}selected{% endif %} value="AR">Arkansas</option>
+              <option {% if address.province == 'California' %}selected{% endif %} value="CA">California</option>
+              <option {% if address.province == 'Colorado' %}selected{% endif %} value="CO">Colorado</option>
+              <option {% if address.province == 'Connecticut' %}selected{% endif %} value="CT">Connecticut</option>
+              <option {% if address.province == 'Delaware' %}selected{% endif %} value="DE">Delaware</option>
+              <option {% if address.province == 'District Of Columbia' %}selected{% endif %} value="DC">District Of Columbia</option>
+              <option {% if address.province == 'Florida' %}selected{% endif %} value="FL">Florida</option>
+              <option {% if address.province == 'Georgia' %}selected{% endif %} value="GA">Georgia</option>
+              <option {% if address.province == 'Hawaii' %}selected{% endif %} value="HI">Hawaii</option>
+              <option {% if address.province == 'Idaho' %}selected{% endif %} value="ID">Idaho</option>
+              <option {% if address.province == 'Illinois' %}selected{% endif %} value="IL">Illinois</option>
+              <option {% if address.province == 'Indiana' %}selected{% endif %} value="IN">Indiana</option>
+              <option {% if address.province == 'Iowa' %}selected{% endif %} value="IA">Iowa</option>
+              <option {% if address.province == 'Kansas' %}selected{% endif %} value="KS">Kansas</option>
+              <option {% if address.province == 'Kentucky' %}selected{% endif %} value="KY">Kentucky</option>
+              <option {% if address.province == 'Louisiana' %}selected{% endif %} value="LA">Louisiana</option>
+              <option {% if address.province == 'Maine' %}selected{% endif %} value="ME">Maine</option>
+              <option {% if address.province == 'Maryland' %}selected{% endif %} value="MD">Maryland</option>
+              <option {% if address.province == 'Massachusetts' %}selected{% endif %} value="MA">Massachusetts</option>
+              <option {% if address.province == 'Michigan' %}selected{% endif %} value="MI">Michigan</option>
+              <option {% if address.province == 'Minnesota' %}selected{% endif %} value="MN">Minnesota</option>
+              <option {% if address.province == 'Mississippi' %}selected{% endif %} value="MS">Mississippi</option>
+              <option {% if address.province == 'Missouri' %}selected{% endif %} value="MO">Missouri</option>
+              <option {% if address.province == 'Montana' %}selected{% endif %} value="MT">Montana</option>
+              <option {% if address.province == 'Nebraska' %}selected{% endif %} value="NE">Nebraska</option>
+              <option {% if address.province == 'Nevada' %}selected{% endif %} value="NV">Nevada</option>
+              <option {% if address.province == 'New Hampshire' %}selected{% endif %} value="NH">New Hampshire</option>
+              <option {% if address.province == 'New Jersey' %}selected{% endif %} value="NJ">New Jersey</option>
+              <option {% if address.province == 'New Mexico' %}selected{% endif %} value="NM">New Mexico</option>
+              <option {% if address.province == 'New York' %}selected{% endif %} value="NY">New York</option>
+              <option {% if address.province == 'North Carolina' %}selected{% endif %} value="NC">North Carolina</option>
+              <option {% if address.province == 'North Dakota' %}selected{% endif %} value="ND">North Dakota</option>
+              <option {% if address.province == 'Ohio' %}selected{% endif %} value="OH">Ohio</option>
+              <option {% if address.province == 'Oklahoma' %}selected{% endif %} value="OK">Oklahoma</option>
+              <option {% if address.province == 'Oregon' %}selected{% endif %} value="OR">Oregon</option>
+              <option {% if address.province == 'Pennsylvania' %}selected{% endif %} value="PA">Pennsylvania</option>
+              <option {% if address.province == 'Rhode Island' %}selected{% endif %} value="RI">Rhode Island</option>
+              <option {% if address.province == 'South Carolina' %}selected{% endif %} value="SC">South Carolina</option>
+              <option {% if address.province == 'South Dakota' %}selected{% endif %} value="SD">South Dakota</option>
+              <option {% if address.province == 'Tennessee' %}selected{% endif %} value="TN">Tennessee</option>
+              <option {% if address.province == 'Texas' %}selected{% endif %} value="TX">Texas</option>
+              <option {% if address.province == 'Utah' %}selected{% endif %} value="UT">Utah</option>
+              <option {% if address.province == 'Vermont' %}selected{% endif %} value="VT">Vermont</option>
+              <option {% if address.province == 'Virginia' %}selected{% endif %} value="VA">Virginia</option>
+              <option {% if address.province == 'Washington' %}selected{% endif %} value="WA">Washington</option>
+              <option {% if address.province == 'West Virginia' %}selected{% endif %} value="WV">West Virginia</option>
+              <option {% if address.province  == 'Wisconsin' %}selected{% endif %} value="WI">Wisconsin</option>
+              <option {% if address.province  == 'Wyoming' %}selected{% endif %} value="WY">Wyoming</option>
+            </select>
+            <span class="error" style="display: none; font-size: 14px;color: red;">The field is required</span>
+          </div>
+      </div>
+      <div class="field zip required">
+          <label class="label" for="zip"><span>Zip/Postal Code</span></label> 
+          <div class="control">
+            <input type="text" name="address[zip]" value="{{ address.zip }}" title="Zip/Postal Code" id="zip" class="input-text validate-zip-international required-entry" aria-required="true">
+            <span class="error" style="display: none; font-size: 14px;color: red;">The field is required</span>
+            <span class="wrong-zip" style="display: none; font-size: 14px;color: red;">Zip code is incorrect</span>
+          </div>
+      </div>
+      <div class="field country required">
+          <label class="label" for="country"><span>Country</span></label> 
+          <div class="control">
+            <select name="address[country]" id="country" class="required-entry" title="Country" data-validate="{'validate-select':true}" aria-required="true">
+                <option value="US" selected="selected">United States</option>
+            </select>
+            <span class="error" style="display: none; font-size: 14px;color: red;">The fields is required</span>
+          </div>
+      </div>
+      {% assign billing_address = customer.default_address %}
+      {% if customer.addresses_count > 1 %}
+        {% for address_item in customer.addresses %}
+          {% if address_item != customer.default_address and address_item.last_name %}
+            {% assign billing_address_id = address_item.id %}
+            {% assign billing_address = address_item %}
+            {% break %}
+          {% endif %}
+          {% assign billing_address_id = '' %}
+        {% endfor %}
+      {% endif %}
+      {% if billing_address == address %}
+        <div class="message info"><span>This is your default billing address.</span></div>
+      {% elsif customer.default_address == address %}
+        <div class="message info"><span>This is your default shipping address.</span></div>
+      {% else %}
+        <div class="field choice set billing"><input type="radio" id="primary_billing" name="save_address" class="checkbox" data-address-id="{{ billing_address_id }}"><label class="label" for="primary_billing"><span>Use as my default billing address</span></label></div>
+        <div class="field choice set shipping"><input type="radio" id="primary_shipping" name="save_address" class="checkbox" data-address-id="{{ customer.default_address.id }}"><label class="label" for="primary_shipping"><span>Use as my default shipping address</span></label></div>
+      {% endif %}
+    </fieldset>
+    <div class="actions-toolbar">
+      <div class="primary"><button id="save-address" type="submit" class="action submit primary" data-action="save-address" title="Validate &amp;amp; Save"><span>Validate &amp; Save</span></button></div>
+    </div>
+  </div>
+  <input type="hidden" name="return_to" value="/account#addresses"> 
+
+  {% if form.errors %}
+    {{ form.errors | default_errors }}
+  {% endif %}
+{% endform %}

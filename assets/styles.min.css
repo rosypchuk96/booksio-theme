@@ -234,9 +234,6 @@ header .sections .active>a {
   font-weight: 700;
   font-family: "LatoBold";
 }
-#html-body.account .block-collapsible-nav .block-collapsible-nav-title strong {
-  font-family: "LatoBold";
-}
 #html-body.account .tabs .column {
   display: none;
 }

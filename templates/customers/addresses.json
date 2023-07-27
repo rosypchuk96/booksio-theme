@@ -1,0 +1,12 @@
+{
+  "wrapper": "main#html-body.account.customer-account-index.page-layout-2columns-left.sales-order-history",
+  "sections": {
+    "account-addresses": {
+      "type": "account-addresses",
+      "settings": {}
+    }
+  },
+  "order": [
+    "account-addresses"
+  ]
+}

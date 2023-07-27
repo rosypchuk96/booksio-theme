@@ -16,45 +16,27 @@
          <div class="title block-collapsible-nav-title"><strong> My Account</strong> <span class="icon" aria-hidden="true"></span></div>
          <div class="content block-collapsible-nav-content" id="block-collapsible-nav">
             <ul class="nav items">
-               <li class="nav item current"><a href="#account">My Account</a></li>
-               <li class="nav item"><a href="#orders">My Orders</a></li>
-               <li class="nav item"><a href="#products">My Library</a></li>
-               <li class="nav item"><a href="#wishlist">My Wish List</a></li>
+               <li class="nav item"><a href="/account">My Account</a></li>
+               <li class="nav item"><a href="/account#orders">My Orders</a></li>
+               <li class="nav item"><a href="/account#products">My Library</a></li>
+               <li class="nav item"><a href="/account#wishlist">My Wish List</a></li>
                <li class="nav item"><span class="delimiter"></span></li>
-               <li class="nav item"><a href="#addresses">Address Book</a></li>
-               <li class="nav item"><a href="#account-info">Account Information</a></li>
-               <li class="nav item"><a href="#store-credit">Store Credit</a></li>
-               <li class="nav item"><a href="#gift-card">Gift Card</a></li>
+               <li class="nav item current"><a href="/account#addresses">Address Book</a></li>
+               <li class="nav item"><a href="/account#account-info">Account Information</a></li>
+               <li class="nav item"><a href="/account#store-credit">Store Credit</a></li>
+               <li class="nav item"><a href="/account#gift-card">Gift Card</a></li>
                <li class="nav item"><span class="delimiter"></span></li>
-               <li class="nav item"><a href="#gift-registry">Gift Registry</a></li>
-               <li class="nav item"><a href="#payment-methods">My Payment Options</a></li>
-               <li class="nav item"><a href="#returns">My Returns</a></li>
-               <li class="nav item"><a href="#social-accounts">My Social Accounts</a></li>
+               <li class="nav item"><a href="/account#gift-registry">Gift Registry</a></li>
+               <li class="nav item"><a href="/account#payment-methods">My Payment Options</a></li>
+               <li class="nav item"><a href="/account#returns">My Returns</a></li>
+               <li class="nav item"><a href="/account#social-accounts">My Social Accounts</a></li>
             </ul>
          </div>
       </div>
    </div>
    <div class="tabs">
-    <div class="column main active" id="account">
-      {% include 'account-main-tab' %}
-    </div>
-
-    <div class="column main" id="manage-subscription">
-      {% include 'account-subscription' %}
-    </div>
-
-    <div class="column main" id="orders">
-      {% include 'account-orders' %}
-    </div>
-
-    <div class="column main downloadable-customer-products" id="products">
-      {% include 'account-downloadable-products' %}
-    </div>
-
-    {% include 'account-addresses' %}
-
-    <div class="column main" id="account-info">
-      {% include 'account-edit-info' %}
+    <div class="column main active address-form-tab" id="add-address">
+      {% include 'address-form' %}
     </div>
   </div>
 </div>

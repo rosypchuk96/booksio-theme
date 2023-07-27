@@ -1,0 +1,45 @@
+
+<div class="block block-order-history">
+  <div class="block-title"><strong>My Orders</strong></div>
+  <div class="block-content">
+  {% if customer.orders.size != 0 %}
+    <div class="table-wrapper orders-history">
+      <table class="data table table-order-items history" id="my-orders-table">
+          <caption class="table-caption">Orders</caption>
+          <thead>
+            <tr>
+                <th scope="col" class="col id">Order #</th>
+                <th scope="col" class="col date">Date</th>
+                <th scope="col" class="col shipping">Ship To</th>
+                <th scope="col" class="col total">Total</th>
+                <th scope="col" class="col status">Status</th>
+                <th scope="col" class="col actions">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for order in customer.orders %}
+              <tr class="order-line">
+                  <td data-th="Order #" class="col id">{{ order.order_number }}</td>
+                  <td data-th="Date" class="col date">{{ order.created_at | date: "%m/%e/%y" }}</td>
+                  <td data-th="Ship To" class="col shipping">
+                    {% if order.shipping_address %}
+                      <span>{{ order.shipping_address.address1 }} {{ order.shipping_address.address2 }}</span><br>
+                      <span>{{ order.shipping_address.city }}</span>
+                      <span>, {{ order.shipping_address.province }}</span>
+                      <span>, {{ order.shipping_address.zip }}</span>
+                      <br><span>{{ order.shipping_address.country }}</span>
+                    {% endif %}
+                  </td>
+                  <td data-th="Order Total" class="col total"><span class="price">{{ order.total_price | money }}</span></td>
+                  <td data-th="Status" class="col status">{{ order.fulfillment_status_label }}</td>
+                  <td data-th="Actions" class="col actions"><span class="arrow-icon" style="display: none;"></span> <a href="{{ order.customer_url }}" class="action view"><span>View Order</span></a> 
+              </tr>
+            {% endfor %}
+          </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="message info empty"><span>You have placed no orders.</span></div>
+  {% endif %}
+  </div>
+</div>
