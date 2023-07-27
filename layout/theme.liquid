@@ -30,7 +30,7 @@
 
     {{ content_for_header }}
     
-    {% comment %}
+{% if template == 'product' %}
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
@@ -92,7 +92,7 @@
     {%- unless settings.type_header_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
-  {% endcomment %}
+  {% endif %}
 
 {% render 'usf' %}
 

@@ -19,7 +19,12 @@
         "type": "url",
         "id": "sidebar_banner_link",
         "label": "Banner Link"
-      },
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.typography.name",
+    "settings": [
       {
         "type": "header",
         "content": "t:settings_schema.typography.settings.header__1.content"

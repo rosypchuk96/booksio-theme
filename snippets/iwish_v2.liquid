@@ -1,11 +1,7 @@
 {% if iwish_v2 == 'iwishlink' %}
 	<a class="iWishView" href="/apps/iwish">{% render 'wishlist_icon' %}</a>
 {% elsif iwish_v2 == 'iwishproduct' %}
-<div class="iwishAddWrap" style="    border: 1px solid #dbdbdb;
-    padding: 10px;
-    text-align: center;
-    max-width: 49%;
-">
+<div class="iwishAddWrap" >
 	<a class="iWishAdd" href="#" data-product="{{ product.id }}" data-pTitle="{{ product.title | escape }}">{% render 'wishlist_icon' %}</a>
 	{% unless customer %}<p class="iWishLoginMsg" style="display: none;">Your wishlist has been temporarily saved. Please <a href="/account/login">Log in</a> to save it permanently.</p>{% endunless %}
 </div>
@@ -17,8 +13,8 @@ var iwish_shop = "{{ shop.permanent_domain }}";
 var iwish_pro_template = {% if template contains 'product' %}true{% else %}false{% endif %};
 var iwish_cid = "{{ customer.id }}";
 //Add to Wishlist - Product Page Text
-var iwish_added_txt = 'Added in Wishlist';
-var iwish_add_txt = '❤️ Add to Wishlist';
+var iwish_added_txt = 'ADDED IN WISHLIST';
+var iwish_add_txt = '❤️ ADD TO WISHLIST';
 //Add to Wishlist - Collection Page Text
 var iwish_added_txt_col = 'Added in Wishlist';
 var iwish_add_txt_col = 'Add to Wishlist';
