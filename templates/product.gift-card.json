@@ -1,0 +1,21 @@
+{
+  "wrapper": "div.page-product-giftcard.catalog-product-view.page-layout-1column",
+  "sections": {
+    "gift-card": {
+      "type": "gift-card",
+      "settings": {
+      }
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "gift-card",
+    "subscribe"
+  ]
+}

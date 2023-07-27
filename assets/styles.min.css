@@ -202,6 +202,9 @@ header .sections .active>a {
   .columns .sidebar-main.account-navigation {
     order: -1;
   }
+  #html-body .downloadable-customer-products .products.list.items.product-items .product-item {
+    width: 100% !important;
+  }
 }
 .books-banner {
   padding: 10px 0 0;

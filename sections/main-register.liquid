@@ -15,25 +15,34 @@
 {%- endstyle -%}
 
 <div class="page-main">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul class="items">
+      <li class="item Home">
+        <a href="/" title="Home">Home</a>
+        <span class="icon" aria-hidden="true"></span>
+      </li>
+      <li class="item Customer Account">
+        <strong>Customer Account</strong>
+      </li>
+    </ul>
+  </nav>
   <div class="columns">
     <div class="column main">
       <div
         class="heading-one-sec box-model-64b0d75e7fb42"
       >
         <div class="row-full-width-inner" data-element="inner">
+          <div data-pb-style="KS7UGWJ">
           <figure>
             <img
               class="pagebuilder-mobile-hidden"
               loading="lazy"
-              src="{{ 'heading_icon_1.png' | asset_url }}"
-              alt="">
-            <img
+              src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_1.png?v=1689338176"
+              alt=""><img
               class="pagebuilder-mobile-only"
-              src="{{ 'heading_icon_1.png' | asset_url }}"
-              alt=""
-            >
+              src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_1.png?v=1689338176"
+              alt="">
           </figure>
-        </div>
         <div
           class="lato-font box-model-64b0d75e7fb83"
         >
@@ -46,7 +55,7 @@
           </h3>
         </div>
         <div
-          class="lato-font box-model-64b0d75e7fb90"
+          class="lato-font box-model-64b0d75e7fb90 subtitle"
         >
           <p>
             <span style="font-size: 24px; color: #939393;"
@@ -60,165 +69,252 @@
             >
           </p>
         </div>
+        </div>
 
         <div class="login-container">
-          <div class="block block-customer-login">
-            <div class="block-title">
-              <strong id="block-customer-login-heading" role="heading" aria-level="2">PERSONAL INFORMATION</strong>
-            </div>
-            <div class="block-content" aria-labelledby="block-customer-login-heading">
-              {%- form 'create_customer', novalidate: 'novalidate' -%}
-                {%- if form.errors -%}
-                  <h2 class="form__message" tabindex="-1" autofocus>
-                    <svg aria-hidden="true" focusable="false">
-                      <use href="#icon-error" />
-                    </svg>
-                    {{ 'templates.contact.form.error_heading' | t }}
-                  </h2>
-                  <ul>
-                    {%- for control in form.errors -%}
-                      <li>
-                        {%- if control == 'form' -%}
-                          {{ form.errors.messages[control] }}
-                        {%- else -%}
-                          <a href="#RegisterForm-{{ control }}">
-                            {{ form.errors.translated_controls[control] | capitalize }}
-                            {{ form.errors.messages[control] }}
-                          </a>
-                        {%- endif -%}
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                {%- endif -%}
-                <div class="control">
-                  <input
-                    type="text"
-                    name="customer[first_name]"
-                    id="RegisterForm-FirstName"
-                    {% if form.first_name %}
-                      value="{{ form.first_name }}"
-                    {% endif %}
-                    autocomplete="given-name"
-                    placeholder="{{ 'customer.register.first_name' | t }}"
-                  >
-                </div>
-
-                <br>
-                <div class="control">
-                  <input
-                    type="text"
-                    name="customer[last_name]"
-                    id="RegisterForm-LastName"
-                    {% if form.last_name %}
-                      value="{{ form.last_name }}"
-                    {% endif %}
-                    autocomplete="family-name"
-                    placeholder="{{ 'customer.register.last_name' | t }}"
-                  >
-                </div>
-                <br>
-                <div class="control">
-                  <input
-                    type="email"
-                    name="customer[email]"
-                    id="RegisterForm-email"
-                    {% if form.email %}
-                      value="{{ form.email }}"
-                    {% endif %}
-                    spellcheck="false"
-                    autocapitalize="off"
-                    autocomplete="email"
-                    aria-required="true"
-                    {% if form.errors contains 'email' %}
-                      aria-invalid="true"
-                      aria-describedby="RegisterForm-email-error"
-                    {% endif %}
-                    placeholder="{{ 'customer.register.email' | t }}"
-                  >
-                </div>
-                <br>
-                {%- if form.errors contains 'email' -%}
-                  <span id="RegisterForm-email-error" class="form__message">
-                    <svg aria-hidden="true" focusable="false">
-                      <use href="#icon-error" />
-                    </svg>
-                    {{ form.errors.translated_controls.email | capitalize }}
-                    {{ form.errors.messages.email }}.
-                  </span>
-                {%- endif -%}
-
-                <div class="control">
-                  <input
-                    type="password"
-                    name="customer[password]"
-                    id="RegisterForm-password"
-                    aria-required="true"
-                    {% if form.errors contains 'password' %}
-                      aria-invalid="true"
-                      aria-describedby="RegisterForm-password-error"
-                    {% endif %}
-                    placeholder="{{ 'customer.register.password' | t }}"
-                  >
-                </div>
-
-                {%- if form.errors contains 'password' -%}
-                  <span id="RegisterForm-password-error" class="form__message">
-                    <svg aria-hidden="true" focusable="false">
-                      <use href="#icon-error" />
-                    </svg>
-                    {{ form.errors.translated_controls.password | capitalize }}
-                    {{ form.errors.messages.password }}.
-                  </span>
-                {%- endif -%}
-                <br>
-                <button
-                  class="action create primary"
-                  style="
-                    border-radius: 4px !important;
-                        text-transform: uppercase;
-                        font-weight: 600 !important;
-                        line-height: normal;
-                    }
-                  "
-                >
-                  {{ 'customer.register.submit' | t }}
-                </button>
-              {%- endform -%}
-            </div>
-
-            {%- if shop.checkout.guest_login -%}
-              <div>
-                <hr>
-                <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
-
-                {%- form 'guest_login' -%}
-                  <button>
-                    {{ 'customer.login_page.guest_continue' | t }}
-                  </button>
-                {%- endform -%}
-              </div>
-            {%- endif -%}
-          </div>
-
-          <div class="block block-new-customer">
-            <div class="block-title">
-              <strong id="block-new-customer-heading" role="heading" aria-level="2">REGISTERED CUSTOMERS</strong>
-            </div>
-            <div class="block-content" aria-labelledby="block-new-customer-heading">
-              <h3>SIGN IN NOW</h3>
-              <p>
-                Click here to sign into your existing account to check out faster, keep more than one address, track
-                orders and more.
-              </p>
-              <div class="actions-toolbar">
-                <div class="primary">
-                  <a href="{{ routes.account_login_url }}" class="action create primary"><span>SIGN IN</span> </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <form data-cf-form="ewt5Dk"></form>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+{% assign selected_charity = customer.metafields.customer_fields.supported_charity %}
+
+<div class="cf-field-container" id="charity-selector">
+  <div class="cf-field">
+    <select style="font-weight: 500;font-size: 16px;height: 42px;width: 100%;">
+      <option value="" {% unless selected_charity %}selected{% endunless %}>I'll go with Booksio's pick!</option>
+      {% assign charities = shop.metaobjects["charity_settings"]['charity-settings'].supported_charities.value %}
+      {% for charity in charities %}
+        {% assign charity_id = charity.id | append: '' %}
+        <option value="{{ charity_id }}" {% if selected_charity == charity_id %}selected{% endif %}>{{ charity.legal_name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    CF.ready(function() {
+      var $myForm = document.querySelector('form[data-cf-form="ewt5Dk"]');
+      var cfForm = $myForm.cfForm;
+
+      $('#charity-selector').on('change', function () {
+        cfForm.setFieldValue("supported_charity", $(this).find(':selected').val());
+      });
+    });
+
+    var t = setInterval(function () {
+      if ($('.charity-selector').length) {
+        $('.cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container:last-child').append($('#account-info .cf-form-actions'));
+
+        $('.charity-selector').after($('#charity-selector'))
+        clearInterval(t);
+      };
+    }, 300);
+  })
+</script>
+
+<style>
+  #charity-selector {
+    width: 100%;
+  }
+  #html-body [data-pb-style=KS7UGWJ] {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  .cf-field[data-cf-field-type=group] {
+    border: none;
+  }
+  .cf-cancel {
+    display: none;
+  }
+  .box-title {
+    text-transform: uppercase;
+  }
+  .cf-form-inner .cf-cancel {
+    display: none !important;
+  }
+  .cf-form-inner .cf-form-actions {
+    margin-top: 0 !important;
+    padding-left: 16px;
+  }
+  .cf-form-inner .cf-form-actions button {
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: "Lato";
+    font-weight: 600;
+    line-height: normal;
+    background:#ff8e0f;
+    border: 1px solid #ff8e0f;
+    color: #fff;
+  }
+  .charity-selector {
+    display: none !important;
+  }
+  .cf-form-inner h3 {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 14px;
+  }
+  .cf-form-inner h3:after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background: #ff8e10;
+    z-index: 1;
+  }
+  .cf-field input[type=text], .cf-field input[type=email], .cf-field input[type=number], .cf-field input[type=tel], .cf-field input[type=password], .cf-field textarea, .cf-field select {
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: "Lato";
+    font-weight: 600;
+  }
+  .cf-field input::-webkit-input-placeholder,
+  .cf-field textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #b8b8b8;
+  }
+  .cf-field input::-moz-placeholder,
+  .cf-field textarea::-moz-placeholder { /* Firefox 19+ */
+    color: #b8b8b8;
+  }
+  .cf-field input:-ms-input-placeholder,
+  .cf-field textarea:-ms-input-placeholder  { /* IE 10+ */
+    color: #b8b8b8;
+  }
+  .cf-field input:-moz-placeholder,
+  .cf-field textarea:-moz-placeholder { /* Firefox 18- */
+    color: #b8b8b8;
+  }
+  .cf-field {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 10px 0 !important; 
+    color: #b8b8b8;
+  }
+  .cf-field-container[data-cf-field-type="email_marketing_consent"] .cf-field {
+    margin: 0 0 10px !important;
+  }
+  .cf-enum-field__choice input[type=radio], .cf-enum-field__choice input[type=checkbox] {
+    border-color: #b8b8b8;
+  }
+  .cf-field label {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .cf-field-container[data-cf-field-type="email_marketing_consent"] .cf-field label {
+    font-weight: inherit;
+    margin-bottom: 0;
+  }
+  .cf-field-description {
+    opacity: 1;
+    font-size: 1.4rem;
+  }
+  .cf-form-inner .cf-form-actions {
+    margin: 60px auto auto !important;
+    text-align: center;
+    padding: 0 !important;
+  }
+
+  .cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container:after {
+    position: absolute;
+    content: "";
+    background-color: #f4f4f4;
+    width: 6px;
+    height: 380px;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+  .cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container:before {
+    position: absolute;
+    content: "";
+    background-color: #f0bf2d;
+    width: 6px;
+    height: 60px;
+    left: 0;
+    top: 170px;
+    border-radius: 10px;
+    z-index: 9;
+  }
+
+  .cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container {
+    padding: 0 0 0 5px;
+    position: relative;
+  }
+
+  @media (min-width: 1200px) {
+    .cf-form-inner h3 {
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 14px;
+      margin-left: -40px;
+    }
+
+    .cf-form-inner .cf-form-step > .cf-fields-container {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
+    }
+
+    .cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container {
+      height: auto;
+    }
+
+    .cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container {
+      position: relative;
+      padding: 0 24px;
+      width: 100%;
+      min-height: 367px;
+    }
+
+    .cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container:after {
+      position: absolute;
+      content: "";
+      background-color: #f4f4f4;
+      width: 6px;
+      height: 380px;
+      left: 0;
+      bottom: 0;
+      border-radius: 10px;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    #html-body [data-pb-style=KS7UGWJ] {
+      padding-top: 40px;
+    }
+    .subtitle {
+      margin-top: 10px !important;
+    }
+    .subtitle span {
+      font-size: 24px !important;
+      line-height: 1.4;
+    }
+    .cf-form-inner h3 {
+      margin-bottom: 14px;
+    }
+    .cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container:after {
+      height: calc(100% - 110px);
+      bottom: 20px;
+    }
+    .cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container:before {
+      bottom: auto;
+      top: 130px;
+    }
+    .cf-form-inner .cf-form-actions button {
+      width: 100%;
+    }
+  }
+</style>

@@ -141,7 +141,16 @@
                   {% assign commission_attribute = shop.metaobjects["partner_store_settings"][subdomain].name | append: ':' | append: commission %}
                  {% endif %}
                {% else %}
-                 {% assign order_charities = current_charities | strip | newline_to_br | strip_newlines | split: "<br />"  %}
+                {% if customer and customer.metafields.customer_fields.supported_charity %}
+                  {% for charity in charities %}
+                    {% assign id = charity.id | strip %}
+                    {% if customer.metafields.customer_fields.supported_charity == id %}
+                      {% assign order_charities = customer.metafields.customer_fields.supported_charity %}
+                    {% endif %}
+                  {% endfor %}
+                {% else %}
+                  {% assign order_charities = current_charities | strip | newline_to_br | strip_newlines | split: "<br />"  %}
+                {% endif %}
                {% endif %}
 
               {% if order_charities %}

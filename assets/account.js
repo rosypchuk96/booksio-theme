@@ -66,7 +66,7 @@ $(document).ready(function () {
     }
   });
 
-  $('.field.choice.set input[type="radio"]').on('change', function() {
+  $('.field.choice.set input[type="radio"]').on('change', function () {
     if ($(this).is(':checked')) {
       var id = $(this).data('address-id');
       $('.column.main.active form').attr('action', '/account/addresses/' + id);
@@ -78,5 +78,23 @@ $(document).ready(function () {
       $('.column.main.active form').attr('action', '/account/addresses');
       $('#put-method').remove();
     }
-  })
+  });
+
+  CF.ready(function() {
+    var $myForm = document.querySelector('form[data-cf-form="70tRxe"]');
+    var cfForm = $myForm.cfForm;
+
+    $('#charity-selector').on('change', function () {
+      cfForm.setFieldValue("supported_charity", $(this).find(':selected').val());
+    });
+  });
+
+  var t = setInterval(function () {
+    if ($('#account-info .charity-selector').length) {
+      $('.cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container:last-child').append($('#account-info .cf-form-actions'));
+
+      $('.charity-selector').after($('#charity-selector'))
+      clearInterval(t);
+    };
+  }, 300);
 });

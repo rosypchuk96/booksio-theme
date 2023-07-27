@@ -76,7 +76,7 @@
             <address>You have not set a default billing address.</address>
           {% endif %}
         </div>
-        <div class="box-actions"><a class="action edit" href="https://www.booksio.com/customer/address/edit/id/1089/" data-ui-id="default-billing-edit-link"><span>Edit</span></a></div>
+        <div class="box-actions"><a class="action edit" href="#edit-address-{{ billing_address.id }}" data-ui-id="default-billing-edit-link"><span>Edit</span></a></div>
       </div>
       <div class="box box-shipping-address">
         <strong class="box-title"><span>Default Shipping Address</span></strong> 
@@ -112,7 +112,7 @@
             <address>You have not set a default billing address.</address>
           {% endif %}
         </div>
-        <div class="box-actions"><a class="action edit" href="https://www.booksio.com/customer/address/edit/id/1089/" data-ui-id="default-shipping-edit-link"><span>Edit</span></a></div>
+        <div class="box-actions"><a class="action edit" href="#edit-address-{{ customer.default_address.id }}" data-ui-id="default-shipping-edit-link"><span>Edit</span></a></div>
       </div>
   </div>
 </div>

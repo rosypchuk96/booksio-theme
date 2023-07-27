@@ -1,0 +1,479 @@
+<div class="page-wrapper">
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+   <ul class="items">
+      <li class="item home"> <a href="/" title="Go to Home Page">Home</a> <span class="icon" aria-hidden="true"></span> </li>
+      <li class="item cms_page"> <strong>{{ product.title }}</strong> </li>
+   </ul>
+</nav>
+
+<main id="maincontent" class="page-main">
+   <div class="columns">
+      <div class="column main">
+         <div class="product-info-main">
+            <div class="product-info-top">
+            </div>
+            <div class="book-authors"></div>
+            <div class="product-info-title">
+               <div class="page-title-wrapper product">
+                  <h1 class="page-title">
+                    <span class="base" data-ui-id="page-title-wrapper" itemprop="name">{{ product.title }}</span>
+                  </h1>
+               </div>
+            </div>
+            <div id="product-short-description" class="product attribute description">
+               <div class="value"></div>
+            </div>
+            <div class="add-attr-section"></div>
+            <div class="pre-back-order-text" style="display: none;"></div>
+            <div class="product-add-form new_indicator">
+              {% form 'product', product, id: 'addToCartForm', class: 'product-single__form pdp-details' %}
+                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                  <div class="price-box price-final_price" data-role="priceBox" data-product-id="16537892" data-price-box="product-id-16537892">
+                     <fieldset class="fieldset giftcard-amount pricing-giftcard-regular">
+                        <div id="giftcard-amount-box" class="field required open-amount">
+                           <label for="giftcard-amount-input" id="amount-label-input" class="label"><span>Amount in USD</span></label> 
+                           <div class="control">
+                              <div class="control"> 
+                                {% for option in product.options_with_values %}
+                                  {% if option.name == 'Denominations' %}
+                                      {% for value in option.values %}
+                                          {%- for variant in product.variants -%}
+                                              {%- if variant.options contains value and variant.available -%}
+                                                  <button class="amount btn" name="amount" data-value="50"><span class="price" data-value="{{ variant.price }}">{{ variant.price | money }}</span></button> 
+                                                  {%- break -%}
+                                              {%- endif -%}
+                                          {%- endfor -%}
+                                      {% endfor %}
+                                  {% endif %}
+                                {% endfor %}
+                              </div>
+                           </div>
+                        </div>
+                     </fieldset>
+                  </div>
+                  <div class="giftcard form" data-container-for="giftcard_info">
+                     <fieldset class="fieldset giftcard send">
+                        <legend class="legend"><span>Gift Card Information</span></legend>
+                        <br> 
+                        <div class="field recipient required">
+                           <label for="giftcard_recipient_name" class="label"><span>Recipient Name</span></label> 
+                           <div class="control">
+                              <input type="text" id="giftcard_recipient_name" name="properties[Recipient name]" class="required-entry input-text" value="" aria-required="true">
+                           </div>
+                        </div>
+                        <div class="field recipient email required">
+                           <label for="giftcard_recipient_email" class="label"><span>Recipient Email</span></label> 
+                           <div class="control">
+                              <input type="email" id="giftcard_recipient_email" name="properties[Recipient email]" class="validate-email required-entry input-text" value="" aria-required="true" aria-invalid="true" aria-describedby="giftcard_recipient_email-error">
+                           </div>
+                        </div>
+                        <div class="field text required">
+                           <label for="giftcard-message" class="label"><span>  Message (Maximum length: 255 characters)</span></label> 
+                           <div class="control">
+                              <textarea name="properties[Message]" id="giftcard-message" class="input-text giftcard-message-max-length required-entry" data-validate="{maxlength:255,messages:{maxlength:'Maximum length of the message is 255 characters.'}}" aria-required="true"></textarea>
+                           </div>
+                        </div>
+                     </fieldset>
+                  </div>
+                  <div class="product-options-wrapper" id="product-options-wrapper" data-hasrequired="* Required Fields">
+                     <div class="fieldset" tabindex="0">     </div>
+                  </div>
+                  <div class="product-options-bottom">
+                     <div class="product-actions-box" style="">
+                        <div class="box-tocart">
+                           <div class="fieldset">
+                              <div class="actions">
+                                 <button type="submit" title="Add to Cart" class="action primary tocart" id="product-addtocart-button"><span>Add to Cart</span></button>   
+                                 <div id="instant-purchase" data-bind="scope:'instant-purchase'">
+                                    <!-- ko template: getTemplate() -->
+                                    <!-- ko if: showButton() --><!-- /ko -->
+                                    <!-- /ko -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                {% endform %}
+            </div>
+            <div class="product-sample-links"> </div>
+            <div class="product-social-links">
+               <div class="product-addto-links" data-role="add-to-links"></div>
+            </div>
+            <style>#html-body [data-pb-style=KQEQY55]{border-width:0}</style>
+            <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="KQEQY55" data-decoded="true" class="box-model-64c25a91a88bb">
+               <div class="secure-checkout-wrapper">
+                  <p class="secure-title">Secure Checkout</p>
+                  <div class="secure-thumbnail">
+                     <img src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/payment-method.png?v=1690464954" alt="payment method" style="display: inline-block;">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="product media">
+            <a id="gallery-prev-area" tabindex="-1" href="#"></a>
+            <div class="action-skip-wrapper"> <a class="action skip gallery-next-area" href="#gallery-next-area"><span> Skip to the end of the images gallery</span></a></div>
+            <div class="gallery-placeholder" data-gallery-role="gallery-placeholder" style="">
+              {% if product.featured_image %}
+                <img alt="main product photo" class="gallery-placeholder__image" src="{{ product.featured_image | img_url: 'master' }}" width="300" height="446" style="display: block;">
+              {% endif %}
+               <div class="fotorama--hidden"></div>
+               <style></style>
+            </div>
+            <a id="gallery-next-area" tabindex="-1" href="#"></a>
+            <div class="wishlist-wrapper"><a href="#" class="wish-list">Add to wishlist</a> <span class="view-a-sample"></span></div>
+         </div>
+         <input name="form_key" type="hidden" value="fDgK5ZzclpMEPz5h"> 
+         <div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}" style="display: none;">
+            <!-- ko template: getTemplate() -->
+            <!-- /ko -->
+         </div>
+         <div></div>
+      </div>
+   </div>
+</main>
+</div>
+
+<style>
+  .secure-checkout-wrapper {
+  padding: 20px 30px;
+  text-align: center;
+  text-transform: capitalize;
+  background: #eee;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: #212322;
+  font-family: 'Lato';
+  max-width: 380px;
+  }
+  .secure-checkout-wrapper .secure-title {
+  width: 100%;
+  }
+  .charity-text p {
+  color: #212322;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  margin-top: 12px;
+  font-family: 'Lato';
+  }
+  .secure-checkout-wrapper .secure-thumbnail {
+  max-width: 310px;
+  }
+  @media screen and (max-width: 767px) {
+  .secure-checkout-wrapper {
+  margin-bottom: 10px;
+  }
+  }
+   nav.breadcrumbs ul li.item a, nav.breadcrumbs ul li.item strong {
+   color: #298FC2;
+   }
+   nav.breadcrumbs ul li.item .icon:after {
+   content: '\e608';
+   font-family: 'luma-icons';
+   color: #298FC2;
+   }
+   .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .label {
+   width: 100%;
+   display: inline-block;
+   font-size: 14px;
+   color: #212322;
+   font-family: 'Lato';
+   font-weight: normal;
+   margin-bottom: 5px;
+   }
+   .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .price {
+   display: inline-block !important;
+   width: 100% !important;
+   font-size: 14px !important;
+   color: #212322 !important;
+   font-family: 'Lato' !important;
+   font-weight: bold !important;
+   margin-left: 0 !important;
+   }
+   .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch {
+   display: inline-block !important;
+   max-height: min-content !important;
+   text-align: left !important;
+   padding: 15px 20px !important;
+   border-color: #E2E3E2 !important;
+   }
+   .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch.selected {
+   background: #FFF0E0;
+   border-color: #FFF0E0 !important;
+   }
+   .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch:hover {
+   border-color: #FFF0E0 !important;
+   background-color: #FFF0E0;
+   }
+   button#product-addtocart-button {
+   background-color: #298FC2;
+   border-color: #298FC2;
+   }
+   .catalog-product-view .page-wrapper .product-info-main #cms-product-mapping-container .cms-wrapper {
+   color: #212322;
+   font-size: 14px;
+   font-family: 'Lato';
+   }
+   .catalog-product-view .page-wrapper .product-info-main .product.description {
+   display: none;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .add-attr-section {
+   display: none;
+   }
+   .catalog-product-view .page-wrapper .product-info-main>.product-add-form .product-options-wrapper .swatch-attribute-label {
+   display: none;
+   }
+   .catalog-product-view .page-wrapper .product-info-main>.product-add-form .product-options-wrapper .swatch-attribute-selected-option {
+   display: none;
+   }
+   .page-product-configurable .product-options-wrapper .swatch-opt {
+   margin-top: 0;
+   }
+   .catalog-product-view .page-wrapper .product-info-main #cms-product-mapping-container .cms-wrapper p {
+   margin-bottom: 0;
+   margin-top: 10px;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .product-info-title {
+   order: -2;
+   width: 100%;
+   border-bottom: none;
+   }
+   .catalog-product-view .page-wrapper .product-info-main {
+   display: flex;
+   flex-flow: row wrap;
+   width: 70%;
+   }
+   .book-authors {
+   order: -1;
+   }
+   .product-info-top {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid #eee;
+   position: relative;
+   }
+   .product-info-top:after {
+   content: "";
+   background: #298FC2;
+   width: 50px;
+   height: 3px;
+   position: absolute;
+   left: 0;
+   bottom: -2px;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title:after {
+   display: none;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title {
+   padding-bottom: 0;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .book-authors span {
+   color: #298FC2;
+   font-weight: normal;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .yotpoBottomLine .standalone-bottomline a.text-m.write-review-btn-hidden {
+   color: #298FC2 !important;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title {
+   text-transform: capitalize;
+   }
+   body.catalog-product-view .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .label{
+   width: 100%;
+   display: inline-block;
+   font-size: 14px !important;
+   color: #212322 !important;
+   font-family: 'Lato' !important;
+   font-weight: normal !important;
+   margin-bottom: 5px !important;
+   }
+   .product-options-wrapper .price-box.price-final_price {
+   float: left !important;
+   margin-left: 0 !important;
+   width: 100% !important;
+   }
+   body#html-body.catalog-product-view #cms-product-mapping-container {
+   display: inline-block !important;
+   width: 100% !important;
+   }
+   .catalog-product-view .box-tocart>.fieldset .actions {
+   min-width: 350px;
+   display: flex;
+   flex-flow: row wrap;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .price-box {
+   padding: 0;
+   float: left;
+   position: relative;
+   line-height: 1;
+   align-self: flex-end;
+   }
+   .catalog-product-view .page-wrapper #product-addtocart-button {
+   float: right;
+   max-width: 190px;
+   width: 100%;
+   padding: 18px 10px;
+   font-size: 18px;
+   order: 2;
+   margin-left: 15px;
+   margin-right: 0;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .product-add-form.new_indicator .box-tocart .fieldset {
+   column-gap: 22px;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .product-add-form.new_indicator .price-box.price-final_price + .price-box.price-final_price {
+   display: none;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .price-box .price {
+   font-size: 23px;
+   line-height: 23px;
+   }
+   /*.catalog-product-view .page-wrapper .product-info-main .product-actions-box .price-box:before {
+   content: 'TOTAL';
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin-top: -33px;
+   color: #212322;
+   }*/
+   .catalog-product-view .page-wrapper .product-info-main .product-actions-box .price-box .price:before {
+   content: 'TOTAL';
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin-top: -33px;
+   color: #212322;
+   font-weight: lighter;
+   font-size: 16px;
+   line-height: 18px;
+   }
+   .catalog-product-view .box-tocart>.fieldset .field.qty {
+   align-self: flex-end;
+   position: relative;
+   }
+   .catalog-product-view .box-tocart>.fieldset .field.qty:before {
+   content: 'QUANTITY';
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin-top: -33px;
+   color: #212322;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .box-tocart .fieldset .qty #qty {
+   width: 70px;
+   padding: 0 5px;
+   }
+   body.catalog-product-view .page-wrapper .product-info-main>.product-add-form .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch.mock-swatch.selected {
+   border-color: #FFF0E0 !important;
+   }
+   nav.breadcrumbs ul li.item a, 
+   nav.breadcrumbs ul li.item strong, 
+   .catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title, 
+   .catalog-product-view .page-wrapper .product-info-main .book-authors span,
+   .wishlist-wrapper .wish-list,
+   .wishlist-wrapper a.button.action.secondary {
+   font-weight: bold;
+   }
+   .catalog-product-view .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .label {
+   font-weight: bold !important;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .book-authors span:before {
+   content: 'by';
+   color: #212322;
+   margin-right: 5px;
+   font-size: 22px;
+   font-family: 'Lato';
+   font-weight: bold;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .book-authors  a + a span:before {
+   font-size: 0 !important;
+   }
+   .catalog-product-view .product-options-bottom .price-box .price-container>span {
+   margin: 0;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title {
+   font-size: 30px;
+   color: #212322;
+   line-height: 1.5;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .book-authors span {
+   font-family: 'Lato';
+   line-height: 1.5;
+   }
+   .catalog-product-view .product.attribute.description:not(#product-short-description) .value,
+   .catalog-product-view .additional-attributes-wrapper table#product-attribute-specs-table tbody td, 
+   .catalog-product-view .additional-attributes-wrapper table#product-attribute-specs-table tbody th{
+   color: #212322;
+   font-size: 16px;
+   font-family: 'Lato';
+   line-height: 1.5;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .yotpoBottomLine {
+   margin-top: 5px;
+   }
+   .category-label-wrapper-outter:after {
+   content: "";
+   background: #298FC2;
+   width: 50px;
+   height: 3px;
+   position: absolute;
+   left: 0;
+   bottom: -2px;
+   }
+   .category-label-wrapper-outter {
+   position: relative;
+   width: 100%;
+   border-bottom: 1px solid #eee;
+   padding-bottom: 20px;
+   }
+   .product-info-top:after {
+   display: none;
+   }
+   .product-info-top {
+   border-bottom: none;
+   }
+   @media screen and (max-width: 767px){
+   .catalog-product-view .page-wrapper .product-info-main .product-actions-box .price-box .price:before{
+   line-height: 14px;
+   }
+   .faq-content-pdp-wrapper {
+   margin-left: -20px;
+   margin-right: -20px;
+   }
+   .how-booksio-works .row-full-width-inner {
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+   }
+   .review-outter-wrapper {
+   width: calc(100% + 40px) !important;
+   margin-right: -20px;
+   margin-left: -20px;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .product-add-form.new_indicator .box-tocart .fieldset {
+   column-gap: 5px;
+   }
+   .catalog-product-view .page-wrapper #product-addtocart-button {
+   max-width: 170px;
+   }
+   .catalog-product-view .box-tocart>.fieldset .actions {
+   min-width: 265px;
+   margin-right: 0;
+   padding-left: 5px;
+   }
+   .catalog-product-view .page-wrapper .product-info-main .price-box .price {
+   font-size: 20px;
+   }
+   .catalog-product-view .page-wrapper #product-addtocart-button {
+   max-width: 145px;
+   font-size: 14px;
+   }
+   .catalog-product-view .page-wrapper .product-info-main {
+   width: 100%;
+   }
+   }
+</style>
