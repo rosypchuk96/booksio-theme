@@ -305,4 +305,13 @@
       </button>
     </slider-component>
   {%- endif -%}
+<div class="buttons-after-product-images" style="width: 50%; float: left;font-weight: bold; color: #298fc2; ">
+     {% render 'iwish_v2' with 'iwishproduct' %}
+
+</div>
+
+  {% if product.metafields.custom.view_sample != 'blank' %}
+  <div class="buttons-after-product-images" style="width: 50%; float: right;font-weight: bold; color: #298fc2;" ><a href="{{ product.metafields.custom.view_sample }}" target="_blank">VIEW A SAMPLE</a></div>
+{% endif %}
+  
 </media-gallery>
