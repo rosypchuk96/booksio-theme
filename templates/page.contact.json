@@ -1,15 +1,15 @@
 {
-  "wrapper": "main.cms-page-view",
-  "sections": {
-    "main": {
-      "type": "main-contact",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
+    "wrapper": "main.cms-page-view",
+    "sections": {
+      "main": {
+        "type": "main-contact",
+        "settings": {
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
       }
-    }
-  },
-  "order": [
-    "main"
-  ]
-}
+    },
+    "order": [
+      "main"
+    ]
+  }

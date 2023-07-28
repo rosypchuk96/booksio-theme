@@ -5,3 +5,132 @@
     margin-top:40px;
     margin-bottom: 80px;
 }
+.contact-index-index .contact-main-container .store-info {
+    padding: 15px;
+}
+.contact-index-index .contact-main-container h2 {
+    font-size: 24px;
+    font-family: "Lato";
+    font-weight: 600;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #c5c5c5;
+    margin-bottom: 3rem;
+    padding-top: 6px;
+}
+.contact-index-index .contact-main-container .store-info li {
+    color: #616161;
+    font-size: 16px;
+    list-style: none;
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-family: "Lato";
+}
+.store-info .address {
+    display: flex;
+}
+.store-info .address .icon {
+    display: inline-block;
+    text-decoration: none;
+}
+.store-info .info .icon {
+    padding-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.contact-index-index .contact-main-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+}
+.contact-index-index form.contact input {
+    border: 1px solid #c2c2c2;
+    height: 50px;
+    border-radius: 7px;
+    font-size: 16px;
+    color: #636363;
+    padding: 0 40px 0 24px;
+}
+.contact-index-index form.contact .legend {
+    font-family: "Lato";
+    font-weight: 600;
+    font-size: 24px;
+    padding-bottom: 12px;
+    margin-bottom: 1rem;
+    position: relative;
+    text-transform: uppercase;
+}
+.contact-index-index form.contact .legend:after {
+    background-color: #40c2ff;
+    content: " ";
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    z-index: 1;
+}
+.field.note.no-label{
+    margin: 0 0 28px;
+}
+.contact-index-index .contact-main-container .form.contact .label {
+    font-weight: 500;
+}
+.contact-index-index .form.contact textarea {
+    border-radius: 7px;
+    font-size: 16px;
+    color: #636363;
+    padding: 0 40px 0 24px;
+    border: 1px solid #c2c2c2;
+    resize: none;
+}
+.contact-index-index .contact__button .button {
+    font-family: 'Lato';
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 27px;
+    line-height: 42px;
+    font-size: 16px;
+    background: #ff8e0f;
+    border: 1px solid #ff8e0f;
+    color: #fff;
+    cursor: pointer;
+}
+@media (min-width: 768px), print{
+    .contact__fields{
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .contact-index-index .contact-main-container.container {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    body
+    .contact-index-index .store-info {
+        width: 30%;
+    }
+    .contact-index-index .form.contact {
+        min-width: 600px;
+    }
+    .contact-index-index form.contact {
+        width: 60%;
+    }
+    .contact-index-index form.contact .contact__fields .field{
+        width: 50%;
+        padding-right: 10px;
+    }
+    .contact-index-index form.contact .field{
+      
+        margin-bottom: 28px;
+    }
+    .contact-index-index form.contact .field.name {
+        padding-right: 10px;
+    }
+}
