@@ -10,8 +10,10 @@
         <option value="" {% unless selected_charity %}selected{% endunless %}>I'll go with Booksio's pick!</option>
         {% assign charities = shop.metaobjects["charity_settings"]['charity-settings'].supported_charities.value %}
         {% for charity in charities %}
-          {% assign charity_id = charity.id | append: '' %}
-          <option value="{{ charity_id }}" {% if selected_charity == charity_id %}selected{% endif %}>{{ charity.legal_name }}</option>
+          {% unless charity.hidden %}
+            {% assign charity_id = charity.id | append: '' %}
+            <option value="{{ charity_id }}" {% if selected_charity == charity_id %}selected{% endif %}>{{ charity.legal_name }}</option>
+          {% endunless %}
         {% endfor %}
       </select>
     </div>

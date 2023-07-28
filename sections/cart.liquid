@@ -99,6 +99,14 @@
                                         </dd>
                                       {% endif %}
                                     {% endfor %}
+                                    {% if line_item.properties['Recipient name'] or line_item.properties['Recipient email'] %}
+                                      <dt>Gift Card Recipient</dt>
+                                      <dd>{{ line_item.properties['Recipient name']}} &lt;{{ line_item.properties['Recipient email']}}&gt;</dd>
+                                    {% endif %}
+                                    {% if line_item.properties['Message'] %}
+                                      <dt>Gift Card Message</dt>
+                                      <dd>{{ line_item.properties['Message'] }}</dd>
+                                    {% endif %}
                                   </dl>
                                 </div>
                             </td>
@@ -134,7 +142,11 @@
                {% assign partner_charities = shop.metaobjects["partner_store_settings"][subdomain].charity_partner_ein %}
                {% if is_subdomain %}
                  {% if partner_charities %}
-                  {% assign order_charities = partner_charities | strip | newline_to_br | strip_newlines | split: "<br />" %}
+                  {% if partner_charities == 'any' %}
+                    {% assign order_charities = current_charities | strip | newline_to_br | strip_newlines | split: "<br />"  %}
+                  {% else %}
+                    {% assign order_charities = partner_charities | strip | newline_to_br | strip_newlines | split: "<br />" %}
+                  {% endif %}
                  {% endif %}
                  {% assign commission = shop.metaobjects["partner_store_settings"][subdomain].charity_payout %}
                  {% if commission %}

@@ -137,6 +137,142 @@
       {% section 'footer' %}
     </div>
 
+    <script>
+      function drawMiniCart(data) {
+        console.log(data)
+        if (!$('.minicart-wrapper .qty').length) {
+          $('.action.showcart').append(`<span class="counter qty"></span>`);
+        }
+        $('.minicart-wrapper .qty').text(data.item_count);
+        $('#mini-cart-total').text('$' + (data.total_price / 100).toFixed(2));
+        var html = '';
+        if (data.items.length > 0) {
+          $('#minicart-content-wrapper .subtotal').show(0);
+          for (var i in data.items) {
+            var product = data.items[i];
+            var img = '', options = '';
+            if (product.featured_image) {
+              img += `<img class="product-image-photo" src="${product.featured_image.url}" alt="${product.featured_image.alt}" style="width: auto; height: auto;">`;
+            }
+            if (product.options_with_values) {
+              for (var j in product.options_with_values) {
+                var option = product.options_with_values[j];
+                options += `
+                <dt class="label">
+                  ${option.name}
+                </dt>
+                <dd class="values">
+                  <span data-bind="text: option.value">
+                  ${option.value}</span>
+                </dd>`;
+              }
+            }
+            html += `<li class="item product product-item" data-role="product-item" data-collapsible="true" data-id="${ product.variant_id }">
+            <div class="product" role="group" aria-label="product">
+              <a data-bind="attr: {href: product_url, title: product_name}" tabindex="-1" class="product-item-photo" href="${product.url}" title="Spare">
+                <span class="product-image-container" data-bind="style: {width: width/2 + 'px'}" style="width: 75px;">
+                  <span class="product-image-wrapper" data-bind="style: {'padding-bottom': height/width*100 + '%'}" style="padding-bottom: 100%;">
+                    ${img}
+                  </span>
+                </span>
+              </a>
+
+              <div class="product-item-details">
+                <strong class="product-item-name">
+                  <span>${product.product_title}</span>
+                </strong>
+                
+                  <div class="product options" data-bind="style: {visibility: options.length || customOptions.length ? 'visible' : 'hidden'}" role="tablist" data-collapsible="true" style="visibility: visible;">
+                    <span data-role="title" class="toggle" role="tab" aria-selected="false" aria-expanded="false" tabindex="0">
+                      <span>See Details</span>
+                    </span>
+                    <div data-role="content" class="content" role="tabpanel" aria-hidden="true" style="display: none;">
+                      <strong class="subtitle">
+                        <span>Options Details</span>
+                      </strong>
+                      <dl class="product options list">
+                        ${options}
+                      </dl>
+                    </div>
+                  </div>
+                
+                <div class="product-item-pricing">
+                  <div class="price-container">
+                    <span class="price-wrapper" data-bind="html: price">
+                      <span class="price-excluding-tax" data-label="Excl. Tax">
+                        <span class="minicart-price">
+                          <span class="price">$${(product.price / 100).toFixed(2)}</span>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="details-qty qty" data-dashlane-rid="a442faba8a632b85" data-form-type="other">
+                    <label class="label" for="cart-item-30948-qty">Qty</label>
+                    ${product.quantity}
+                  </div>
+                </div>
+                <div class="product actions">
+                  <div class="primary">
+                    <a data-bind="attr: {href: configure_url, title: $t('Edit item')}" class="action edit" href="" title="Edit item">
+                      <i class="icon edit-icon" aria-hidden="true"></i>
+                      <span data-bind="i18n: 'Edit'">Edit</span>
+                    </a>
+                  </div>
+                  <div class="secondary">
+                    <a href="#" data-bind="attr: {'data-cart-item': item_id, title: $t('Remove item')}" class="action delete" data-cart-item="30948" title="Remove item">
+                      <i class="icon delete-icon" aria-hidden="true"></i>
+                      <span data-bind="i18n: 'Remove'">Remove</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>`;
+          }
+          $('#mini-cart-shop-btn').hide(0);
+          $('#mini-cart-checkout-btn').show(0);
+        } else {
+          $('#minicart-content-wrapper .subtotal').hide(0);
+          html = '<strong class="subtitle empty">You have no items in your shopping cart.</strong>';
+          $('#mini-cart-shop-btn').show(0);
+          $('#mini-cart-checkout-btn').hide(0);
+        }
+
+        $('#mini-cart').html(html);
+
+        $('#mini-cart .product.options .toggle').click(function() {
+          $(this).closest('.options').find('.content').toggle(0);
+          $(this).closest('.options').toggleClass('active');
+        });
+
+        $('#mini-cart .action.delete').click(function (e) {
+          e.preventDefault();
+          var id = $(this).closest('.product-item').attr('data-id');
+          var data = {};
+          data[id] = 0;
+      
+          jQuery.ajax({
+            type: 'POST',
+            url: '/cart/update.js',
+            data: {
+              updates: data
+            },
+            dataType: 'json',
+            success: function (data) {
+              jQuery.ajax({
+                type: 'GET',
+                url: '/cart.js',
+                dataType: 'json',
+                success: function (data) {  
+                  drawMiniCart(data);
+                }
+              });
+            }
+          });
+        });
+      }
+    </script>
+
     {{ 'slick.min.js' | asset_url | script_tag }}
     {{ 'theme.min.js' | asset_url | script_tag }}
 

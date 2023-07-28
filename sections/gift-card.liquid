@@ -39,8 +39,8 @@
                                       {% for value in option.values %}
                                           {%- for variant in product.variants -%}
                                               {%- if variant.options contains value and variant.available -%}
-                                                  <button class="amount btn" name="amount" data-value="50"><span class="price" data-value="{{ variant.price }}">{{ variant.price | money }}</span></button> 
-                                                  {%- break -%}
+                                                <button class="amount btn" name="amount" data-value="{{ variant.price }}" data-variant="{{ variant.id }}"><span class="price">{{ variant.price | money }}</span></button> 
+                                                {%- break -%}
                                               {%- endif -%}
                                           {%- endfor -%}
                                       {% endfor %}
@@ -48,6 +48,7 @@
                                 {% endfor %}
                               </div>
                            </div>
+                           <div id="amount-error" style="display: none;margin-top: 7px;color: #e02b27;font-size: 1.4rem;">This is a required field.</div>
                         </div>
                      </fieldset>
                   </div>
@@ -59,18 +60,22 @@
                            <label for="giftcard_recipient_name" class="label"><span>Recipient Name</span></label> 
                            <div class="control">
                               <input type="text" id="giftcard_recipient_name" name="properties[Recipient name]" class="required-entry input-text" value="" aria-required="true">
+                              <div for="giftcard_sender_name" generated="true" class="mage-error" id="giftcard_sender_name-error" style="display: none;">This is a required field.</div>
                            </div>
                         </div>
                         <div class="field recipient email required">
                            <label for="giftcard_recipient_email" class="label"><span>Recipient Email</span></label> 
                            <div class="control">
                               <input type="email" id="giftcard_recipient_email" name="properties[Recipient email]" class="validate-email required-entry input-text" value="" aria-required="true" aria-invalid="true" aria-describedby="giftcard_recipient_email-error">
+                              <div for="giftcard_sender_email" generated="true" class="mage-error" id="giftcard_sender_email-error" style="display: none;">This is a required field.</div>
+                              <div for="giftcard_recipient_email" generated="true" class="mage-error email-not-valid" id="giftcard_recipient_email-error" style="display: none;">Please enter a valid email address (Ex: johndoe@domain.com).</div>
                            </div>
                         </div>
                         <div class="field text required">
                            <label for="giftcard-message" class="label"><span>  Message (Maximum length: 255 characters)</span></label> 
                            <div class="control">
                               <textarea name="properties[Message]" id="giftcard-message" class="input-text giftcard-message-max-length required-entry" data-validate="{maxlength:255,messages:{maxlength:'Maximum length of the message is 255 characters.'}}" aria-required="true"></textarea>
+                              <div for="giftcard-message" generated="true" class="mage-error" id="giftcard-message-error" style="display: none;">This is a required field.</div>
                            </div>
                         </div>
                      </fieldset>
@@ -134,7 +139,17 @@
 </main>
 </div>
 
+{% include 'gift-card-confirmation' %}
+
+{{ 'gift-card.js' | asset_url | script_tag }}
+
 <style>
+  .page-product-giftcard .product-info-main .giftcard-amount #giftcard-amount-box button.amount.active {
+    background: #ff8e0f;
+  }
+  .page-product-giftcard .product-info-main .giftcard-amount #giftcard-amount-box button.amount.active .price {
+    color: #fff !important;
+  }
   .secure-checkout-wrapper {
   padding: 20px 30px;
   text-align: center;
