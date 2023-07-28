@@ -3,13 +3,11 @@
     <div class="field note no-label">Jot us a note and we’ll get back to you as quickly as possible.</div>
     {%- if form.posted_successfully? -%}
       <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
-        {% render 'icon-success' %}
         {{ 'templates.contact.form.post_success' | t }}
       </h2>
     {%- elsif form.errors -%}
       <div class="form__message">
         <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
-          {% render 'icon-error' %}
           {{ 'templates.contact.form.error_heading' | t }}
         </h2>
       </div>
@@ -24,15 +22,8 @@
     {%- endif -%}
     <div class="contact__fields">
       <div class="field">
-       <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
-        <input
-          class="field__input"
-          autocomplete="name"
-          type="text"
-          id="ContactForm-name"
-          name="contact[{{ 'templates.contact.form.name' | t }}]"
-          value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-        >
+      <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }} <span aria-hidden="true">*</span></label>
+       <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" required> 
       </div>
       <div class="field field--with-error">
        <label class="field__label" for="ContactForm-email">
@@ -51,19 +42,8 @@
           {% if form.errors contains 'email' %}
             aria-invalid="true"
             aria-describedby="ContactForm-email-error"
-          {% endif %}
+          {% endif %} required
         >
-       
-        {%- if form.errors contains 'email' -%}
-          <small class="contact__field-error" id="ContactForm-email-error">
-            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-            <span class="form__message">
-              {%- render 'icon-error' -%}
-              {{- form.errors.translated_fields.email | capitalize }}
-              {{ form.errors.messages.email -}}
-            </span>
-          </small>
-        {%- endif -%}
       </div>
     </div>
     <div class="field">
@@ -81,9 +61,11 @@
     </div>
     <div class="field">
       <label class="form__label field__label" for="ContactForm-body">
-        What’s on your mind? * 
+        What’s on your mind?
+        <span aria-hidden="true">*</span>
       </label>
       <textarea
+      required
         rows="3"
         id="ContactForm-body"
         class="text-area field__input"
