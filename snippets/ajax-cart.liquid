@@ -66,8 +66,7 @@
                   <li
                     class="item product product-item"
                     data-role="product-item"
-                    data-collapsible="true"
-                    data-id="{{ line_item.variant_id }}">
+                    data-collapsible="true">
                     <div
                       class="product"
                       role="group"
@@ -152,7 +151,9 @@
                             </span>
                           </div>
                           <div
-                            class="details-qty qty">
+                            class="details-qty qty"
+                            data-dashlane-rid="0fe1c0f715ffc8ac"
+                            data-form-type="other">
                             <label class="label" for="cart-item-30948-qty">Qty</label>
                             <input
                               type="number"
@@ -213,25 +214,14 @@
 
               <div class="amount price-container">
                 <span class="price-wrapper" data-bind="html: cart().subtotal_excl_tax">
-                  <span class="price" id="mini-cart-total">{{ cart.total_price | money }}</span>
+                  <span class="price">{{ cart.total_price | money }}</span>
                 </span>
               </div>
             </div>
 
             <div class="minicart-actions">
               <div class="actions">
-                <div class="primary" id="mini-cart-shop-btn" style="display: none;">
-                  <a
-                    href="/collections/ny-times-bestsellers"
-                    id="top-cart-btn-shop-now"
-                    type="button"
-                    class="action primary checkout"
-                    data-action="close"
-                    title="Shop Now">Shop Now
-                  </a>
-                </div>
-
-                <div class="primary" id="mini-cart-checkout-btn">
+                <div class="primary">
                   <a
                     class="action primary checkout"
                     data-bind="attr: {title: $t('View Cart &amp; Check Out'), href: shoppingCartUrl}, i18n: 'View Cart &amp; Check Out'"
@@ -245,7 +235,6 @@
           </div>
         {% else %}
           <div class="block-content empty-cart">
-            
             <button
               type="button"
               id="btn-minicart-close"
@@ -255,34 +244,11 @@
               <span data-bind="i18n: 'Close'">Close</span>
               <i class="icon" aria-hidden="true"></i>
             </button>
-            <div
-              data-action="scroll"
-              class="minicart-items-wrapper"
-              style="height: 139px;">
-              <ol
-                id="mini-cart"
-                class="minicart-items"
-                data-bind="foreach: { data: getCartItems(), as: 'item' }">
             <strong class="subtitle empty" data-bind="i18n: 'You have no items in your shopping cart.'">
               You have no items in your shopping cart.</strong>
-              </ol>
-            </div>
-            <div class="subtotal" style="display: none;">
-              <span class="label">
-                <!-- ko i18n: 'Cart Subtotal' -->
-                <span>Cart Subtotal</span>
-                <!-- /ko -->
-              </span>
-
-              <div class="amount price-container">
-                <span class="price-wrapper" data-bind="html: cart().subtotal_excl_tax">
-                  <span class="price" id="mini-cart-total">{{ cart.total_price | money }}</span>
-                </span>
-              </div>
-            </div>
             <div class="minicart-actions">
               <div class="actions">
-                <div class="primary" id="mini-cart-shop-btn">
+                <div class="primary">
                   <a
                     href="/collections/ny-times-bestsellers"
                     id="top-cart-btn-shop-now"
@@ -291,14 +257,6 @@
                     data-action="close"
                     title="Shop Now">Shop Now
                   </a>
-                </div>
-
-                <div class="primary" id="mini-cart-checkout-btn" style="display: none;">
-                  <a
-                    class="action primary checkout"
-                    data-bind="attr: {title: $t('View Cart &amp; Check Out'), href: shoppingCartUrl}, i18n: 'View Cart &amp; Check Out'"
-                    title="View Cart &amp; Check Out"
-                    href="/cart/">View Cart &amp; Check Out</a>
                 </div>
               </div>
             </div>
@@ -310,3 +268,22 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function() {
+    $('#mini-cart .product.options .toggle').click(function() {
+      $(this).closest('.options').find('.content').toggle(0);
+      $(this).closest('.options').toggleClass('active');
+    });
+
+    $('.showcart').click(function(e) {
+      e.preventDefault();
+      $('.mini-cart-content').toggle(0);
+    });
+
+    $('#btn-minicart-close').click(function(e) {
+      e.preventDefault();
+      $('.mini-cart-content').hide(0);
+    });
+  });
+</script>
