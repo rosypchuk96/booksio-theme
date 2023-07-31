@@ -23,249 +23,44 @@
                <li class="nav item"><span class="delimiter"></span></li>
                <li class="nav item"><a href="#addresses">Address Book</a></li>
                <li class="nav item"><a href="#account-info">Account Information</a></li>
-               <li class="nav item"><a href="#store-credit">Store Credit</a></li>
-               <li class="nav item"><a href="#gift-card">Gift Card</a></li>
                <li class="nav item"><span class="delimiter"></span></li>
                <li class="nav item"><a href="#gift-registry">Gift Registry</a></li>
-               <li class="nav item"><a href="#payment-methods">My Payment Options</a></li>
                <li class="nav item"><a href="#returns">My Returns</a></li>
-               <li class="nav item"><a href="#social-accounts">My Social Accounts</a></li>
             </ul>
          </div>
       </div>
    </div>
    <div class="tabs">
-    <div class="column main" id="account">
-        <input name="form_key" type="hidden" value="opij28QGNnAoMoTX"> 
-        <div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}" style="display: none;">
-          <!-- ko template: getTemplate() --><!-- /ko -->
-        </div>
-        <div></div>
-        <!-- Yotpo - Add body class --><!--/ Yotpo - Add body class --><!-- Yotpo - Widget Script --><!--/ Yotpo - Widget Script --> 
-        <div class="block block-dashboard-info">
-          <div class="block-title"><strong>Account Information</strong></div>
-          <div class="block-content">
-              <div class="box box-information">
-                <strong class="box-title"><span>Contact Information</span></strong> 
-                <div class="box-content">
-                    <p><strong>Name</strong>{{ customer.name }}<br> <strong>Email</strong>{{ customer.email }}<br></p>
-                </div>
-                <div class="box-actions"><a class="action edit" href="#account-info"><span>Edit</span></a></div>
-              </div>
-              <div class="box box-newsletter">
-                <strong class="box-title"><span>Newsletters</span></strong> 
-                {% if customer.accepts_marketing == true %}
-                  <div class="box-content">
-                      <p> You are subscribed to our newsletter. </p>
-                  </div>
-                {% else %}
-                  <div class="box-content">
-                      <p> You aren't subscribed to our newsletter. </p>
-                  </div>
-                  <div class="box-actions"><a class="action edit" href="#manage-subscription"><span>Edit</span></a></div>
-                {% endif %}
-              </div>
-          </div>
-        </div>
-        <div class="block block-dashboard-addresses">
-          <div class="block-title"><strong>Address Book</strong> <a class="action edit" href="https://www.booksio.com/customer/address/"><span>Manage Addresses</span></a></div>
-          <div class="block-content">
-              <div class="box box-billing-address">
-                <strong class="box-title"><span>Default Billing Address</span></strong> 
-                <div class="box-content">
-                  {% if customer.addresses_count > 1 %}
-                    {% for address in customer.addresses %}
-                      {% if address != customer.default_address and address.last_name %}
-                        {% assign billing_address = address %}
-                        {% break %}
-                      {% endif %}
-                      {% assign billing_address = customer.default_address %}
-                    {% endfor %}
-                  {% endif %}
-                  {% if billing_address %}
-                    <address>
-                      <div class="address-name">
-                          <strong>Name</strong>
-                          <p>
-                            {{ billing_address.first_name }}
-                            {{ billing_address.last_name }}
-                          </p>
-                      </div>
-                      <div class="address-address">
-                          <div class="address-item">
-                            <strong>Address</strong>
-                            <p>
-                                <span>{{ billing_address.address1 }} {{ billing_address.address2 }}</span><br>
-                                <span>{{ billing_address.city }}</span>
-                                <span>, {{ billing_address.province }}</span>
-                                <span>, {{ billing_address.zip }}</span>
-                                <br><span>{{ billing_address.country }}</span>
-                            </p>
-                          </div>
-                      </div>
-                      <div class="address-phone">{{ billing_address.phone }}</div>
-                    </address>
-                  {% else %}
-                    <address>You have not set a default billing address.</address>
-                  {% endif %}
-                </div>
-                <div class="box-actions"><a class="action edit" href="https://www.booksio.com/customer/address/edit/id/1089/" data-ui-id="default-billing-edit-link"><span>Edit</span></a></div>
-              </div>
-              <div class="box box-shipping-address">
-                <strong class="box-title"><span>Default Shipping Address</span></strong> 
-                <div class="box-content">
-                  {% if customer.default_address %}
-                    <address>
-                      <div class="address-name">
-                          <strong>Name</strong>
-                          <p>
-                            {{ customer.default_address.first_name }}
-                            {{ customer.default_address.last_name }}
-                          </p>
-                      </div>
-                      <div class="address-address">
-                          <div class="address-item">
-                            <strong>Address</strong>
-                            <p>
-                                <span>{{ customer.default_address.address1 }} {{ customer.default_address.address2 }}</span><br>
-                                <span>{{ customer.default_address.city }}</span>
-                                <span>, {{ customer.default_address.province }}</span>
-                                <span>, {{ customer.default_address.zip }}</span>
-                                <br><span>{{ customer.default_address.country }}</span>
-                            </p>
-                          </div>
-                      </div>
-                      <div class="address-phone">{{ customer.default_address.phone }}</div>
-                    </address>
-                  {% else %}
-                    <address>You have not set a default billing address.</address>
-                  {% endif %}
-                </div>
-                <div class="box-actions"><a class="action edit" href="https://www.booksio.com/customer/address/edit/id/1089/" data-ui-id="default-shipping-edit-link"><span>Edit</span></a></div>
-              </div>
-          </div>
-        </div>
+    <div class="column main active" id="account">
+      {% include 'account-main-tab' %}
     </div>
 
     <div class="column main" id="manage-subscription">
-      <input name="form_key" type="hidden" value="opij28QGNnAoMoTX"> 
-      <div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}" style="display: none;">
-          <!-- ko template: getTemplate() -->
-          <!-- /ko -->
-      </div>
-      <div></div>
-      <!-- Yotpo - Add body class --><!--/ Yotpo - Add body class --><!-- Yotpo - Widget Script --><!--/ Yotpo - Widget Script -->  
-      <div class="form form-newsletter-manage" method="post" id="form-validate" data-hs-cf-bound="true">
-          <fieldset class="fieldset">
-            <input name="form_key" type="hidden" value="opij28QGNnAoMoTX"> 
-            <legend class="legend"><span>Subscription option</span></legend>
-            <br> 
-            <div class="field choice"><input type="radio" name="is_subscribed" id="subscription" value="1" title="General Subscription" class="checkbox" checked><label for="subscription" class="label"><span>General Subscription</span></label></div>
-          </fieldset>
-          <div class="actions-toolbar">
-            <div class="primary"><button id="subscribe-btn" type="submit" title="Save" class="action save primary"><span>Save</span></button></div>
-          </div>
-      </div>
-      <div style="display: none !important;" class="subscribe-form">
-      {% form 'customer', id: formId, novalidate: 'novalidate' %}
-        <input
-          type="hidden"
-          name="contact[tags]"
-          value="newsletter">
-        <div class="field newsletter">
-          <div class="control"><input name="contact[email]" type="email" value="{{ customer.email }}"></div>
-        </div>
-        <div class="actions"><button class="action subscribe primary" title="Sign Up" type="submit" data-form-type="action,subscribe"><span>Sign Up</span></button></div>
-      {% endform %}
-      </div>
+      {% include 'account-subscription' %}
     </div>
 
     <div class="column main" id="orders">
-      <div class="block block-order-history">
-        <div class="block-title"><strong>My Orders</strong></div>
-        <div class="block-content">
-        {% if customer.orders.size != 0 %}
-          <div class="table-wrapper orders-history">
-            <table class="data table table-order-items history" id="my-orders-table">
-                <caption class="table-caption">Orders</caption>
-                <thead>
-                  <tr>
-                      <th scope="col" class="col id">Order #</th>
-                      <th scope="col" class="col date">Date</th>
-                      <th scope="col" class="col shipping">Ship To</th>
-                      <th scope="col" class="col total">Total</th>
-                      <th scope="col" class="col status">Status</th>
-                      <th scope="col" class="col actions">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for order in customer.orders %}
-                    <tr class="order-line">
-                        <td data-th="Order #" class="col id">{{ order.order_number }}</td>
-                        <td data-th="Date" class="col date">{{ order.created_at | date: "%m/%e/%y" }}</td>
-                        <td data-th="Ship To" class="col shipping">
-                          {% if order.shipping_address %}
-                            <span>{{ order.shipping_address.address1 }} {{ order.shipping_address.address2 }}</span><br>
-                            <span>{{ order.shipping_address.city }}</span>
-                            <span>, {{ order.shipping_address.province }}</span>
-                            <span>, {{ order.shipping_address.zip }}</span>
-                            <br><span>{{ order.shipping_address.country }}</span>
-                          {% endif %}
-                        </td>
-                        <td data-th="Order Total" class="col total"><span class="price">{{ order.total_price | money }}</span></td>
-                        <td data-th="Status" class="col status">{{ order.fulfillment_status_label }}</td>
-                        <td data-th="Actions" class="col actions"><span class="arrow-icon" style="display: none;"></span> <a href="{{ order.customer_url }}" class="action view"><span>View Order</span></a> 
-                    </tr>
-                  {% endfor %}
-                </tbody>
-            </table>
-          </div>
-        {% else %}
-          <div class="message info empty"><span>You have placed no orders.</span></div>
-        {% endif %}
-        </div>
-      </div>
+      {% include 'account-orders' %}
     </div>
 
-    <div class="column main active">
-      <div class="products wrapper grid products-grid">
-        {% assign digital_products = "" | split: '' %}
-        {% for order in customer.orders %}
-          {% for item in order.line_items %}
-            {% unless item.requires_shipping or item.gift_card %}
-              {% assign digital_products = digital_products | push: item %}
-            {% endunless %}
-          {% endfor %}
-        {% endfor %}
-        {% if digital_products %}
-          <ol class="products list items product-items products-grid">
-            {% for line_item in digital_products %}
-              <li class="item product product-item">
-                  <div role="group" aria-label="product" class="product-item-info" id="product-item-info_5101">
-                    <a href="" class="product photo product-item-photo">
-                      {{ line_item | img_url: '500x500' | img_tag }}
-                    </a> 
-                    <div class="product details product-item-details">
-                        <strong class="product name product-item-name">{{ line_item.product.title }}</strong> 
-                        <div class="author-wrapper"> 
-                          {% if line_item.product.metafields.custom.author %}
-                            <a target="_blank" href="/search?q={{ line_item.product.metafields.custom.author }}">
-                                <p class="author">{{ line_item.product.metafields.custom.author }}</p>
-                            </a>
-                          {% endif %}
-                        </div>
-                        {% comment %}
-                        <div class="button-wrapper"> <button data-link="https://read.booksio.com/magento/Eve%27s+Diary/d82c7617-8d71-489b-b35a-bafb6d7dc28b/8u2rcyee3uukw2is0mf04dtkul93we6v/digital" id="download_" title="Read Online" class="button online action primary read-online">Read Online</button>  </div>
-                        {% endcomment %}
-                    </div>
-                  </div>
-              </li>
-            {% endfor %}
-          </ol>
-        {% else %}
-          <div class="message info empty"><span>You have not purchased any downloadable products yet.</span></div>
-        {% endif %}
-      </div>
+    <div class="column main downloadable-customer-products" id="products">
+      {% include 'account-downloadable-products' %}
+    </div>
+
+    {% include 'account-addresses' %}
+
+    <div class="column main" id="account-info">
+      {% include 'account-edit-info' %}
+    </div>
+
+    <div class="column main" id="store-credit">
+      {% include 'account-store-credit' %}
+    </div>
+
+    <div class="column main" id="gift-card">
+    </div>
+
+    <div class="column main" id="gift-registry">
     </div>
   </div>
 </div>
@@ -273,6 +68,120 @@
 <style>
   .sidebar .block:last-child {
     margin-bottom: 56px;
+  }
+  .downloadable-customer-products a.product.photo.product-item-photo img {
+    height: 265px;
+  }
+  .sidebar.sidebar-main .title strong {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 22px;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato";
+  }
+  .product.name a {
+    font-weight: inherit;
+    font-family: "LatoBold";
+  }
+  strong {
+    font-family: "LatoBold";
+  }
+  .cf-field[data-cf-field-type=group] {
+    border: none;
+  }
+  .cf-cancel {
+    display: none;
+  }
+  .box-title {
+    text-transform: uppercase;
+  }
+  .cf-form-inner .cf-cancel {
+    display: none !important;
+  }
+  .cf-form-inner .cf-form-actions {
+    margin-top: 0 !important;
+    padding-left: 16px;
+  }
+  .cf-form-inner .cf-form-actions button {
+    width: 97px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11.8841px;
+    line-height: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    background: #ff8e0f;
+    border: 1px solid #ff8e0f;
+    border-radius: 2px;
+  }
+  .charity-selector {
+    display: none !important;
+  }
+  #store-credit .block-content .box .box-content strong {
+    margin-right: 30px;
+    width: 43px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 35px;
+    color: #1f1f1f;
+    text-transform: uppercase;
+  }
+  #store-credit .block-content .box .box-content {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #888686;
+  }
+  #store-credit .block-content .box .box-actions .action.edit {
+    width: 162px;
+    font-size: 12px;
+    background-color: #000;
+    color: #fff;
+    padding: 3px 0;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 3px;
+  }
+  @media (min-width: 1200px) {
+    .cf-form-inner .cf-form-step > .cf-fields-container {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
+    }
+
+    .cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container {
+      border-bottom: 1px solid #eee;
+      height: auto;
+    }
+
+    .cf-form-inner .cf-form-step > .cf-fields-container > .cf-field-container:first-child {
+      border-right: 1px solid #eee;
+    }
+
+    #store-credit .block-content .box {
+      min-height: 500px;
+    }
+
+    #store-credit .block-content .box .box-content {
+      padding-left: 30px;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 22px;
+      color: #888686;
+    }
+
+    #store-credit .block-content .box .box-actions {
+      padding-left: 30px;
+    }
   }
 </style>
 

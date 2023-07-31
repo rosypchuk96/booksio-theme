@@ -5,7 +5,7 @@
   {% assign is_subdomain = true %}
   {% assign subdomain = host_arr[0] %}
 {% endif %}
-<div id="main-content" class="page-main page-wrapper">
+<div id="main-content" class="page-main page-wrapper" data-collection="{{ collection.handle }}">
     <nav class="breadcrumbs" aria-label="breadcrumbs">
       <ul class="items">
         <li class="item home">
@@ -137,6 +137,13 @@
     }
     .filter-actions {
       margin: 0;
+    }
+    #main-content[data-collection="gift-cards"] .product-items.items .product-item .product-item-photo {
+      min-height: 167px;
+      max-height: 167px;
+    }
+    #main-content[data-collection="gift-cards"] .product-items.items .product-image-wrapper {
+      padding: 0 !important;
     }
   </style>
   

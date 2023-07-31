@@ -202,6 +202,9 @@ header .sections .active>a {
   .columns .sidebar-main.account-navigation {
     order: -1;
   }
+  #html-body .downloadable-customer-products .products.list.items.product-items .product-item {
+    width: 100% !important;
+  }
 }
 .books-banner {
   padding: 10px 0 0;
@@ -232,9 +235,6 @@ header .sections .active>a {
   color: #41c2ff;
   border: none;
   font-weight: 700;
-  font-family: "LatoBold";
-}
-#html-body.account .block-collapsible-nav .block-collapsible-nav-title strong {
   font-family: "LatoBold";
 }
 #html-body.account .tabs .column {

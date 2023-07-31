@@ -1,0 +1,194 @@
+{
+  "wrapper": "div.page-product-giftcard.catalog-product-view.page-layout-1column",
+  "sections": {
+    "gift-card": {
+      "type": "gift-card",
+      "settings": {
+      }
+    },
+    "e865c050-9601-43cc-9049-34fc077cecc0": {
+      "type": "product-cards",
+      "blocks": {
+        "731ac957-9ad6-42a4-a6da-d368968dfed0": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/box-image-1.png",
+            "title": "Choose Your Cause",
+            "text": "<p>If there’s a cause or charity you feel strongly about, we can make it happen! Just visit your account profile and pick one that is on our approved list!<\/p>"
+          }
+        },
+        "bfcc759f-e05d-4687-a913-5b8ec093a8a0": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/box-image-2.png",
+            "title": "Make a Difference",
+            "text": "<p>We’ll automatically donate 10% of your purchase each month to the cause or charity we are raising money for that month, and all you have to do is shop.<\/p>"
+          }
+        },
+        "522e72a1-0ea4-41af-90ea-eaf18ef33152": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/box-image-3.png",
+            "title": "Read Together",
+            "text": "<p>Join readers passionate about inspiring change. We’re connecting readers around the world through amazing stories that make a difference.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "731ac957-9ad6-42a4-a6da-d368968dfed0",
+        "bfcc759f-e05d-4687-a913-5b8ec093a8a0",
+        "522e72a1-0ea4-41af-90ea-eaf18ef33152"
+      ],
+      "settings": {
+      }
+    },
+    "f471c8e2-5d66-42a8-8c9f-126ab1a6866d": {
+      "type": "product-reviews",
+      "blocks": {
+        "efd36d49-10a4-4e6d-99e3-65c2e66d32a2": {
+          "type": "item",
+          "settings": {
+            "title": "Good Business, Great Cause",
+            "text": "<p>Booksio is one of the few online retailers that I feel good about shopping with. I picked up a book I’d been meaning to read and found something new while supporting a cause I care about. My books arrived on time and in good shape. I’ll definitely be shopping with Booksio again.<\/p>",
+            "author": "— Kurt P."
+          }
+        },
+        "f3eec887-640a-4277-a49e-31f44908424b": {
+          "type": "item",
+          "settings": {
+            "title": "Confidence in the Mission",
+            "text": "<p>Shopping with Booksio exposes me to new causes with monthly supporting literature. I can choose to read what I want and know that way more than 0.5% of the purchase is going to a good cause that has been vetted.<\/p>",
+            "author": "— Alanna J."
+          }
+        }
+      },
+      "block_order": [
+        "efd36d49-10a4-4e6d-99e3-65c2e66d32a2",
+        "f3eec887-640a-4277-a49e-31f44908424b"
+      ],
+      "settings": {
+      }
+    },
+    "4e696fd9-3550-4dd7-9fe9-02f4cc64edaf": {
+      "type": "product-how-it-works",
+      "blocks": {
+        "ad43ceac-a19e-4b79-ad04-04f8956ec93c": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/one_1.png",
+            "title": "BROWSE OUR COLLECTION",
+            "text": "Search for a book or browse through categories to find over 15 million titles of books."
+          }
+        },
+        "3a75392e-fbba-4ab1-9af6-bc4d637723a8": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/two_1.png",
+            "title": "PURCHASE YOUR BOOKS",
+            "text": "Create an account and complete your purchase, we’ll ship your books within 3-4 business days."
+          }
+        },
+        "bacb9fc8-84f1-4f7a-b7b9-522e8d8266e8": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/three_1.png",
+            "title": "READ WITH A PURPOSE",
+            "text": "10% of all of your purchases will go towards the charity you choose. Support a good cause and read at the same time!"
+          }
+        }
+      },
+      "block_order": [
+        "ad43ceac-a19e-4b79-ad04-04f8956ec93c",
+        "3a75392e-fbba-4ab1-9af6-bc4d637723a8",
+        "bacb9fc8-84f1-4f7a-b7b9-522e8d8266e8"
+      ],
+      "settings": {
+        "title": "Making A Difference",
+        "title_2": "<span style=\"color: #298fc2;\">HOW<\/span> BOOKSIO WORKS",
+        "text": "<p style=\"text-align: left;\"><span style=\"font-size: 20px; line-height: 28px; color: #212322;\"><strong>It’s possible to purchase books at almost any store, so why Booksio?<\/strong> With every book you buy from us, we donate 10% of the total cost to charity. Every month, we pick a new charitable cause for which you can receive literary support with your purchase. And we’re not just about selling books - we’re about reading and storytelling that makes a difference in this world.<\/span><\/p>",
+        "url": "",
+        "button_text": ""
+      }
+    },
+    "17f55de1-de93-4e69-b5f4-a004362ab5e3": {
+      "type": "product-faq",
+      "blocks": {
+        "80827062-ec5b-4768-b57c-d77fb463a772": {
+          "type": "item",
+          "settings": {
+            "title": "What do I do if I receive the wrong product or if it arrives damaged?",
+            "text": "<p>We’re so sorry this happened! Don’t hesitate to get in touch with our customer care team on this<a href=\"https:\/\/www.booksio.com\/contact\/\">page<\/a>within two weeks of delivery to describe what you received. Please include your order number (it looks like “BOOK-############” and was included in your confirmation email) and email address used for the purchase. A photo of the product in question is helpful too! We’ll work with you to resolve the problem as soon as possible.<\/p>"
+          }
+        },
+        "0a779455-b66e-401b-961f-a602789ae6c5": {
+          "type": "item",
+          "settings": {
+            "title": "Can I cancel my order?",
+            "text": "<p>Yes, you have the ability to cancel your order. Please reach out to our customer care team on this page, and we will be happy to assist you.<\/p>"
+          }
+        },
+        "832b2c52-de9a-4cde-abcb-da74a216dfb8": {
+          "type": "item",
+          "settings": {
+            "title": "If I don’t live in the US, can I still make digital purchases?",
+            "text": "<p>At this time, Booksio is ONLY available to US customers, both for print and digital orders. We are working to start accepting non-US orders in 2023.<\/p>"
+          }
+        },
+        "375e87fb-a767-43d9-a446-1952e5ce23bc": {
+          "type": "item",
+          "settings": {
+            "title": "How do I update my billing information?",
+            "text": "<p>After placing your first order with Booksio, you can change your billing information for future orders by logging into your account and selecting <a href=\"https:\/\/www.booksio.com\/customer\/paymentinfo\/\">\"My Payment Options\"<\/a>.<\/p>"
+          }
+        },
+        "61cb221e-1bc9-4fbc-bc3e-87ec1c508a82": {
+          "type": "item",
+          "settings": {
+            "title": "How do I track my book order?",
+            "text": "<p>You will receive an email with the tracking number, as well as a link, as soon as your order ships.<\/p>"
+          }
+        },
+        "9bebe89e-0b28-4554-8922-023603a462b1": {
+          "type": "item",
+          "settings": {
+            "title": "How can I access my ebook and audiobook purchases?",
+            "text": "<p>All of your digital purchases from Booksio can be accessed through our app, available on both the <a href=\"https:\/\/apps.apple.com\/tt\/app\/booksio\/id1590368314\">Apple App Store <\/a>for iOS devices and in the <a href=\"https:\/\/play.google.com\/store\/search?q=booksio&c=apps\">Google Play Store <\/a>for Android devices. You can sign in with your existing Booksio.com account to find your entire digital library.<\/p>"
+          }
+        },
+        "5f9841d7-a7c5-49bc-b458-531780d9746f": {
+          "type": "item",
+          "settings": {
+            "title": "Do gift cards provide a charitable donation?",
+            "text": "<p>At this time the act of buying a gift card does not trigger the 10% charitable donation. However, when the recipient redeems their gift card and makes a purchase, a charitable donation will occur at that time.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "80827062-ec5b-4768-b57c-d77fb463a772",
+        "0a779455-b66e-401b-961f-a602789ae6c5",
+        "832b2c52-de9a-4cde-abcb-da74a216dfb8",
+        "375e87fb-a767-43d9-a446-1952e5ce23bc",
+        "61cb221e-1bc9-4fbc-bc3e-87ec1c508a82",
+        "9bebe89e-0b28-4554-8922-023603a462b1",
+        "5f9841d7-a7c5-49bc-b458-531780d9746f"
+      ],
+      "settings": {
+      }
+    },
+    "subscribe": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "gift-card",
+    "e865c050-9601-43cc-9049-34fc077cecc0",
+    "f471c8e2-5d66-42a8-8c9f-126ab1a6866d",
+    "4e696fd9-3550-4dd7-9fe9-02f4cc64edaf",
+    "17f55de1-de93-4e69-b5f4-a004362ab5e3",
+    "subscribe"
+  ]
+}

@@ -1,0 +1,106 @@
+{% comment %}
+Renders gift card recipient form.
+Accepts:
+- product: {Object} product object.
+- form: {Object} the product form object.
+- section: {Object} section to which this snippet belongs.
+
+Usage:
+{% render 'gift-card-recipient-form', product: product, form: form, section: section %}
+{% endcomment %}
+<div class="giftcard form" data-container-for="giftcard_info">
+  {%- assign gift_card_recipient_control_flag = 'properties[__shopify_send_gift_card_to_recipient]' -%}
+  <script src="{{ 'recipient-form.js' | asset_url }}" defer="defer"></script>
+  <recipient-form
+    class="recipient-form"
+    data-section-id="{{ section.id }}"
+    data-product-variant-id="{{ product.selected_or_first_available_variant.id }}">
+    <div
+      class="product-form__recipient-error-message-wrapper"
+      role="alert"
+      {% unless form.errors %}
+      hidden
+      {% endunless %}>
+      <h2
+        class="form__message"
+        tabindex="-1"
+        autofocus>
+        <span class="error-message">{{ 'templates.contact.form.error_heading' | t }}</span>
+      </h2>
+
+      <ul>
+        {%- if form.errors -%}
+          {%- for field in form.errors -%}
+            <li>
+              {%- if field == 'form' -%}
+                {{ form.errors.messages[field] }}
+              {%- else -%}
+                <a href="#Recipient-{{ field }}-{{ section.id }}">
+                  {{ form.errors.messages[field] }}
+                </a>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        {%- endif -%}
+      </ul>
+    </div>
+    <fieldset class="fieldset giftcard send">
+       <legend class="legend"><span>Gift Card Information</span></legend>
+       <br> 
+       <div class="field recipient required">
+          <label for="giftcard_recipient_name" class="label"><span>Recipient Name</span></label> 
+          <div class="control">
+            <input type="text" id="giftcard_recipient_name" name="properties[Recipient name]" class="required-entry input-text" value="{{ form.name }}" aria-required="true">
+            <div id="RecipientForm-name-error-{{ section.id }}" class="form__message{% unless form.errors contains 'name' %} hidden{% endunless %}">
+              <span class="error-message">
+                {%- if form.errors contains 'name' -%}
+                  {{ form.errors.messages.name }}.
+                {%- endif -%}
+              </span>
+            </div>
+          </div>
+       </div>
+       <div class="field recipient email required">
+          <label for="giftcard_recipient_email" class="label"><span>Recipient Email</span></label> 
+          <div class="control">
+            <input type="email" id="giftcard_recipient_email" name="properties[Recipient email]" class="validate-email required-entry input-text" value="{{ form.email }}" aria-required="true" aria-invalid="true" aria-describedby="giftcard_recipient_email-error">
+            <div id="RecipientForm-email-error-{{ section.id }}" class="form__message{% unless form.errors contains 'email' %} hidden{% endunless %}">
+              <span class="error-message">
+                {%- if form.errors contains 'email' -%}
+                  {{ form.errors.messages.email }}.
+                {%- endif -%}
+              </span>
+            </div>
+          </div>
+       </div>
+       <div class="field text required">
+          {%- assign max_chars_message = 255 -%}
+          {%- assign max_chars_message_rendered = 'recipient.form.max_characters' | t: max_chars: max_chars_message -%}
+          {%- assign message_label_rendered = 'recipient.form.message_label' | t -%}
+          <label for="giftcard-message" class="label"><span>  Message (Maximum length: {{ max_chars_message }} characters)</span></label> 
+          <div class="control">
+             <textarea name="properties[Message]" id="giftcard-message" class="input-text giftcard-message-max-length required-entry" data-validate="{maxlength:255,messages:{maxlength:'Maximum length of the message is 255 characters.'}}" aria-required="true">    
+
+              <div id="RecipientForm-message-error-{{ section.id }}" class="form__message{% unless form.errors contains 'message' %} hidden{% endunless %}">
+                <span class="error-message">
+                  {%- if form.errors contains 'message' -%}
+                    {{ form.errors.messages.message }}.
+                  {%- endif -%}
+                </span>
+              </div>    
+          </div>
+       </div>
+    </fieldset>
+    <input
+      type="hidden"
+      name="{{ gift_card_recipient_control_flag }}"
+      value="if_present"
+      id="Recipient-control-{{ section.id }}">
+    <input
+      type="hidden"
+      name="properties[__shopify_offset]"
+      value=""
+      id="Recipient-timezone-offset-{{ section.id }}"
+      disabled>
+  </recipient-form>
+</div>

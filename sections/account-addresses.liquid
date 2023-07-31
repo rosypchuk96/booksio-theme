@@ -1,0 +1,65 @@
+<div class="page-main">
+<div class="lato-font box-model-64be653d4dac8" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-element="main" data-pb-style="PQ8YRYA">
+   <figure data-content-type="image" data-appearance="full-width" data-box-model="{}" data-element="main" data-pb-style="EXHNDHH"><img class="pagebuilder-mobile-hidden" src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_1.png?v=1689338176" alt="" title="" data-box-model="{}" data-element="desktop_image" data-pb-style="B2K4GBR"><img class="pagebuilder-mobile-only" src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/heading_icon_1.png?v=1689338176" alt="" title="" data-box-model="{}" data-element="mobile_image" data-pb-style="PO0IE6K"></figure>
+   <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="ITD7974" data-decoded="true" class="box-model-64be653d4dae0">
+      <h3 style="margin: 0;">
+         <span style="font-size: 34px; line-height: 42px;">
+         <span style="color: #41c2ff;">MY ACCOUNT</span>
+         </span>
+      </h3>
+   </div>
+</div>
+
+<div class="columns">
+   <div class="sidebar sidebar-main account-navigation">
+      <div class="block block-collapsible-nav">
+         <div class="title block-collapsible-nav-title"><strong> My Account</strong> <span class="icon" aria-hidden="true"></span></div>
+         <div class="content block-collapsible-nav-content" id="block-collapsible-nav">
+            <ul class="nav items">
+               <li class="nav item"><a href="/account">My Account</a></li>
+               <li class="nav item"><a href="/account#orders">My Orders</a></li>
+               <li class="nav item"><a href="/account#products">My Library</a></li>
+               <li class="nav item"><a href="/account#wishlist">My Wish List</a></li>
+               <li class="nav item"><span class="delimiter"></span></li>
+               <li class="nav item current"><a href="/account#addresses">Address Book</a></li>
+               <li class="nav item"><a href="/account#account-info">Account Information</a></li>
+               <li class="nav item"><span class="delimiter"></span></li>
+               <li class="nav item"><a href="/account#gift-registry">Gift Registry</a></li>
+               <li class="nav item"><a href="/account#returns">My Returns</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="tabs">
+    <div class="column main active address-form-tab" id="add-address">
+      {% include 'address-form' %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .sidebar .block:last-child {
+    margin-bottom: 56px;
+  }
+  .downloadable-customer-products a.product.photo.product-item-photo img {
+    height: 265px;
+  }
+  .sidebar.sidebar-main .title strong {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 22px;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato";
+  }
+  .product.name a {
+    font-weight: inherit;
+    font-family: "LatoBold";
+  }
+  strong {
+    font-family: "LatoBold";
+  }
+</style>
+
+{{ 'account.js' | asset_url | script_tag }}

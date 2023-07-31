@@ -1,0 +1,100 @@
+<div data-content-type="block" data-appearance="default" data-element="main" data-pb-style="S3BCCMJ" class="box-model-64c25a91bc002" style="background: #f1f1f1;">
+   <div class="widget block block-static-block">
+      <style>#html-body [data-pb-style=U2MN3KW]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0}#html-body [data-pb-style=S5A5FN7]{border-width:0}#html-body [data-pb-style=PEA84SG]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0;width:33.3333%;align-self:stretch}#html-body [data-pb-style=RHIJ4UX]{border-width:0}#html-body [data-pb-style=OUQBO6I]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0;width:33.3333%;align-self:stretch}#html-body [data-pb-style=O7VQC5B]{border-width:0}#html-body [data-pb-style=XYK1I9R]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0;width:33.3333%;align-self:stretch}#html-body [data-pb-style=HOGJVD7]{border-width:0}#html-body [data-pb-style=I24QHIS]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0}#html-body [data-pb-style=M44HUUS]{border-width:0}#html-body [data-pb-style=MPDAODK]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0;width:100%;align-self:stretch}#html-body [data-pb-style=K5ACEAL]{border-width:0}</style>
+      <div class="how-booksio-works box-model-64c25a91b7fa9 box-model-64c25a91bc00d" data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="U2MN3KW">
+         <div class="row-full-width-inner" data-element="inner">
+            <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="S5A5FN7" data-decoded="true" class="box-model-64c25a91b7fbb box-model-64c25a91bc018">
+               <style>
+                  .column-box-wrapper{
+                  text-align: center;
+                  padding: 0 30px;
+                  margin-top: -40px;
+                  }
+                  .column-title{
+                  font-size: 22px;
+                  line-height: 26px;
+                  font-weight: bold;
+                  font-family: lato;
+                  color: #212322;
+                  }
+                  .column-content{
+                  font-size: 18px;
+                  line-height: 22px;
+                  font-family: lato;
+                  color: #212322;
+                  }
+                  .box-model-64c25a91bc00d {
+                    margin-top: 60px;
+                    margin-right: 0px;
+                    margin-bottom: 0px;
+                    margin-left: 0px;
+                    padding-top: 15px;
+                    padding-right: 0px;
+                    padding-bottom: 135px;
+                    padding-left: 0px;
+                  }
+                  @media screen and (max-width: 767px) {
+                    .box-model-64c25a91bc00d {
+                      padding-bottom: 40px;
+                    }
+                  }
+               </style>
+            </div>
+            <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+              {% for block in section.blocks %}
+                <div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-box-model="{}" data-element="main" data-pb-style="PEA84SG">
+                    <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="RHIJ4UX" data-decoded="true" class="box-model-64c25a91b7fc8 box-model-64c25a91bc024">
+                      <div class="column-box-wrapper">
+                          <div class="column-box-image">
+                            {% if block.settings.icon != blank %}
+                              <img src="{{ block.settings.icon | img_url: 'master' }}" alt="" style="display: inline-block;">
+                            {% endif %}
+                          </div>
+                          <p class="column-title">{{ block.settings.title }}</p>
+                          <p class="column-content">{{ block.settings.text }}</p>
+                      </div>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+            <style type="text/css">.box-model-64c25a91b7fbb {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+            <style type="text/css">.box-model-64c25a91bc018 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+         </div>
+      </div>
+   </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Cards",
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Product Cards"
+      }
+    ]
+  }
+{% endschema %}

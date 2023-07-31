@@ -1,0 +1,36 @@
+
+<div class="products wrapper grid products-grid">
+  {% assign digital_products = "" | split: ',' %}
+  {% if digital_products %}
+    <ol class="products list items product-items products-grid">
+      {% for order in customer.orders %}
+        {% for line_item in order.line_items %}
+          {% unless line_item.requires_shipping or line_item.gift_card %}
+              <li class="item product product-item">
+                  <div role="group" aria-label="product" class="product-item-info" id="product-item-info_5101">
+                    <a href="{{ line_item.url }}" class="product photo product-item-photo">
+                      {{ line_item | img_url: '500x500' | img_tag }}
+                    </a> 
+                    <div class="product details product-item-details">
+                        <strong class="product name product-item-name"><a href="{{ line_item.url }}">{{ line_item.product.title }}</a></strong> 
+                        <div class="author-wrapper"> 
+                          {% if line_item.product.metafields.custom.author %}
+                            <a target="_blank" href="/search?q={{ line_item.product.metafields.custom.author }}">
+                                <p class="author">{{ line_item.product.metafields.custom.author }}</p>
+                            </a>
+                          {% endif %}
+                        </div>
+                        {% comment %}
+                        <div class="button-wrapper"> <button data-link="https://read.booksio.com/magento/Eve%27s+Diary/d82c7617-8d71-489b-b35a-bafb6d7dc28b/8u2rcyee3uukw2is0mf04dtkul93we6v/digital" id="download_" title="Read Online" class="button online action primary read-online">Read Online</button>  </div>
+                        {% endcomment %}
+                    </div>
+                  </div>
+              </li>
+          {% endunless %}
+        {% endfor %}
+      {% endfor %}
+    </ol>
+  {% else %}
+    <div class="message info empty"><span>You have not purchased any downloadable products yet.</span></div>
+  {% endif %}
+</div>

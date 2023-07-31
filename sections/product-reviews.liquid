@@ -1,0 +1,122 @@
+<div data-content-type="row" data-appearance="contained" data-element="main" class="product-reviews">
+   <div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-element="inner" data-pb-style="I24QHIS" class="box-model-64c25a91b7fe5 box-model-64c25a91bc042">
+      <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="M44HUUS" data-decoded="true" class="box-model-64c25a91b7fee box-model-64c25a91bc04b">
+         <style>
+            .review-static-wrapper {
+            width: 100%;
+            display: inline-block;
+            padding: 45px 50px 35px;
+            border: 1px solid #707070;
+            border-radius: 20px;
+            margin: -75px 35px 0 35px;
+            max-width: 440px;
+            background: #fff;
+            box-shadow: 0 0 20px rgb(0 0 0 / 16%);
+            color: #212322;
+            font-size: 18px;
+            line-height: 1.5;
+            position: relative;
+            vertical-align: top;
+            }
+            .review-static-wrapper .review-qoute {
+            background-image: url('https://cdn.shopify.com/s/files/1/0789/2592/2613/files/review-qoute.png?v=1690466944');
+            width: 50px;
+            height: 42px;
+            display: inline-block;
+            margin-bottom: 10px;
+            }
+            .review-static-wrapper .review-title {
+            margin: 0;
+            font-size: 24px;
+            line-height: 1.5;
+            color: #707070;
+            }
+            .review-static-wrapper .review-content {
+            font-size: 18px;
+            margin-bottom: 5px;
+            }
+            .review-static-wrapper .review-arthur {
+            text-align: right;
+            font-size: 22px;
+            font-weight: bold;
+            color: #707070;
+            }
+            .review-outter-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            justify-content: center;
+            }
+            .review-static-wrapper, .review-static-wrapper .review-title {
+            font-family: 'Lato';
+            }
+            @media screen and (max-width: 1144px) {
+              .review-static-wrapper {
+                margin: 25px 0;
+                padding: 25px;
+                max-width: 100%;
+              }
+            }
+            @media screen and (max-width: 768px) {
+              .product-reviews .review-outter-wrapper {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100% !important;
+              }
+            }
+         </style>
+      </div>
+      <div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main">
+         <div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-box-model="{}" data-element="main" data-pb-style="MPDAODK">
+            <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="K5ACEAL" data-decoded="true" class="box-model-64c25a91b7ff7 box-model-64c25a91bc055">
+               <div class="review-outter-wrapper">
+                {% for block in section.blocks %}
+                  <div class="review-static-wrapper">
+                     <span class="review-qoute"></span>
+                     <p class="review-title">{{ block.settings.title }}</p>
+                     <p class="review-content">{{ block.settings.text }}</p>
+                     <p class="review"><img src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/reviews.png?v=1690467077" style="display: inline-block;"></p>
+                     <p class="review-arthur">{{ block.settings.author }}</p>
+                  </div>
+                {% endfor %}
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Reviews",
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "text",
+            "id": "author",
+            "label": "Author"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom Content",
+        "name": "Product Reviews"
+      }
+    ]
+  }
+{% endschema %}

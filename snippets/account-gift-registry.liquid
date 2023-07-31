@@ -1,0 +1,164 @@
+ <div class="manage-payment-method">
+  <div class="block block-payment-options">
+      <div class="block-title"><strong>My Payment Options</strong></div>
+      <div class="block-content">
+        <div class="box box-cards-list">     </div>
+        <div class="box box-add-card">
+            <div class="box-title"><strong>  Add A Credit Card </strong></div>
+            <div class="box-content">
+              <form action="https://www.booksio.com/customer/paymentinfo/save/" method="post" id="form-validate" data-hasrequired="* Required Fields" novalidate="novalidate" data-hs-cf-bound="true">
+                  <input name="form_key" type="hidden" value="opij28QGNnAoMoTX"> <input type="hidden" name="id" value=""><input type="hidden" name="method" value="paradoxlabs_stripe"><input type="hidden" name="payment[token]" id="paradoxlabs_stripe-token" value=""><input type="hidden" name="payment[cc_type]" id="paradoxlabs_stripe-cc-type" value=""><input type="hidden" name="payment[cc_last4]" id="paradoxlabs_stripe-cc-last4" value=""><input type="hidden" name="payment[cc_exp_year]" id="paradoxlabs_stripe-cc-exp-year" value=""><input type="hidden" name="payment[cc_exp_month]" id="paradoxlabs_stripe-cc-exp-month" value="">
+                  <fieldset class="fieldset" id="paradoxlabs_stripe-payment-request-wrapper" style="display:none;">
+                    <label> <strong>Add a card from your wallet:</strong></label> 
+                    <div class="number">
+                        <div class="input-text" id="paradoxlabs_stripe-payment-request"></div>
+                    </div>
+                    <p>Or enter your credit card info:</p>
+                  </fieldset>
+                  <fieldset class="fieldset add-card-fieldset">
+                    <legend class="legend"><span>Cardholder Information</span></legend>
+                    <br> 
+                    <div class="name-fields">
+                        <div class="field field-name-firstname required">
+                          <label class="label" for="firstname"><span>First Name</span></label> 
+                          <div class="control"><input type="text" id="firstname" name="billing[firstname]" value="" title="First Name" placeholder="First Name" class="input-text required-entry" data-validate="{required:true}" aria-required="true"></div>
+                        </div>
+                        <div class="field field-name-lastname required">
+                          <label class="label" for="lastname"><span>Last Name</span></label> 
+                          <div class="control"><input type="text" id="lastname" name="billing[lastname]" value="" title="Last Name" placeholder="Last Name" class="input-text required-entry" data-validate="{required:true}" aria-required="true"></div>
+                        </div>
+                    </div>
+                    <div class="field company required">
+                        <label class="label" for="company"><span>Company Name</span></label> 
+                        <div class="control"><input type="text" name="billing[company]" value="" title="Company Name" placeholder="Company Name" class="input-text " id="company" aria-required="true"></div>
+                    </div>
+                    <div class="field street required">
+                        <label for="street" class="label"><span>Street</span></label> 
+                        <div class="control"><input type="text" placeholder="Address" name="billing[street][]" value="" title="Street Address" id="street" class="input-text required-entry" aria-required="true"></div>
+                    </div>
+                    <div class="field city required">
+                        <label class="label" for="city"><span>City</span></label> 
+                        <div class="control"><input type="text" name="billing[city]" value="" title="City" placeholder="Town / City" class="input-text required-entry" id="city" aria-required="true"></div>
+                    </div>
+                    <div class="field region required">
+                        <label class="label" for="region-id"><span>State/Province</span></label> 
+                        <div class="control">
+                          <select id="region-id" name="billing[region_id]" title="State/Province" class="validate-select required-entry" aria-required="true" defaultvalue="0">
+                              <option value="">Please select a state.</option>
+                              <option value="1">Alabama</option>
+                              <option value="2">Alaska</option>
+                              <option value="3">American Samoa</option>
+                              <option value="4">Arizona</option>
+                              <option value="5">Arkansas</option>
+                              <option value="6">Armed Forces Africa</option>
+                              <option value="7">Armed Forces Americas</option>
+                              <option value="8">Armed Forces Canada</option>
+                              <option value="9">Armed Forces Europe</option>
+                              <option value="10">Armed Forces Middle East</option>
+                              <option value="11">Armed Forces Pacific</option>
+                              <option value="12">California</option>
+                              <option value="13">Colorado</option>
+                              <option value="14">Connecticut</option>
+                              <option value="15">Delaware</option>
+                              <option value="16">District of Columbia</option>
+                              <option value="17">Federated States Of Micronesia</option>
+                              <option value="18">Florida</option>
+                              <option value="19">Georgia</option>
+                              <option value="20">Guam</option>
+                              <option value="21">Hawaii</option>
+                              <option value="22">Idaho</option>
+                              <option value="23">Illinois</option>
+                              <option value="24">Indiana</option>
+                              <option value="25">Iowa</option>
+                              <option value="26">Kansas</option>
+                              <option value="27">Kentucky</option>
+                              <option value="28">Louisiana</option>
+                              <option value="29">Maine</option>
+                              <option value="30">Marshall Islands</option>
+                              <option value="31">Maryland</option>
+                              <option value="32">Massachusetts</option>
+                              <option value="33">Michigan</option>
+                              <option value="34">Minnesota</option>
+                              <option value="35">Mississippi</option>
+                              <option value="36">Missouri</option>
+                              <option value="37">Montana</option>
+                              <option value="38">Nebraska</option>
+                              <option value="39">Nevada</option>
+                              <option value="40">New Hampshire</option>
+                              <option value="41">New Jersey</option>
+                              <option value="42">New Mexico</option>
+                              <option value="43">New York</option>
+                              <option value="44">North Carolina</option>
+                              <option value="45">North Dakota</option>
+                              <option value="46">Northern Mariana Islands</option>
+                              <option value="47">Ohio</option>
+                              <option value="48">Oklahoma</option>
+                              <option value="49">Oregon</option>
+                              <option value="50">Palau</option>
+                              <option value="51">Pennsylvania</option>
+                              <option value="52">Puerto Rico</option>
+                              <option value="53">Rhode Island</option>
+                              <option value="54">South Carolina</option>
+                              <option value="55">South Dakota</option>
+                              <option value="56">Tennessee</option>
+                              <option value="57">Texas</option>
+                              <option value="58">Utah</option>
+                              <option value="59">Vermont</option>
+                              <option value="60">Virgin Islands</option>
+                              <option value="61">Virginia</option>
+                              <option value="62">Washington</option>
+                              <option value="63">West Virginia</option>
+                              <option value="64">Wisconsin</option>
+                              <option value="65">Wyoming</option>
+                          </select>
+                          <input type="text" placeholder="State / Province" id="region" name="billing[region]" value="" title="State/Province" class="input-text" aria-required="true" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="field country required">
+                        <label class="label" for="country"><span>Country</span></label> 
+                        <div class="control">
+                          <select name="billing[country_id]" id="country" class="required-entry" title="Country" data-validate="{'validate-select':true}" aria-required="true">
+                              <option value="US" selected="selected">United States</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="phone-zip-fields">
+                        <div class="field zip required">
+                          <label class="label" for="zip"><span>Zip / Postal Code</span></label> 
+                          <div class="control"><input type="text" name="billing[postcode]" placeholder="Post Code" value="" title="Zip/Postal Code" id="zip" class="input-text validate-zip-international required-entry" aria-required="true"></div>
+                        </div>
+                        <div class="field telephone">
+                          <label class="label" for="telephone"><span>Telephone</span></label> 
+                          <div class="control"><input type="text" name="billing[telephone]" placeholder="Phone" value="" title="Phone Number" class="input-text validate-phoneLax-custom" id="telephone"></div>
+                        </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="fieldset payment items ccard paradoxlabs_stripe">
+                    <label class="legend"><span>Credit Card Information</span></label><br>  
+                    <div class="field number required">
+                        <div class="control">
+                          <div id="paradoxlabs_stripe-cc" class="StripeElement StripeElement--empty">
+                              <div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background-color: transparent !important; position: relative !important; opacity: 1 !important; --stripeElementWidth: 414.671875px;">
+                                <iframe name="__privateStripeFrame1796" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="https://js.stripe.com/v3/elements-inner-card-fc3d9301492660d5d28db03432a3149e.html#wait=false&amp;mids[guid]=NA&amp;mids[muid]=d31b20e8-2a0f-4daa-b0a7-bbaa4fd252b3cc6f9a&amp;mids[sid]=NA&amp;hidePostalCode=true&amp;hideIcon=false&amp;style[base][fontSize]=16px&amp;iconStyle=solid&amp;rtl=false&amp;componentName=card&amp;keyMode=live&amp;apiKey=pk_live_51LAbWfA1QICYXgE2mTpniY4ceNcLw5DU0grJqxyRnzvzjGI1sQf55LjrpQuMQksa6CUTq5TYkH3XalNLRWEDA3wK00UhnUUshk&amp;referrer=https%3A%2F%2Fwww.booksio.com%2Fcustomer%2Fpaymentinfo%2F&amp;controllerId=__privateStripeController1791" title="Secure card payment input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; transform: translate(0px) !important; color-scheme: only light !important; height: 19.2px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: -1px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background-color: transparent !important; pointer-events: none !important; font-size: 16px !important;" aria-required="true">
+                                <div style="display: block !important; position: absolute !important; top: 50% !important; right: -6px !important; width: 0px !important; margin: -16px 0px 0px !important; padding: 0px !important; border: 0px !important; background-image: none !important; opacity: 1 !important; overflow: hidden !important; visibility: visible !important; height: 32px !important; transition: width 0s ease 0.4s !important;"><iframe name="cardButton1797" frameborder="0" allowtransparency="true" scrolling="no" style="margin: 0px !important; transform: translate(0px) !important; color-scheme: only light !important; display: block !important; position: absolute !important; top: 0px !important; right: 0px !important; height: 32px !important; width: calc(var(--stripeElementWidth) + 12px) !important; padding: 0px !important; border: 0px !important; overflow: hidden !important; opacity: 1 !important; visibility: hidden !important; transition: visibility 0s ease 0.4s !important;" src="https://js.stripe.com/v3/elements-inner-link-button-for-card-1aea1959861066777a64a4ec8798d791.html#locale=en-GB&amp;style[backgroundColor]=&amp;style[foregroundColor]=&amp;iconStyle=solid&amp;frameId=__privateStripeFrame1796&amp;publishableKey=pk_live_51LAbWfA1QICYXgE2mTpniY4ceNcLw5DU0grJqxyRnzvzjGI1sQf55LjrpQuMQksa6CUTq5TYkH3XalNLRWEDA3wK00UhnUUshk&amp;stripeJsId=4012e263-2863-4dbb-bf33-c788a0bbf638&amp;mids[guid]=NA&amp;mids[muid]=d31b20e8-2a0f-4daa-b0a7-bbaa4fd252b3cc6f9a&amp;mids[sid]=NA" tabindex="-1"></iframe></div>
+                              </div>
+                          </div>
+                          <div class="note addon" id="paradoxlabs_stripe-stripe-error" style="display:none"></div>
+                        </div>
+                    </div>
+                  </fieldset>
+                  <div class="actions-toolbar">
+                    <div data-bind="scope: 'addressValidationMessage'">
+                        <!-- ko template:getTemplate() -->
+                        <!-- ko if: hasMessage --><!-- /ko -->
+                        <!-- /ko --><!-- ko if: showSuccessMessage --><!-- /ko -->
+                    </div>
+                    <div class="primary"><button type="submit" class="action save primary disabled" data-action="save-address" title="Save"><span>Save</span></button></div>
+                    <div class="secondary"><a class="action back" href="https://www.booksio.com/customer/paymentinfo/index/method/paradoxlabs_stripe/"><span>Cancel</span></a></div>
+                  </div>
+              </form>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
