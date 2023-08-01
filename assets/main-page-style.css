@@ -100,6 +100,9 @@
     color: #e02b27;
     font-size: 1.4rem;
 }
+#ContactForm .form__label span{
+    color: #e02b27;
+}
 @media (min-width: 768px), print{
     .contact__fields{
         display: -webkit-flex;
@@ -136,4 +139,13 @@
     .contact-index-index form.contact .field.name {
         padding-right: 10px;
     }
+}
+@media(max-width:767px){
+    .contact__button .button{
+        width: 100%;
+    }
+    #ContactForm .field{
+        padding-bottom: 28px;
+    }
+  
 }
