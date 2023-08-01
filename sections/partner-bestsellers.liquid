@@ -231,7 +231,7 @@
           <style type="text/css">.box-model-64a5c65d8cae5 {margin-top: 0px;margin-right: 0px;margin-bottom: 20px;}@media only screen and (max-width: 768px) {.box-model-64a5c65d8cae5 {margin-right: 0px;}}</style>
         </div>
 
-        {% assign restricted_collections = shop.metaobjects["partner_store_settings"][subdomain].restricted_collections.value %}
+        {% assign restricted_tags = shop.metaobjects["partner_store_settings"][subdomain].restricted_tags.value | downcase | newline_to_br | split: '<br />' %}
         {% assign restricted_formats = shop.metaobjects["partner_store_settings"][subdomain].restricted_formats.value | downcase | newline_to_br | split: '<br />' %}
         <div data-content-type="products" data-appearance="carousel" data-autoplay="false" data-autoplay-speed="4000" data-infinite-loop="true" data-show-arrows="true" data-show-dots="false" data-carousel-mode="default" data-center-padding="90px" data-element="main" data-pb-style="LAKM42B" class="box-model-64a5c65d77965 box-model-64a5c65d8cb32">
           {% assign collection_handle = section.settings.collection %}
@@ -252,10 +252,11 @@
                     {% assign is_restricted = true %}
                   {% endif %}
                 {% endif %}
-                {% if restricted_collections != blank %}
-                  {% for restricted_collection in restricted_collections %}
-                    {% for prod_collection in product.collections %}
-                      {% if prod_collection.handle == restricted_collection.handle %}
+                {% if restricted_tags != blank %}
+                  {% for tag in restricted_tags %}
+                    {% for prod_tag in product.tags %}
+                      {% assign formatted = prod_tag | downcase %}
+                      {% if formatted == tag %}
                         {% assign is_restricted = true %}
                         {% break %}
                       {% endif %}

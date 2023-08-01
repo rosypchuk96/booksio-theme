@@ -1,0 +1,39 @@
+<div id="confirmOverlay" class="am-center" style="display: none;">
+  <div id="confirmBox" class="amcart-confirm-block" style="">
+    <span title="Close" class="cross">×</span>
+    <div id="messageBox" class="amcart-message-box">
+        <a href="{{ product.url }}" title="Spare" class="added-item">{{ product.title }}</a> 
+        <p class="text">has been added to your cart</p>
+        <div class="am-photo-container">
+          <a href="{{ product.url }}" title="{{ product.title }}" tabindex="-1" class="product-item-photo">
+             <div class="amcart-image-success product-image-container-16537892">
+              {% if product.featured_image %}
+                <img class="amcart-image" src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
+              {% endif %}
+            </div>
+          </a>
+        </div>
+        <p id="amcart-count" class="text">There <span class="is">is</span> <a href="/cart" id="am-a-count" data-amcart="amcart-count" title="View Cart"><span id="popup-cart-quantity"></span> <span class="item-text">item</span></a>  in your cart.</p>
+        <p class="amcart-subtotal text">Cart Subtotal: <span class="am_price" data-amcart="amcart-price"><span class="price" id="popup-cart-total"></span></span></p>
+    </div>
+    <div id="confirmButtons" class="amcart-confirm-buttons">
+      <button class="button am-btn-left close" title="Continue" style="background: #bbb;">Continue</button>
+      <button onclick="window.location.href='/cart'" class="button am-btn-right" title="View Cart" style="background: rgba(255,142,15);">View Cart</button>
+    </div>
+    <div class="am-related-box"></div>
+  </div>
+</div>
+
+<style>
+  #confirmBox {
+    background: #fff;
+  }
+  #confirmBox a, #confirmBox a:hover, #confirmBox a:active, #confirmBox .amrelated-confirm-header {
+    color: #FF9416;
+  }
+  @media (min-width: 1000px) {
+    #confirmBox {
+      min-width: 400px;
+    }
+  }
+</style>

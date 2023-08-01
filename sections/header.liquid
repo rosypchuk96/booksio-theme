@@ -242,7 +242,7 @@
                   {% assign column_width = 25 %}
                 {% endif %}
                 {% if link.links != blank %}
-                  <div class="mgz-element {% if current_index == 3 %}main-joinmenu{% else %}main-books{% endif %} nav-item mega left_edge_menu_bar level0">
+                  <div class="mgz-element {% if link_title contains 'charities' %}main-joinmenu{% else %}main-books{% endif %} nav-item mega left_edge_menu_bar level0">
                     <a href="{{ link.url }}">
                       <span class="title">{{ link.title }}</span>
                     </a>
@@ -276,7 +276,7 @@
                                                 <span class="opener"></span>
                                                 <div class="item-submenu mgz-element-inner i3fks86-s">
                                                   {% for child_link_2 in child_link.links %}
-                                                    {% if current_index == 3 %}
+                                                    {% if link_title contains 'charities' %}
                                                       <div class="mgz-element nav-item {% if child_link_2.active %}active{% endif %}" data-icon="fas mgz-fa-angle-right">
                                                         <a href="{{ child_link_2.url }}">
                                                           <span class="title">{{ child_link_2.title }}</span>
@@ -296,7 +296,7 @@
                                               </div>
                                             </div>
                                           </div>
-                                          {% unless current_index == 3 %}
+                                          {% unless link_title contains 'charities' %}
                                             {% assign column_max = column_num | minus: 1 %}
                                             {% for i in (1..column_max) %}
                                               {% assign max = column_size %}
@@ -379,7 +379,7 @@
                                 </div>
                               {% endif %}
                             {% endfor %}
-                            {% if current_index == 3 and section.settings.charities_image != blank %}
+                            {% if link_title contains 'charities' and section.settings.charities_image != blank %}
                               <div class="tftnyvo mgz-element mgz-element-column menu-image-cols shop-magazines mgz-col-xl-3 mgz-col-lg-3 mgz-col-md-12 mgz-col-sm-12 mgz-col-xs-12 mgz-hidden-md mgz-hidden-sm mgz-hidden-xs magemanu-banner">
                                 <div class="mgz-element-inner tftnyvo-s">
                                   <div class="adja54p mgz-element mgz-child mgz-element-single_image mgz-hidden-sm mgz-hidden-xs mgz-image-hovers">

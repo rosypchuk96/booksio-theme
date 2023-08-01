@@ -1,3 +1,16 @@
+{% assign ny_collection = collections['ny-times-bestsellers'] %}
+{% assign magazines_collection = collections['magazines'] %}
+
+{% assign host = request.host %}
+{% assign host_arr = host | split: '.' %}
+{% if host_arr.size >= 3 %}
+  {% assign subdomain = host_arr[0] %}
+{% endif %}
+
+{% if subdomain %}
+    {% assign restricted_formats = shop.metaobjects["partner_store_settings"][subdomain].restricted_formats %}
+{% endif %}
+
 <div class="page-wrapper">
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul class="items">
@@ -5,6 +18,25 @@
       <a href="/" title="Go to Home Page">Home</a>
       <span class="icon" aria-hidden="true"></span>
     </li>
+    {% for collection in product.collections %}
+        {% if collection.handle == 'magazines' %}
+          {% assign is_magazine = true %}
+        {% endif %}
+        {% if collection.handle == 'ny-times-bestsellers' %}
+          {% assign is_best_seller = true %}
+        {% endif %}
+      {% endfor %}
+    {% if is_best_seller %}
+        <li class="item category">
+            <a href="{{ ny_collection.url }}">{{ ny_collection.title }}</a>
+            <span class="icon" aria-hidden="true"></span>
+        </li>
+    {% elsif is_magazine %}
+        <li class="item category">
+            <a href="{{ magazines_collectio.url }}">{{ magazines_collection.title }}</a>
+            <span class="icon" aria-hidden="true"></span>
+        </li>
+    {% endif %}
     <li class="item cms_page">
       <strong>{{ product.title }}</strong>
     </li>
@@ -29,11 +61,9 @@
                 <a target="_blank" href="/search?q={{ product.metafields.custom.author }}"><span class="author">{{ product.metafields.custom.author }}</span></a>     
               {% endif %}
             </div>
-            {% for collection in product.collections %}
-              {% if collection.handle == 'ny-times-bestsellers' %}
+            {% if is_best_seller %}
                 <div class="category-label-wrapper-outter"><span class="category-label-wrapper">NY Times® Bestsellers</span></div>
-              {% endif %}
-            {% endfor %}
+            {% endif %}
             <div class="product-info-title">
                <div class="page-title-wrapper product">
                   <h1 class="page-title">
@@ -41,60 +71,45 @@
                   </h1>
                </div>
             </div>
-            {% comment %}
+            {% assign variant_name = product.selected_variant.title | downcase %}
             <div id="cms-product-mapping-container">
-               <div class="cms-wrapper inactive" data-attribute="13">
+                <div class="cms-wrapper {% if product.selected_variant and variant_name == "audiobook" %}active{% else %}inactive{% endif %}" data-type="audiobook">
                   <style>#html-body [data-pb-style=B34SLQH]{border-width:0}</style>
-                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="B34SLQH" data-decoded="true" class="box-model-64c77560e3a6f">
-                     <p>Audiobooks are available immediately after purchase! Please download our <a href="/booksio_reader_app" target="_blank"><b>Booksio Reader App</b></a> and log in to begin reading! Booksio Audiobooks are not compatible with Kindle, Apple Books, or other proprietary devices.</p>
+                  <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="B34SLQH" data-decoded="true" class="box-model-64c77560e3a6f">
+                     <p>Audiobooks are available immediately after purchase! Please download our <a href="/booksio-reader-app" target="_blank"><b>Booksio Reader App</b></a> and log in to begin reading! Booksio Audiobooks are not compatible with Kindle, Apple Books, or other proprietary devices.</p>
                   </div>
-                  <style type="text/css">.box-model-64c77560e3a6f {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
                </div>
-               <div class="cms-wrapper inactive" data-attribute="14">
+               <div class="cms-wrapper {% if variant_name == "ebook" %}active{% else %}inactive{% endif %}" data-type="ebook">
                   <style>#html-body [data-pb-style=J2VCAJW]{border-width:0}</style>
-                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="J2VCAJW" data-decoded="true" class="box-model-64c77560e27bc">
-                     <p>Digital books are available immediately after purchase! Please download our <a href="/booksio_reader_app" target="_blank"><b>Booksio Reader App</b></a> and log in to begin reading! Booksio digital books are not compatible with Kindle, Apple Books, or other proprietary devices.</p>
+                  <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="J2VCAJW" data-decoded="true" class="box-model-64c77560e27bc">
+                     <p>Digital books are available immediately after purchase! Please download our <a href="/booksio-reader-app" target="_blank"><b>Booksio Reader App</b></a> and log in to begin reading! Booksio digital books are not compatible with Kindle, Apple Books, or other proprietary devices.</p>
                   </div>
-                  <style type="text/css">.box-model-64c77560e27bc {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
                </div>
-               <div class="cms-wrapper inactive" data-attribute="16">
+               <div class="cms-wrapper {% if variant_name == "print" %}active{% else %}inactive{% endif %}" data-type="print">
                   <style>#html-body [data-pb-style=MXOG72M]{border-width:0}</style>
-                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="MXOG72M" data-decoded="true" class="box-model-64c77560e4d1e">
+                  <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="MXOG72M" data-decoded="true" class="box-model-64c77560e4d1e">
                      <p>The first issue will arrive as soon as the next issue of the magazine is released. Please be patient, this might take 8-16 weeks for some titles! Order information is shared with the publisher directly who processes the subscription.</p>
                   </div>
-                  <style type="text/css">.box-model-64c77560e4d1e {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
                </div>
-               <div class="cms-wrapper inactive" data-attribute="17">
+               <div class="cms-wrapper {% if variant_name == "digital" %}active{% else %}inactive{% endif %}" data-type="digital">
                   <style>#html-body [data-pb-style=ASK5K6G]{border-width:0}</style>
-                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="ASK5K6G" data-decoded="true" class="box-model-64c77560e5fe2">
+                  <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="ASK5K6G" data-decoded="true" class="box-model-64c77560e5fe2">
                      <p>Your first issue will arrive in your email inbox as soon as the next issue of your magazine is released. Please remember to check your spam folder, as your instructions for accessing your digital subscription will come directly from our digital magazine partner.</p>
                   </div>
-                  <style type="text/css">.box-model-64c77560e5fe2 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
                </div>
-               <div class="cms-wrapper inactive" data-attribute="15">
+               <div class="cms-wrapper inactive">
                   <style>#html-body [data-pb-style=FCCJLJ1]{border-width:0}</style>
-                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="FCCJLJ1" data-decoded="true" class="box-model-64c77560e7270">
+                  <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="FCCJLJ1" data-decoded="true" class="box-model-64c77560e7270">
                      <p>Paperback books are processed by our warehouse. Please allow for 3-5 business days for in-stock books to be shipped and received.</p>
                   </div>
-                  <style type="text/css">.box-model-64c77560e7270 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
                </div>
-               <div class="cms-wrapper inactive" data-attribute="19">
+               <div class="cms-wrapper {% if variant_name == "hardcover" or variant_name == "paperback" %}active{% else %}inactive{% endif %}" data-type="hardcover,paperback">
                   <style>#html-body [data-pb-style=HL6CVEN]{border-width:0}</style>
-                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="HL6CVEN" data-decoded="true" class="box-model-64c77560e85de">
+                  <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="HL6CVEN" data-decoded="true" class="box-model-64c77560e85de">
                      <p>Physical books usually arrive within 2-5 days, subject to availability.</p>
                   </div>
-                  <style type="text/css">.box-model-64c77560e85de {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
-               </div>
-               <div class="cms-wrapper inactive" data-attribute="18">
-                  <style>#html-body [data-pb-style=HL6CVEN]{border-width:0}</style>
-                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="HL6CVEN" data-decoded="true" class="box-model-64c77560e85de">
-                     <p>Physical books usually arrive within 2-5 days, subject to availability.</p>
-                  </div>
-                  <style type="text/css">.box-model-64c77560e85de {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
                </div>
             </div>
-          {% endcomment %}
-            <div class="pre-back-order-text" style="display: none;"></div>
             {% form 'product', product, id: 'addToCartForm', class: 'product-single__form pdp-details' %}
               <div class="product-add-form new_indicator">
                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
@@ -107,8 +122,8 @@
                           <div aria-activedescendant="" tabindex="0" aria-invalid="false" aria-required="true" role="listbox" aria-labelledby="option-label-format-237" class="swatch-attribute-options clearfix">
                             {% for value in option.values %}
                               {%- for variant in product.variants -%}
-                                {%- if variant.options contains value and variant.available -%}
-                                  <div class="swatch-option text price-swatch" id="option-label-format-237-item-34" aria-checked="" aria-describedby="option-label-format-237" aria-label="Paperback, Large Print" tabindex="0" role="option" data-option-type="0" data-option-id="34" data-option-label="Paperback, Large Print">
+                                {%- if variant.options contains value -%}
+                                    <div class="swatch-option text price-swatch {% if product.selected_variant == variant %}selected{% endif %}" id="option-label-format-237-item-34" aria-checked="" aria-describedby="option-label-format-237" data-variant="{{ variant.id }}" data-variant-price="{{ variant.price | money }}" data-variant-title="{{ variant.title | downcase }}">
                                       <p class="label">{{ variant.title }}</p>
                                       <div class="prices">
                                         {% if variant.compare_at_price %}
@@ -127,22 +142,23 @@
                   {% endif %}
                 {% endfor %}
               </div>
+              <div class="pre-back-order-text" style="display: none;margin-top: -20px;margin-bottom: 40px;">Backorders usually ship in 1-3 weeks.</div>
               <div class="product-options-bottom">
                 <div class="product-actions-box" style="">
                   <div class="box-tocart">
                       <div class="fieldset">
-                        <div class="field qty" {% unless product.selected_variant or product.has_only_default_variant %}style="display: none;"{% endunless %}>
+                        <div class="field qty" {% unless product.selected_variant or product.has_only_default_variant or product.variants.size == 1 %}style="display: none;"{% endunless %}>
                             <label class="label" for="qty"><span>Qty</span></label> 
                             <div class="control"><input type="number" name="qty" id="qty" min="1" value="1" title="Qty" class="input-text qty" data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:10000}}"></div>
                         </div>
                         <div class="actions">
-                            <button type="submit" title="Add to Cart" class="action primary tocart" id="product-addtocart-button" {% unless product.selected_variant or product.has_only_default_variant %}disabled="disabled"{% endunless %} style="margin-left: 0px;"><span>Add to Cart</span></button>   
+                            <button type="submit" title="Add to Cart" class="action primary tocart" id="product-addtocart-button" {% unless product.selected_variant or product.has_only_default_variant or product.variants.size == 1 %}disabled="disabled"{% endunless %} {% if product.selected_variant or product.has_only_default_variant or product.variants.size == 1 %}style="margin-left: 15px;"{% else %}style="margin-left: 0;"{% endif %}><span>Add to Cart</span></button>   
                             <div id="instant-purchase" data-bind="scope:'instant-purchase'">
                               <!-- ko template: getTemplate() -->
                               <!-- ko if: showButton() --><!-- /ko -->
                               <!-- /ko -->
                             </div>
-                            <div class="price-box price-final_price" data-role="priceBox" data-product-id="15443735" data-price-box="product-id-15443735" {% unless product.selected_variant or product.has_only_default_variant %}style="display: none;"{% endunless %}> 
+                            <div class="price-box price-final_price" data-role="priceBox" data-product-id="15443735" data-price-box="product-id-15443735" {% unless product.selected_variant or product.has_only_default_variant or product.variants.size == 1 %}style="display: none;"{% endunless %}> 
                               <span class="normal-price">
                                 <span class="normal-price">
                                   <span class="pricing-element price-container">
@@ -254,43 +270,52 @@
                             {% if product.metafields.custom.recommended_audience %}
                               <tr>
                                 <th class="col label" scope="row">Recommended Audience</th>
-                                <td class="col data audience" data-th="Recommended Audience"><span>{{ product.metafields.custom.recommended_audience }}</span></td>
+                                <td class="col data"><span>{{ product.metafields.custom.recommended_audience }}</span></td>
                               </tr>
                             {% endif %}
+                            {% for variant in product.variants %}
+                                {% if variant.metafields.custom.isbn_13 != blank %}
+                                <tr {% unless product.selected_variant == variant %}style="display:none"{% endunless %} data-variant="{{ variant.id }}" class="isbn">
+                                    <th class="col label" scope="row">ISBN-13</th>
+                                    <td class="col data"><span>{{ variant.metafields.custom.isbn_13 }}</span></td>
+                                  </tr>
+                                {% endif %}
+                            {% endfor %}
                             {% if product.selected_variant and product.metafields.custom.recommended_audience %}
                               <tr>
-                                <th class="col label" scope="row">ISBN-13</th>
-                                <td class="col data audience" data-th="Recommended Audience"><span>{{ product.selected_variant.metafields.custom.custom.isbn_13 }}</span></td>
+                                <td class="col data"><span>{{ product.selected_variant.metafields.custom.custom.isbn_13 }}</span></td>
                               </tr>
                             {% endif %}
                             {% if product.metafields.custom.author %}
                               <tr>
                                  <th class="col label" scope="row">Author</th>
-                                 <td class="col data author" data-th="Author">   <a target="_blank" href="/search?q={{ product.metafields.custom.author }}"><span>{{ product.metafields.custom.author }}</span></a>   </td>
+                                 <td class="col data">   <a target="_blank" href="/search?q={{ product.metafields.custom.author }}"><span>{{ product.metafields.custom.author }}</span></a>   </td>
                               </tr>
                             {% endif %}
                             {% if product.metafields.custom.language %}
                               <tr>
                                  <th class="col label" scope="row">Language Code</th>
-                                 <td class="col data language_code" data-th="Language Code"><span>{{ product.metafields.custom.language }}</span></td>
+                                 <td class="col data"><span>{{ product.metafields.custom.language }}</span></td>
                               </tr>
                             {% endif %}
                             {% if product.metafields.custom.issues %}
                               <tr>
                                  <th class="col label" scope="row">Issues</th>
-                                 <td class="col data language_code" data-th="Language Code"><span>{{ product.metafields.custom.issues }}</span></td>
+                                 <td class="col data"><span>{{ product.metafields.custom.issues }}</span></td>
                               </tr>
                             {% endif %}
-                            {% if product.selected_variant and product.selected_variant.metafields.custom.publisher %}
-                              <tr>
-                                <th class="col label" scope="row">Publisher</th>
-                                 <td class="col data language_code" data-th="Language Code"><span>{{ product.selected_variant.metafields.custom.publisher }}</span></td>
-                              </tr>
-                            {% endif %}
+                            {% for variant in product.variants %}
+                                {% if variant.metafields.custom.publisher != blank %}
+                                <tr {% unless product.selected_variant == variant %}style="display:none"{% endunless %} data-variant="{{ variant.id }}" class="publisher">
+                                    <th class="col label" scope="row">Publisher</th>
+                                     <td class="col data"><span>{{ variant.metafields.custom.publisher }}</span></td>
+                                  </tr>
+                                {% endif %}
+                            {% endfor %}
                             {% if product.metafields.custom.publication_date %}
                               <tr>
                                  <th class="col label" scope="row">Publication Date</th>
-                                 <td class="col data publish_date" data-th="Publication Date"><span>{{ product.metafields.custom.publication_date | date: "%b %e, %y" }}</span></td>
+                                 <td class="col data"><span>{{ product.metafields.custom.publication_date | date: "%b %e, %Y" }}</span></td>
                               </tr>
                             {% endif %}
                            </tbody>
@@ -304,6 +329,43 @@
    </div>
 </main>
 </div>
+
+{% include 'product-confirmation' %}
+
+<script>
+    var preorderConfig, preorderSettings;
+    jQuery.ajax({
+        type: 'GET',
+        contentType: "application/json; charset=utf-8",
+        url: `/apps/timesact/config?productId={{ product.id }}`,
+        dataType: 'json',
+        success: function (data) {
+            preorderConfig = data;
+            if ($('.product-options-wrapper .swatch-option.selected').length) {
+                var variant = $('.product-options-wrapper .swatch-option.selected').data('variant');
+                if (preorderConfig && preorderConfig.product.variants[variant].config.status == "ACTIVE") {
+                    $('.pre-back-order-text').show(0);
+                    $('#product-addtocart-button').text('Pre-order');
+                }
+            }
+        }
+    });
+    jQuery.ajax({
+        type: 'GET',
+        contentType: "application/json; charset=utf-8",
+        url: `/apps/timesact/shop/settings`,
+        dataType: 'json',
+        success: function (data) {
+            for (var settings in data.settings) {
+                if (data.settings[settings].type == "PO") {
+                    preorderSettings = data.settings[settings];
+                }
+            }
+        }
+    });
+</script>
+
+{{ 'product.js' | asset_url | script_tag }}
 
 <style>
 .secure-checkout-wrapper {

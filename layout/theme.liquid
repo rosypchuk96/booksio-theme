@@ -33,10 +33,7 @@
 
     {% render 'usf' %}
 
-    {% render 'usf' %}
-    {% comment %}
     <script src="{{ 'timesact.js' | asset_url }}" defer="defer"></script>
-{% endcomment %}
   </head>
 
   <body id="html-body">
@@ -247,24 +244,22 @@
         $('.pdp-tab-wrapper .collapsible-item-tab').click(function() {
 
 // Remove 'active' class from all tabs
-          $('.collapsible-item-tab').removeClass('active');
+          $('.pdp-tab-wrapper .collapsible-item-tab').removeClass('active');
 
 // Add 'active' class to the clicked tab
           $(this).addClass('active');
 
 // Hide all tab contents
-          $('.content').hide();
+          $('.pdp-tab-wrapper .content').hide();
 
 // Show the corresponding tab content based on the clicked tab
           var tabContentId = $(this).attr('class').split(' ')[1].split('-')[0] + '-content';
-          console.log(tabContentId)
           $('#' + tabContentId).show();
         });
       });
     </script>
 
     {% include 'iwish_v2' with 'iwishfooter' %}
-    {% include 'appikon-pre-order-helper' %}{% include 'appikon-pre-order-cart-items-liquid-helper' %}{% include 'appikon-pre-order-product-liquid-helper' %}{% render 'preorder-now' %}
     {% render 'spurit_po2_theme_snippet' %}
 
     {% include 'swymSnippet' %}
