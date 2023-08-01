@@ -223,7 +223,14 @@
                <style></style>
             </div>
             <a id="gallery-next-area" tabindex="-1" href="#"></a>
-            <div class="wishlist-wrapper"><a href="#" class="wish-list">Add to wishlist</a> <span class="view-a-sample"></span></div>
+            <div class="wishlist-wrapper">
+              <a href="#" class="wish-list">Add to wishlist</a> 
+              <span class="view-a-sample">
+                {% if product.metafields.custom.view_sample %}
+                  <a class="button action secondary" target="_blank" href="{{ product.metafields.custom.view_sample }}"><span class="link-text">View a Sample</span> <span class="visually-hidden">Open the sample in a new tab</span></a>
+                {% endif %}
+              </span>
+            </div>
          </div> 
          <div class="pdp-tab-wrapper">
             <div class="tab-inner-wrapper">

@@ -1,5 +1,5 @@
 {
-  "wrapper": "div.catalog-product-view.page-layout-1column",
+  "wrapper": "div.catalog-product-view.page-layout-1column.page-product-configurable",
   "sections": {
     "main": {
       "type": "product-main",

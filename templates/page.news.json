@@ -1,14 +1,71 @@
 {
-    "sections": {
-      "main": {
-        "type": "main-news-page",
-        "settings": {
-          "padding_top": 28,
-          "padding_bottom": 28
+  "wrapper": "main.cms-page-view",
+  "sections": {
+    "main": {
+      "type": "main-news-page",
+      "blocks": {
+        "cc776871-7b5e-4b6c-b0a5-8d65e1728cd5": {
+          "type": "News",
+          "settings": {
+            "title": "Woman-Owned Retailer, 16+ Million Title Catalog",
+            "text": "Booksio will soon be the name on every print, digital, and audiobook fan's lips.",
+            "img": "shopify:\/\/shop_images\/shelf.png",
+            "button_text": "News Website",
+            "url": "https:\/\/www.shelf-awareness.com\/issue.html?issue=4312#m57484",
+            "featured_on": "Shelf Awareness",
+            "date": "September 1st, 2022"
+          }
+        },
+        "8e009865-c046-4e01-b230-57e7d6e5b29d": {
+          "type": "News",
+          "settings": {
+            "title": "Not A Work of Fiction!",
+            "text": "Online book retailer Booksio has just launched and pledged 10% of every book, audiobook, and magazine sale to customer-selected charities.",
+            "img": "shopify:\/\/shop_images\/ap-2.png",
+            "button_text": "News Website",
+            "url": "https:\/\/apnews.com\/press-release\/pr-newswire\/entertainment-philanthropy-fiction-book-retail-d1edfc2f319116e24c323ece903fc25e",
+            "featured_on": "AP News",
+            "date": "September 1st, 2022"
+          }
+        },
+        "894de94b-9e46-439d-b743-29b33677fbe3": {
+          "type": "News",
+          "settings": {
+            "title": "Book Retailer Pairs Sales with Charitable Giving",
+            "text": "According to principal and co-founder Kelly Vucovich, 'We wanted our values to drive Booksio's charitable giving.'",
+            "img": "shopify:\/\/shop_images\/yahoo-2.png",
+            "button_text": "News Website",
+            "url": "https:\/\/finance.yahoo.com\/news\/not-fiction-book-retailer-pairs-213700784.html",
+            "featured_on": "Yahoo!finance",
+            "date": "September 1st, 2022"
+          }
+        },
+        "7e51e119-3371-4c23-81b6-501e4b1c1dc3": {
+          "type": "News",
+          "settings": {
+            "title": "Philanthropic Approach To Business",
+            "text": "While other companies may question WHAT they can gain, Booksio is more concerned with who they can help.",
+            "img": "shopify:\/\/shop_images\/time-2.png",
+            "button_text": "News Website",
+            "url": "https:\/\/time.com\/partners\/?prx_t=xNEHAAAAAA3S8RA",
+            "featured_on": "Shelf Awareness",
+            "date": "September 1st, 2022"
+          }
         }
+      },
+      "block_order": [
+        "cc776871-7b5e-4b6c-b0a5-8d65e1728cd5",
+        "8e009865-c046-4e01-b230-57e7d6e5b29d",
+        "894de94b-9e46-439d-b743-29b33677fbe3",
+        "7e51e119-3371-4c23-81b6-501e4b1c1dc3"
+      ],
+      "settings": {
+        "title": "<span style=\"font-size: 34px; line-height: 42px;\"><span style=\"color: #41c2ff;\">IN THE<\/span> NEWS<\/span>",
+        "subtitle": "Press Coverage"
       }
-    },
-    "order": [
-      "main"
-    ]
-  }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
