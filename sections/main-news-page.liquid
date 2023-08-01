@@ -26,35 +26,15 @@
         </div>
       </div>
 </div>
-<div class="contact-index-index {{ page.handle | escape }} section-{{ section.id }}-padding">
-<div class="contact-main-container container">  
-	<div class="store-info footer-column">
-		<h2 class="title">{{section.settings.contact_info_heading}}</h2>
-		<li class="address info">
-			<i class="icon" aria-hidden="true"></i> 
-			<span class="address-wrapper"><span>{{section.settings.contact_info_map}}</span>
-		</li> 
-		<li class="phone info">
-			<i class="icon" aria-hidden="true"></i> 
-			<a href="tel:  {{section.settings.contact_info_phone}}" class="link"> {{section.settings.contact_info_phone}}</a>
-		</li> 
-		<li class="hours info">
-			<i class="icon" aria-hidden="true"></i> <span>{{section.settings.contact_info_days}}</span>
-		</li> 
-		<li class="email info">
-			<i class="icon" aria-hidden="true"></i> <a href="mailto:{{section.settings.contact_info_email}}" class="link">{{section.settings.contact_info_email}}</a>
-		</li>
-	</div> 
-  {% render 'contact-form' %}
-</div>
-</div>
-{% schema %}
+
+
+{% schema %} 
 {
   "name": "t:sections.main-page.name",
   "tag": "section",
   "class": "section",
   "settings": [
-    {
+     {
         "type": "html",
         "id": "title",
         "label": "Title",
@@ -88,66 +68,6 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
-    },
-    {
-      "type": "header",
-      "content": "Contact Info Block"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "contact_info_heading",
-      "default": "BOOKSIO",
-      "label": "Heading"
-    },
-    {
-      "type": "text",
-      "id": "contact_info_map",
-      "default": "653 W Fallbrook Ave, Fresno, CA, 93711, US",
-      "label": "Map address"
-    },
-    {
-      "type": "text",
-      "id": "contact_info_phone",
-      "default": "(877) 307-1451",
-      "label": "Phone Number"
-    },
-    {
-      "type": "text",
-      "id": "contact_info_days",
-      "default": " Monday - Friday, 7am - 4pm PST",
-      "label": "Working Days"
-    },
-    {
-      "type": "text",
-      "id": "contact_info_email",
-      "default": "support@booksio.com",
-      "label": "Email"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "heading",
-      "default": "Contact form",
-      "label": "Heading"
-    },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
-        },
-        {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
-        }
-      ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
     }
   ]
 }

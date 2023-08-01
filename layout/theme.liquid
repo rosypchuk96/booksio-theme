@@ -29,10 +29,12 @@
     {{ 'jquery.min.js' | asset_url | script_tag }}
 
     {{ content_for_header }}
-    
+
 
     {% render 'usf' %}
 
+    {% render 'usf' %}
+    <script src="{{ 'timesact.js' | asset_url }}" defer="defer"></script>
   </head>
 
   <body id="html-body">
@@ -46,15 +48,19 @@
       {% endif %}
 
       <script>
-        var restrictedFormats, restrictedTags, isPartnerSite;
-        {% if is_subdomain %}
-          restrictedFormats = '{{ shop.metaobjects["partner_store_settings"][subdomain].restricted_formats }}';
+        var restrictedFormats,
+          restrictedTags,
+          isPartnerSite;{% if is_subdomain %}restrictedFormats = '{{ shop.metaobjects["partner_store_settings"][subdomain].restricted_formats }}';
           restrictedTags = `{{ shop.metaobjects["partner_store_settings"][subdomain].restricted_tags | strip | newline_to_br | strip_newlines }}`;
           isPartnerSite = true;
 
-          restrictedFormats = restrictedFormats.toLowerCase().replace(/["']/g, "").replace('[', '').replace(']', '').split(',');
-          restrictedTags = restrictedTags.toLowerCase().split('<br />');
-        {% endif %}
+          restrictedFormats = restrictedFormats
+            .toLowerCase()
+            .replace(/["']/g, "")
+            .replace('[', '')
+            .replace(']', '')
+            .split(',');
+          restrictedTags = restrictedTags.toLowerCase().split('<br />');{% endif %}
       </script>
 
       {% section 'header' %}
@@ -81,32 +87,47 @@
           $('.action.showcart').append(`<span class="counter qty"></span>`);
         }
         $('.minicart-wrapper .qty').text(data.item_count);
-        $('#mini-cart-total').text('$' + (data.total_price / 100).toFixed(2));
+        $('#mini-cart-total').text('$' + (
+          data.total_price / 100
+        ).toFixed(2));
         var html = '';
         if (data.items.length > 0) {
           $('#minicart-content-wrapper .subtotal').show(0);
           for (var i in data.items) {
             var product = data.items[i];
-            var img = '', options = '';
+            var img = '',
+              options = '';
             if (product.featured_image) {
-              img += `<img class="product-image-photo" src="${product.featured_image.url}" alt="${product.featured_image.alt}" style="width: auto; height: auto;">`;
+              img += `<img class="product-image-photo" src="${
+                product.featured_image.url
+              }" alt="${
+                product.featured_image.alt
+              }" style="width: auto; height: auto;">`;
             }
             if (product.options_with_values) {
               for (var j in product.options_with_values) {
                 var option = product.options_with_values[j];
                 options += `
                 <dt class="label">
-                  ${option.name}
+                  ${
+                  option.name
+                }
                 </dt>
                 <dd class="values">
                   <span data-bind="text: option.value">
-                  ${option.value}</span>
+                  ${
+                  option.value
+                }</span>
                 </dd>`;
               }
             }
-            html += `<li class="item product product-item" data-role="product-item" data-collapsible="true" data-id="${ product.variant_id }">
+            html += `<li class="item product product-item" data-role="product-item" data-collapsible="true" data-id="${
+              product.variant_id
+            }">
             <div class="product" role="group" aria-label="product">
-              <a data-bind="attr: {href: product_url, title: product_name}" tabindex="-1" class="product-item-photo" href="${product.url}" title="Spare">
+              <a data-bind="attr: {href: product_url, title: product_name}" tabindex="-1" class="product-item-photo" href="${
+              product.url
+            }" title="Spare">
                 <span class="product-image-container" data-bind="style: {width: width/2 + 'px'}" style="width: 75px;">
                   <span class="product-image-wrapper" data-bind="style: {'padding-bottom': height/width*100 + '%'}" style="padding-bottom: 100%;">
                     ${img}
@@ -116,7 +137,9 @@
 
               <div class="product-item-details">
                 <strong class="product-item-name">
-                  <span>${product.product_title}</span>
+                  <span>${
+              product.product_title
+            }</span>
                 </strong>
                 
                   <div class="product options" data-bind="style: {visibility: options.length || customOptions.length ? 'visible' : 'hidden'}" role="tablist" data-collapsible="true" style="visibility: visible;">
@@ -138,14 +161,18 @@
                     <span class="price-wrapper" data-bind="html: price">
                       <span class="price-excluding-tax" data-label="Excl. Tax">
                         <span class="minicart-price">
-                          <span class="price">$${(product.price / 100).toFixed(2)}</span>
+                          <span class="price">$${
+              (product.price / 100).toFixed(2)
+            }</span>
                         </span>
                       </span>
                     </span>
                   </div>
                   <div class="details-qty qty" data-dashlane-rid="a442faba8a632b85" data-form-type="other">
                     <label class="label" for="cart-item-30948-qty">Qty</label>
-                    ${product.quantity}
+                    ${
+              product.quantity
+            }
                   </div>
                 </div>
                 <div class="product actions">
@@ -182,12 +209,12 @@
           $(this).closest('.options').toggleClass('active');
         });
 
-        $('#mini-cart .action.delete').click(function (e) {
+        $('#mini-cart .action.delete').click(function(e) {
           e.preventDefault();
           var id = $(this).closest('.product-item').attr('data-id');
           var data = {};
           data[id] = 0;
-      
+
           jQuery.ajax({
             type: 'POST',
             url: '/cart/update.js',
@@ -195,12 +222,12 @@
               updates: data
             },
             dataType: 'json',
-            success: function (data) {
+            success: function(data) {
               jQuery.ajax({
                 type: 'GET',
                 url: '/cart.js',
                 dataType: 'json',
-                success: function (data) {  
+                success: function(data) {
                   drawMiniCart(data);
                 }
               });
@@ -235,10 +262,10 @@
     </script>
 
     {% include 'iwish_v2' with 'iwishfooter' %}
-  {% include 'appikon-pre-order-helper' %}{% include 'appikon-pre-order-cart-items-liquid-helper' %}{% include 'appikon-pre-order-product-liquid-helper' %}{% render 'preorder-now' %}
-  {% render 'spurit_po2_theme_snippet' %}
+    {% include 'appikon-pre-order-helper' %}{% include 'appikon-pre-order-cart-items-liquid-helper' %}{% include 'appikon-pre-order-product-liquid-helper' %}{% render 'preorder-now' %}
+    {% render 'spurit_po2_theme_snippet' %}
 
-{% include 'swymSnippet' %}
+    {% include 'swymSnippet' %}
 
-</body>
+  </body>
 </html>

@@ -92,33 +92,34 @@
             </style>
                 </a>
               </div>
-          
+<div style="margin-bottom: 2%;" class="category-label-wrapper-outter"><span class="category-label-wrapper">Creative Ability</span></div>
           <input
             type="hidden"
             name="id"
             value="{{ product.selected_or_first_available_variant.id }}">
           {%- unless product.has_only_default_variant -%}
             <div class="variant-selector">
-          
+  
           <!-- Product prices and compare prices -->
-  <ul>
+  <ul style="padding: 0px;">
     {% for variant in product.variants %}
-      <li>
+      <li class="button">
         <input
           type="radio"
           id="variant-{{ variant.id }}"
           name="id"
           value="{{ variant.id }}"
           {% if product.selected_or_first_available_variant.id == variant.id %}checked{% endif %}>
-        <label for="variant-{{ variant.id }}">
+        <label class="btn btn-default" for="variant-{{ variant.id }}">
           {% if variant.title == "Print" %}
             {{ variant.title }} Only
           {% else %}
-            {{ variant.title }} - 
+           {{ variant.title }} <br/> 
+              <span style="display: inline-block;width: 120px;font-weight: bold;">  
             {% if variant.compare_at_price > variant.price %}
-              <span style="text-decoration: line-through;">{{ variant.compare_at_price | money }}</span>
+         <del> {{ variant.compare_at_price | money }}</del>
             {% endif %}
-            {{ variant.price | money }}
+            {{ variant.price | money }}</span>
           {% endif %}
         </label>
       </li>
@@ -176,15 +177,18 @@
             </div>
           {% endif %}
           <div class="row">
-<!--           <div class="quantity">
-              <span>Quantity</span>
-              <input
+      
+              <label class="label-quantity">Quantity</label>
+              <input class="quantity-input"
                 min="1"
                 type="number"
                 id="quantity"
                 name="quantity"
                 value="1" />
-            </div>  -->
+
+
+    
+            
             <button
               type="submit"
               name="add"
@@ -195,6 +199,47 @@
         </form>
       </div>
 
+<div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="KQEQY55" data-decoded="true" class="box-model-64c2dd8729630"><div class="secure-checkout-wrapper">
+<p class="secure-title">Secure Checkout</p>
+<div class="secure-thumbnail">
+<img src="https://backend.booksio.com/media/wysiwyg/payment-method.png" alt="payment method" style="display: inline-block;">
+</div>
+</div>
+<style>
+.secure-checkout-wrapper {
+    padding: 20px 30px;
+    text-align: center;
+    text-transform: capitalize;
+    background: #eee;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: #212322;
+    font-family: 'Lato';
+    max-width: 380px;
+  }
+.secure-checkout-wrapper .secure-title {
+    width: 100%;
+}
+.charity-text p {
+    color: #212322;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    margin-top: 12px;
+    font-family: 'Lato';
+}
+.secure-checkout-wrapper .secure-thumbnail {
+    max-width: 310px;
+}
+@media screen and (max-width: 767px) {
+.secure-checkout-wrapper {
+   margin-bottom: 10px;
+}
+}
+</style></div>
     </div>
     {%- if section.settings.media_position == 'right' -%}
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
