@@ -1,144 +1,190 @@
 {
+  "wrapper": "div.catalog-product-view.page-layout-1column",
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "product-main",
+      "settings": {}
+    },
+    "e865c050-9601-43cc-9049-34fc077cecc0": {
+      "type": "product-cards",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "disabled": true,
+        "731ac957-9ad6-42a4-a6da-d368968dfed0": {
+          "type": "item",
           "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
+            "icon": "shopify:\/\/shop_images\/box-image-1.png",
+            "title": "Choose Your Cause",
+            "text": "<p>If there’s a cause or charity you feel strongly about, we can make it happen! Just visit your account profile and pick one that is on our approved list!<\/p>"
           }
         },
-        "title": {
-          "type": "title",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
+        "bfcc759f-e05d-4687-a913-5b8ec093a8a0": {
+          "type": "item",
           "settings": {
-            "picker_type": "button"
+            "icon": "shopify:\/\/shop_images\/box-image-2.png",
+            "title": "Make a Difference",
+            "text": "<p>We’ll automatically donate 10% of your purchase each month to the cause or charity we are raising money for that month, and all you have to do is shop.<\/p>"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
+        "522e72a1-0ea4-41af-90ea-eaf18ef33152": {
+          "type": "item",
           "settings": {
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": false
-          }
-        },
-        "description": {
-          "type": "description",
-          "disabled": true,
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "disabled": true,
-          "settings": {
-            "share_label": "Share"
-          }
-        },
-        "2ed8fceb-fd26-4c0f-aa65-b99b2879f21c": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div data-content-type=\"html\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"KQEQY55\" data-decoded=\"true\" class=\"box-model-64ac3328471e4\"><div class=\"secure-checkout-wrapper\">\n<p class=\"secure-title\">Secure Checkout<\/p>\n<div class=\"secure-thumbnail\">\n<img src=\"https:\/\/backend.booksio.com\/media\/wysiwyg\/payment-method.png\" alt=\"payment method\" style=\"display: inline-block;\">\n<\/div>\n<\/div>\n<style>\n.secure-checkout-wrapper {\n    padding: 20px 30px;\n    text-align: center;\n    text-transform: capitalize;\n    background: #eee;\n    margin-top: 20px;\n    margin-bottom: 40px;\n    display: flex;\n    flex-flow: row wrap;\n    justify-content: center;\n    color: #212322;\n    font-family: 'Lato';\n    max-width: 380px;\n  }\n.secure-checkout-wrapper .secure-title {\n    width: 100%;\n}\n.charity-text p {\n    color: #212322;\n    font-size: 16px;\n    line-height: 20px;\n    font-weight: bold;\n    margin-top: 12px;\n    font-family: 'Lato';\n}\n.secure-checkout-wrapper .secure-thumbnail {\n    max-width: 310px;\n}\n@media screen and (max-width: 767px) {\n.secure-checkout-wrapper {\n   margin-bottom: 10px;\n}\n}\n<\/style><\/div>"
+            "icon": "shopify:\/\/shop_images\/box-image-3.png",
+            "title": "Read Together",
+            "text": "<p>Join readers passionate about inspiring change. We’re connecting readers around the world through amazing stories that make a difference.<\/p>"
           }
         }
       },
       "block_order": [
-        "vendor",
-        "title",
-        "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
-        "description",
-        "share",
-        "2ed8fceb-fd26-4c0f-aa65-b99b2879f21c"
+        "731ac957-9ad6-42a4-a6da-d368968dfed0",
+        "bfcc759f-e05d-4687-a913-5b8ec093a8a0",
+        "522e72a1-0ea4-41af-90ea-eaf18ef33152"
+      ],
+      "settings": {}
+    },
+    "f471c8e2-5d66-42a8-8c9f-126ab1a6866d": {
+      "type": "product-reviews",
+      "blocks": {
+        "efd36d49-10a4-4e6d-99e3-65c2e66d32a2": {
+          "type": "item",
+          "settings": {
+            "title": "Good Business, Great Cause",
+            "text": "<p>Booksio is one of the few online retailers that I feel good about shopping with. I picked up a book I’d been meaning to read and found something new while supporting a cause I care about. My books arrived on time and in good shape. I’ll definitely be shopping with Booksio again.<\/p>",
+            "author": "— Kurt P."
+          }
+        },
+        "f3eec887-640a-4277-a49e-31f44908424b": {
+          "type": "item",
+          "settings": {
+            "title": "Confidence in the Mission",
+            "text": "<p>Shopping with Booksio exposes me to new causes with monthly supporting literature. I can choose to read what I want and know that way more than 0.5% of the purchase is going to a good cause that has been vetted.<\/p>",
+            "author": "— Alanna J."
+          }
+        }
+      },
+      "block_order": [
+        "efd36d49-10a4-4e6d-99e3-65c2e66d32a2",
+        "f3eec887-640a-4277-a49e-31f44908424b"
+      ],
+      "settings": {}
+    },
+    "4e696fd9-3550-4dd7-9fe9-02f4cc64edaf": {
+      "type": "product-how-it-works",
+      "blocks": {
+        "ad43ceac-a19e-4b79-ad04-04f8956ec93c": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/one_1.png",
+            "title": "BROWSE OUR COLLECTION",
+            "text": "Search for a book or browse through categories to find over 15 million titles of books."
+          }
+        },
+        "3a75392e-fbba-4ab1-9af6-bc4d637723a8": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/two_1.png",
+            "title": "PURCHASE YOUR BOOKS",
+            "text": "Create an account and complete your purchase, we’ll ship your books within 3-4 business days."
+          }
+        },
+        "bacb9fc8-84f1-4f7a-b7b9-522e8d8266e8": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/three_1.png",
+            "title": "READ WITH A PURPOSE",
+            "text": "10% of all of your purchases will go towards the charity you choose. Support a good cause and read at the same time!"
+          }
+        }
+      },
+      "block_order": [
+        "ad43ceac-a19e-4b79-ad04-04f8956ec93c",
+        "3a75392e-fbba-4ab1-9af6-bc4d637723a8",
+        "bacb9fc8-84f1-4f7a-b7b9-522e8d8266e8"
       ],
       "settings": {
-        "enable_sticky_info": true,
-        "media_size": "small",
-        "constrain_to_viewport": false,
-        "media_fit": "contain",
-        "gallery_layout": "stacked",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "title": "Making A Difference",
+        "title_2": "<span style=\"color: #298fc2;\">HOW<\/span> BOOKSIO WORKS",
+        "text": "<p style=\"text-align: left;\"><span style=\"font-size: 20px; line-height: 28px; color: #212322;\"><strong>It’s possible to purchase books at almost any store, so why Booksio?<\/strong> With every book you buy from us, we donate 10% of the total cost to charity. Every month, we pick a new charitable cause for which you can receive literary support with your purchase. And we’re not just about selling books - we’re about reading and storytelling that makes a difference in this world.<\/span><\/p>",
+        "url": "",
+        "button_text": ""
       }
     },
-    "51244a2e-a4a9-4c96-bdb3-4c7a5fbf99aa": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"pdp-tab-wrapper\">\n  <div class=\"tab-inner-wrapper\">\n    <div class=\"collapsible-item-tab description-label active\">Description<\/div>\n    <div class=\"collapsible-item-tab detail-label\">Detail<\/div>\n    <div class=\"tab-content-wrapper\">\n      <div class=\"content description-content\" id=\"description-content\">\n        <div class=\"product attribute description\" id=\"tab-label-description\">\n          {{product.description}}\n        <\/div>\n      <\/div>\n      <div class=\"content detail-content\" id=\"detail-content\">\n        <div class=\"additional-attributes-wrapper table-wrapper details-table\">\n          <strong>DETAILS<\/strong>\n          {{product.metafields.custom.author}}\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
+    "17f55de1-de93-4e69-b5f4-a004362ab5e3": {
+      "type": "product-faq",
+      "blocks": {
+        "80827062-ec5b-4768-b57c-d77fb463a772": {
+          "type": "item",
+          "settings": {
+            "title": "What do I do if I receive the wrong product or if it arrives damaged?",
+            "text": "<p>We’re so sorry this happened! Don’t hesitate to get in touch with our customer care team on this<a href=\"https:\/\/www.booksio.com\/contact\/\">page<\/a>within two weeks of delivery to describe what you received. Please include your order number (it looks like “BOOK-############” and was included in your confirmation email) and email address used for the purchase. A photo of the product in question is helpful too! We’ll work with you to resolve the problem as soon as possible.<\/p>"
+          }
+        },
+        "0a779455-b66e-401b-961f-a602789ae6c5": {
+          "type": "item",
+          "settings": {
+            "title": "Can I cancel my order?",
+            "text": "<p>Yes, you have the ability to cancel your order. Please reach out to our customer care team on this page, and we will be happy to assist you.<\/p>"
+          }
+        },
+        "832b2c52-de9a-4cde-abcb-da74a216dfb8": {
+          "type": "item",
+          "settings": {
+            "title": "If I don’t live in the US, can I still make digital purchases?",
+            "text": "<p>At this time, Booksio is ONLY available to US customers, both for print and digital orders. We are working to start accepting non-US orders in 2023.<\/p>"
+          }
+        },
+        "375e87fb-a767-43d9-a446-1952e5ce23bc": {
+          "type": "item",
+          "settings": {
+            "title": "How do I update my billing information?",
+            "text": "<p>After placing your first order with Booksio, you can change your billing information for future orders by logging into your account and selecting <a href=\"https:\/\/www.booksio.com\/customer\/paymentinfo\/\">\"My Payment Options\"<\/a>.<\/p>"
+          }
+        },
+        "61cb221e-1bc9-4fbc-bc3e-87ec1c508a82": {
+          "type": "item",
+          "settings": {
+            "title": "How do I track my book order?",
+            "text": "<p>You will receive an email with the tracking number, as well as a link, as soon as your order ships.<\/p>"
+          }
+        },
+        "9bebe89e-0b28-4554-8922-023603a462b1": {
+          "type": "item",
+          "settings": {
+            "title": "How can I access my ebook and audiobook purchases?",
+            "text": "<p>All of your digital purchases from Booksio can be accessed through our app, available on both the <a href=\"https:\/\/apps.apple.com\/tt\/app\/booksio\/id1590368314\">Apple App Store <\/a>for iOS devices and in the <a href=\"https:\/\/play.google.com\/store\/search?q=booksio&c=apps\">Google Play Store <\/a>for Android devices. You can sign in with your existing Booksio.com account to find your entire digital library.<\/p>"
+          }
+        },
+        "5f9841d7-a7c5-49bc-b458-531780d9746f": {
+          "type": "item",
+          "settings": {
+            "title": "Do gift cards provide a charitable donation?",
+            "text": "<p>At this time the act of buying a gift card does not trigger the 10% charitable donation. However, when the recipient redeems their gift card and makes a purchase, a charitable donation will occur at that time.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "80827062-ec5b-4768-b57c-d77fb463a772",
+        "0a779455-b66e-401b-961f-a602789ae6c5",
+        "832b2c52-de9a-4cde-abcb-da74a216dfb8",
+        "375e87fb-a767-43d9-a446-1952e5ce23bc",
+        "61cb221e-1bc9-4fbc-bc3e-87ec1c508a82",
+        "9bebe89e-0b28-4554-8922-023603a462b1",
+        "5f9841d7-a7c5-49bc-b458-531780d9746f"
+      ],
+      "settings": {}
     },
-    "related-products": {
-      "type": "related-products",
+    "subscribe": {
+      "type": "subscribe",
       "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
-      }
-    },
-    "34f73c81-2b03-4c65-ac8f-b56ca89e10f5": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"widget block block-static-block\"><style>#html-body [data-pb-style=U2MN3KW]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0}#html-body [data-pb-style=S5A5FN7]{border-width:0}#html-body [data-pb-style=PEA84SG]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0;width:33.3333%;align-self:stretch}#html-body [data-pb-style=RHIJ4UX]{border-width:0}#html-body [data-pb-style=OUQBO6I]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0;width:33.3333%;align-self:stretch}#html-body [data-pb-style=O7VQC5B]{border-width:0}#html-body [data-pb-style=XYK1I9R]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0;width:33.3333%;align-self:stretch}#html-body [data-pb-style=HOGJVD7]{border-width:0}#html-body [data-pb-style=I24QHIS]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0}#html-body [data-pb-style=M44HUUS]{border-width:0}#html-body [data-pb-style=MPDAODK]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0;width:100%;align-self:stretch}#html-body [data-pb-style=K5ACEAL]{border-width:0}<\/style><div class=\"how-booksio-works box-model-64ac332858204 box-model-64ac33285c047\" data-content-type=\"row\" data-appearance=\"full-width\" data-enable-parallax=\"0\" data-parallax-speed=\"0.5\" data-background-images=\"{}\" data-background-type=\"image\" data-video-loop=\"true\" data-video-play-only-visible=\"true\" data-video-lazy-load=\"true\" data-video-fallback-src=\"\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;60px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;15px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;135px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"U2MN3KW\"><div class=\"row-full-width-inner\" data-element=\"inner\"><div data-content-type=\"html\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"S5A5FN7\" data-decoded=\"true\" class=\"box-model-64ac332858216 box-model-64ac33285c052\"><style>\n.column-box-wrapper{\ntext-align: center;\npadding: 0 30px;\nmargin-top: -40px;\n}\n.column-title{\nfont-size: 22px;\nline-height: 26px;\nfont-weight: bold;\nfont-family: lato;\ncolor: #212322;\n}\n.column-content{\nfont-size: 18px;\nline-height: 22px;\nfont-family: lato;\ncolor: #212322;\n}\n<\/style><\/div><div class=\"pagebuilder-column-group\" style=\"display: flex;\" data-content-type=\"column-group\" data-grid-size=\"12\" data-element=\"main\"><div class=\"pagebuilder-column\" data-content-type=\"column\" data-appearance=\"full-height\" data-background-images=\"{}\" data-box-model=\"{}\" data-element=\"main\" data-pb-style=\"PEA84SG\"><div data-content-type=\"html\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"RHIJ4UX\" data-decoded=\"true\" class=\"box-model-64ac332858223 box-model-64ac33285c05d\"><div class=\"column-box-wrapper\">\n<div class=\"column-box-image\"><img src=\"https:\/\/backend.booksio.com\/media\/wysiwyg\/box-image-1.png\" alt=\"\" style=\"display: inline-block;\"><\/div>\n<p class=\"column-title\">Choose Your Cause<\/p>\n<p class=\"column-content\">If there’s a cause or charity you feel strongly about, we can make it happen! Just visit your account profile and pick one that is on our approved list!<\/p>\n<\/div><\/div><style type=\"text\/css\">.box-model-64ac332858223 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c05d {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/div><div class=\"pagebuilder-column\" data-content-type=\"column\" data-appearance=\"full-height\" data-background-images=\"{}\" data-box-model=\"{}\" data-element=\"main\" data-pb-style=\"OUQBO6I\"><div data-content-type=\"html\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"O7VQC5B\" data-decoded=\"true\" class=\"box-model-64ac33285822e box-model-64ac33285c068\"><div class=\"column-box-wrapper\">\n<div class=\"column-box-image\"><img src=\"https:\/\/backend.booksio.com\/media\/wysiwyg\/box-image-2.png\" alt=\"\" style=\"display: inline-block;\"><\/div>\n<p class=\"column-title\">Make a Difference<\/p>\n<p class=\"column-content\">We’ll automatically donate 10% of your purchase each month to the cause or charity we are raising money for that month, and all you have to do is shop.<\/p>\n<\/div><\/div><style type=\"text\/css\">.box-model-64ac33285822e {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c068 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/div><div class=\"pagebuilder-column\" data-content-type=\"column\" data-appearance=\"full-height\" data-background-images=\"{}\" data-box-model=\"{}\" data-element=\"main\" data-pb-style=\"XYK1I9R\"><div data-content-type=\"html\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"HOGJVD7\" data-decoded=\"true\" class=\"box-model-64ac332858238 box-model-64ac33285c072\"><div class=\"column-box-wrapper\">\n<div class=\"column-box-image\"><img src=\"https:\/\/backend.booksio.com\/media\/wysiwyg\/box-image-3.png\" alt=\"\" style=\"display: inline-block;\"><\/div>\n<p class=\"column-title\">Read Together<\/p>\n<p class=\"column-content\">Join readers passionate about inspiring change. We’re connecting readers around the world through amazing stories that make a difference.<\/p>\n<\/div><\/div><style type=\"text\/css\">.box-model-64ac332858238 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c072 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/div><\/div><style type=\"text\/css\">.box-model-64ac332858216 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c052 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/div><\/div><div data-content-type=\"row\" data-appearance=\"contained\" data-element=\"main\"><div data-enable-parallax=\"0\" data-parallax-speed=\"0.5\" data-background-images=\"{}\" data-background-type=\"image\" data-video-loop=\"true\" data-video-play-only-visible=\"true\" data-video-lazy-load=\"true\" data-video-fallback-src=\"\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"inner\" data-pb-style=\"I24QHIS\" class=\"box-model-64ac332858240 box-model-64ac33285c07a\"><div data-content-type=\"html\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"M44HUUS\" data-decoded=\"true\" class=\"box-model-64ac332858249 box-model-64ac33285c084\"><style>\n.review-static-wrapper {\n    width: 100%;\n    display: inline-block;\n    padding: 45px 50px 35px;\n    border: 1px solid #707070;\n    border-radius: 20px;\n    margin: -75px 35px 0 35px;\n    max-width: 440px;\n    background: #fff;\n    box-shadow: 0 0 20px rgb(0 0 0 \/ 16%);\n    color: #212322;\n    font-size: 18px;\n    line-height: 1.5;\n    position: relative;\n    vertical-align: top;\n}\n.review-static-wrapper .review-qoute {\n    background-image: url('https:\/\/backend.booksio.com\/media\/wysiwyg\/review-qoute.png');\n    width: 50px;\n    height: 42px;\n    display: inline-block;\n    margin-bottom: 10px;\n}\n.review-static-wrapper .review-title {\n    margin: 0;\n    font-size: 24px;\n    line-height: 1.5;\n    color: #707070;\n}\n.review-static-wrapper .review-content {\n    font-size: 18px;\n    margin-bottom: 5px;\n}\n.review-static-wrapper .review-arthur {\n    text-align: right;\n    font-size: 22px;\n    font-weight: bold;\n    color: #707070;\n}\n.review-outter-wrapper {\n    display: flex;\n    flex-flow: row wrap;\n    width: 100%;\n    justify-content: center;\n}\n.review-static-wrapper, .review-static-wrapper .review-title {\n    font-family: 'Lato';\n}\n<\/style><\/div><div class=\"pagebuilder-column-group\" style=\"display: flex;\" data-content-type=\"column-group\" data-grid-size=\"12\" data-element=\"main\"><div class=\"pagebuilder-column\" data-content-type=\"column\" data-appearance=\"full-height\" data-background-images=\"{}\" data-box-model=\"{}\" data-element=\"main\" data-pb-style=\"MPDAODK\"><div data-content-type=\"html\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"K5ACEAL\" data-decoded=\"true\" class=\"box-model-64ac332858252 box-model-64ac33285c08e\"><div class=\"review-outter-wrapper\">\n<div class=\"review-static-wrapper\">\n<span class=\"review-qoute\"><\/span>\n<p class=\"review-title\">Good Business, Great Cause<\/p>\n<p class=\"review-content\">Booksio is one of the few online retailers that I feel good about shopping with. I picked up a book I’d been meaning to read and found something new while supporting a cause I care about. My books arrived on time and in good shape. I’ll definitely be shopping with Booksio again.<\/p>\n<p class=\"review\"><img src=\"https:\/\/backend.booksio.com\/media\/wysiwyg\/reviews.png\" style=\"display: inline-block;\"><\/p>\n<p class=\"review-arthur\">— Kurt P.<\/p>\n<\/div>\n\n<div class=\"review-static-wrapper\">\n<span class=\"review-qoute\"><\/span>\n<p class=\"review-title\">Confidence in the Mission<\/p>\n<p class=\"review-content\">Shopping with Booksio exposes me to new causes with monthly supporting literature. I can choose to read what I want and know that way more than 0.5% of the purchase is going to a good cause that has been vetted.<\/p>\n<p class=\"review\"><img src=\"https:\/\/backend.booksio.com\/media\/wysiwyg\/reviews.png\" style=\"display: inline-block;\"><\/p>\n<p class=\"review-arthur\">— Alanna J.<\/p>\n<\/div>\n<\/div><\/div><style type=\"text\/css\">.box-model-64ac332858252 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c08e {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/div><\/div><style type=\"text\/css\">.box-model-64ac332858249 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c084 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/div><style type=\"text\/css\">.box-model-64ac332858240 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c07a {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/div><style type=\"text\/css\">.box-model-64ac332858204 {margin-top: 60px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 15px;padding-right: 0px;padding-bottom: 135px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c047 {margin-top: 60px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 15px;padding-right: 0px;padding-bottom: 135px;padding-left: 0px;}<\/style><\/div>",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "bbccde7a-89f4-4f1b-baeb-5db3349627a3": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div data-content-type=\"block\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"DR3AMX5\" class=\"box-model-64ac33285c096\"> <div class=\"widget block block-static-block\"><style>#html-body [data-pb-style=Y491QRY]{justify-content:flex-start;display:flex;flex-direction:column;background-color:#f1f1f1;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0}#html-body [data-pb-style=S5BS2NL]{border-width:0}#html-body [data-pb-style=O4KBB8U]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0;width:33.33333333%;align-self:stretch}#html-body [data-pb-style=JQ06RRS]{border-width:0}#html-body [data-pb-style=IEUHLQQ]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0;width:66.66666667%;align-self:center}#html-body [data-pb-style=JTQRMOD]{border-style:none}#html-body [data-pb-style=O1M6R08],#html-body [data-pb-style=UR5OTNR]{border-width:0;max-width:100%;height:auto}#html-body [data-pb-style=IIIHQO7],#html-body [data-pb-style=LWVTKHX],#html-body [data-pb-style=NOUABX2]{border-width:0}@media only screen and (max-width: 768px) { #html-body [data-pb-style=JTQRMOD]{border-style:none} }<\/style><div class=\"how-booksio-works box-model-64ac3328599f1 box-model-64ac33285c09f\" data-content-type=\"row\" data-appearance=\"full-width\" data-enable-parallax=\"0\" data-parallax-speed=\"0.5\" data-background-images=\"{}\" data-background-type=\"image\" data-video-loop=\"true\" data-video-play-only-visible=\"true\" data-video-lazy-load=\"true\" data-video-fallback-src=\"\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;60px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;60px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;60px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"Y491QRY\"><div class=\"row-full-width-inner\" data-element=\"inner\"><div data-content-type=\"html\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"S5BS2NL\" data-decoded=\"true\" class=\"box-model-64ac332859a02 box-model-64ac33285c0a8\"><style>\n.white-box-wrapper .box-wrapper {\n    position: relative;\n    float: left;\n    padding: 15px 0;\n}\n\n.white-box-wrapper .box-content {\n    padding-left: 80px;\n    float: left;\n}\n\n.white-box-wrapper .box-number {\n    float: left;\n    position: absolute;\n    top: 50%;transform: translateY(-50%);\n}\n\n.white-box-wrapper .box-content > p {\n    margin: 0;\n    line-height: 1.3;\n}\n\n.white-box-wrapper .box-title {\n    font-weight: bold;\ntext-transform: uppercase;\n}\n\n.white-box-wrapper .box-number:after {\n    content: '';\n    width: 2px;\n    height: 66px;\n    background: #d3d3d3;\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    margin: 0 10px;\n}\n.full-width{\n   display: flex;\n   flex-flow: row wrap;\n   width: 100%;\n}\n.white-box-wrapper {\n    background-color: #fff;\n    border-radius: 15px;\n    margin: 15px 0;\n    padding: 0 20px;\n    box-sizing: border-box;\n}\n\n.how-booksio-works:before {\n    content: '';\n    position: absolute;\n    left: 0;\n    top: 0;\n    background-color: #f1f1f1;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    width: 100vw;\n    margin-left: calc((100vw - 100%) \/ 2 * (-1));\n}\n\n.how-booksio-works {\n    position: relative;\n}\n.white-box-wrapper .box-content > p {\n    margin-bottom: 0 !important;\n}\n\n.white-box-wrapper .box-content {\n    font-family: 'Lato';\n    color: #212322;\n    font-size: 16px;\n}\n.m-0 h3{\nmargin: 0 !important;\n}\n@media screen and (max-width: 1144px){\n    .review-static-wrapper {\n    margin: 25px 0;\n    padding: 25px;\n    max-width: 100%;\n    }\n}\n\n@media screen and (max-width: 767px){\n.white-box-wrapper:nth-child(3) {\n    margin-bottom: 40px;\n}\n.secure-checkout-wrapper {\n    width: 100%;\n}\n\n.column-box-wrapper {\n    margin-top: 0;\n}\n\n\n.how-booksio-works {\n    padding-bottom: 40px;\n}\n.how-booksio-works .box-content-padding {\n   padding-left: 0;\n}\n}\n<\/style><\/div><div class=\"pagebuilder-column-group\" style=\"display: flex;\" data-content-type=\"column-group\" data-grid-size=\"12\" data-element=\"main\"><div class=\"pagebuilder-column\" data-content-type=\"column\" data-appearance=\"full-height\" data-background-images=\"{}\" data-box-model=\"{}\" data-element=\"main\" data-pb-style=\"O4KBB8U\"><div data-content-type=\"html\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"JQ06RRS\" data-decoded=\"true\" class=\"box-model-64ac332859a10 box-model-64ac33285c0b2\"><div class=\"full-width white-box-wrapper box-shadow box-one\">\n<div class=\"box-wrapper\">\n<span class=\"box-number\"><img src=\"https:\/\/www.booksio.com\/media\/\/wysiwyg\/one.png\" alt=\"\" style=\"display: inline-block;\"><\/span>\n<span class=\"box-content\">\n<p class=\"box-title\">Browse Our Collection<\/p>\n<p class=\"box-content-inner\">Search for a book or browse through categories to find over 15 million titles of books.<\/p>\n<\/span>\n<\/div>\n<\/div>\n<div class=\"full-width white-box-wrapper box-shadow box-one\">\n<div class=\"box-wrapper\">\n<span class=\"box-number\"><img src=\"https:\/\/www.booksio.com\/media\/\/wysiwyg\/two.png\" alt=\"\" style=\"display: inline-block;\"><\/span>\n<span class=\"box-content\">\n<p class=\"box-title\">Purchase Your Books<\/p>\n<p class=\"box-content-inner\">Create an account and complete your purchase, we’ll ship your books within 3-4 business days.<\/p>\n<\/span>\n<\/div>\n<\/div>\n<div class=\"full-width white-box-wrapper box-shadow box-one\">\n<div class=\"box-wrapper\">\n<span class=\"box-number\"><img src=\"https:\/\/www.booksio.com\/media\/\/wysiwyg\/three.png\" alt=\"\" style=\"display: inline-block;\"><\/span>\n<span class=\"box-content\">\n<p class=\"box-title\">Read With A Purpose<\/p>\n<p class=\"box-content-inner\">10% of all of your purchases will go towards the charity you choose. Support a good cause and read at the same time!<\/p>\n<\/span>\n<\/div>\n<\/div><\/div><style type=\"text\/css\">.box-model-64ac332859a10 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c0b2 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/div><div class=\"pagebuilder-column box-content-padding box-model-64ac332859a19 box-model-64ac33285c0bb\" data-content-type=\"column\" data-appearance=\"align-center\" data-background-images=\"{}\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;100px&quot;}}}\" data-element=\"main\" data-pb-style=\"IEUHLQQ\"><figure data-content-type=\"image\" data-appearance=\"full-width\" data-box-model=\"{}\" data-element=\"main\" data-pb-style=\"JTQRMOD\"><img class=\"pagebuilder-mobile-hidden\" src=\"https:\/\/www.booksio.com\/media\/wysiwyg\/heading_icon_4.png\" alt=\"\" title=\"\" data-box-model=\"{}\" data-element=\"desktop_image\" data-pb-style=\"UR5OTNR\" style=\"display: inline-block;\"><img class=\"pagebuilder-mobile-only\" src=\"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=\" data-amsrc=\"https:\/\/www.booksio.com\/media\/wysiwyg\/heading_icon_4.png\" alt=\"\" title=\"\" data-box-model=\"{}\" data-element=\"mobile_image\" data-pb-style=\"O1M6R08\"><\/figure><div class=\"font-lato box-model-64ac332859a26 box-model-64ac33285c0c7\" data-content-type=\"text\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"IIIHQO7\"><p><span style=\"font-size: 16px; color: #707070; line-height: 18px;\">Making A Difference<\/span><\/p><\/div><div class=\"font-lato m-0 box-model-64ac332859a2f box-model-64ac33285c0cf\" data-content-type=\"text\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;30px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"LWVTKHX\"><h3><span style=\"font-size: 36px; line-height: 36px;\"><span style=\"color: #202020;\"><span style=\"color: #298fc2;\">HOW<\/span> BOOKSIO WORKS<\/span><\/span><\/h3><\/div><div class=\"font-lato box-model-64ac332859a38 box-model-64ac33285c0d8\" data-content-type=\"text\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;20px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"NOUABX2\"><p style=\"text-align: left;\"><span style=\"font-size: 20px; line-height: 28px; color: #212322;\"><strong>It’s possible to purchase books at almost any store, so why Booksio?<\/strong> With every book you buy from us, we donate 10% of the total cost to charity. Every month, we pick a new charitable cause for which you can receive literary support with your purchase. And we’re not just about selling books - we’re about reading and storytelling that makes a difference in this world.<\/span><\/p><\/div><style type=\"text\/css\">.box-model-64ac332859a26 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac332859a2f {margin-top: 0px;margin-right: 0px;margin-bottom: 30px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac332859a38 {margin-top: 0px;margin-right: 0px;margin-bottom: 20px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c0c7 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c0cf {margin-top: 0px;margin-right: 0px;margin-bottom: 30px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c0d8 {margin-top: 0px;margin-right: 0px;margin-bottom: 20px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/div><style type=\"text\/css\">.box-model-64ac332859a19 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 100px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c0bb {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 100px;}<\/style><\/div><style type=\"text\/css\">.box-model-64ac332859a02 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c0a8 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/div><\/div><style type=\"text\/css\">.box-model-64ac3328599f1 {margin-top: 60px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 60px;padding-right: 0px;padding-bottom: 60px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c09f {margin-top: 60px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 60px;padding-right: 0px;padding-bottom: 60px;padding-left: 0px;}<\/style><\/div><\/div>",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "e285dce0-40bf-415b-9a46-1225e8c7d8fc": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"widget block block-static-block\"><style>#html-body [data-pb-style=GY7P4K9],#html-body [data-pb-style=UGT6NLS]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;border-width:0}#html-body [data-pb-style=UGT6NLS]{width:100%;align-self:stretch}#html-body [data-pb-style=WJDLGU7]{text-align:center;border-style:none}#html-body [data-pb-style=QWVL0OY],#html-body [data-pb-style=TYFVXFT]{border-width:0;max-width:100%;height:auto}#html-body [data-pb-style=A924RH4],#html-body [data-pb-style=TEM2YC8],#html-body [data-pb-style=U15YR7F]{border-width:0}@media only screen and (max-width: 768px) { #html-body [data-pb-style=WJDLGU7]{border-style:none} }<\/style><div data-content-type=\"row\" data-appearance=\"contained\" data-element=\"main\"><div data-enable-parallax=\"0\" data-parallax-speed=\"0.5\" data-background-images=\"{}\" data-background-type=\"image\" data-video-loop=\"true\" data-video-play-only-visible=\"true\" data-video-lazy-load=\"true\" data-video-fallback-src=\"\" data-box-model=\"{}\" data-element=\"inner\" data-pb-style=\"GY7P4K9\"><div class=\"pagebuilder-column-group\" style=\"display: flex;\" data-content-type=\"column-group\" data-grid-size=\"12\" data-element=\"main\"><div class=\"pagebuilder-column\" data-content-type=\"column\" data-appearance=\"full-height\" data-background-images=\"{}\" data-box-model=\"{}\" data-element=\"main\" data-pb-style=\"UGT6NLS\"><figure data-content-type=\"image\" data-appearance=\"full-width\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"WJDLGU7\" class=\"box-model-64ac33285b23e box-model-64ac33285c0eb\"><img class=\"pagebuilder-mobile-hidden box-model-64ac33285b24f box-model-64ac33285c0f4\" src=\"https:\/\/www.booksio.com\/media\/wysiwyg\/heading_icon_3.png\" alt=\"\" title=\"\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"desktop_image\" data-pb-style=\"QWVL0OY\" style=\"display: inline-block;\"><img class=\"pagebuilder-mobile-only box-model-64ac33285b25b box-model-64ac33285c0fd\" src=\"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=\" data-amsrc=\"https:\/\/www.booksio.com\/media\/wysiwyg\/heading_icon_3.png\" alt=\"\" title=\"\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"mobile_image\" data-pb-style=\"TYFVXFT\"><style type=\"text\/css\">.box-model-64ac33285b24f {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285b25b {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c0f4 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c0fd {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/figure><div data-content-type=\"text\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"U15YR7F\" class=\"box-model-64ac33285b265 box-model-64ac33285c106\"><h3 style=\"text-align: center;\"><span style=\"font-size: 36px; line-height: 42px;\"><span style=\"color: #202020;\"><span style=\"color: #298fc2;\">FREQUENTLY<\/span> ASKED QUESTIONS<\/span><\/span><\/h3><\/div><div data-content-type=\"html\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"A924RH4\" data-decoded=\"true\" class=\"box-model-64ac33285b26e box-model-64ac33285c10e\"><style>\n.faq-wrapper .collapsible-item > button {\n    background: transparent;\n    border: none;\n    color: #212322;\n    font-weight: bold;\n    margin: 10px 0;\n    font-size: 20px;\n    width: 100%;\n    position: relative;\n}\n\n.faq-wrapper .collapsible-item > .content > p {\n    font-size: 20px;\n    font-weight: normal;\n    padding: 10px 0;\n}\n\n.collapsible-item {\n    border-bottom: 1px solid #b3b3b2;\n}\n\n.faq-wrapper .collapsible-item > button:after {\n    content: '\\e608';\n    font-family: 'luma-icons';\n    position: absolute;\n    right: 0;\n}\n\n.faq-wrapper .collapsible-item.active > button:after {\n    content: '\\e622';\n}\n\n.faq-wrapper {\n    border-top: 1px solid #b3b3b2;\n}\n@media screen and (max-width: 1280px){\n    .main-hero-home {min-height: auto !important;padding: 0 0 70px 0;}\n}\n\n@media screen and (max-width: 1200px){\n    .main-hero-home {background: #fff;}\n    .faq-wrapper .collapsible-item > button {\n    font-size: 15px;\n}\n\n.faq-wrapper .collapsible-item > .content > p {\n    font-size: 15px;\n}\n}\n\n<\/style><\/div><div data-content-type=\"html\" data-appearance=\"default\" data-box-model=\"{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}\" data-element=\"main\" data-pb-style=\"TEM2YC8\" data-decoded=\"true\" class=\"box-model-64ac33285b277 box-model-64ac33285c117\"><div class=\"faq-wrapper\">\t\n\t<div class=\"collapsible-item active\">\n            <button type=\"button\" class=\"collapsible\" fdprocessedid=\"7h5qd7\">What do I do if I receive the wrong product or if it arrives damaged?<\/button>\n            <div class=\"content\" style=\"display: block;\">\n            <p>\nWe’re so sorry this happened! Don’t hesitate to get in touch with our customer care team on this <a href=\"https:\/\/www.booksio.com\/contact\/\">page<\/a> within two weeks of delivery to describe what you received. Please include your order number (it looks like “BOOK-############” and was included in your confirmation email) and email address used for the purchase. A photo of the product in question is helpful too! We’ll work with you to resolve the problem as soon as possible.\n<\/p>\n            <\/div>\n            <\/div>\n\t<div class=\"collapsible-item\">\n            <button type=\"button\" class=\"collapsible\" fdprocessedid=\"fpmeij\">Can I cancel my order?<\/button>\n            <div class=\"content\" style=\"display: none;\">\n            <p>\nYes, you have the ability to cancel your order. Please reach out to our customer care team on this page, and we will be happy to assist you.\n<\/p>\n            <\/div>\n            <\/div>\n<div class=\"collapsible-item\">\n            <button type=\"button\" class=\"collapsible\" fdprocessedid=\"lyml7i\">If I don’t live in the US, can I still make digital purchases?<\/button>\n            <div class=\"content\" style=\"display: none;\">\n            <p>\nAt this time, Booksio is ONLY available to US customers, both for print and digital orders. We are working to start accepting non-US orders in 2023. \n<\/p>\n            <\/div>\n            <\/div>\n<div class=\"collapsible-item\">\n            <button type=\"button\" class=\"collapsible\" fdprocessedid=\"fabjt\">How do I update my billing information?<\/button>\n            <div class=\"content\" style=\"display: none;\">\n            <p>\nAfter placing your first order with Booksio, you can change your billing information for future orders by logging into your account and selecting <a href=\"https:\/\/www.booksio.com\/customer\/paymentinfo\/\">\"My Payment Options\"<\/a>.\n<\/p>\n            <\/div>\n            <\/div>\n<div class=\"collapsible-item\">\n            <button type=\"button\" class=\"collapsible\" fdprocessedid=\"tclcut\">How do I track my book order?<\/button>\n            <div class=\"content\" style=\"display: none;\">\n            <p>\nYou will receive an email with the tracking number, as well as a link, as soon as your order ships.\n<\/p>\n            <\/div>\n            <\/div>\n<div class=\"collapsible-item\">\n            <button type=\"button\" class=\"collapsible\" fdprocessedid=\"wys5i6\">How can I access my ebook and audiobook purchases?<\/button>\n            <div class=\"content\" style=\"display: none;\">\n            <p>\nAll of your digital purchases from Booksio can be accessed through our app, available on both the <a href=\"https:\/\/apps.apple.com\/tt\/app\/booksio\/id1590368314\">Apple App Store<\/a> for iOS devices and in the <a href=\"https:\/\/play.google.com\/store\/search?q=booksio&amp;c=apps\">Google Play Store<\/a> for Android devices. You can sign in with your existing Booksio.com account to find your entire digital library.\n<\/p>\n            <\/div>\n            <\/div>\n<div class=\"collapsible-item\">\n            <button type=\"button\" class=\"collapsible\" fdprocessedid=\"85v4ko\">Do gift cards provide a charitable donation?<\/button>\n            <div class=\"content\" style=\"display: none;\">\n            <p>\nAt this time the act of buying a gift card does not trigger the 10% charitable donation. However, when the recipient redeems their gift card and makes a purchase, a charitable donation will occur at that time.\n<\/p>\n            <\/div>\n            <\/div>\n<\/div>\n            <\/div><style type=\"text\/css\">.box-model-64ac33285b23e {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285b265 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285b26e {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285b277 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c0eb {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c106 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c10e {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><style type=\"text\/css\">.box-model-64ac33285c117 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}<\/style><\/div><\/div><\/div><\/div><\/div>",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "title": "Subscribe To Our Newsletter",
+        "text": "<p>Have you signed up yet? Subscribe to our newsletter and we’ll keep you up-to-date on all of your <\/p><p>favorite authors, charities, books and special promotions. So don’t wait, sign up today!<\/p>"
       }
     }
   },
   "order": [
     "main",
-    "51244a2e-a4a9-4c96-bdb3-4c7a5fbf99aa",
-    "related-products",
-    "34f73c81-2b03-4c65-ac8f-b56ca89e10f5",
-    "bbccde7a-89f4-4f1b-baeb-5db3349627a3",
-    "e285dce0-40bf-415b-9a46-1225e8c7d8fc"
+    "e865c050-9601-43cc-9049-34fc077cecc0",
+    "f471c8e2-5d66-42a8-8c9f-126ab1a6866d",
+    "4e696fd9-3550-4dd7-9fe9-02f4cc64edaf",
+    "17f55de1-de93-4e69-b5f4-a004362ab5e3",
+    "subscribe"
   ]
 }

@@ -6,9 +6,44 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "1690860846c0f7ee68": {
+      "type": "apps",
+      "blocks": {
+        "011a117f-4833-4d8b-935c-4db13a78ef69": {
+          "type": "shopify:\/\/apps\/iwish-wishlist\/blocks\/app-block\/7f9269b0-1b45-4d0c-8479-faf04f05d8ac",
+          "settings": {
+            "is_collection": true,
+            "is_text_only_col": false,
+            "iwish_add_txt": "Add To Wishlist",
+            "iwish_added_txt": "Added To Wishlist",
+            "outline_icon": "default_outline",
+            "filled_icon": "default_filled",
+            "iwish_add_icon_outline": "",
+            "iwish_added_icon_filled": "",
+            "iwish_theme_class": "",
+            "txt_font_size": 14,
+            "iwish_text_clr": "#000000",
+            "iwish_text_hover_clr": "#000000",
+            "variant_change_wrapper": "",
+            "variant_name_id_selector": "[name=id]",
+            "iwish_qvWrapper": "",
+            "iwish_qvBtn_click": "",
+            "iwish_custom_filters": "",
+            "filter_timeout": 1500
+          }
+        }
+      },
+      "block_order": [
+        "011a117f-4833-4d8b-935c-4db13a78ef69"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1690860846c0f7ee68"
   ]
 }

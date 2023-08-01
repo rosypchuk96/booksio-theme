@@ -1,0 +1,997 @@
+<div class="page-wrapper">
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul class="items">
+    <li class="item home">
+      <a href="/" title="Go to Home Page">Home</a>
+      <span class="icon" aria-hidden="true"></span>
+    </li>
+    <li class="item cms_page">
+      <strong>{{ product.title }}</strong>
+    </li>
+  </ul>
+</nav>
+
+<main id="maincontent" class="page-main">
+   <a id="contentarea" tabindex="-1" href="#"></a>
+   <div class="page messages">
+      <div data-placeholder="messages"></div>
+      <div data-bind="scope: 'messages'">
+         <!-- ko if: cookieMessages && cookieMessages.length > 0 --><!-- /ko --><!-- ko if: messages().messages && messages().messages.length > 0 --><!-- /ko -->
+      </div>
+   </div>
+   <div class="columns">
+      <div class="column main">
+         <div class="product-info-main">
+            <div class="product-info-top">
+            </div>
+            <div class="book-authors">    
+              {% if product.metafields.custom.author %}
+                <a target="_blank" href="/search?q={{ product.metafields.custom.author }}"><span class="author">{{ product.metafields.custom.author }}</span></a>     
+              {% endif %}
+            </div>
+            {% for collection in product.collections %}
+              {% if collection.handle == 'ny-times-bestsellers' %}
+                <div class="category-label-wrapper-outter"><span class="category-label-wrapper">NY Times® Bestsellers</span></div>
+              {% endif %}
+            {% endfor %}
+            <div class="product-info-title">
+               <div class="page-title-wrapper product">
+                  <h1 class="page-title">
+                     <span class="base" data-ui-id="page-title-wrapper" itemprop="name">{{ product.title }}</span>
+                  </h1>
+               </div>
+            </div>
+            {% comment %}
+            <div id="cms-product-mapping-container">
+               <div class="cms-wrapper inactive" data-attribute="13">
+                  <style>#html-body [data-pb-style=B34SLQH]{border-width:0}</style>
+                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="B34SLQH" data-decoded="true" class="box-model-64c77560e3a6f">
+                     <p>Audiobooks are available immediately after purchase! Please download our <a href="/booksio_reader_app" target="_blank"><b>Booksio Reader App</b></a> and log in to begin reading! Booksio Audiobooks are not compatible with Kindle, Apple Books, or other proprietary devices.</p>
+                  </div>
+                  <style type="text/css">.box-model-64c77560e3a6f {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+               </div>
+               <div class="cms-wrapper inactive" data-attribute="14">
+                  <style>#html-body [data-pb-style=J2VCAJW]{border-width:0}</style>
+                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="J2VCAJW" data-decoded="true" class="box-model-64c77560e27bc">
+                     <p>Digital books are available immediately after purchase! Please download our <a href="/booksio_reader_app" target="_blank"><b>Booksio Reader App</b></a> and log in to begin reading! Booksio digital books are not compatible with Kindle, Apple Books, or other proprietary devices.</p>
+                  </div>
+                  <style type="text/css">.box-model-64c77560e27bc {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+               </div>
+               <div class="cms-wrapper inactive" data-attribute="16">
+                  <style>#html-body [data-pb-style=MXOG72M]{border-width:0}</style>
+                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="MXOG72M" data-decoded="true" class="box-model-64c77560e4d1e">
+                     <p>The first issue will arrive as soon as the next issue of the magazine is released. Please be patient, this might take 8-16 weeks for some titles! Order information is shared with the publisher directly who processes the subscription.</p>
+                  </div>
+                  <style type="text/css">.box-model-64c77560e4d1e {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+               </div>
+               <div class="cms-wrapper inactive" data-attribute="17">
+                  <style>#html-body [data-pb-style=ASK5K6G]{border-width:0}</style>
+                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="ASK5K6G" data-decoded="true" class="box-model-64c77560e5fe2">
+                     <p>Your first issue will arrive in your email inbox as soon as the next issue of your magazine is released. Please remember to check your spam folder, as your instructions for accessing your digital subscription will come directly from our digital magazine partner.</p>
+                  </div>
+                  <style type="text/css">.box-model-64c77560e5fe2 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+               </div>
+               <div class="cms-wrapper inactive" data-attribute="15">
+                  <style>#html-body [data-pb-style=FCCJLJ1]{border-width:0}</style>
+                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="FCCJLJ1" data-decoded="true" class="box-model-64c77560e7270">
+                     <p>Paperback books are processed by our warehouse. Please allow for 3-5 business days for in-stock books to be shipped and received.</p>
+                  </div>
+                  <style type="text/css">.box-model-64c77560e7270 {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+               </div>
+               <div class="cms-wrapper inactive" data-attribute="19">
+                  <style>#html-body [data-pb-style=HL6CVEN]{border-width:0}</style>
+                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="HL6CVEN" data-decoded="true" class="box-model-64c77560e85de">
+                     <p>Physical books usually arrive within 2-5 days, subject to availability.</p>
+                  </div>
+                  <style type="text/css">.box-model-64c77560e85de {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+               </div>
+               <div class="cms-wrapper inactive" data-attribute="18">
+                  <style>#html-body [data-pb-style=HL6CVEN]{border-width:0}</style>
+                  <div data-content-type="html" data-appearance="default" data-box-model="{&quot;desktop&quot;:{&quot;margin&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;},&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}}}" data-element="main" data-pb-style="HL6CVEN" data-decoded="true" class="box-model-64c77560e85de">
+                     <p>Physical books usually arrive within 2-5 days, subject to availability.</p>
+                  </div>
+                  <style type="text/css">.box-model-64c77560e85de {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}</style>
+               </div>
+            </div>
+          {% endcomment %}
+            <div class="pre-back-order-text" style="display: none;"></div>
+            {% form 'product', product, id: 'addToCartForm', class: 'product-single__form pdp-details' %}
+              <div class="product-add-form new_indicator">
+                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                <div class="product-options-wrapper" id="product-options-wrapper">
+                {% for option in product.options_with_values %}
+                  {% if option.name == 'Format' %}
+                    <div class="fieldset" tabindex="0">
+                      <div class="swatch-opt" data-role="swatch-options" data-rendered="true">
+                        <div class="swatch-attribute format" data-attribute-code="format" data-attribute-id="237">
+                          <div aria-activedescendant="" tabindex="0" aria-invalid="false" aria-required="true" role="listbox" aria-labelledby="option-label-format-237" class="swatch-attribute-options clearfix">
+                            {% for value in option.values %}
+                              {%- for variant in product.variants -%}
+                                {%- if variant.options contains value and variant.available -%}
+                                  <div class="swatch-option text price-swatch" id="option-label-format-237-item-34" aria-checked="" aria-describedby="option-label-format-237" aria-label="Paperback, Large Print" tabindex="0" role="option" data-option-type="0" data-option-id="34" data-option-label="Paperback, Large Print">
+                                      <p class="label">{{ variant.title }}</p>
+                                      <div class="prices">
+                                        {% if variant.compare_at_price %}
+                                          <p class="old-price">{{ variant.compare_at_price | money }}</p>
+                                        {% endif %}
+                                        <p class="price">{{ variant.price | money }}</p>
+                                      </div>
+                                  </div>
+                                {%- endif -%}
+                              {% endfor %}
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <div class="product-options-bottom">
+                <div class="product-actions-box" style="">
+                  <div class="box-tocart">
+                      <div class="fieldset">
+                        <div class="field qty" {% unless product.selected_variant or product.has_only_default_variant %}style="display: none;"{% endunless %}>
+                            <label class="label" for="qty"><span>Qty</span></label> 
+                            <div class="control"><input type="number" name="qty" id="qty" min="1" value="1" title="Qty" class="input-text qty" data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:10000}}"></div>
+                        </div>
+                        <div class="actions">
+                            <button type="submit" title="Add to Cart" class="action primary tocart" id="product-addtocart-button" {% unless product.selected_variant or product.has_only_default_variant %}disabled="disabled"{% endunless %} style="margin-left: 0px;"><span>Add to Cart</span></button>   
+                            <div id="instant-purchase" data-bind="scope:'instant-purchase'">
+                              <!-- ko template: getTemplate() -->
+                              <!-- ko if: showButton() --><!-- /ko -->
+                              <!-- /ko -->
+                            </div>
+                            <div class="price-box price-final_price" data-role="priceBox" data-product-id="15443735" data-price-box="product-id-15443735" {% unless product.selected_variant or product.has_only_default_variant %}style="display: none;"{% endunless %}> 
+                              <span class="normal-price">
+                                <span class="normal-price">
+                                  <span class="pricing-element price-container">
+                                  <span data-price-type="finalPrice" class="price-wrapper">
+                                  <span class="price">{{ product.price | money }}</span>
+                                  </span>
+                                  </span>
+                                </span>
+                              </span>  
+                              <span class="old-price sly-old-price no-display">  <span class="pricing-element price-container "> <span class="price-label">Regular Price</span>           <span id="old-price-15443735" data-price-type="oldPrice" class="price-wrapper single-price ">  <span class="price"></span>{{ product.price | money }}</span></span>   </span> </span>  
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="button-row samples">  </div>
+                </div>
+                <a href="#" class="action towishlist" data-action="add-to-wishlist"><i class="icon" aria-hidden="true"></i> <span>Add to WishList</span></a> 
+              </div>
+              {% endform %}
+            </div>
+            <div class="product-sample-links"> </div>
+            <div class="product-social-links">
+               <div class="product-addto-links" data-role="add-to-links"></div>
+            </div>
+            <style>#html-body [data-pb-style=KQEQY55]{border-width:0}</style>
+            <div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="KQEQY55" data-decoded="true" class="box-model-64c775612611f">
+               <div class="secure-checkout-wrapper">
+                  <p class="secure-title">Secure Checkout</p>
+                  <div class="secure-thumbnail">
+                     <img src="https://cdn.shopify.com/s/files/1/0789/2592/2613/files/payment-method.png?v=1690464954" alt="payment method" style="display: inline-block;">
+                  </div>
+               </div>
+               <style>
+                  .secure-checkout-wrapper {
+                  padding: 20px 30px;
+                  text-align: center;
+                  text-transform: capitalize;
+                  background: #eee;
+                  margin-top: 20px;
+                  margin-bottom: 40px;
+                  display: flex;
+                  flex-flow: row wrap;
+                  justify-content: center;
+                  color: #212322;
+                  font-family: 'Lato';
+                  max-width: 380px;
+                  }
+                  .secure-checkout-wrapper .secure-title {
+                  width: 100%;
+                  }
+                  .charity-text p {
+                  color: #212322;
+                  font-size: 16px;
+                  line-height: 20px;
+                  font-weight: bold;
+                  margin-top: 12px;
+                  font-family: 'Lato';
+                  }
+                  .secure-checkout-wrapper .secure-thumbnail {
+                  max-width: 310px;
+                  }
+                  @media screen and (max-width: 767px) {
+                  .secure-checkout-wrapper {
+                  margin-bottom: 10px;
+                  }
+                  }
+               </style>
+            </div>
+         </div>
+         <div class="product media">
+            <a id="gallery-prev-area" tabindex="-1" href="#"></a>
+            <div class="action-skip-wrapper"> <a class="action skip gallery-next-area" href="#gallery-next-area"><span> Skip to the end of the images gallery</span></a></div>
+            <div class="gallery-placeholder" data-gallery-role="gallery-placeholder" style="">
+              {% if product.featured_image %}
+                <img alt="main product photo" class="gallery-placeholder__image" src="{{ product.featured_image | img_url: 'master' }}" width="300" height="446" style="display: block;">
+              {% endif %}
+               <div class="fotorama--hidden"></div>
+               <style></style>
+            </div>
+            <a id="gallery-next-area" tabindex="-1" href="#"></a>
+            <div class="wishlist-wrapper"><a href="#" class="wish-list">Add to wishlist</a> <span class="view-a-sample"></span></div>
+         </div> 
+         <div class="pdp-tab-wrapper">
+            <div class="tab-inner-wrapper">
+               <div class="collapsible-item-tab description-label active">Description</div>
+               <div class="collapsible-item-tab detail-label">Detail</div>
+               <div class="tab-content-wrapper">
+                  <div class="content description-content" id="description-content">
+                     <div class="product attribute description" id="tab-label-description">
+                        <strong>description</strong>  
+                        <div class="value">
+                          {{ product.description }}
+                        </div>
+                     </div>
+                  </div>
+                  <div class="content detail-content" id="detail-content">
+                     <div class="additional-attributes-wrapper table-wrapper details-table">
+                        <strong>DETAILS</strong> 
+                        <table class="data table additional-attributes" id="product-attribute-specs-table">
+                           <caption class="table-caption">More Information</caption>
+                           <tbody>
+                            {% if product.metafields.custom.recommended_audience %}
+                              <tr>
+                                <th class="col label" scope="row">Recommended Audience</th>
+                                <td class="col data audience" data-th="Recommended Audience"><span>{{ product.metafields.custom.recommended_audience }}</span></td>
+                              </tr>
+                            {% endif %}
+                            {% if product.selected_variant and product.metafields.custom.recommended_audience %}
+                              <tr>
+                                <th class="col label" scope="row">ISBN-13</th>
+                                <td class="col data audience" data-th="Recommended Audience"><span>{{ product.selected_variant.metafields.custom.custom.isbn_13 }}</span></td>
+                              </tr>
+                            {% endif %}
+                            {% if product.metafields.custom.author %}
+                              <tr>
+                                 <th class="col label" scope="row">Author</th>
+                                 <td class="col data author" data-th="Author">   <a target="_blank" href="/search?q={{ product.metafields.custom.author }}"><span>{{ product.metafields.custom.author }}</span></a>   </td>
+                              </tr>
+                            {% endif %}
+                            {% if product.metafields.custom.language %}
+                              <tr>
+                                 <th class="col label" scope="row">Language Code</th>
+                                 <td class="col data language_code" data-th="Language Code"><span>{{ product.metafields.custom.language }}</span></td>
+                              </tr>
+                            {% endif %}
+                            {% if product.metafields.custom.issues %}
+                              <tr>
+                                 <th class="col label" scope="row">Issues</th>
+                                 <td class="col data language_code" data-th="Language Code"><span>{{ product.metafields.custom.issues }}</span></td>
+                              </tr>
+                            {% endif %}
+                            {% if product.selected_variant and product.selected_variant.metafields.custom.publisher %}
+                              <tr>
+                                <th class="col label" scope="row">Publisher</th>
+                                 <td class="col data language_code" data-th="Language Code"><span>{{ product.selected_variant.metafields.custom.publisher }}</span></td>
+                              </tr>
+                            {% endif %}
+                            {% if product.metafields.custom.publication_date %}
+                              <tr>
+                                 <th class="col label" scope="row">Publication Date</th>
+                                 <td class="col data publish_date" data-th="Publication Date"><span>{{ product.metafields.custom.publication_date | date: "%b %e, %y" }}</span></td>
+                              </tr>
+                            {% endif %}
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+</div>
+
+<style>
+.secure-checkout-wrapper {
+    padding: 20px 30px;
+    text-align: center;
+    text-transform: capitalize;
+    background: #eee;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: #212322;
+    font-family: 'Lato';
+    max-width: 380px;
+  }
+.secure-checkout-wrapper .secure-title {
+    width: 100%;
+}
+.charity-text p {
+    color: #212322;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    margin-top: 12px;
+    font-family: 'Lato';
+}
+.secure-checkout-wrapper .secure-thumbnail {
+    max-width: 310px;
+}
+@media screen and (max-width: 767px) {
+.secure-checkout-wrapper {
+   margin-bottom: 10px;
+}
+}
+</style>
+  <style>
+nav.breadcrumbs ul li.item a, nav.breadcrumbs ul li.item strong {
+    color: #298FC2;
+}
+nav.breadcrumbs ul li.item .icon:after {
+    content: '\e608';
+    font-family: 'luma-icons';
+    color: #298FC2;
+}
+.product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .label {
+    width: 100%;
+    display: inline-block;
+    font-size: 14px;
+    color: #212322;
+    font-family: 'Lato';
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .price {
+    display: inline-block !important;
+    width: 100% !important;
+    font-size: 14px !important;
+    color: #212322 !important;
+    font-family: 'Lato' !important;
+    font-weight: bold !important;
+margin-left: 0 !important;
+}
+.product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch {
+    display: inline-block !important;
+    max-height: min-content !important;
+    text-align: left !important;
+    padding: 15px 20px !important;
+    border-color: #E2E3E2 !important;
+}
+
+.product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch.selected {
+    background: #FFF0E0;
+    border-color: #FFF0E0 !important;
+}
+.product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch:hover {
+    border-color: #FFF0E0 !important;
+    background-color: #FFF0E0;
+}
+button#product-addtocart-button {
+    background-color: #298FC2;
+    border-color: #298FC2;
+}
+.catalog-product-view .page-wrapper .product-info-main #cms-product-mapping-container .cms-wrapper {
+    color: #212322;
+    font-size: 14px;
+    font-family: 'Lato';
+}
+.catalog-product-view .page-wrapper .product-info-main .product.description {
+    display: none;
+}
+.catalog-product-view .page-wrapper .product-info-main .add-attr-section {
+    display: none;
+}
+.catalog-product-view .page-wrapper .product-info-main>.product-add-form .product-options-wrapper .swatch-attribute-label {
+    display: none;
+}
+.catalog-product-view .page-wrapper .product-info-main>.product-add-form .product-options-wrapper .swatch-attribute-selected-option {
+    display: none;
+}
+.page-product-configurable .product-options-wrapper .swatch-opt {
+    margin-top: 0;
+}
+.catalog-product-view .page-wrapper .product-info-main #cms-product-mapping-container .cms-wrapper p {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.catalog-product-view .page-wrapper .product-info-main .product-info-title {
+    order: -2;
+    width: 100%;
+    border-bottom: none;
+}
+.catalog-product-view .page-wrapper .product-info-main {
+    display: flex;
+    flex-flow: row wrap;
+    width: 70%;
+}
+.book-authors {
+    order: -1;
+}
+.product-info-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+.product-info-top:after {
+    content: "";
+    background: #298FC2;
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+.catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title:after {
+    display: none;
+}
+.catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title {
+    padding-bottom: 0;
+}
+.catalog-product-view .page-wrapper .product-info-main .book-authors span {
+    color: #298FC2;
+    font-weight: normal;
+}
+.catalog-product-view .page-wrapper .product-info-main .yotpoBottomLine .standalone-bottomline a.text-m.write-review-btn-hidden {
+    color: #298FC2 !important;
+}
+.catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title {
+    text-transform: capitalize;
+}
+body.catalog-product-view .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .label{
+    width: 100%;
+    display: inline-block;
+    font-size: 14px !important;
+    color: #212322 !important;
+    font-family: 'Lato' !important;
+    font-weight: normal !important;
+    margin-bottom: 5px !important;
+}
+.product-options-wrapper .price-box.price-final_price {
+    float: left !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+}
+body#html-body.catalog-product-view #cms-product-mapping-container {
+    display: inline-block !important;
+    width: 100% !important;
+}
+
+    .catalog-product-view .box-tocart>.fieldset .actions {
+    min-width: 350px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.catalog-product-view .page-wrapper .product-info-main .price-box {
+    padding: 0;
+    float: left;
+    position: relative;
+    line-height: 1;
+    align-self: flex-end;
+}
+
+.catalog-product-view .page-wrapper #product-addtocart-button {
+    float: right;
+    max-width: 190px;
+    width: 100%;
+    padding: 18px 10px;
+    font-size: 18px;
+    order: 2;
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+.catalog-product-view .page-wrapper .product-info-main .product-add-form.new_indicator .box-tocart .fieldset {
+    column-gap: 22px;
+}
+.catalog-product-view .page-wrapper .product-info-main .product-add-form.new_indicator .price-box.price-final_price + .price-box.price-final_price {
+    display: none;
+}
+
+.catalog-product-view .page-wrapper .product-info-main .price-box .price {
+    font-size: 23px;
+    line-height: 23px;
+}
+
+/*.catalog-product-view .page-wrapper .product-info-main .product-actions-box .price-box:before {
+    content: 'TOTAL';
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -33px;
+    color: #212322;
+}*/
+.catalog-product-view .page-wrapper .product-info-main .product-actions-box .price-box .price:before {
+    content: 'TOTAL';
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -33px;
+    color: #212322;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.catalog-product-view .box-tocart>.fieldset .field.qty {
+    align-self: flex-end;
+    position: relative;
+}
+
+.catalog-product-view .box-tocart>.fieldset .field.qty:before {
+    content: 'QUANTITY';
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -33px;
+    color: #212322;
+}
+
+.catalog-product-view .page-wrapper .product-info-main .box-tocart .fieldset .qty #qty {
+    width: 70px;
+    padding: 0 5px;
+}
+body.catalog-product-view .page-wrapper .product-info-main>.product-add-form .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch.mock-swatch.selected {
+    border-color: #FFF0E0 !important;
+}
+nav.breadcrumbs ul li.item a, 
+nav.breadcrumbs ul li.item strong, 
+.catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title, 
+.catalog-product-view .page-wrapper .product-info-main .book-authors span,
+.wishlist-wrapper .wish-list,
+.wishlist-wrapper a.button.action.secondary {
+    font-weight: bold;
+}
+.catalog-product-view .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .label {
+    font-weight: bold !important;
+}
+.catalog-product-view .page-wrapper .product-info-main .book-authors span:before {
+    content: 'by';
+    color: #212322;
+    margin-right: 5px;
+    font-size: 22px;
+    font-family: 'Lato';
+    font-weight: bold;
+}
+.catalog-product-view .page-wrapper .product-info-main .book-authors  a + a span:before {
+    font-size: 0 !important;
+}
+.catalog-product-view .product-options-bottom .price-box .price-container>span {
+    margin: 0;
+}
+.catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title {
+    font-size: 30px;
+    color: #212322;
+    line-height: 1.5;
+}
+
+.catalog-product-view .page-wrapper .product-info-main .book-authors span {
+    font-family: 'Lato';
+    line-height: 1.5;
+}
+
+.catalog-product-view .product.attribute.description:not(#product-short-description) .value,
+.catalog-product-view .additional-attributes-wrapper table#product-attribute-specs-table tbody td, 
+.catalog-product-view .additional-attributes-wrapper table#product-attribute-specs-table tbody th{
+       color: #212322;
+       font-size: 16px;
+       font-family: 'Lato';
+       line-height: 1.5;
+}
+.catalog-product-view .page-wrapper .product-info-main .yotpoBottomLine {
+    margin-top: 5px;
+}
+.category-label-wrapper-outter:after {
+    content: "";
+    background: #298FC2;
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+.category-label-wrapper-outter {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.product-info-top:after {
+    display: none;
+}
+
+.product-info-top {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 767px){
+.catalog-product-view .page-wrapper .product-info-main .product-actions-box .price-box .price:before{
+line-height: 14px;
+}
+
+    .faq-content-pdp-wrapper {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    
+    .how-booksio-works .row-full-width-inner {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .review-outter-wrapper {
+        width: calc(100% + 40px) !important;
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+    .catalog-product-view .page-wrapper .product-info-main .product-add-form.new_indicator .box-tocart .fieldset {
+    column-gap: 5px;
+}
+
+.catalog-product-view .page-wrapper #product-addtocart-button {
+    max-width: 170px;
+}
+    .catalog-product-view .box-tocart>.fieldset .actions {
+    min-width: 265px;
+    margin-right: 0;
+    padding-left: 5px;
+}
+.catalog-product-view .page-wrapper .product-info-main .price-box .price {
+    font-size: 20px;
+}
+
+.catalog-product-view .page-wrapper #product-addtocart-button {
+    max-width: 145px;
+    font-size: 14px;
+}
+.catalog-product-view .page-wrapper .product-info-main {
+    width: 100%;
+}
+}
+</style>
+  <style>
+  nav.breadcrumbs ul li.item a, nav.breadcrumbs ul li.item strong {
+      color: #298FC2;
+  }
+  nav.breadcrumbs ul li.item .icon:after {
+      content: '\e608';
+      font-family: 'luma-icons';
+      color: #298FC2;
+  }
+  .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .label {
+      width: 100%;
+      display: inline-block;
+      font-size: 14px;
+      color: #212322;
+      font-family: 'Lato';
+      font-weight: normal;
+      margin-bottom: 5px;
+  }
+  .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .price {
+      display: inline-block !important;
+      width: 100% !important;
+      font-size: 14px !important;
+      color: #212322 !important;
+      font-family: 'Lato' !important;
+      font-weight: bold !important;
+  margin-left: 0 !important;
+  }
+  .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch {
+      display: inline-block !important;
+      max-height: min-content !important;
+      text-align: left !important;
+      padding: 15px 20px !important;
+      border-color: #E2E3E2 !important;
+  }
+  
+  .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch.selected {
+      background: #FFF0E0;
+      border-color: #FFF0E0 !important;
+  }
+  .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch:hover {
+      border-color: #FFF0E0 !important;
+      background-color: #FFF0E0;
+  }
+  button#product-addtocart-button {
+      background-color: #298FC2;
+      border-color: #298FC2;
+  }
+  .catalog-product-view .page-wrapper .product-info-main #cms-product-mapping-container .cms-wrapper {
+      color: #212322;
+      font-size: 14px;
+      font-family: 'Lato';
+  }
+  .catalog-product-view .page-wrapper .product-info-main .product.description {
+      display: none;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .add-attr-section {
+      display: none;
+  }
+  .catalog-product-view .page-wrapper .product-info-main>.product-add-form .product-options-wrapper .swatch-attribute-label {
+      display: none;
+  }
+  .catalog-product-view .page-wrapper .product-info-main>.product-add-form .product-options-wrapper .swatch-attribute-selected-option {
+      display: none;
+  }
+  .page-product-configurable .product-options-wrapper .swatch-opt {
+      margin-top: 0;
+  }
+  .catalog-product-view .page-wrapper .product-info-main #cms-product-mapping-container .cms-wrapper p {
+      margin-bottom: 0;
+      margin-top: 10px;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .product-info-title {
+      order: -2;
+      width: 100%;
+      border-bottom: none;
+  }
+  .catalog-product-view .page-wrapper .product-info-main {
+      display: flex;
+      flex-flow: row wrap;
+      width: 70%;
+  }
+  .book-authors {
+      order: -1;
+  }
+  .product-info-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      position: relative;
+  }
+  .product-info-top:after {
+      content: "";
+      background: #298FC2;
+      width: 50px;
+      height: 3px;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title:after {
+      display: none;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title {
+      padding-bottom: 0;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .book-authors span {
+      color: #298FC2;
+      font-weight: normal;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .yotpoBottomLine .standalone-bottomline a.text-m.write-review-btn-hidden {
+      color: #298FC2 !important;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title {
+      text-transform: capitalize;
+  }
+  body.catalog-product-view .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .label{
+      width: 100%;
+      display: inline-block;
+      font-size: 14px !important;
+      color: #212322 !important;
+      font-family: 'Lato' !important;
+      font-weight: normal !important;
+      margin-bottom: 5px !important;
+  }
+  .product-options-wrapper .price-box.price-final_price {
+      float: left !important;
+      margin-left: 0 !important;
+      width: 100% !important;
+  }
+  body#html-body.catalog-product-view #cms-product-mapping-container {
+      display: inline-block !important;
+      width: 100% !important;
+  }
+  
+      .catalog-product-view .box-tocart>.fieldset .actions {
+      min-width: 350px;
+      display: flex;
+      flex-flow: row wrap;
+  }
+  
+  .catalog-product-view .page-wrapper .product-info-main .price-box {
+      padding: 0;
+      float: left;
+      position: relative;
+      line-height: 1;
+      align-self: flex-end;
+  }
+  
+  .catalog-product-view .page-wrapper #product-addtocart-button {
+      float: right;
+      max-width: 190px;
+      width: 100%;
+      padding: 18px 10px;
+      font-size: 18px;
+      order: 2;
+      margin-left: 15px;
+      margin-right: 0;
+  }
+  
+  .catalog-product-view .page-wrapper .product-info-main .product-add-form.new_indicator .box-tocart .fieldset {
+      column-gap: 22px;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .product-add-form.new_indicator .price-box.price-final_price + .price-box.price-final_price {
+      display: none;
+  }
+  
+  .catalog-product-view .page-wrapper .product-info-main .price-box .price {
+      font-size: 23px;
+      line-height: 23px;
+  }
+  
+  /*.catalog-product-view .page-wrapper .product-info-main .product-actions-box .price-box:before {
+      content: 'TOTAL';
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: -33px;
+      color: #212322;
+  }*/
+  .catalog-product-view .page-wrapper .product-info-main .product-actions-box .price-box .price:before {
+      content: 'TOTAL';
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: -33px;
+      color: #212322;
+      font-weight: lighter;
+      font-size: 16px;
+      line-height: 18px;
+  }
+  
+  .catalog-product-view .box-tocart>.fieldset .field.qty {
+      align-self: flex-end;
+      position: relative;
+  }
+  
+  .catalog-product-view .box-tocart>.fieldset .field.qty:before {
+      content: 'QUANTITY';
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: -33px;
+      color: #212322;
+  }
+  
+  .catalog-product-view .page-wrapper .product-info-main .box-tocart .fieldset .qty #qty {
+      width: 70px;
+      padding: 0 5px;
+  }
+  body.catalog-product-view .page-wrapper .product-info-main>.product-add-form .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch.mock-swatch.selected {
+      border-color: #FFF0E0 !important;
+  }
+  nav.breadcrumbs ul li.item a, 
+  nav.breadcrumbs ul li.item strong, 
+  .catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title, 
+  .catalog-product-view .page-wrapper .product-info-main .book-authors span,
+  .wishlist-wrapper .wish-list,
+  .wishlist-wrapper a.button.action.secondary {
+      font-weight: bold;
+  }
+  .catalog-product-view .product-options-wrapper .swatch-attribute-options .swatch-option.text.price-swatch .label {
+      font-weight: bold !important;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .book-authors span:before {
+      content: 'by';
+      color: #212322;
+      margin-right: 5px;
+      font-size: 22px;
+      font-family: 'Lato';
+      font-weight: bold;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .book-authors  a + a span:before {
+      font-size: 0 !important;
+  }
+  .catalog-product-view .product-options-bottom .price-box .price-container>span {
+      margin: 0;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .page-title-wrapper .page-title {
+      font-size: 30px;
+      color: #212322;
+      line-height: 1.5;
+  }
+  
+  .catalog-product-view .page-wrapper .product-info-main .book-authors span {
+      font-family: 'Lato';
+      line-height: 1.5;
+  }
+  
+  .catalog-product-view .product.attribute.description:not(#product-short-description) .value,
+  .catalog-product-view .additional-attributes-wrapper table#product-attribute-specs-table tbody td, 
+  .catalog-product-view .additional-attributes-wrapper table#product-attribute-specs-table tbody th{
+         color: #212322;
+         font-size: 16px;
+         font-family: 'Lato';
+         line-height: 1.5;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .yotpoBottomLine {
+      margin-top: 5px;
+  }
+  .category-label-wrapper-outter:after {
+      content: "";
+      background: #298FC2;
+      width: 50px;
+      height: 3px;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+  }
+  
+  .category-label-wrapper-outter {
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+  }
+  
+  .product-info-top:after {
+      display: none;
+  }
+  
+  .product-info-top {
+      border-bottom: none;
+  }
+  
+  @media screen and (max-width: 767px){
+  .catalog-product-view .page-wrapper .product-info-main .product-actions-box .price-box .price:before{
+  line-height: 14px;
+  }
+  
+      .faq-content-pdp-wrapper {
+          margin-left: -20px;
+          margin-right: -20px;
+      }
+      
+      .how-booksio-works .row-full-width-inner {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+      }
+      
+      .review-outter-wrapper {
+          width: calc(100% + 40px) !important;
+          margin-right: -20px;
+          margin-left: -20px;
+      }
+      .catalog-product-view .page-wrapper .product-info-main .product-add-form.new_indicator .box-tocart .fieldset {
+      column-gap: 5px;
+  }
+  
+  .catalog-product-view .page-wrapper #product-addtocart-button {
+      max-width: 170px;
+  }
+      .catalog-product-view .box-tocart>.fieldset .actions {
+      min-width: 265px;
+      margin-right: 0;
+      padding-left: 5px;
+  }
+  .catalog-product-view .page-wrapper .product-info-main .price-box .price {
+      font-size: 20px;
+  }
+  
+  .catalog-product-view .page-wrapper #product-addtocart-button {
+      max-width: 145px;
+      font-size: 14px;
+  }
+  .catalog-product-view .page-wrapper .product-info-main {
+      width: 100%;
+  }
+  }
+  </style>

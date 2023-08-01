@@ -1,15 +1,24 @@
 {
-    "wrapper": "main.cms-page-view",
-    "sections": {
-      "main": {
-        "type": "main-contact",
-        "settings": {
-          "padding_top": 36,
-          "padding_bottom": 36
-        }
+  "wrapper": "main.cms-page-view",
+  "sections": {
+    "main": {
+      "type": "main-contact",
+      "settings": {
+        "title": "<h3>\n<span style=\"line-height: 42px;\"><span style=\"font-size: 34px;\"><span style=\"color: #41c2ff;\">CONTACT <\/span><\/span><\/span><span style=\"line-height: 42px;\"><span style=\"font-size: 34px;\"><span style=\"color: #202020;\">US<\/span><\/span><\/span> <\/h3>",
+        "subtitle": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "contact_info_heading": "BOOKSIO",
+        "contact_info_map": "653 W Fallbrook Ave, Fresno, CA, 93711, US",
+        "contact_info_phone": "(877) 307-1451",
+        "contact_info_days": "Monday - Friday, 7am - 4pm PST",
+        "contact_info_email": "support@booksio.com",
+        "heading": "Contact form",
+        "heading_size": "h1"
       }
-    },
-    "order": [
-      "main"
-    ]
-  }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="{{ shop.locale }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <title>{{ shop.name }}</title>
+
+    <meta name="description" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    {{ 'slick.css' | asset_url | stylesheet_tag }}
+    {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+    {{ 'mgz_font.min.css' | asset_url | stylesheet_tag }}
+    {{ 'styles-m.min.css' | asset_url | stylesheet_tag }}
+    {{ 'styles-l.min.css' | asset_url | stylesheet_tag }}
+    {{ 'styles.min.css' | asset_url | stylesheet_tag }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+
+    {{ 'jquery.min.js' | asset_url | script_tag }}
+
+    {{ content_for_header }}
+    
+{% if template == 'product' %}
+    {%- liquid
+      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+    %}
+
+    {% style %}
+      {{ settings.type_body_font | font_face: font_display: 'swap' }}
+      {{ body_font_bold | font_face: font_display: 'swap' }}
+      {{ body_font_italic | font_face: font_display: 'swap' }}
+      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+      {{ settings.type_header_font | font_face: font_display: 'swap' }}
+
+      :root {
+        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-style: {{ settings.type_body_font.style }};
+        --font-body-weight: {{ settings.type_body_font.weight }};
+        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
+
+        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-style: {{ settings.type_header_font.style }};
+        --font-heading-weight: {{ settings.type_header_font.weight }};
+
+        --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
+        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+
+      }
+
+      html {
+        box-sizing: border-box;
+        font-size: calc(var(--font-body-scale) * 62.5%);
+        height: 100%;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 100%;
+        min-height: 100%;
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: 0.06rem;
+        line-height: calc(1 + 0.8 / var(--font-body-scale));
+        font-family: var(--font-body-family);
+        font-style: var(--font-body-style);
+        font-weight: var(--font-body-weight);
+      }
+
+      @media screen and (min-width: 750px) {
+        body {
+          font-size: 1.6rem;
+        }
+      }
+    {% endstyle %}
+
+    {%- unless settings.type_body_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+    {%- unless settings.type_header_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+  {% endif %}
+
+{% render 'usf' %}
+
+  </head>
+
+  <body id="html-body">
+    <div class="page-wrapper">
+      {% assign host = request.host %}
+      {% assign host_arr = host | split: '.' %}
+      {% assign is_subdomain = false %}
+      {% if host_arr.size >= 3 %}
+        {% assign is_subdomain = true %}
+        {% assign subdomain = host_arr[0] %}
+      {% endif %}
+
+      <script>
+        var restrictedFormats, restrictedTags, isPartnerSite;
+        {% if is_subdomain %}
+          restrictedFormats = '{{ shop.metaobjects["partner_store_settings"][subdomain].restricted_formats }}';
+          restrictedTags = `{{ shop.metaobjects["partner_store_settings"][subdomain].restricted_tags | strip | newline_to_br | strip_newlines }}`;
+          isPartnerSite = true;
+
+          restrictedFormats = restrictedFormats.toLowerCase().replace(/["']/g, "").replace('[', '').replace(']', '').split(',');
+          restrictedTags = restrictedTags.toLowerCase().split('<br />');
+        {% endif %}
+      </script>
+
+      {% section 'header' %}
+
+      {% if host_arr.size < 3 or template != 'index' or host contains 'shopify' %}
+        {{ content_for_layout }}
+      {% elsif template == 'index' %}
+        {% assign subdomain = host_arr[0] %}
+        {% assign lp_url = shop.metaobjects["partner_store_settings"][subdomain].landing_page %}
+        {% assign lp_page = pages[lp_url] %}
+        {% if lp_page %}
+          <script>
+            window.location.href = "{{ lp_page.url }}"
+          </script>
+        {% endif %}
+      {% endif %}
+      {% section 'footer' %}
+    </div>
+
+    <script>
+      function drawMiniCart(data) {
+        console.log(data)
+        if (!$('.minicart-wrapper .qty').length) {
+          $('.action.showcart').append(`<span class="counter qty"></span>`);
+        }
+        $('.minicart-wrapper .qty').text(data.item_count);
+        $('#mini-cart-total').text('$' + (data.total_price / 100).toFixed(2));
+        var html = '';
+        if (data.items.length > 0) {
+          $('#minicart-content-wrapper .subtotal').show(0);
+          for (var i in data.items) {
+            var product = data.items[i];
+            var img = '', options = '';
+            if (product.featured_image) {
+              img += `<img class="product-image-photo" src="${product.featured_image.url}" alt="${product.featured_image.alt}" style="width: auto; height: auto;">`;
+            }
+            if (product.options_with_values) {
+              for (var j in product.options_with_values) {
+                var option = product.options_with_values[j];
+                options += `
+                <dt class="label">
+                  ${option.name}
+                </dt>
+                <dd class="values">
+                  <span data-bind="text: option.value">
+                  ${option.value}</span>
+                </dd>`;
+              }
+            }
+            html += `<li class="item product product-item" data-role="product-item" data-collapsible="true" data-id="${ product.variant_id }">
+            <div class="product" role="group" aria-label="product">
+              <a data-bind="attr: {href: product_url, title: product_name}" tabindex="-1" class="product-item-photo" href="${product.url}" title="Spare">
+                <span class="product-image-container" data-bind="style: {width: width/2 + 'px'}" style="width: 75px;">
+                  <span class="product-image-wrapper" data-bind="style: {'padding-bottom': height/width*100 + '%'}" style="padding-bottom: 100%;">
+                    ${img}
+                  </span>
+                </span>
+              </a>
+
+              <div class="product-item-details">
+                <strong class="product-item-name">
+                  <span>${product.product_title}</span>
+                </strong>
+                
+                  <div class="product options" data-bind="style: {visibility: options.length || customOptions.length ? 'visible' : 'hidden'}" role="tablist" data-collapsible="true" style="visibility: visible;">
+                    <span data-role="title" class="toggle" role="tab" aria-selected="false" aria-expanded="false" tabindex="0">
+                      <span>See Details</span>
+                    </span>
+                    <div data-role="content" class="content" role="tabpanel" aria-hidden="true" style="display: none;">
+                      <strong class="subtitle">
+                        <span>Options Details</span>
+                      </strong>
+                      <dl class="product options list">
+                        ${options}
+                      </dl>
+                    </div>
+                  </div>
+                
+                <div class="product-item-pricing">
+                  <div class="price-container">
+                    <span class="price-wrapper" data-bind="html: price">
+                      <span class="price-excluding-tax" data-label="Excl. Tax">
+                        <span class="minicart-price">
+                          <span class="price">$${(product.price / 100).toFixed(2)}</span>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="details-qty qty" data-dashlane-rid="a442faba8a632b85" data-form-type="other">
+                    <label class="label" for="cart-item-30948-qty">Qty</label>
+                    ${product.quantity}
+                  </div>
+                </div>
+                <div class="product actions">
+                  <div class="primary">
+                    <a data-bind="attr: {href: configure_url, title: $t('Edit item')}" class="action edit" href="" title="Edit item">
+                      <i class="icon edit-icon" aria-hidden="true"></i>
+                      <span data-bind="i18n: 'Edit'">Edit</span>
+                    </a>
+                  </div>
+                  <div class="secondary">
+                    <a href="#" data-bind="attr: {'data-cart-item': item_id, title: $t('Remove item')}" class="action delete" data-cart-item="30948" title="Remove item">
+                      <i class="icon delete-icon" aria-hidden="true"></i>
+                      <span data-bind="i18n: 'Remove'">Remove</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>`;
+          }
+          $('#mini-cart-shop-btn').hide(0);
+          $('#mini-cart-checkout-btn').show(0);
+        } else {
+          $('#minicart-content-wrapper .subtotal').hide(0);
+          html = '<strong class="subtitle empty">You have no items in your shopping cart.</strong>';
+          $('#mini-cart-shop-btn').show(0);
+          $('#mini-cart-checkout-btn').hide(0);
+        }
+
+        $('#mini-cart').html(html);
+
+        $('#mini-cart .product.options .toggle').click(function() {
+          $(this).closest('.options').find('.content').toggle(0);
+          $(this).closest('.options').toggleClass('active');
+        });
+
+        $('#mini-cart .action.delete').click(function (e) {
+          e.preventDefault();
+          var id = $(this).closest('.product-item').attr('data-id');
+          var data = {};
+          data[id] = 0;
+      
+          jQuery.ajax({
+            type: 'POST',
+            url: '/cart/update.js',
+            data: {
+              updates: data
+            },
+            dataType: 'json',
+            success: function (data) {
+              jQuery.ajax({
+                type: 'GET',
+                url: '/cart.js',
+                dataType: 'json',
+                success: function (data) {  
+                  drawMiniCart(data);
+                }
+              });
+            }
+          });
+        });
+      }
+    </script>
+
+    {{ 'slick.min.js' | asset_url | script_tag }}
+    {{ 'theme.min.js' | asset_url | script_tag }}
+
+    <script>
+      $(document).ready(function() {
+        $('.collapsible-item-tab').click(function() {
+
+// Remove 'active' class from all tabs
+          $('.collapsible-item-tab').removeClass('active');
+
+// Add 'active' class to the clicked tab
+          $(this).addClass('active');
+
+// Hide all tab contents
+          $('.content').hide();
+
+// Show the corresponding tab content based on the clicked tab
+          var tabContentId = $(this).attr('class').split(' ')[1].split('-')[0] + '-content';
+          $('#' + tabContentId).show();
+        });
+      });
+    </script>
+
+    {% include 'iwish_v2' with 'iwishfooter' %}
+  {% include 'appikon-pre-order-helper' %}{% include 'appikon-pre-order-cart-items-liquid-helper' %}{% include 'appikon-pre-order-product-liquid-helper' %}{% render 'preorder-now' %}
+  </body>
+</html>
